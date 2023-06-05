@@ -1,11 +1,26 @@
-from flask import Flask
+# Import the necessary packages
+from flask import Flask, render_template
 
-app = Flask(__name__)
+# Create the application object
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
+# Use decorators to link the function to a url
 @app.route('/')
-def home():
-    return 'Hello, World!'
+def index():
+    return render_template("index.html", title="Home")
 
-@app.route('/about')
-def about():
-    return 'About'
+# Create the AMP version of the site
+@app.route('/amp/')
+def amp():
+    return render_template("index_amp.html", title="Home")
+
+@app.route('/robots.txt')
+def robots():
+    return str(open("./api/robots.txt").read())
+@app.route('/sitemap.xml')
+def sitemap():
+    return str(open("./api/sitemap.xml").read())
+
+# Start the server with the 'run()' method
+if __name__ == '__main__':
+    app.run(debug=True)
