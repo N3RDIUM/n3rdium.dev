@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script>
-            /* If the user is on a mobile device, redirect them to the mobile version of the site */
-            if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)){
-                window.location.href = "/amp/";
-            }
-        </script>
+        <title>N3RDIUM's Hideout</title>
 
         <meta charset="utf-8">
-        <title>N3RDIUM's Hideout</title>
         <meta name="description" content="N3RDIUM's Hideout">
         <meta name="author" content="N3RDIUM">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,18 +13,26 @@
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9EH1P4F6"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'G-EZ9EH1P4F6');
+            gtag('config', 'G-EZ9EH1P4F6');
+        </script>
+        <script>
+            /* If the user is on a mobile device, redirect them to the mobile version of the site */
+            if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)){
+                window.location.href = "/amp/";
+            }
         </script>
 
         <link rel="stylesheet" href="../static/css/main.css">
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>   
+    </head>
 
-        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>    <body data-scroll-container>
+    <body>
         <div class="h-spacer-small"></div>
-        <div class="fullscreen-container" data-scroll-section>
+        <div class="fullscreen-container">
             <div class="avatar" id="avatar">
                 <div id="display-scan" class="display-scan"></div>
                 <img id="avatar-img" src="https://avatars.githubusercontent.com/u/74598401?v=4" alt="N3RDIUM's Avatar"/>
