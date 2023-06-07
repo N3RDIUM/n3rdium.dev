@@ -3,6 +3,7 @@ if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
     console.log("Browser does not support gradient.")
     let el = document.getElementById("username")
     el.classList.add("uname-chrome")
+    el.classList.remove("uname")
 }
 
 let _chars = "1234567890QWERTYUIOPASDFGHJKLZXCVBNM"
@@ -26,7 +27,6 @@ function resetText(){
 }
 
 // When the document is loaded, we will start the animation
-document.addEventListener("DOMContentLoaded", resetText)
 document.getElementById("username").addEventListener("click", resetText)
 document.getElementById("username").addEventListener("mouseenter", function(){
     resetText()

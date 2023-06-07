@@ -7,6 +7,9 @@
         <meta name="description" content="N3RDIUM's Hideout">
         <meta name="author" content="N3RDIUM">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="
+            Content-Security-Policy:frame-src 'none'
+        ">
 
         <link rel="icon" href="../static/img/n3rdium.avif" type="image/x-icon">
 
@@ -25,9 +28,9 @@
                 window.location.href = "/amp/";
             }
         </script>
+        <script defer src="../static/js/lenis.min.js"></script>   
 
-        <link rel="stylesheet" href="../static/css/main.css">
-        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>   
+        <link rel="stylesheet" href="../static/css/index.css">
     </head>
 
     <body>
@@ -35,9 +38,8 @@
         <div class="fullscreen-container">
             <div class="avatar" id="avatar">
                 <div id="display-scan" class="display-scan"></div>
-                <img id="avatar-img" src="https://avatars.githubusercontent.com/u/74598401?v=4" alt="N3RDIUM's Avatar"/>
+                <img id="avatar-img" src="../static/img/n3rdium.avif" alt="N3RDIUM's Avatar"/>
             </div>
-            <div class="h-spacer-small"></div>
             <div class="uname" id="username">
                 <div class="uname-letter">N</div>
                 <div class="uname-letter">3</div>
@@ -47,6 +49,9 @@
                 <div class="uname-letter">U</div>
                 <div class="uname-letter">M</div>
             </div>
+            <p align="center" class="userdesc">
+                Hello there. I'm N3RDIUM.
+            </p>
             <div class="scrolldown" id="sdi">
                 <div class="sd-mark1"></div>
                 <div class="sd-mark2"></div>

@@ -35,7 +35,7 @@ overflow: hidden;
 
 .lenis.lenis-scrolling iframe {
     pointer-events: none;
-} 
+}
 
 /* Avatar styling */
 .avatar {
@@ -51,7 +51,7 @@ overflow: hidden;
     transform: translate3d(0 ,0, 0) rotate3d(0, 0, 0);
 }
 .avatar > img {
-    width: 40vh;
+    width: 20%;
     border-radius: 50%;
     align-self: center;
     position:absolute;
@@ -60,7 +60,6 @@ overflow: hidden;
     box-shadow: 0px 0px 100px #00e1ff;
     z-index: 5;
 }
-
 .display-scan {
     background: transparent;
     background-image: linear-gradient(transparent 50%,
@@ -73,7 +72,6 @@ overflow: hidden;
     border-radius: 50%;
     position:relative;
 }
-
 @keyframes scan {
     0% {
         background-position: 0 0;
@@ -82,74 +80,17 @@ overflow: hidden;
         background-position: 50px 50px;
     }
 }
-
-/* Scatter text on hover */
-.uname {
-    display: flex;
-    font-size: 12vw;
-    font-family: 'Roboto', sans-serif;
+.glowhead{
+    font-size: 8vw;
+    font-family: Arial;
+    text-shadow: 0 0 10px #fff;
+    opacity: 1;
     align-self: center;
-    justify-content: center;
-    margin-top: 4vh;
-    cursor: default;
-    height: 25%;
-    padding-top: 2vh;
-
-    background-image: linear-gradient(to right, #00ccff, #00ccff, #00ffaa, #00ffaa, black,#00ffaa, #00ffaa, #00ccff, #00ccff);
-    background-image: -webkit-linear-gradient(to right, #00ccff, #00ccff, #00ffaa, #00ffaa, black,#00ffaa, #00ffaa, #00ccff, #00ccff);
-    background-image: -moz-linear-gradient(to right, #00ccff, #00ccff, #00ffaa, #00ffaa, black,#00ffaa, #00ffaa, #00ccff, #00ccff);
-    background-image: -o-linear-gradient(to right, #00ccff, #00ccff, #00ffaa, #00ffaa, black,#00ffaa, #00ffaa, #00ccff, #00ccff);
-    background-image: -ms-linear-gradient(to right, #00ccff, #00ccff, #00ffaa, #00ffaa, black,#00ffaa, #00ffaa, #00ccff, #00ccff);
-    
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -o-background-clip: text;
-    -ms-background-clip: text;
-
-    color: transparent;
-
-    background-position: 0% center;
-    background-size: 200% 100%;
-    transition: background-position 0.5s ease;
-    animation: move-bg-out 4s linear;
-    text-shadow: 0 0 16px #00e1ffff, 
-        0 0 200px #00e1ffff;
-    user-select: none    
 }
-
-.uname:hover {
-    animation: move-bg 4s linear infinite;
+.fullscreen-container {
+    width: 100%;
+    height: 100vh;
 }
-
-.uname-chrome {
-    display: flex;
-    font-size: 12vw;
-    font-family: 'Roboto', sans-serif;
-    align-self: center;
-    justify-content: center;
-    margin-top: 4vh;
-    cursor: default;
-    color: white;
-}
-
-@keyframes move-bg {
-    0% {
-        background-position: 0% center;
-    }
-    100% {
-        background-position: 200% center;
-    }
-}
-@keyframes move-bg-out {
-    0% {
-        background-position: 200% center;
-    }
-    100% {
-        background-position: 0% center;
-    }
-}
-
 .scrolldown {
     height:20vh;
     width: 100%;
@@ -212,14 +153,6 @@ overflow: hidden;
         border-radius: 10%;
     }
 }
-
-.glowhead{
-    font-size: 8vw;
-    font-family: Arial;
-    text-shadow: 0 0 10px #fff;
-    opacity: 1;
-    align-self: center;
-}
 .h-spacer {
     height: 16vh;
 }
@@ -229,7 +162,39 @@ overflow: hidden;
 .h-spacer-small {
     height: 2vh;
 }
-.fullscreen-container {
-    width: 100%;
-    height: 100vh;
+.uname {
+    display: flex;
+    font-size: 8vh;
+    font-family: 'Roboto', sans-serif;
+    align-self: center;
+    justify-content: center;
+    margin-top: 4vh;
+    cursor: default;
+    height: 25%;
+    padding-top: 2vh;
+
+    background-image: linear-gradient(to right, #00ccff, #00ffaa);
+    background-image: -webkit-linear-gradient(to right, #00ccff, #00ffaa);
+    background-image: -moz-linear-gradient(to right, #00ccff, #00ffaa);
+    background-image: -o-linear-gradient(to right, #00ccff, #00ffaa);
+    background-image: -ms-linear-gradient(to right, #00ccff, #00ffaa);
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+
+    color: transparent;
+    user-select: none    
+}
+.uname-chrome {
+    display: flex;
+    font-size: 12vw;
+    font-family: 'Roboto', sans-serif;
+    align-self: center;
+    justify-content: center;
+    margin-top: 4vh;
+    cursor: default;
+    color: white;
 }
