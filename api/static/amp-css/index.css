@@ -38,6 +38,7 @@ html, body {
     -webkit-background-clip: text;
     color: transparent;
     text-shadow: 0px 0px 100px #00e1ff;
+    user-select: none;
 }
 .uname:hover {
     background-image: linear-gradient(to right, #00ccff, #00ffaa);
