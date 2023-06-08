@@ -43,10 +43,11 @@ overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4vh;
+    margin-top: 4%;
     cursor: default;
     align-items: center;
     width: 100%;
+    height: 40%;
 
     transform: translate3d(0 ,0, 0) rotate3d(0, 0, 0);
 }
@@ -97,7 +98,7 @@ overflow: hidden;
     height: 100vh;
 }
 .scrolldown {
-    height:20vh;
+    height:20%;
     width: 100%;
     display: flex;
     justify-content: center;
