@@ -8,8 +8,8 @@ for (let i = 0; i < codeicons.length; i++) {
 	gsap.to(codeicon, {
 		scrollTrigger: {
 			trigger: codeicon,
-			start: "top 80%",
-			end: "bottom 20%",
+			start: "top 95%",
+			end: "top 60%",
 			toggleActions: "play none none reverse",
 			scrub: true
 		},
