@@ -252,6 +252,7 @@ overflow: hidden;
     justify-content: center;
     align-items: center;
     padding: 1vh;
+    box-shadow: 0 0 32px #fff;
 }
 .icon-img {
     width: 64px;
