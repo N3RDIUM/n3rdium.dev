@@ -165,3 +165,30 @@ html, body {
     opacity: 1;
     align-self: center;
 }
+.icon-container {
+    padding: 2vh;
+    padding-left: 16%;
+    padding-right: 16%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.icon {
+    margin: 2vh;
+    border-radius: 5%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+    box-shadow: 0 0 32px #fff;
+}
+.icon-img {
+    width: 64px;
+    height: 64px;
+}
