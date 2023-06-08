@@ -3,42 +3,18 @@ gsap.registerPlugin(ScrollTrigger)
 
 const codeicons = document.getElementsByClassName("icon")
 for (let i = 0; i < codeicons.length; i++) {
-    const codeicon = codeicons[i]
-    // Create random green "connectors" like in a circuit board
-    if(Math.random() > 0.9) {
-		let el = document.createElement("div")
-		el.className = "circuit-connector-y"
-		codeicon.appendChild(el)
-    }
-	if(Math.random() > 0.9) {
-		let el = document.createElement("div")
-		el.className = "circuit-connector-x"
-		codeicon.appendChild(el)
-	}
-	if(Math.random() > 0.94) {
-		let el = document.createElement("div")
-		el.className = "circuit-connector-diag1"
-		codeicon.appendChild(el)
-	}
-	if(Math.random() > 0.94) {
-		let el = document.createElement("div")
-		el.className = "circuit-connector-diag1"
-		codeicon.appendChild(el)
-	}
-
+	let codeicon = codeicons[i]
+	codeicon.style.opacity = 0
 	gsap.to(codeicon, {
 		scrollTrigger: {
 			trigger: codeicon,
 			start: "top 80%",
 			end: "bottom 20%",
 			toggleActions: "play none none reverse",
-			markers: false,
-			onEnter: () => {
-				codeicon.style.opacity = 1
-			}
+			scrub: true
 		},
-		opacity: 0,
-		duration: 0.5
+		opacity: 1,
+		duration: 0.12
 	})
 }
 
@@ -60,12 +36,6 @@ lenis.on('scroll', (e) => {
     document.getElementById("p2-head").style.opacity = e.animatedScroll / window.innerHeight - 1
     document.getElementById("p2-txt").style.opacity = e.animatedScroll / window.innerHeight - 1.1
 	document.getElementById("p2-txt1").style.opacity = e.animatedScroll / window.innerHeight - 1.32
-	for (let i = 0; i < codeicons.length; i++) {
-		codeicons[i].style.opacity = e.animatedScroll / window.innerHeight - 1
-		for(child of codeicons[i].children) {
-			child.style.opacity = e.animatedScroll / window.innerHeight - 1.2
-		}
-	}
 })
 
 function raf(time) {

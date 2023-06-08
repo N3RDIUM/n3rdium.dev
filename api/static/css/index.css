@@ -251,37 +251,3 @@ overflow: hidden;
     width: 64px;
     height: 64px;
 }
-.circuit-connector-y {
-    position: fixed;
-    background-color: #00ffaa;
-    width: 0.4vh;
-    height: 2vh;
-    border-top: solid 24vh #00ffaa;
-    z-index: -12;
-}
-.circuit-connector-x {
-    position: fixed;
-    background-color: #00ffaa;
-    width: 2vh;
-    height: 0.4vh;
-    border-left: solid 24vh #00ffaa;
-    z-index: -12;
-}
-.circuit-connector-diag1 {
-    position: fixed;
-    background-color: #00ffaa;
-    width: 0.4vh;
-    height: 3vh;
-    border-top: solid 24vh #00ffaa;
-    z-index: -12;
-    rotate: 45deg;
-}
-.circuit-connector-diag2 {
-    position: fixed;
-    background-color: #00ffaa;
-    width: 0.4vh;
-    height: 3vh;
-    border-top: solid 24vh #00ffaa;
-    z-index: -12;
-    rotate: -45deg;
-}
