@@ -24,7 +24,7 @@ lenis.on('scroll', (e) => {
     // PANEL 0
     document.getElementById("avatar").style.opacity = 1 - e.animatedScroll / window.innerHeight
     document.getElementById("username").style.opacity = 1.1 - e.animatedScroll / window.innerHeight
-    document.getElementById("userdesc").style.opacity = 1.2 - e.animatedScroll / window.innerHeight
+    // document.getElementById("userdesc").style.opacity = 1.2 - e.animatedScroll / window.innerHeight
     document.getElementById("sdi").style.opacity = 1.3 - e.animatedScroll / window.innerHeight
 
     // PANEL 1
