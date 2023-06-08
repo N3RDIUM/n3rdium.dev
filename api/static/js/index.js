@@ -1,5 +1,12 @@
 const lenis = new Lenis()
-gsap.registerPlugin(ScrollTrigger)
+
+let _ = false;
+while(!_){
+  try{
+    gsap.registerPlugin(ScrollTrigger)
+    _ = true;
+  }catch(e){}
+}
 
 const codeicons = document.getElementsByClassName("icon")
 for (let i = 0; i < codeicons.length; i++) {
