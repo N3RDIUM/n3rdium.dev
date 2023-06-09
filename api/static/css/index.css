@@ -227,7 +227,7 @@ overflow: hidden;
     box-shadow: 0 0 24px black;
 }
 .userdesc {
-    font-size: larger;
+    font-size: 16px;
     padding: 2vh;
     padding-left: 16%;
     padding-right: 16%;
