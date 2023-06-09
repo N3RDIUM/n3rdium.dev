@@ -51,8 +51,8 @@
           width: 100%;
       }
       .avatar > img {
-          width: 320px;
-          height: 320px;
+          width: 256px;
+          height: 256px;
           border-radius: 50%;
           align-self: center;
           -moz-box-shadow: 0 0 100px #00e1ff;
@@ -89,6 +89,7 @@
           flex-direction: column;
           position: absolute;
           top: 80;
+          z-index: 8;
       }
       .sd-mark1 {
           width:16px;
@@ -152,7 +153,7 @@
       }
       .fullscreen-container {
           width: 100%;
-          height: 100%;
+          height: max-content;
       }
       .panel-title {
           font-family: Arial, Helvetica, sans-serif;
@@ -230,9 +231,7 @@
       }
       .space-bg-1 {
           background-image: url('../static/img/jwst-carina-nebula.avif');
-          background-size: 300%;
-          background-repeat: no-repeat;
-          background-position-y: 6vh;
+          background-size: 512%;
       }
     </style>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -246,6 +245,7 @@
       <!-- <p class="userdesc"> -->
         <!-- Hello there. I'm N3RDIUM. -->
       <!-- </p> -->
+        
         <div class="scrolldown" id="sdi">
           <div class="sd-mark1"></div>
           <div class="sd-mark2"></div>
@@ -292,26 +292,26 @@
           <!--
               android, css3, git, github, html5, javascript, linux, jquery, json, jupyter, linux, node-js, npm, powershell, python, reacy, terminal, ubuntu, vim, visual-studio-code, windows
           -->
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/android.avif" class="icon-img" alt="Android"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/css3.avif" class="icon-img" alt="CSS3"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/git.avif" class="icon-img" alt="Git"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/github.avif" class="icon-img" alt="GitHub"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/html5.avif" class="icon-img" alt="HTML5"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/javascript.avif" class="icon-img" alt="JavaScript"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/jquery.avif" class="icon-img" alt="jQuery"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/json.avif" class="icon-img" alt="JSON"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/jupyter.avif" class="icon-img" alt="Jupyter"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/linux.avif" class="icon-img" alt="Linux"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/node-js.avif" class="icon-img" alt="Node.js"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/npm.avif" class="icon-img" alt="NPM"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/powershell.avif" class="icon-img" alt="PowerShell"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/python.avif" class="icon-img" alt="Python"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/react.avif" class="icon-img" alt="React"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/terminal.avif" class="icon-img" alt="Terminal"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/ubuntu.avif" class="icon-img" alt="Ubuntu"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/vim.avif" class="icon-img" alt="Vim"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/visual-studio-code.avif" class="icon-img" alt="Visual Studio Code"></div>
-          <div class="icon"><img width="48vw" height="48vw" src="../static/icons/windows.avif" class="icon-img" alt="Windows"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/android.avif" class="icon-img" alt="Android"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/css3.avif" class="icon-img" alt="CSS3"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/git.avif" class="icon-img" alt="Git"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/github.avif" class="icon-img" alt="GitHub"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/html5.avif" class="icon-img" alt="HTML5"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/javascript.avif" class="icon-img" alt="JavaScript"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/jquery.avif" class="icon-img" alt="jQuery"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/json.avif" class="icon-img" alt="JSON"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/jupyter.avif" class="icon-img" alt="Jupyter"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/linux.avif" class="icon-img" alt="Linux"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/node-js.avif" class="icon-img" alt="Node.js"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/npm.avif" class="icon-img" alt="NPM"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/powershell.avif" class="icon-img" alt="PowerShell"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/python.avif" class="icon-img" alt="Python"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/react.avif" class="icon-img" alt="React"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/terminal.avif" class="icon-img" alt="Terminal"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/ubuntu.avif" class="icon-img" alt="Ubuntu"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/vim.avif" class="icon-img" alt="Vim"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/visual-studio-code.avif" class="icon-img" alt="Visual Studio Code"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/windows.avif" class="icon-img" alt="Windows"></div>
       </div>
       <div class="h-spacer-small"></div>
       <p align="center" class="userdesc glowhead" id="p2-txt1">
