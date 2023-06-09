@@ -22,8 +22,211 @@
     <title>N3RDIUM's Hideout</title>
     <link rel="canonical" href="https://n3rdium.dev/">
     <link rel="icon" href="../static/img/n3rdium.avif" type="image/x-icon">
-    <link rel="stylesheet" href="../static/amp-css/index.css">
-    <link rel="stylesheet" href="../static/amp-css/bg.css">
+    <style amp-custom>
+      html, body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        background: black;
+      }
+      .avatar {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 0;
+          align-items: center;
+          width: 100%;
+      }
+      .avatar > img {
+          width: 80%;
+          border-radius: 50%;
+          align-self: center;
+          -moz-box-shadow: 0 0 100px #00e1ff;
+          -webkit-box-shadow: 0 0 100px #00e1ff;
+          box-shadow: 0px 0px 100px #00e1ff;
+          z-index: 5;
+      }
+      .uname {
+          font-size: 8vh;
+          font-family: 'Roboto', sans-serif;
+          align-self: center;
+          justify-content: center;
+          width: 100%;
+          text-align: center;
+          background-image: linear-gradient(to right, #00ccff, #00ffaa);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          text-shadow: 0px 0px 100px #00e1ff;
+          user-select: none;
+      }
+      .uname:hover {
+          background-image: linear-gradient(to right, #00ccff, #00ffaa);
+          color: black;
+          background-clip: content-box;
+          -webkit-background-clip: content-box;
+      }
+      .scrolldown {
+          height:20vh;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: absolute;
+          top: 80vh;
+      }
+      .sd-mark1 {
+          width:2vh;
+          height:2vh;
+          border: solid 1px white;
+          transform: rotate(45deg);
+          animation: sd-mark1 2s infinite;
+          opacity: 0;
+      }
+      .sd-mark2 {
+          width:2vh;
+          height:2vh;
+          border: solid 1px white;
+          transform: rotate(45deg);
+          animation: sd-mark2 2s infinite;
+          opacity: 0;
+      }
+      @keyframes sd-mark1 {
+          0% {
+              opacity: 0;
+              transform: rotate(0deg);
+              border-radius: 4%;
+          }
+          20% {
+              border-radius: 20%;
+              transform: rotate(45deg);
+          }
+          50% {
+              opacity: 1;
+              transform: rotate(45deg) translate(2vh, 2vh);
+              border-radius: 4%;
+          }
+          75% {
+              opacity: 0;
+              transform: rotate(45deg) translate(2vh, 2vh);
+          }
+          100% {
+              transform: rotate(45deg) translate(2vh, 2vh);
+          }
+      }
+      @keyframes sd-mark2 {
+          0% {
+              opacity: 0;
+              border-radius: 50%;
+          }
+          50% {
+              opacity: 1;
+              transform: rotate(45deg);
+              border-radius: 4%;
+          }
+          100% {
+              opacity: 0;
+              border-radius: 10%;
+          }
+      }
+      .userdesc {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 2vh;
+          width: 100%;
+          text-align: center;
+      }
+      .fullscreen-container {
+          width: 100%;
+          height: 100vh;
+      }
+      .panel-title {
+          padding-top: 10vh;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: xx-large;
+          text-align: center;
+      }
+      .black-panel-sep {
+          width: 100%;
+          height: 8vh;
+          background-color: black;
+          border-bottom-left-radius: 80%;
+          border-bottom-right-radius: 80%;
+          box-shadow: 0 0 24px black;
+          position:absolute;
+          transform: translateY(16%);
+      }
+      .black-panel-sep-end {
+          width: 100%;
+          height: 8vh;
+          background-color: black;
+          border-top-left-radius: 80%;
+          border-top-right-radius: 80%;
+          box-shadow: 0 0 24px black;
+          transform: translateY(-8vh);
+      }
+      .userdesc {
+          font-size: larger;
+          padding-right: 8%;
+          padding-left: 8%;
+          flex-wrap: wrap;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          max-width: 84%;
+      }
+      .glowhead{
+          font-family: Arial;
+          text-shadow: 0 0 16px #fff;
+          opacity: 1;
+          align-self: center;
+      }
+      .glowhead-black{
+          font-family: Arial;
+          text-shadow: 0 0 16px #000;
+          opacity: 1;
+          align-self: center;
+      }
+      .icon-container {
+          padding: 2vh;
+          padding-left: 4%;
+          padding-right: 4%;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          flex: 1;
+      }
+      .icon {
+          margin: 1vh;
+          border-radius: 5%;
+          background-color: #ccc;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1vh;
+          box-shadow: 0 0 32px #fff;
+      }
+      .img-credit {
+          position:absolute;
+          font-family: Arial, Helvetica, sans-serif;
+          z-index: 5;
+          right: 15px;
+          transform: translateY(-4vh);
+      }
+      .space-bg-1 {
+          background-image: url('../img/jwst-carina-nebula.avif');
+          background-size: 300%;
+          background-repeat: no-repeat;
+          background-position-y: 6vh;
+      }
+    </style>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="description" content="N3RDIUM's Hideout">
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
