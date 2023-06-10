@@ -259,3 +259,26 @@ overflow: hidden;
     width: 64px;
     height: 64px;
 }
+.panel3 {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cntct-btn {
+    width: max-content;
+    height: max-content;
+    padding: 0.69vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    border: solid 0px #ccc;
+    font-size: x-large;
+    background-color: #00ccff;
+    align-self: center;
+    cursor: pointer;
+    color: white;
+}
+.p3-head {
+    margin-top: 16%;
+}

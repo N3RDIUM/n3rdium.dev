@@ -1,12 +1,5 @@
 const lenis = new Lenis()
-
-let _ = false;
-while(!_){
-  try{
-    gsap.registerPlugin(ScrollTrigger)
-    _ = true;
-  }catch(e){}
-}
+gsap.registerPlugin(ScrollTrigger)
 
 const codeicons = document.getElementsByClassName("icon")
 for (let i = 0; i < codeicons.length; i++) {
@@ -42,7 +35,16 @@ lenis.on('scroll', (e) => {
     // PANEL 2
     document.getElementById("p2-head").style.opacity = e.animatedScroll / window.innerHeight - 1
     document.getElementById("p2-txt").style.opacity = e.animatedScroll / window.innerHeight - 1.1
-	document.getElementById("p2-txt1").style.opacity = e.animatedScroll / window.innerHeight - 1.32
+	  document.getElementById("p2-txt1").style.opacity = e.animatedScroll / window.innerHeight - 1.32
+
+    // PANEL 3
+    document.getElementById("panel3").style.backgroundPositionY = -e.animatedScroll / window.innerHeight * 80 + "px"
+
+    let els = document.querySelectorAll(".stagger")
+    for (let i = 0; i < els.length; i++) {
+      let el = els[i]
+      el.style.transform = "translateY(" + e.velocity * 4 + "px)"
+    }
 })
 
 function raf(time) {
