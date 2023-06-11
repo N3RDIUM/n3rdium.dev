@@ -1,0 +1,14 @@
+.img-credit {
+    position:absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 5;
+    right: 15px;
+    transform: translateY(-4vh);
+}
+.space-bg-1 {
+    background-image: url('../img/jwst-carina-nebula.avif');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}

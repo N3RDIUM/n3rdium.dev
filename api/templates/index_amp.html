@@ -1,0 +1,324 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <link rel=preconnect href="https://www.googletagmanager.com">
+    <link rel=preconnect href="https://stats.g.doubleclick.net">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9EH1P4F6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EZ9EH1P4F6');
+    </script>
+    <script>
+      /* If the user is on a mobile device, redirect them to the mobile version of the site */
+      if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/webOS/i) && !navigator.userAgent.match(/iPhone/i) && !navigator.userAgent.match(/iPad/i) && !navigator.userAgent.match(/iPod/i) && !navigator.userAgent.match(/BlackBerry/i) && !navigator.userAgent.match(/Windows Phone/i)){
+          window.location.href = "/";
+      }
+    </script>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>N3RDIUM's Hideout</title>
+    <link rel="canonical" href="https://n3rdium.dev/">
+    <link rel="icon" href="../static/img/n3rdium.avif" type="image/x-icon">
+    <style amp-custom>
+      html, body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        background: black;
+      }
+      .h-spacer {
+          height: 64px;
+      }
+      .h-spacer-small {
+          height: 32px;
+      }
+      .h-spacer-large {
+          height: 128px;
+      }
+      .avatar {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 0;
+          align-items: center;
+          width: 100%;
+      }
+      .avatar > img {
+          width: 256px;
+          height: 256px;
+          border-radius: 50%;
+          align-self: center;
+          -moz-box-shadow: 0 0 100px #00e1ff;
+          -webkit-box-shadow: 0 0 100px #00e1ff;
+          box-shadow: 0px 0px 100px #00e1ff;
+          z-index: 5;
+      }
+      .uname {
+          font-size: 48px;
+          font-family: 'Roboto', sans-serif;
+          align-self: center;
+          justify-content: center;
+          width: 100%;
+          text-align: center;
+          background-image: linear-gradient(to right, #00ccff, #00ffaa);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          text-shadow: 0px 0px 100px #00e1ff;
+          user-select: none;
+      }
+      .uname:hover {
+          background-image: linear-gradient(to right, #00ccff, #00ffaa);
+          color: black;
+          background-clip: content-box;
+          -webkit-background-clip: content-box;
+      }
+      .scrolldown {
+          height:20;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: absolute;
+          top: 80;
+          z-index: 8;
+      }
+      .sd-mark1 {
+          width:16px;
+          height:16px;
+          border: solid 1px white;
+          transform: rotate(45deg);
+          animation: sd-mark1 2s infinite;
+          opacity: 0;
+      }
+      .sd-mark2 {
+          width:16px;
+          height:16px;
+          border: solid 1px white;
+          transform: rotate(45deg);
+          animation: sd-mark2 2s infinite;
+          opacity: 0;
+      }
+      @keyframes sd-mark1 {
+          0% {
+              opacity: 0;
+              transform: rotate(0deg);
+              border-radius: 4%;
+          }
+          20% {
+              border-radius: 20%;
+              transform: rotate(45deg);
+          }
+          50% {
+              opacity: 1;
+              transform: rotate(45deg) translate(16px, 16px);
+              border-radius: 4%;
+          }
+          75% {
+              opacity: 0;
+              transform: rotate(45deg) translate(16px, 16px);
+          }
+          100% {
+              transform: rotate(45deg) translate(16px, 16px);
+          }
+      }
+      @keyframes sd-mark2 {
+          0% {
+              opacity: 0;
+              border-radius: 50%;
+          }
+          50% {
+              opacity: 1;
+              transform: rotate(45deg);
+              border-radius: 4%;
+          }
+          100% {
+              opacity: 0;
+              border-radius: 10%;
+          }
+      }
+      .userdesc {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          width: 100%;
+          text-align: center;
+      }
+      .fullscreen-container {
+          width: 100%;
+          height: max-content;
+      }
+      .panel-title {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: xx-large;
+          text-align: center;
+          z-index: 10;
+      }
+      .black-panel-sep {
+          width: 100%;
+          height: 64px;
+          background-color: #000;
+          border-bottom-left-radius: 80%;
+          border-bottom-right-radius: 80%;
+          box-shadow: 0 0 24px #000;
+          position:absolute;
+      }
+      .black-panel-sep-end {
+          width: 100%;
+          height: 64px;
+          background-color: black;
+          border-top-left-radius: 80%;
+          border-top-right-radius: 80%;
+          box-shadow: 0 0 24px black;
+          transform: translateY(-48px);
+      }
+      .userdesc {
+          font-size: larger;
+          padding-right: 8%;
+          padding-left: 8%;
+          flex-wrap: wrap;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          max-width: 84%;
+      }
+      .glowhead{
+          font-family: Arial;
+          text-shadow: 0 0 16px #fff;
+          opacity: 1;
+          align-self: center;
+      }
+      .glowhead-black{
+          font-family: Arial;
+          text-shadow: 0 0 16px #000;
+          opacity: 1;
+          align-self: center;
+      }
+      .icon-container {
+          padding: 2vh;
+          padding-left: 4%;
+          padding-right: 4%;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          flex: 1;
+      }
+      .icon {
+          margin: 1vh;
+          border-radius: 5%;
+          background-color: #ccc;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1vh;
+          box-shadow: 0 0 32px #fff;
+      }
+      .img-credit {
+          position:absolute;
+          font-family: Arial, Helvetica, sans-serif;
+          z-index: 5;
+          right: 15px;
+      }
+      .space-bg-1 {
+          background-image: url('../static/img/jwst-carina-nebula.avif');
+          background-size: 512%;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="N3RDIUM's Hideout">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <div class="fullscreen-container" style="padding-top: 4vh;">
+      <div class="avatar" id="avatar"><img id="avatar-img" width="80vw" height="80vw" src="../static/img/n3rdium.avif" alt="N3RDIUM's Avatar"/></div>
+      <h1 class="uname" data-value="N3RDIUM">N3RDIUM</h1>
+      <!-- <p class="userdesc"> -->
+        <!-- Hello there. I'm N3RDIUM. -->
+      <!-- </p> -->
+        
+        <div class="scrolldown" id="sdi">
+          <div class="sd-mark1"></div>
+          <div class="sd-mark2"></div>
+        </div>
+    </div>
+    <div class="fullscreen-container">
+      <div class="black-panel-sep"></div>
+      <div class="space-bg-1" style="min-height:100%;">
+          <br><br><br>
+          <h2 class="panel-title glowhead-black" id="p1-head">There's a H-U-G-E cosmos out there.</h2>
+          <p align="center" class="userdesc glowhead-black" id="p1-txt">
+              We're creating problems here on Earth, and focusing on them like fools. 
+              To develop, all we have to do is come together, eat all the problems, and look up.
+              Life's too short to dream small.
+              <br><br>
+              Astronomy has been my favorite subject since I was a kid. 
+              I've always been fascinated by the cosmos, and I still am.
+              Call it my hobby, or my passion, whatever.
+              It is, and will always be, the center character of my life.
+              I'm going to be an astrophysicist, and I'm going to make a difference.
+              <br><br>
+              I'm also planning to start my own space agency, or work for one.
+              <br><br>
+              Clear skies!
+              <br><br><br><br>
+          </p>
+      </div>
+      <div class="black-panel-sep-end">
+        <p class="img-credit">Image Credit: NASA (JWST)</p>
+      </div>
+    </div> 
+    <div class="fullscreen-container">
+      <h2 class="panel-title glowhead">Let's talk code.</h2>
+      <!-- <div class="h-spacer-small"></div> -->
+      <p align="center" class="userdesc glowhead">
+          Honestly, I think coding is fascinating. 
+          I do it as a hobby, and it's really helped me dive deeper into astronomy as well.
+          In this technologically developing world, coding is a must-have skill.
+          In my journey through the world of coding, which is still going on, 
+          I've learnt many languages, technologies, frameworks, editors, OSes, and other whatnot.
+      </p>
+      <div class="h-spacer-small"></div>
+      <div class="icon-container">
+          <!--
+              android, css3, git, github, html5, javascript, linux, jquery, json, jupyter, linux, node-js, npm, powershell, python, reacy, terminal, ubuntu, vim, visual-studio-code, windows
+          -->
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/android.avif" class="icon-img" alt="Android"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/css3.avif" class="icon-img" alt="CSS3"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/git.avif" class="icon-img" alt="Git"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/github.avif" class="icon-img" alt="GitHub"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/html5.avif" class="icon-img" alt="HTML5"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/javascript.avif" class="icon-img" alt="JavaScript"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/jquery.avif" class="icon-img" alt="jQuery"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/json.avif" class="icon-img" alt="JSON"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/jupyter.avif" class="icon-img" alt="Jupyter"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/linux.avif" class="icon-img" alt="Linux"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/node-js.avif" class="icon-img" alt="Node.js"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/npm.avif" class="icon-img" alt="NPM"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/powershell.avif" class="icon-img" alt="PowerShell"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/python.avif" class="icon-img" alt="Python"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/react.avif" class="icon-img" alt="React"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/terminal.avif" class="icon-img" alt="Terminal"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/ubuntu.avif" class="icon-img" alt="Ubuntu"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/vim.avif" class="icon-img" alt="Vim"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/visual-studio-code.avif" class="icon-img" alt="Visual Studio Code"></div>
+          <div class="icon"><img width="32vw" height="32vw" src="../static/icons/windows.avif" class="icon-img" alt="Windows"></div>
+      </div>
+      <div class="h-spacer-small"></div>
+      <p align="center" class="userdesc glowhead" id="p2-txt1">
+          More coming soon!
+      </p>
+    </div>
+    </div>
+    <script defer src="../static/amp-js/uname.js"></script>
+  </body>
+</html>

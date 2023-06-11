@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+User-agent: *
+Allow: /blog/*
+
+User-agent: *
+Allow: /blog/posts/*
+
+Sitemap: https://www.n3rdium.dev/sitemap.xml
