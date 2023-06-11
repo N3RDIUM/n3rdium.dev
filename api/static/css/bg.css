@@ -5,14 +5,14 @@
     right: 15px;
     transform: translateY(-4vh);
 }
-.space-bg-1 {
+.space-bg {
     background-image: url('../img/jwst-carina-nebula.avif');
     background-size: 150%;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
 }
-.space-bg-2 {
+.space-bg-contact {
     background-image: url('../img/jwst2.avif');
     background-size: 150%;
     background-repeat: no-repeat;

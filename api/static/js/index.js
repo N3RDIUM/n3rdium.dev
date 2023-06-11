@@ -38,7 +38,7 @@ lenis.on('scroll', (e) => {
 	  document.getElementById("p2-txt1").style.opacity = e.animatedScroll / window.innerHeight - 1.32
 
     // PANEL 3
-    document.getElementById("panel3").style.backgroundPositionY = -e.animatedScroll / window.innerHeight * 80 + "px"
+    document.getElementById("panelc").style.backgroundPositionY = -e.animatedScroll / window.innerHeight * 80 + "px"
 
     let els = document.querySelectorAll(".stagger")
     for (let i = 0; i < els.length; i++) {
