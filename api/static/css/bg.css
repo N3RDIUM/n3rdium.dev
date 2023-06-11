@@ -12,3 +12,10 @@
     background-position-x: center;
     background-position-y: center;
 }
+.space-bg-2 {
+    background-image: url('../img/jwst2.avif');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
