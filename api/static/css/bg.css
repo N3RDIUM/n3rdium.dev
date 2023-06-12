@@ -12,6 +12,13 @@
     background-position-x: center;
     background-position-y: center;
 }
+.space-bg1 {
+    background-image: url('../img/hubble1.avif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
 .space-bg-contact {
     background-image: url('../img/jwst2.avif');
     background-size: 150%;

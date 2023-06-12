@@ -97,6 +97,10 @@ overflow: hidden;
     width: 100%;
     height: 100vh;
 }
+.mt-fullscreen-container {
+    width: 100%;
+    height: 128vh;
+}
 .scrolldown {
     height:20%;
     width: 100%;
