@@ -2,7 +2,7 @@
 let current = {x: 0, y: 0};
 let previous = {x: 0, y: 0};
 let actual = {x: 0, y: 0};
-let ease = 0.064;
+let ease = 0.16;
 document.addEventListener('mousemove', function(e) {
     actual.x = e.clientX;
     actual.y = e.clientY;

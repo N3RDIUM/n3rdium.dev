@@ -33,7 +33,6 @@ body {
     border-radius: 50%;
     border: solid 1px white;
     pointer-events: none;
-    box-shadow: 0 0px 8px 1px white;
 }
 html.lenis {
     height: auto;
