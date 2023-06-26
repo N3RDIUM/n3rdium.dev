@@ -9,14 +9,6 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 def index():
     return render_template("index.html", title="Home")
 
-# Create the AMP version of the site
-@app.route('/amp/')
-def amp():
-    return render_template("index_amp.html", title="Home")
-@app.route('/canonical-homepage/')
-def amp_canonical():
-    return redirect("/", code=301)
-
 @app.route('/robots.txt')
 def robots():
     return str(open("./api/robots.txt").read())
