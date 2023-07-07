@@ -30,6 +30,7 @@ const Btns = document.getElementsByClassName("normal-button")
 for (let i = 0; i < Btns.length; i++) {
     let spacebgBtn = Btns[i]
     spacebgBtn.addEventListener("mouseenter", function() {
+        document.querySelector('.cursor-crosshair-black').remove()
         document.querySelector('.cursor').classList.add("cursor-btn")
         document.querySelector('.cursor').classList.remove("cursor-normal")
         let crosshair = document.createElement("div")
@@ -39,7 +40,7 @@ for (let i = 0; i < Btns.length; i++) {
     spacebgBtn.addEventListener("mouseleave", function() {
         document.querySelector('.cursor').classList.add("cursor-normal")
         document.querySelector('.cursor').classList.remove("cursor-btn")
-        document.querySelector('.cursor-crosshair-black').remove()
+        setTimeout(()=>document.querySelector('.cursor-crosshair-black').remove(), 1000)
     })
 }
 
@@ -47,6 +48,7 @@ const spacebgBtns = document.getElementsByClassName("spacebg-button")
 for (let i = 0; i < spacebgBtns.length; i++) {
     let spacebgBtn = spacebgBtns[i]
     spacebgBtn.addEventListener("mouseenter", function() {
+        document.querySelector('.cursor-crosshair').remove()
         document.querySelector('.cursor').classList.add("cursor-space2btn")
         document.querySelector('.cursor').classList.remove("cursor-spacewin")
         let crosshair = document.createElement("div")
