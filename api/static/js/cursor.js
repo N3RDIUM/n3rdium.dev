@@ -13,16 +13,45 @@ onwheel = function(e) {
     actualDeltaScroll = e.wheelDeltaY / 2.4;
 }
 
+function addBlackCrosshair(){
+    if(document.querySelector('.cursor').childElementCount == 0){
+        let crosshair = document.createElement("div")
+        crosshair.classList.add("cursor-crosshair-black")
+        document.querySelector('.cursor').appendChild(crosshair)
+    }
+}
+function removeBlackCrosshair(){
+    if(document.querySelector('.cursor').childElementCount > 0){
+        document.querySelector('.cursor-crosshair-black').remove()
+    }
+}
+function addCrosshair(){
+    if(document.querySelector('.cursor').childElementCount == 0){
+        let crosshair = document.createElement("div")
+        crosshair.classList.add("cursor-crosshair")
+        document.querySelector('.cursor').appendChild(crosshair)
+    }
+}
+function removeCrosshair(){
+    if(document.querySelector('.cursor').childElementCount > 0){
+        document.querySelector('.cursor-crosshair').remove()
+    }
+}
+
 const spacebgs = document.getElementsByClassName("space")
 for (let i = 0; i < spacebgs.length; i++) {
   let space = spacebgs[i]
   space.addEventListener("mouseenter", function() {
     document.querySelector('.cursor').classList.add("cursor-spacewin")
     document.querySelector('.cursor').classList.remove("cursor-normal")
+    removeBlackCrosshair()
+    removeCrosshair()
   })
   space.addEventListener("mouseleave", function() {
     document.querySelector('.cursor').classList.add("cursor-normal")
     document.querySelector('.cursor').classList.remove("cursor-spacewin")
+    removeBlackCrosshair()
+    removeCrosshair()
   })
 }
 
@@ -32,14 +61,12 @@ for (let i = 0; i < Btns.length; i++) {
     spacebgBtn.addEventListener("mouseenter", function() {
         document.querySelector('.cursor').classList.add("cursor-btn")
         document.querySelector('.cursor').classList.remove("cursor-normal")
-        let crosshair = document.createElement("div")
-        crosshair.classList.add("cursor-crosshair-black")
-        document.querySelector('.cursor').appendChild(crosshair)
+        addBlackCrosshair()
     })
     spacebgBtn.addEventListener("mouseleave", function() {
         document.querySelector('.cursor').classList.add("cursor-normal")
         document.querySelector('.cursor').classList.remove("cursor-btn")
-        setTimeout(()=>document.querySelector('.cursor-crosshair-black').remove(), 1000)
+        setTimeout(removeBlackCrosshair, 1000)
     })
 }
 
@@ -49,14 +76,12 @@ for (let i = 0; i < spacebgBtns.length; i++) {
     spacebgBtn.addEventListener("mouseenter", function() {
         document.querySelector('.cursor').classList.add("cursor-space2btn")
         document.querySelector('.cursor').classList.remove("cursor-spacewin")
-        let crosshair = document.createElement("div")
-        crosshair.classList.add("cursor-crosshair")
-        document.querySelector('.cursor').appendChild(crosshair)
+        addCrosshair()
     })
     spacebgBtn.addEventListener("mouseleave", function() {
         document.querySelector('.cursor').classList.add("cursor-spacewin")
         document.querySelector('.cursor').classList.remove("cursor-space2btn")
-        setTimeout(()=>document.querySelector('.cursor-crosshair').remove(), 1000)
+        setTimeout(removeCrosshair, 1000)
     })
 }
 

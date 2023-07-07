@@ -26,3 +26,15 @@
     background-position-x: center;
     background-position-y: center;
 }
+.blurbg1 {
+    background-image: url('../img/jwst2.avif');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(16px);
+    filter: blur(16px);
+}
