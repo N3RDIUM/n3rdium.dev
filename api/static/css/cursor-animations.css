@@ -1,0 +1,92 @@
+.cursor-normal {
+    border-radius: 50%;
+    border: solid 2px white;
+    background-color: transparent;
+    pointer-events: none;
+
+    animation: nrml 0.5s ease-in-out;
+}
+@keyframes nrml {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.cursor-spacewin {
+    border-radius: 50%;
+    border: solid 2px white;
+    background-color: white;
+    pointer-events: none;
+
+    animation: spacewin 0.5s ease-in-out;
+}
+@keyframes spacewin {
+    0% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+.cursor-btn {
+    border-radius: 50%;
+    border: solid 2px white;
+    background-color: white;
+    box-shadow: 0 0 10px 1px white;
+    pointer-events: none;
+
+    animation: btn 0.5s ease-in-out;
+}
+@keyframes space2btn {
+    0% {
+    box-shadow: 0 0 0px 1px white;
+    background-color: white;
+    }
+    100% {
+    box-shadow: 0 0 10px 1px white;
+    background-color: transparent;
+    }
+}
+
+.cursor-crosshair {
+    width: 4px;
+    height: 4px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px 1px white;
+    background-color: white;
+    margin-top: 18px;
+    margin-left: 18px;
+}
+.cursor-crosshair-black {
+    width: 4px;
+    height: 4px;
+    transform: rotate(45deg);
+    background-color: black;
+    margin-top: 18px;
+    margin-left: 18px;
+}
+
+.cursor-space2btn {
+    border-radius: 50%;
+    border: solid 2px white;
+    background-color: transparent;
+    box-shadow: 0 0 10px 1px white;
+
+    pointer-events: none;
+
+    animation: space2btn 0.5s ease-in-out;
+}
+@keyframes space2btn {
+    0% {
+    box-shadow: 0 0 0px 1px white;
+    background-color: white;
+    }
+    100% {
+    box-shadow: 0 0 10px 1px white;
+    background-color: transparent;
+    }
+}

@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="../static/css/index.css">
         <link rel="stylesheet" href="../static/css/bg.css">
         <link rel="stylesheet" href="../static/css/ap.css">
+        <link rel="stylesheet" href="../static/css/cursor-animations.css">
 
         <script defer src="../static/js/gsap.min.js"></script>
         <script defer src="../static/js/scrolltrigger.min.js"></script>
@@ -39,7 +40,7 @@
 
     <body>
         <div class="cursor-container">
-            <div class="cursor" id="cursor"></div>
+            <div class="cursor cursor-normal" id="cursor"></div>
         </div>
         <div class="h-spacer-small"></div>
         <div class="fullscreen-container" id="panel0">
@@ -47,7 +48,7 @@
                 <div id="display-scan" class="display-scan"></div>
                 <img id="avatar-img" src="../static/img/n3rdium.avif" alt="N3RDIUM's Avatar"/>
             </div>
-            <div class="uname" id="username" data-value="N3RDIUM">N3RDIUM</div>
+            <div class="uname normal-button" id="username" data-value="N3RDIUM">N3RDIUM</div>
             <!-- <p align="center" class="userdesc" id="userdesc"> -->
                 <!-- Hello there. I'm N3RDIUM.  -->
             <!-- </p> -->
@@ -56,7 +57,7 @@
                 <div class="sd-mark2"></div>
             </div>
         </div>
-        <div class="fullscreen-container space-bg" id="panel1">
+        <div class="fullscreen-container space space-bg" id="panel1">
             <div class="black-panel-sep"></div>
             <div style="height:96%">
                 <div class="h-spacer"></div>
@@ -124,7 +125,7 @@
                 More coming soon!
             </p>
         </div>
-        <div class="mt-fullscreen-container space-bg1" id="panel3">
+        <div class="mt-fullscreen-container space space-bg1" id="panel3">
             <div class="black-panel-sep"></div>
             <div style="height:96%">
                 <div class="h-spacer-small"></div><div class="h-spacer-small"></div>
@@ -162,7 +163,7 @@
             Work in progress...
             <div class="h-spacer-small"></div>
         </div>
-        <div class="panelc space-bg-contact" id="panelc">
+        <div class="panelc space space-bg-contact" id="panelc">
             <div class="black-panel-sep"></div>
             <div style="height:100%">
                 <div class="h-spacer"></div>
@@ -173,7 +174,7 @@
                     Let's get in touch!
                 </p>
                 <div class="h-spacer-small"></div>
-                <button class="cntct-btn" style="cursor:none;" onclick="window.location.href='/contact/'">Contact Me</button>
+                <button class="cntct-btn spacebg-button" style="cursor:none;" onclick="window.location.href='/contact/'">Contact Me</button>
                 <br><br><br><br>
             </div>
             <div class="black-panel-sep-end">

@@ -10,10 +10,9 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 .primary-img {
-    width: 64%;
-    height: 80%;
-    object-fit: cover;
     position: relative;
+    width: calc(16%*4);
+    object-fit: cover;
 }
 .secondary-img {
     width: 12vw;
