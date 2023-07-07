@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel=preconnect href="https://www.googletagmanager.com">
+        <link rel=preconnect href="https://stats.g.doubleclick.net">
+        <title>N3RDIUM's Hideout</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="N3RDIUM's Hideout">
+        <meta name="author" content="N3RDIUM">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="../static/img/n3rdium.avif" type="image/x-icon">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-DRCTBWSMF2');
+        </script>
+        <script>
+            /* If the user is on a mobile device, redirect them to the mobile version of the site */
+            if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)){
+                window.location.href = "/amp/";
+            }
+        </script>
+        <script defer src="../static/js/lenis.min.js"></script>   
+
+        <link rel="stylesheet" href="../static/css/index.css">
+        <link rel="stylesheet" href="../static/css/bg.css">
+        <link rel="stylesheet" href="../static/css/cursor-animations.css">
+
+        <script defer src="../static/js/gsap.min.js"></script>
+        <script defer src="../static/js/scrolltrigger.min.js"></script>
+        <script type="module" defer>/* tachyon 2.0.1 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){var e;t.dataset&&(e="tachyon"in t.dataset,"A"!==t.tagName||!t.href||e!=o&&!n||n&&!e&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0})))}new MutationObserver(e=>e.forEach(e=>e.addedNodes.forEach(t))).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
+    </head>
+
+    <body>
+        <div class="cursor-container">
+            <div class="cursor cursor-normal" id="cursor"></div>
+        </div>
+        <div class="h-spacer-small"></div>
+        <script defer src="../static/js/cursor.js"></script>
+        <script defer src="../static/js/contact.js"></script>
+    </body>
+</html>

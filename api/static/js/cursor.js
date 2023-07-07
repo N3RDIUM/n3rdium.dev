@@ -40,7 +40,7 @@ for (let i = 0; i < Btns.length; i++) {
     spacebgBtn.addEventListener("mouseleave", function() {
         document.querySelector('.cursor').classList.add("cursor-normal")
         document.querySelector('.cursor').classList.remove("cursor-btn")
-        document.querySelector('.cursor-crosshair-black').remove()
+        setTimeout(()=>document.querySelector('.cursor-crosshair').remove(), 1000)
     })
 }
 
@@ -58,7 +58,7 @@ for (let i = 0; i < spacebgBtns.length; i++) {
     spacebgBtn.addEventListener("mouseleave", function() {
         document.querySelector('.cursor').classList.add("cursor-spacewin")
         document.querySelector('.cursor').classList.remove("cursor-space2btn")
-        document.querySelector('.cursor-crosshair').remove()
+        setTimeout(()=>document.querySelector('.cursor-crosshair').remove(), 1000)
     })
 }
 
