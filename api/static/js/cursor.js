@@ -35,12 +35,11 @@ for (let i = 0; i < Btns.length; i++) {
         let crosshair = document.createElement("div")
         crosshair.classList.add("cursor-crosshair-black")
         document.querySelector('.cursor').appendChild(crosshair)
-        console.log(crosshair)
     })
     spacebgBtn.addEventListener("mouseleave", function() {
         document.querySelector('.cursor').classList.add("cursor-normal")
         document.querySelector('.cursor').classList.remove("cursor-btn")
-        setTimeout(()=>document.querySelector('.cursor-crosshair-black').remove(), 1000)
+        document.querySelector('.cursor-crosshair-black').remove()
     })
 }
 
@@ -53,7 +52,6 @@ for (let i = 0; i < spacebgBtns.length; i++) {
         let crosshair = document.createElement("div")
         crosshair.classList.add("cursor-crosshair")
         document.querySelector('.cursor').appendChild(crosshair)
-        console.log(crosshair)
     })
     spacebgBtn.addEventListener("mouseleave", function() {
         document.querySelector('.cursor').classList.add("cursor-spacewin")
