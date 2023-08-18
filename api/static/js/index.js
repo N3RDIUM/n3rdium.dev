@@ -1,3 +1,4 @@
+screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 const lenis = new Lenis()
 lenis.on('scroll', (e) => {})
 function raf(time) {
