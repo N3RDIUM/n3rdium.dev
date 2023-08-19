@@ -2,12 +2,15 @@
 from flask import Flask, render_template
 
 # Create the application object
-app = Flask(__name__, template_folder='templates', static_folder='static')
+app = Flask(__name__, template_folder="templates", static_folder="static")
+
 
 # Use decorators to link the function to a url
-@app.route('/')
+@app.route("/")
 def index():
     return render_template("index.html", title="Home")
+
+
 # @app.route('/contact/')
 # def contact():
 #     return render_template("contact.html", title="Contact")
@@ -25,5 +28,5 @@ def index():
 #     return str(open("./api/sitemap.xml").read())
 
 # Start the server with the 'run()' method
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
