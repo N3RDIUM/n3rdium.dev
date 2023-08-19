@@ -1,0 +1,28 @@
+version = 1
+
+[[analyzers]]
+name = "python"
+
+  [analyzers.meta]
+  runtime_version = "3.x.x"
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  environment = ["browser"]
+
+[[transformers]]
+name = "standardjs"
+
+[[transformers]]
+name = "black"
+
+[[transformers]]
+name = "autopep8"
+
+[[transformers]]
+name = "yapf"
+
+[[transformers]]
+name = "isort"
