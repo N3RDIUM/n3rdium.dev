@@ -21,6 +21,16 @@ panels.forEach((panel) => {
     }
 })
 
+const age = document.querySelector('#age')
+const user_age = new Date().getFullYear() - 2008
+age.innerHTML = user_age
+
+const typeIns = document.querySelectorAll('.typeIn')
+typeIns.forEach((typeIn) => {
+    typeIn.style.animationDelay = Math.random() * 2 + 's'
+    typeIn.style.animationDuration = Math.random() * 2 + 3 + 's'
+})
+
 lenis.on('scroll', (e) => {
     for(let panel of panels) {
         panel.style.backgroundPositionY = e.animatedScroll / 2 + 'px'
