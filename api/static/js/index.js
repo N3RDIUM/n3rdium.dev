@@ -20,6 +20,9 @@ panels.forEach((panel) => {
 })
 
 lenis.on('scroll', (e) => {
+    for(let panel of panels) {
+        panel.style.backgroundPositionY = e.animatedScroll / 2 + 'px'
+    }
 })
 function raf(time) {
     lenis.raf(time)
