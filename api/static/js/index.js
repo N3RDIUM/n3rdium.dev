@@ -32,8 +32,17 @@ typeIns.forEach((typeIn) => {
 })
 
 lenis.on('scroll', (e) => {
+    let scrollCenter = e.animatedScroll + window.innerHeight / 2
     for(let panel of panels) {
-        panel.style.backgroundPositionY = e.animatedScroll / 2 + 'px'
+        panel.style.backgroundPositionY = e.animatedScroll / 2 + 'px';
+        let panelTop = panel.getBoundingClientRect().top
+        let panelBottom = panel.getBoundingClientRect().bottom
+        let panelCenter = (panelTop + panelBottom) / 2 + e.animatedScroll
+        let blurFactor = Math.abs(scrollCenter - panelCenter) / 100
+        if (blurFactor > 32) blurFactor = 32
+        let backdrop = panel.querySelector('.backdrop-blur')
+        if (backdrop == null) continue
+        backdrop.style.backdropFilter = 'blur(' + blurFactor + 'px)'
     }
 })
 function raf(time) {
