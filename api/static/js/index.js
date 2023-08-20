@@ -12,7 +12,7 @@ panels.forEach((panel) => {
         if (_string == "purple") {
             _num = Math.floor(Math.random() * 7) + 1
         } else if (_string == "green") {
-            _num = Math.floor(Math.random() * 6) + 2
+            _num = Math.floor(Math.random() * 6) + 3
         } else {
             _num = Math.floor(Math.random() * 8) + 1
         }
