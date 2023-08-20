@@ -11,6 +11,8 @@ panels.forEach((panel) => {
         let _num = 1
         if (_string == "purple") {
             _num = Math.floor(Math.random() * 7) + 1
+        } else if (_string == "green") {
+            _num = Math.floor(Math.random() * 6) + 2
         } else {
             _num = Math.floor(Math.random() * 8) + 1
         }
