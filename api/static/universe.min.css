@@ -1,0 +1,151 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #ffffffaa;
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+}
+.floating-heading {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 4px white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32%;
+    }
+}
+.simulation-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.star-container {
+    width: 1000%;
+    height: 1000%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.star {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+    animation: star-unhover 0.5s;
+}
+.star:hover {
+    cursor: pointer;
+    animation: star-hover 0.5s;
+    width: 48px;
+    height: 48px;
+}
+@keyframes star-hover {
+    from {
+        width: 32px;
+        height: 32px;
+    }
+    to {
+        width: 48px;
+        height: 48px;
+    }
+}
+@keyframes star-unhover {
+    from {
+        width: 48px;
+        height: 48px;
+    }
+    to {
+        width: 32px;
+        height: 32px;
+    }
+}
+.star>.cosmic-label {
+    position: absolute;
+    top: 50%;
+    left: 200%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 4px white;
+    z-index: 2;
+}
+.star>.cosmic-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0%;
+    animation: cosmic-icon 0.5s;
+}
+.star:hover>.cosmic-icon {
+    opacity: 100%;
+    animation: cosmic-icon-hover 0.5s;
+}
+@keyframes cosmic-icon-hover {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+@keyframes cosmic-icon {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
