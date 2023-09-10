@@ -10,6 +10,11 @@ html {
     color: white;
     overflow: hidden;
 }
+body {
+    background-image: url("../static/bg/Small-512x512/starfield1.avif");
+    background-size: 80%;
+    background-position: center;
+}
 body::-webkit-scrollbar {
     width: 8px;
 }
@@ -34,6 +39,17 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     align-items: center;
 }
+.simulation-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.starfield-primary {
+    width: 100%;
+    height: 100%;
+}
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
     html {
         transform: rotate(-90deg);
@@ -54,55 +70,41 @@ body::-webkit-scrollbar-thumb {
         margin-top: 32%;
     }
 }
-.simulation-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.star-container {
-    width: 1000%;
-    height: 1000%;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .star {
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     background-color: white;
     border-radius: 50%;
-    z-index: 1;
+    z-index: 1000;
+    box-shadow: 0 0 32px white;
+    pointer-events: all;
     animation: star-unhover 0.5s;
 }
 .star:hover {
     cursor: pointer;
     animation: star-hover 0.5s;
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
 }
 @keyframes star-hover {
     from {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
     }
     to {
-        width: 48px;
-        height: 48px;
+        width: 32px;
+        height: 32px;
     }
 }
 @keyframes star-unhover {
     from {
-        width: 48px;
-        height: 48px;
-    }
-    to {
         width: 32px;
         height: 32px;
+    }
+    to {
+        width: 24px;
+        height: 24px;
     }
 }
 .star>.cosmic-label {
@@ -148,4 +150,25 @@ body::-webkit-scrollbar-thumb {
     to {
         opacity: 0%;
     }
+}
+.starfield {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.star-layer {
+    pointer-events: none;
+    backface-visibility: visible;
+}
+.small-star {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 12px white;
 }
