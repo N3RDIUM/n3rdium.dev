@@ -117,6 +117,7 @@ body::-webkit-scrollbar-thumb {
     color: white;
     text-shadow: 0 0 4px white;
     z-index: 2;
+    margin-left: 1vw;
 }
 .star>.cosmic-icon {
     position: absolute;
