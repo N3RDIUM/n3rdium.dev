@@ -14,47 +14,7 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="../static/css/index.css">
-        
-        <!-- Import map -->
-        <script type="importmap">
-            {
-              "imports": {
-                "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/",
-                "opensimplex": "https://cdn.skypack.dev/open-simplex-noise"
-              }
-            }
-        </script>
-
-        <!-- Shaders -->
-        <script type="x-shader/x-vertex" id="vertexshader">
-
-			varying vec2 vUv;
-
-			void main() {
-
-				vUv = uv;
-
-				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-
-			}
-
-		</script>
-
-		<script type="x-shader/x-fragment" id="fragmentshader">
-
-			uniform sampler2D baseTexture;
-			uniform sampler2D bloomTexture;
-
-			varying vec2 vUv;
-
-			void main() {
-
-				gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
-
-			}
-
-		</script>
+        <link rel="stylesheet" href="../static/css/homepage.css">
 
         <!-- Libs -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -76,21 +36,22 @@
     </head>
 
     <body>
-        <canvas id="canvas"></canvas>
+        <div class="overlay">
+            <div class="storyteller" id="bracket1">{</div>
+            <div class="storyteller" id="bracket2">}</div>
+            <div class="storyteller" id="star1">*</div>
+            <div class="storyteller" id="star2">*</div>
+            <div class="storyteller" id="star3">*</div>
+            <div class="storyteller" id="star4">*</div>
+        </div>
         <div class="container" id="c1">
+            <div class="avatar-container">
+                <img class="user-avatar" src="./static/img/n3rdium.avif">
+            </div>
             <div class="username">
-                <h1 class="uname-text">N3RDIUM</h1>
+                <h1 class="username">N3RDIUM</h1>
             </div>
         </div>
-        <div class="container"  id="c2">
-            <div class="username">
-                <h1 class="uname-text">...</h1>
-            </div>
-        </div>
-        <div class="container"  id="c3">
-            <div class="username">
-                <h1 class="uname-text">...</h1>
-            </div>
-        </div>
+        <div class="container" id="c2"></div>
     </body>
 </html>

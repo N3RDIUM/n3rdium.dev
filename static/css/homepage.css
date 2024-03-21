@@ -1,0 +1,46 @@
+.username {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 8vw;
+    font-size: 72px;
+    background: linear-gradient(90deg, rgba(0,226,255,1) 0%, rgba(0,255,215,1) 25%, rgba(0,255,160,1) 50%, rgba(0,255,135,1) 75%, rgba(0,255,113,1) 85%, rgba(0,255,74,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 32px rgba(0,226,255,1);
+}
+
+.avatar-container {
+    width: 100%;
+    height: max-content;
+    text-align: center; 
+}
+
+.user-avatar {
+    width: 50vw;
+    height: 50vw;
+    max-width: 256px;
+    max-height: 256px;
+    border-radius: 25vw;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 0 0 32px rgba(0,226,255,1);
+}
+
+.storyteller {
+    font-size: 4rem;
+    text-shadow: 0 0 32px rgb(255, 255, 255);
+    position: absolute;
+}
+
+#star1 {
+    font-size: 2rem;
+}
+#star2 {
+    font-size: 2.4rem;
+}
+#star3 {
+    font-size: 3.2rem;
+}
+#star4 {
+    font-size: 4rem;
+}
