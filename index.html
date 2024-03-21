@@ -12,6 +12,58 @@
         
         <link rel="icon" href="../static/img/n3rdium.avif" type="image/x-icon">
 
+        <!-- CSS -->
+        <link rel="stylesheet" href="../static/css/index.css">
+        
+        <!-- Import map -->
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/",
+                "opensimplex": "https://cdn.skypack.dev/open-simplex-noise"
+              }
+            }
+        </script>
+
+        <!-- Shaders -->
+        <script type="x-shader/x-vertex" id="vertexshader">
+
+			varying vec2 vUv;
+
+			void main() {
+
+				vUv = uv;
+
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+			}
+
+		</script>
+
+		<script type="x-shader/x-fragment" id="fragmentshader">
+
+			uniform sampler2D baseTexture;
+			uniform sampler2D bloomTexture;
+
+			varying vec2 vUv;
+
+			void main() {
+
+				gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
+
+			}
+
+		</script>
+
+        <!-- Libs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../static/js/lenis.min.js"></script>
+
+        <!-- JS -->
+        <script src="../static/js/index.js" type="module"></script>
+
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
         <script async>
@@ -21,57 +73,24 @@
         
           gtag('config', 'G-DRCTBWSMF2');
         </script>
-
-        <!--Scripts-->
-        <script defer src="../static/js/lenis.min.js"></script>
-        <script defer type="module">/* tachyon 2.0.1 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){var e;t.dataset&&(e="tachyon"in t.dataset,"A"!==t.tagName||!t.href||e!=o&&!n||n&&!e&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0})))}new MutationObserver(e=>e.forEach(e=>e.addedNodes.forEach(t))).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="../static/index.min.css">
-        <link rel="stylesheet" href="../static/backgrounds.min.css">
     </head>
 
     <body>
-        <div class="panel" id="panel1">
-            <div class="avatar-container">
-                <img src="../static/img/n3rdium.avif" alt="N3RDIUM's avatar" class="avatar" width="256" height="256">
-            </div>
-            <h1 class="username">N3RDIUM</h1>
-            <div class="welcome-container">
-                <p class="welcome-text typeIn">Welcome to my hideout!</p>
-            </div>
-            <div class="scrolldown-container">
-                <div class="scrolldown animated-scroll"></div>
-                <div class="scrolldown"></div>
+        <canvas id="canvas"></canvas>
+        <div class="container" id="c1">
+            <div class="username">
+                <h1 class="uname-text">N3RDIUM</h1>
             </div>
         </div>
-
-        <div class="panel" id="panel2">
-            <div class="backdrop-blur"></div>
-            <h1 class="panel-heading text-shadow-black typeIn topEl">About me</h1>
-            <br><br>
-            <p class="user-description text-shadow-black topEl">
-                I'm N3RDIUM, a <span id="age"></span> year old amateur astronomer who likes to code. 
-                I'm going to be an astronomer when I grow up. 
-                Currently, I'm deeply interested in things like cosmology, 
-                aerospace, visual astronomy, reading books, coding, robotics, and many more.
-            </p>
-            <br>
-            <p class="user-description text-shadow-black topEl">
-                Since I was born, I tend to get interested in astronomy and new technology, 
-                which is probably why you're seeing this site right now.
-                Yes, I made this site all by myself!
-            </p>
-            <br>
-            <p class="user-description text-shadow-black topEl">
-                This site is currently work-in-progress, so expect incomplete/broken pages.
-            </p>
-            <br><br>
-            <button class="universe-button topEl" onclick="window.location.href = 'universe.html';">
-                Explore my universe
-            </button>
+        <div class="container"  id="c2">
+            <div class="username">
+                <h1 class="uname-text">...</h1>
+            </div>
         </div>
-
-        <script defer src="../static/js/index.min.js"></script>
+        <div class="container"  id="c3">
+            <div class="username">
+                <h1 class="uname-text">...</h1>
+            </div>
+        </div>
     </body>
 </html>

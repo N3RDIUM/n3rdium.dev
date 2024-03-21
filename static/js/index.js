@@ -1,72 +1,248 @@
-const lenis = new Lenis()
+import * as THREE from 'three';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import openSimplexNoise from 'opensimplex';
 
-const panels = document.querySelectorAll('.panel')
-const variants = ['blue', 'green', 'purple', 'starfield']
-panels.forEach((panel) => {
-    const id = panel.id
-    const name = id.replace('panel', '')
-    const index = parseInt(name)
-    if (index % 2 == 0) {
-        let _string = variants[Math.floor(Math.random() * variants.length)].toString()
-        let _num = 1
-        if (_string == "purple") {
-            _num = Math.floor(Math.random() * 7) + 1
-        } else if (_string == "green") {
-            _num = Math.floor(Math.random() * 6) + 3
-        } else {
-            _num = Math.floor(Math.random() * 8) + 1
-        }
-        let bgname = 'background-' + _string + '-' + _num.toString()
-        panel.classList.add(bgname)
-    }
-})
+gsap.registerPlugin(ScrollTrigger);
 
-const age = document.querySelector('#age')
-const user_age = new Date().getFullYear() - 2008
-age.innerHTML = user_age
+const lenis = new Lenis();
+const canvas = document.querySelector('canvas');
 
-const typeIns = document.querySelectorAll('.typeIn')
-typeIns.forEach((typeIn) => {
-    typeIn.style.animationDelay = Math.random() * 2 + 's'
-    typeIn.style.animationDuration = Math.random() * 2 + 3 + 's'
-})
+var scene = new THREE.Scene();
+var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio( window.devicePixelRatio );
 
-window.mobileAndTabletCheck = function() {
-    let check = false;
-    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
-    return check;
+var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 32;
+
+// Bloom stuff
+const BLOOM_SCENE = 1;
+const bloomLayer = new THREE.Layers();
+bloomLayer.set( BLOOM_SCENE );
+
+const darkMaterial = new THREE.MeshBasicMaterial( { color: 'black' } );
+const materials = {};
+
+const params = {
+    threshold: 0,
+    strength: 0.32,
+    radius: 0.1,
+    exposure: 0.01
 };
-const isMobile = window.mobileAndTabletCheck();   
 
-if(isMobile) {
-    for(let panel of panels) {
-        panel.style.backgroundPosition = 'fixed';
-        panel.style.backgroundAttachment = 'fixed';
-        let backdrop = panel.querySelector('.backdrop-blur');
-        if(backdrop != null) {
-            backdrop.style.backdropFilter = 'blur(0px)';
-        }
+const renderScene = new RenderPass( scene, camera );
+
+const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
+bloomPass.threshold = params.threshold;
+bloomPass.strength = params.strength;
+bloomPass.radius = params.radius;
+
+const bloomComposer = new EffectComposer( renderer );
+bloomComposer.renderToScreen = false;
+bloomComposer.addPass( renderScene );
+bloomComposer.addPass( bloomPass );
+
+const mixPass = new ShaderPass(
+    new THREE.ShaderMaterial( {
+        uniforms: {
+            baseTexture: { value: null },
+            bloomTexture: { value: bloomComposer.renderTarget2.texture }
+        },
+        vertexShader: document.getElementById( 'vertexshader' ).textContent,
+        fragmentShader: document.getElementById( 'fragmentshader' ).textContent,
+        defines: {}
+    } ), 'baseTexture'
+);
+mixPass.needsSwap = true;
+
+const outputPass = new OutputPass();
+const fxaaPass = new ShaderPass( FXAAShader );
+
+const finalComposer = new EffectComposer( renderer );
+finalComposer.addPass( renderScene );
+finalComposer.addPass( fxaaPass );
+finalComposer.addPass( mixPass );
+finalComposer.addPass( outputPass );
+
+function render() {
+    scene.traverse( darkenNonBloomed );
+    bloomComposer.render();
+    scene.traverse( restoreMaterial );
+    // render the entire scene, then render bloom scene on top
+    finalComposer.render();
+}
+
+function darkenNonBloomed( obj ) {
+    if ( obj.isMesh && bloomLayer.test( obj.layers ) === false ) {
+        materials[ obj.uuid ] = obj.material;
+        obj.material = darkMaterial;
     }
 }
 
-lenis.on('scroll', (e) => {
-    if (!isMobile) {
-        let scrollCenter = e.animatedScroll + window.innerHeight / 2
-        for(let panel of panels) {
-            panel.style.backgroundPositionY = e.animatedScroll / 2 + 'px';
-            let panelTop = panel.getBoundingClientRect().top
-            let panelBottom = panel.getBoundingClientRect().bottom
-            let panelCenter = (panelTop + panelBottom) / 2 + e.animatedScroll
-            let blurFactor = Math.abs(scrollCenter - panelCenter) / 100
-            if (blurFactor > 32) blurFactor = 32
-            let backdrop = panel.querySelector('.backdrop-blur')
-            if (backdrop == null) continue
-            backdrop.style.backdropFilter = 'blur(' + blurFactor / 2 + 'px)'
-        }
+function restoreMaterial( obj ) {
+    if ( materials[ obj.uuid ] ) {
+        obj.material = materials[ obj.uuid ];
+        delete materials[ obj.uuid ];
     }
-})
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
 }
-requestAnimationFrame(raf)
+// Bloom stuff end
+
+// Callbacks
+window.addEventListener('resize', onWindowResize, false );
+function onWindowResize(){
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    bloomComposer.setSize( window.innerWidth, window.innerHeight );
+	finalComposer.setSize( window.innerWidth, window.innerHeight );
+};
+
+var animatedScroll = 0;
+lenis.on('scroll', function (scroll) {animatedScroll = scroll.animatedScroll;});
+
+// GSAP Timeline(s)
+const trigger1 = ScrollTrigger.create({
+    trigger: "#c2",
+    start: "top bottom",
+    endTrigger: "#c2",
+    end: "top middle",
+    scrub: true,
+    onUpdate: (self) => {
+        let progress = self.progress.toFixed(3);
+        try{
+            gsap.to(
+                camera.rotation,
+                {
+                    x: Math.PI / 4 - (Math.PI / 4 * progress),
+                    y: Math.PI / 2 - (Math.PI / 2 * progress),
+                    z: Math.PI / 3 - (Math.PI / 3 * progress)
+                }
+            );
+            gsap.to(
+                camera.position,
+                {
+                    x: -32 + 32 * progress,
+                    y: 32 - 32 * progress,
+                    z: 32 - 24 * progress
+                }
+            );
+            gsap.to(
+                scene.fog,
+                {
+                    density: 0.008 * progress
+                }
+            );
+            gsap.to(
+                bloomPass,
+                {
+                    strength: 0.64 - 0.32 * progress,
+                    radius: 0.1 + 0.7 * progress
+                }
+            );
+        } catch (e) {}
+    },
+});
+
+// Lights
+const ambientLight = new THREE.AmbientLight(0x000000, 1);
+scene.add(ambientLight);
+
+// Merge all stars into one geometry
+const points = new THREE.Points();
+const bufferGeometry = new THREE.BufferGeometry();
+const starMtl = new THREE.PointsMaterial({
+    color: 0xffffff,
+    size: 0.64,
+});
+const positions = [];
+const colors = [];
+for (let i = 0; i < 16384; i++) {
+    const x = Math.random()*1000 - 500;
+    const y = Math.random()*1000 - 500;
+    const z = Math.random()*1000 - 500;
+    positions.push(x, y, z);
+    colors.push(
+        Math.abs(Math.random() - 0.5),
+        Math.abs(Math.random() - 0.5),
+        Math.abs(Math.random() - 0.5)
+    );
+}
+bufferGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+bufferGeometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+points.geometry = bufferGeometry;
+points.material = starMtl;
+scene.add(points);
+
+points.layers.enable( BLOOM_SCENE );
+materials[ points.uuid ] = starMtl;
+
+// Fog
+const fog = new THREE.FogExp2(0x000000, 0);
+scene.fog = fog;
+
+// sphere thing
+const geometry = new THREE.SphereGeometry(1, 64, 32);
+const material = new THREE.MeshNormalMaterial();
+const sphere = new THREE.Mesh(geometry, material);
+sphere.position.set(0, 0, 0);
+scene.add(sphere);
+sphere.layers.enable( BLOOM_SCENE );
+materials[ sphere.uuid ] = material;
+
+// Noise
+let noise = openSimplexNoise.makeNoise4D(Date.now());
+let sphereGeometry = sphere.geometry;
+sphereGeometry.positionData = [];
+let v3 = new THREE.Vector3();
+for (let i = 0; i < sphereGeometry.attributes.position.count; i++){
+    v3.fromBufferAttribute(sphereGeometry.attributes.position, i);
+    sphereGeometry.positionData.push(v3.clone());
+}
+
+// Camera rotation
+document.addEventListener('mousemove', (e) => {
+    if (animatedScroll > window.innerHeight / 2 && animatedScroll < window.innerHeight * 1.5) {
+        gsap.to(
+            camera.rotation,
+            {
+                x: (e.clientY - window.innerHeight / 2) / window.innerHeight * Math.PI / 16,
+                y: (e.clientX - window.innerWidth / 2) / window.innerWidth * Math.PI / 16
+            }
+        );
+        gsap.to(
+            camera.position,
+            {
+                y: -(e.clientY - window.innerHeight / 2) / window.innerHeight * 2,
+                x: (e.clientX - window.innerWidth / 2) / window.innerWidth * 2
+            }
+        );
+    }
+});
+
+// Mainloop
+var frame = 0;
+function animate(time) {
+    lenis.raf(time);
+    requestAnimationFrame(animate);
+    frame += 1;
+
+    // Move points of the sphere with perlin noise
+    sphereGeometry.positionData.forEach((p, idx) => {
+        let setNoise = noise(p.x, p.y, p.z, frame / 100) / 4;
+        v3.copy(p).addScaledVector(p, setNoise);
+        sphereGeometry.attributes.position.setXYZ(idx, v3.x, v3.y, v3.z);
+    })
+    sphereGeometry.computeVertexNormals();
+    sphereGeometry.attributes.position.needsUpdate = true;
+    sphere.rotation.y += 0.001;
+    sphere.rotation.z += 0.001;
+    sphere.rotation.x += 0.001;
+
+    render();
+}
+animate();
