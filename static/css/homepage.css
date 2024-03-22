@@ -30,6 +30,7 @@
     font-size: 4rem;
     text-shadow: 0 0 32px rgb(255, 255, 255);
     position: absolute;
+    mix-blend-mode: difference;
 }
 
 #bracket1 {
