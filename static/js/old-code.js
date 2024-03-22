@@ -1,4 +1,3 @@
-
 // Stars: example for bufferGeometry!
 // const points = new THREE.Points();
 // const bufferGeometry = new THREE.BufferGeometry();
