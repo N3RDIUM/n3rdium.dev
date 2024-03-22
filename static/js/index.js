@@ -2,6 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 console.log('[GSAP] Loaded plugin "ScrollTrigger"');
 const lenis = new Lenis();
 
+// Animations
 lenis.on('scroll', function (scroll) {
     // Do sth with the scroll!!
 });
@@ -23,29 +24,17 @@ ScrollTrigger.create({
     },
 });
 
-ScrollTrigger.create({
-    trigger: "#c1",
-    start: "bottom 25%",
-    end: "top +=12.5%",
-    onUpdate: (self) => {
-        gsap.to("#bracket1", {
-            x: (window.innerWidth / 2 - 160) - ((window.innerWidth / 2 - 160) * self.progress.toFixed(3)) + self.progress.toFixed(3) * 80,
-            y: (window.innerHeight / 2) - ((window.innerHeight / 2 - 160) * self.progress.toFixed(3)) + 16 * self.progress.toFixed(3),
-            rotate: -45 * self.progress.toFixed(3)
-        })
-        gsap.to("#bracket2", {
-            x: (window.innerWidth / 2 - 160) - ((window.innerWidth / 2 - 160) * self.progress.toFixed(3)) + self.progress.toFixed(3) * 80 + 32 - 16 * self.progress.toFixed(3),
-            y: (window.innerHeight / 2) - ((window.innerHeight / 2 - 160) * self.progress.toFixed(3)),
-            rotate: -45 * self.progress.toFixed(3)
-        })
-    },
-});
-
-  
 document.addEventListener('mousemove', e => {
     gsap.to(".user-avatar", {
         transform: `rotateY(${(e.clientX - window.innerWidth / 2) / 32}deg) rotateX(${(e.clientY - window.innerHeight) / 32}deg)`
     })
+})
+
+gsap.to('.username', {
+    'background-position-x': '1000px',
+    repeat: -1,
+    duration: 8,
+    easing: 'linear'
 })
 
 // Mainloop

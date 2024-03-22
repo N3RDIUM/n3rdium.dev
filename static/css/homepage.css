@@ -3,7 +3,7 @@
     font-weight: 100;
     font-size: 8vw;
     font-size: 72px;
-    background: linear-gradient(90deg, rgba(0,226,255,1) 0%, rgba(0,255,215,1) 25%, rgba(0,255,160,1) 50%, rgba(0,255,135,1) 75%, rgba(0,255,113,1) 85%, rgba(0,255,74,1) 100%);
+    background: linear-gradient(90deg, rgba(0,226,255,1) 0%, rgb(0, 255, 174) 50%, rgba(0,226,255,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 32px rgba(0,226,255,1);
@@ -32,15 +32,26 @@
     position: absolute;
 }
 
+#bracket1 {
+    transform: translateX(calc(50vw - 160px)) translateY(50vh) rotate(-24deg);
+}
+#bracket2 {
+    transform: translateX(calc(50vw + 160px)) translateY(calc(50vh - 256px)) rotate(32deg);
+}
+
 #star1 {
     font-size: 2rem;
+    transform: translateX(calc(50vw - 130px)) translateY(calc(50vh - 234px)) rotate(13deg);
 }
 #star2 {
     font-size: 2.4rem;
+    transform: translateX(calc(50vw + 172px)) translateY(calc(50vh + 122px)) rotate(13deg);
 }
 #star3 {
     font-size: 3.2rem;
+    transform: translateX(calc(50vw - 200px)) translateY(calc(50vh + 100px)) rotate(13deg);
 }
 #star4 {
     font-size: 4rem;
+    transform: translateX(calc(50vw + 120px)) translateY(calc(50vh - 269px)) rotate(13deg);
 }
