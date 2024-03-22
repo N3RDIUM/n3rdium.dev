@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--Metadata-->
         <link rel=preconnect href="https://www.googletagmanager.com">
         <link rel=preconnect href="https://stats.g.doubleclick.net">
         <title>N3RDIUM's Hideout</title>
@@ -14,6 +15,7 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="../static/css/index.css">
+        <link rel="stylesheet" href="../static/css/homepage.css">
         
         <!-- Import map -->
         <script type="importmap">
@@ -22,47 +24,38 @@
                 "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
                 "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/",
                 "opensimplex": "https://cdn.skypack.dev/open-simplex-noise",
-                "bloom": "./static/js/threejs-bloom.js",
-                "interpolate": "./static/js/interpolate.js",
-                "Three.CSS3DRenderer": "https://raw.githubusercontent.com/mrdoob/three.js/master/examples/jsm/renderers/CSS3DRenderer.js"
+                "bloom": "./static/js/threejs-bloom.js"
               }
             }
         </script>
 
         <!-- Shaders -->
         <script type="x-shader/x-vertex" id="vertexshader">
-
 			varying vec2 vUv;
 
 			void main() {
-
 				vUv = uv;
-
 				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-
 			}
-
 		</script>
 
 		<script type="x-shader/x-fragment" id="fragmentshader">
-
 			uniform sampler2D baseTexture;
 			uniform sampler2D bloomTexture;
 
 			varying vec2 vUv;
 
 			void main() {
-
 				gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
-
 			}
-
 		</script>
 
         <!-- Libs -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="../static/js/lenis.min.js"></script>
+        <script src="./static/js/lenis.min.js"></script>
+        <script src="./static/js/anime.min.js"></script>
+        <script src="./static/js/interpolate.min.js"></script>
 
         <!-- JS -->
         <script src="../static/js/index.js" type="module"></script>
@@ -81,19 +74,16 @@
     <body>
         <canvas id="canvas"></canvas>
         <div class="container" id="c1">
-            <div class="username">
-                <h1 class="uname-text">N3RDIUM</h1>
+            <div class="avatar-container">
+                <img src="./static/img/n3rdium.avif" alt="N3RDIUM's avatar" class="avatar">
             </div>
+            <h1 class="username">
+                <span class="uletter">N</span><span class="uletter">3</span><span class="uletter">R</span><span class="uletter">D</span><span class="uletter">I</span><span class="uletter">U</span><span class="uletter">M</span>
+            </h1>
         </div>
         <div class="container"  id="c2">
-            <div class="username">
-                <h1 class="uname-text">...</h1>
-            </div>
         </div>
         <div class="container"  id="c3">
-            <div class="username">
-                <h1 class="uname-text">...</h1>
-            </div>
         </div>
     </body>
 </html>

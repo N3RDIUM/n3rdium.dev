@@ -1,58 +1,25 @@
 .username {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    font-size: 8vw;
     font-size: 72px;
-    background: linear-gradient(90deg, rgba(0,226,255,1) 0%, rgb(0, 255, 174) 50%, rgba(0,226,255,1) 100%);
+    background: linear-gradient(90deg, rgba(0,226,255,1) 0%, rgb(0, 255, 157) 50%, rgba(0,226,255,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 32px rgba(0,226,255,1);
 }
+.uletter {
+   opacity: 0;
+}
 
 .avatar-container {
     width: 100%;
-    height: max-content;
-    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.user-avatar {
-    width: 50vw;
-    height: 50vw;
-    max-width: 256px;
-    max-height: 256px;
-    border-radius: 25vw;
-    align-self: center;
-    justify-self: center;
+.avatar {
+    width: 256px;
+    height: 256px;
+    border-radius: 128px;
     box-shadow: 0 0 32px rgba(0,226,255,1);
-}
-
-.storyteller {
-    font-size: 4rem;
-    text-shadow: 0 0 32px rgb(255, 255, 255);
-    position: absolute;
-    mix-blend-mode: difference;
-}
-
-#bracket1 {
-    transform: translateX(calc(50vw - 160px)) translateY(50vh) rotate(-24deg);
-}
-#bracket2 {
-    transform: translateX(calc(50vw + 160px)) translateY(calc(50vh - 256px)) rotate(32deg);
-}
-
-#star1 {
-    font-size: 2rem;
-    transform: translateX(calc(50vw - 130px)) translateY(calc(50vh - 234px)) rotate(13deg);
-}
-#star2 {
-    font-size: 2.4rem;
-    transform: translateX(calc(50vw + 172px)) translateY(calc(50vh + 122px)) rotate(13deg);
-}
-#star3 {
-    font-size: 3.2rem;
-    transform: translateX(calc(50vw - 200px)) translateY(calc(50vh + 100px)) rotate(13deg);
-}
-#star4 {
-    font-size: 4rem;
-    transform: translateX(calc(50vw + 120px)) translateY(calc(50vh - 269px)) rotate(13deg);
 }
