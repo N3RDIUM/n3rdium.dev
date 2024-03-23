@@ -23,32 +23,10 @@
               "imports": {
                 "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
                 "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/",
-                "opensimplex": "https://cdn.skypack.dev/open-simplex-noise",
-                "bloom": "./static/js/threejs-bloom.js"
+                "opensimplex": "https://cdn.skypack.dev/open-simplex-noise"
               }
             }
         </script>
-
-        <!-- Shaders -->
-        <script type="x-shader/x-vertex" id="vertexshader">
-			varying vec2 vUv;
-
-			void main() {
-				vUv = uv;
-				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-			}
-		</script>
-
-		<script type="x-shader/x-fragment" id="fragmentshader">
-			uniform sampler2D baseTexture;
-			uniform sampler2D bloomTexture;
-
-			varying vec2 vUv;
-
-			void main() {
-				gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
-			}
-		</script>
 
         <!-- Libs -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -73,17 +51,21 @@
 
     <body>
         <canvas id="canvas"></canvas>
+        <canvas id="bloomCanvas"></canvas>
+        <div class="cursor"></div>
         <div class="container" id="c1">
-            <div class="avatar-container">
+            <div class="avatarContainer">
                 <img src="./static/img/n3rdium.avif" alt="N3RDIUM's avatar" class="avatar">
             </div>
             <h1 class="username">
                 <span class="uletter">N</span><span class="uletter">3</span><span class="uletter">R</span><span class="uletter">D</span><span class="uletter">I</span><span class="uletter">U</span><span class="uletter">M</span>
             </h1>
+            <div class="scrollIndicatorContainer">
+                <div class="scrollIndicator" id="sInd1"></div>
+                <div class="scrollIndicator" id="sInd2"></div>
+            </div>
         </div>
-        <div class="container"  id="c2">
-        </div>
-        <div class="container"  id="c3">
+        <div class="container" id="c2">
         </div>
     </body>
 </html>

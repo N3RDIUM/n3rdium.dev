@@ -11,15 +11,76 @@
    opacity: 0;
 }
 
-.avatar-container {
+.avatarContainer {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
 }
 .avatar {
     width: 256px;
     height: 256px;
     border-radius: 128px;
     box-shadow: 0 0 32px rgba(0,226,255,1);
+}
+
+.scrollIndicatorContainer {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.scrollIndicator {
+    width: 16px;
+    height: 15px;
+    border: solid 2px white;
+    transform: rotate(45deg);
+    border-radius: 4px;
+}
+@keyframes sInd1 {
+    0% {
+      transform: translateY(0px) rotate(45deg);
+        opacity: 0;
+    }
+    25% {
+        transform: translateY(0px) rotate(45deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(17px) rotate(45deg);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(17px) rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(32px) rotate(45deg);
+        opacity: 0;
+    }  
+}
+#sInd1 {
+    animation: sInd1 2s ease-in-out infinite;
+}
+@keyframes sInd2 {
+    0% {
+        background-color: transparent;
+    }
+    25% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+#sInd2 {
+    animation: sInd2 2s ease-in-out infinite;
+    background-color: white;
 }
