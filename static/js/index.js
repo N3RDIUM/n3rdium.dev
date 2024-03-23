@@ -1,6 +1,5 @@
 // Imports / Plugins
 import * as THREE from 'three';
-// import enableBloom from 'bloom';
 import openSimplexNoise from 'opensimplex';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,11 +25,6 @@ bloomRenderer.setPixelRatio( window.devicePixelRatio );
 var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 32;
 
-// Bloom stuff
-// const {
-//     render, materials, BLOOM_SCENE, bloomComposer, finalComposer
-// } = enableBloom(scene, camera, renderer)
-
 // Window resize callback
 window.addEventListener('resize', onWindowResize, false );
 function onWindowResize(){
@@ -38,8 +32,6 @@ function onWindowResize(){
     camera.updateProjectionMatrix();
     renderer.setSize( window.innerWidth, window.innerHeight );
     bloomRenderer.setSize( window.innerWidth, window.innerHeight );
-    // bloomComposer.setSize( window.innerWidth, window.innerHeight );
-	// finalComposer.setSize( window.innerWidth, window.innerHeight );
 };
 
 // Mouse move callback
