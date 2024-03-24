@@ -1,4 +1,6 @@
 // Imports / Plugins
+import openSimplexNoise from 'opensimplex';
+function interpolate(initial,final,progress){return initial-(initial-final)*progress}
 gsap.registerPlugin(ScrollTrigger);
 
 // DOM stuff setup
@@ -116,13 +118,14 @@ ScrollTrigger.create({
     },
 });
 
+let noise = openSimplexNoise.makeNoise4D(Date.now());
+
 // Mainloop
 var frame = 0;
-var starAnimationFrame = 0;
 function animate(time) {
     lenis.raf(time);
     requestAnimationFrame(animate);
+
     frame ++;
-    starAnimationFrame ++;
 }
 animate();
