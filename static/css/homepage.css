@@ -85,3 +85,16 @@
     animation: sInd2 2s ease-in-out infinite;
     background-color: white;
 }
+
+.welcome {
+    margin-top: 16px;
+    text-wrap: nowrap;
+    font-size: 12vw;
+    font-weight: bold;
+    opacity: 0;
+}
+@media screen and (min-width: calc(1600px / 3)) {
+    .welcome {
+       font-size: 64px;
+    }
+}

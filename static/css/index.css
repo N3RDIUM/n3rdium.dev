@@ -11,6 +11,7 @@ html, body {
 
 body {
     background-color: black;
+    overflow-x: hidden;
 }
 
 .lenis.lenis-smooth {
@@ -51,4 +52,5 @@ body {
     top: 0;
     left: 0;
     z-index: 69;
+    opacity: 0;
 }
