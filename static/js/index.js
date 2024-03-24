@@ -34,6 +34,7 @@ function onMouseUp() {
     gsap.to('.cursor', {
         scale: 1,
         duration: 0.32,
+        filter: 'hue-rotate(0deg)',
         ease: 'elastic'
     })
 }
@@ -41,6 +42,7 @@ function onMouseDown() {
     gsap.to('.cursor', {
         scale: 0.84,
         duration: 0.32,
+        filter: 'hue-rotate(270deg)',
         ease: 'elastic'
     })
 }
