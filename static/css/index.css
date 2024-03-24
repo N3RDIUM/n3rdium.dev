@@ -28,28 +28,6 @@ body {
 .lenis.lenis-scrolling iframe {
     pointer-events: none;
 }
-
-#canvas {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    background-color: transparent;
-    position: fixed;
-    z-index: -2;
-}
-#bloomCanvas {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    position: fixed;
-    opacity: 0.8;
-    filter: blur(8px) brightness(2) saturate(2);
-    z-index: -1;
-}
 .container {
     top: 0;
     left: 0;
