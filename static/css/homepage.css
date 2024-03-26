@@ -23,12 +23,13 @@
     width: 256px;
     height: 256px;
     border-radius: 128px;
+    margin-bottom: 64px;
     box-shadow: 0 0 32px rgba(0,226,255,1);
 }
 
 .scrollIndicatorContainer {
     width: 100%;
-    height: 64px;
+    height: 42px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,15 +94,20 @@
     background-color: white;
 }
 
-.welcome {
-    margin-top: 16px;
-    text-wrap: nowrap;
-    font-size: 12vw;
-    font-weight: bold;
+.storyteller {
+    position: fixed;
+    font-size: 64px;
     opacity: 0;
+    text-shadow: 0 0 16px rgba(255, 255, 255,1);
 }
-@media screen and (min-width: calc(1600px / 3)) {
-    .welcome {
-       font-size: 64px;
-    }
+#star {
+    font-size: 128px;
+}
+#up {
+    font-size: 128px;
+}
+.svg-storyteller {
+    width: 64px;
+    height: 64px;
+    filter: drop-shadow(0 0 16px rgb(255, 255, 255));
 }

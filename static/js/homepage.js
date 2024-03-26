@@ -1,6 +1,7 @@
 // Imports / Plugins
 import openSimplexNoise from 'opensimplex';
 function interpolate(initial,final,progress){return initial-(initial-final)*progress}
+
 gsap.registerPlugin(ScrollTrigger);
 
 // DOM stuff setup
@@ -27,6 +28,55 @@ function onMouseMove(e){
         y: mouseY - 34,
         opacity: 1
     })
+}
+
+// Resize callback
+window.addEventListener('resize', onResize, false);
+function onResize() {
+    if(animatedScroll == 0) {
+        anime({
+            targets: '#up',
+            translateX: window.innerWidth / 2 - 32,
+            translateY: window.innerHeight / 2 - 350 - 24,
+            duration: 100,
+            easing: 'easeInOutQuad'
+        });
+        anime({
+            targets: '#question',
+            translateX: window.innerWidth / 2 + 140,
+            translateY: window.innerHeight / 2 - 215 - 64,
+            duration: 100,
+            easing: 'easeInOutQuad'
+        });
+        anime({
+            targets: '#shuttle',
+            translateX: window.innerWidth / 2 + 120,
+            translateY: window.innerHeight / 2 - 28 - 64,
+            duration: 100,
+            easing: 'easeInOutQuad'
+        });
+        anime({
+            targets: '#piano',
+            translateX: window.innerWidth / 2 - 32,
+            translateY: window.innerHeight / 2 + 8,
+            duration: 100,
+            easing: 'easeInOutQuad'
+        });
+        anime({
+            targets: '#brackets',
+            translateX: window.innerWidth / 2 - 190,
+            translateY: window.innerHeight / 2 - 32 - 64,
+            duration: 100,
+            easing: 'easeInOutQuad'
+        });
+        anime({
+            targets: '#star',
+            translateX: window.innerWidth / 2 - 190,
+            translateY: window.innerHeight / 2 - 225 - 64,
+            duration: 100,
+            easing: 'easeInOutQuad'
+        });
+    }
 }
 
 // Mouse button callback
@@ -74,17 +124,58 @@ anime({
     targets: '.scrollIndicatorContainer',
     opacity: 1,
     duration: 2000,
-    delay: 2000,
-    easing: 'easeOutQuad'
+    delay: 5000,
+    easing: 'easeInOutQuad'
 });
 anime({
-    targets: '.welcome',
+    targets: '.storyteller',
+    delay: anime.stagger(256, { start: 2000 }),
     opacity: 1,
     duration: 3000,
-    delay: 3000,
-    easing: 'easeOutQuad'
+    easing: 'easeInOutCirc'
 });
-
+anime({
+    targets: '#up',
+    translateX: window.innerWidth / 2 - 32,
+    translateY: window.innerHeight / 2 - 350 - 24,
+    duration: 100,
+    easing: 'easeInOutQuad'
+});
+anime({
+    targets: '#question',
+    translateX: window.innerWidth / 2 + 140,
+    translateY: window.innerHeight / 2 - 215 - 64,
+    duration: 100,
+    easing: 'easeInOutQuad'
+});
+anime({
+    targets: '#shuttle',
+    translateX: window.innerWidth / 2 + 120,
+    translateY: window.innerHeight / 2 - 28 - 64,
+    duration: 100,
+    easing: 'easeInOutQuad'
+});
+anime({
+    targets: '#piano',
+    translateX: window.innerWidth / 2 - 32,
+    translateY: window.innerHeight / 2 + 8,
+    duration: 100,
+    easing: 'easeInOutQuad'
+});
+anime({
+    targets: '#brackets',
+    translateX: window.innerWidth / 2 - 190,
+    translateY: window.innerHeight / 2 - 32 - 64,
+    duration: 100,
+    easing: 'easeInOutQuad'
+});
+anime({
+    targets: '#star',
+    translateX: window.innerWidth / 2 - 190,
+    translateY: window.innerHeight / 2 - 225 - 64,
+    duration: 100,
+    easing: 'easeInOutQuad'
+});
 
 ScrollTrigger.create({
     trigger: "#c1",
@@ -109,12 +200,6 @@ ScrollTrigger.create({
             scale: 1 - self.progress.toFixed(3) / 5,
             ease: 'elastic'
         });
-        gsap.to(".welcome", {
-            opacity: 1 - self.progress.toFixed(3),
-            filter: `blur(${self.progress.toFixed(3) * 8}px)`,
-            scale: 1 - self.progress.toFixed(3) / 4,
-            ease: 'elastic'
-        });
     },
 });
 
@@ -125,7 +210,7 @@ var frame = 0;
 function animate(time) {
     lenis.raf(time);
     requestAnimationFrame(animate);
-
+    
     frame ++;
 }
 animate();
