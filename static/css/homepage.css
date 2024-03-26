@@ -99,6 +99,7 @@
     font-size: 64px;
     opacity: 0;
     text-shadow: 0 0 16px rgba(255, 255, 255,1);
+    z-index: 4;
 }
 #star {
     font-size: 128px;
