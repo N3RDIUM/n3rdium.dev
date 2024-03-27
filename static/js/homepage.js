@@ -30,55 +30,6 @@ function onMouseMove(e){
     })
 }
 
-// Resize callback
-window.addEventListener('resize', onResize, false);
-function onResize() {
-    if(animatedScroll == 0) {
-        anime({
-            targets: '#up',
-            translateX: window.innerWidth / 2 - 32,
-            translateY: window.innerHeight / 2 - 350 - 24,
-            duration: 100,
-            easing: 'easeInOutQuad'
-        });
-        anime({
-            targets: '#question',
-            translateX: window.innerWidth / 2 + 140,
-            translateY: window.innerHeight / 2 - 215 - 64,
-            duration: 100,
-            easing: 'easeInOutQuad'
-        });
-        anime({
-            targets: '#shuttle',
-            translateX: window.innerWidth / 2 + 120,
-            translateY: window.innerHeight / 2 - 28 - 64,
-            duration: 100,
-            easing: 'easeInOutQuad'
-        });
-        anime({
-            targets: '#piano',
-            translateX: window.innerWidth / 2 - 32,
-            translateY: window.innerHeight / 2 + 8,
-            duration: 100,
-            easing: 'easeInOutQuad'
-        });
-        anime({
-            targets: '#brackets',
-            translateX: window.innerWidth / 2 - 190,
-            translateY: window.innerHeight / 2 - 32 - 64,
-            duration: 100,
-            easing: 'easeInOutQuad'
-        });
-        anime({
-            targets: '#star',
-            translateX: window.innerWidth / 2 - 190,
-            translateY: window.innerHeight / 2 - 225 - 64,
-            duration: 100,
-            easing: 'easeInOutQuad'
-        });
-    }
-}
-
 // Mouse button callback
 window.addEventListener('mousedown', onMouseDown, false);
 window.addEventListener('mouseup', onMouseUp, false);
@@ -134,48 +85,126 @@ anime({
     duration: 3000,
     easing: 'easeInOutCirc'
 });
-anime({
-    targets: '#up',
-    translateX: window.innerWidth / 2 - 32,
-    translateY: window.innerHeight / 2 - 350 - 24,
-    duration: 100,
-    easing: 'easeInOutQuad'
-});
-anime({
-    targets: '#question',
-    translateX: window.innerWidth / 2 + 140,
-    translateY: window.innerHeight / 2 - 215 - 64,
-    duration: 100,
-    easing: 'easeInOutQuad'
-});
-anime({
-    targets: '#shuttle',
-    translateX: window.innerWidth / 2 + 120,
-    translateY: window.innerHeight / 2 - 28 - 64,
-    duration: 100,
-    easing: 'easeInOutQuad'
-});
-anime({
-    targets: '#piano',
-    translateX: window.innerWidth / 2 - 32,
-    translateY: window.innerHeight / 2 + 8,
-    duration: 100,
-    easing: 'easeInOutQuad'
-});
-anime({
-    targets: '#brackets',
-    translateX: window.innerWidth / 2 - 190,
-    translateY: window.innerHeight / 2 - 32 - 64,
-    duration: 100,
-    easing: 'easeInOutQuad'
-});
-anime({
-    targets: '#star',
-    translateX: window.innerWidth / 2 - 190,
-    translateY: window.innerHeight / 2 - 225 - 64,
-    duration: 100,
-    easing: 'easeInOutQuad'
-});
+
+function upPosition() {
+    var x = 0;
+    var y = 0;
+
+    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
+        x = interpolate(
+            window.innerWidth / 2 - 32,
+            window.innerWidth / 7 - 32,
+            animatedScroll / window.innerHeight
+        )
+        y = interpolate(
+            window.innerHeight / 2 - 350 - 24,
+            window.innerHeight / 7 - 32,
+            animatedScroll / window.innerHeight
+        )
+    }
+
+    return [x, y]
+}
+
+function questionPosition() {
+    var x = 0;
+    var y = 0;
+
+    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
+        x = interpolate(
+            window.innerWidth / 2 + 140,
+            window.innerWidth / 7 * 2 - 32,
+            animatedScroll / window.innerHeight
+        )
+        y = interpolate(
+            window.innerHeight / 2 - 215 - 64,
+            window.innerHeight / 7 * 2 - 32,
+            animatedScroll / window.innerHeight
+        )
+    }
+
+    return [x, y]
+}
+
+function shuttlePosition() {
+    var x = 0;
+    var y = 0;
+
+    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
+        x = interpolate(
+            window.innerWidth / 2 + 120,
+            window.innerWidth / 7 * 3 - 32,
+            animatedScroll / window.innerHeight
+        )
+        y = interpolate(
+            window.innerHeight / 2 - 28 - 64,
+            window.innerHeight / 7 * 3 - 32,
+            animatedScroll / window.innerHeight
+        )
+    }
+
+    return [x, y]
+}
+
+function pianoPosition() {
+    var x = 0;
+    var y = 0;
+
+    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
+        x = interpolate(
+            window.innerWidth / 2 - 32,
+            window.innerWidth / 7 * 4 - 32,
+            animatedScroll / window.innerHeight
+        )
+        y = interpolate(
+            window.innerHeight / 2 + 8,
+            window.innerHeight / 7 * 4 - 32,
+            animatedScroll / window.innerHeight
+        )
+    }
+
+    return [x, y]
+}
+
+function bracketsPosition() {
+    var x = 0;
+    var y = 0;
+
+    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
+        x = interpolate(
+            window.innerWidth / 2 - 190,
+            window.innerWidth / 7 * 5 - 32,
+            animatedScroll / window.innerHeight
+        )
+        y = interpolate(
+            window.innerHeight / 2 - 32 - 64,
+            window.innerHeight / 7 * 5 - 32,
+            animatedScroll / window.innerHeight
+        )
+    }
+
+    return [x, y]
+}
+
+function starPosition() {
+    var x = 0;
+    var y = 0;
+
+    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
+        x = interpolate(
+            window.innerWidth / 2 - 190,
+            window.innerWidth / 7 * 6 - 32,
+            animatedScroll / window.innerHeight
+        )
+        y = interpolate(
+            window.innerHeight / 2 - 225 - 64,
+            window.innerHeight / 7 * 6 - 32,
+            animatedScroll / window.innerHeight
+        )
+    }
+
+    return [x, y]
+}
 
 ScrollTrigger.create({
     trigger: "#c1",
@@ -211,6 +240,31 @@ function animate(time) {
     lenis.raf(time);
     requestAnimationFrame(animate);
     
+    gsap.to('#up', {
+        x: upPosition()[0],
+        y: upPosition()[1]
+    })
+    gsap.to('#question', {
+        x: questionPosition()[0],
+        y: questionPosition()[1]
+    })
+    gsap.to('#shuttle', {
+        x: shuttlePosition()[0],
+        y: shuttlePosition()[1]
+    })
+    gsap.to('#piano', {
+        x: pianoPosition()[0],
+        y: pianoPosition()[1]
+    })
+    gsap.to('#brackets', {
+        x: bracketsPosition()[0],
+        y: bracketsPosition()[1]
+    })
+    gsap.to('#star', {
+        x: starPosition()[0],
+        y: starPosition()[1]
+    })
+
     frame ++;
 }
 animate();
