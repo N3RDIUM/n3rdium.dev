@@ -51,7 +51,7 @@
     }
     25% {
         transform: translateY(0px) rotate(45deg);
-        border-radius: 4px;;
+        border-radius: 4px;
         opacity: 1;
     }
     50% {
@@ -99,6 +99,7 @@
     font-size: 64px;
     opacity: 0;
     text-shadow: 0 0 16px rgba(255, 255, 255,1);
+    mix-blend-mode: difference;
     z-index: 4;
 }
 #star {

@@ -110,7 +110,7 @@ function upPosition() {
         )
     }
 
-    return [x + noiseForIdx(1) * 8, y + noiseForIdx(2) * 8]
+    return [x + noiseForIdx(1) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(2) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
 }
 
 function questionPosition() {
@@ -130,7 +130,7 @@ function questionPosition() {
         )
     }
 
-    return [x + noiseForIdx(3) * 8, y + noiseForIdx(4) * 8]
+    return [x + noiseForIdx(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(4) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
 }
 
 function shuttlePosition() {
@@ -150,7 +150,7 @@ function shuttlePosition() {
         )
     }
 
-    return [x + noiseForIdx(5) * 8, y + noiseForIdx(6) * 8]
+    return [x + noiseForIdx(5) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(6) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
 }
 
 function pianoPosition() {
@@ -170,7 +170,7 @@ function pianoPosition() {
         )
     }
 
-    return [x + noiseForIdx(7) * 8, y + noiseForIdx(8) * 8]
+    return [x + noiseForIdx(7) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(8) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
 }
 
 function bracketsPosition() {
@@ -190,7 +190,7 @@ function bracketsPosition() {
         )
     }
 
-    return [x + noiseForIdx(9) * 8, y + noiseForIdx(10) * 8]
+    return [x + noiseForIdx(9) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(10) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
 }
 
 function starPosition() {
@@ -210,7 +210,7 @@ function starPosition() {
         )
     }
 
-    return [x + noiseForIdx(11) * 8, y + noiseForIdx(12) * 8]
+    return [x + noiseForIdx(11) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(12) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
 }
 
 ScrollTrigger.create({
@@ -220,19 +220,19 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         gsap.to(".username", {
             opacity: 1 - self.progress.toFixed(3),
-            filter: `blur(${self.progress.toFixed(3) * 8}px)`,
+            filter: `blur(${self.progress.toFixed(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64}px)`,
             scale: 1 - self.progress.toFixed(3) / 2,
             ease: 'elastic'
         });
         gsap.to(".avatar", {
             opacity: 1 - self.progress.toFixed(3),
-            filter: `blur(${self.progress.toFixed(3) * 8}px)`,
+            filter: `blur(${self.progress.toFixed(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64}px)`,
             scale: 1 - self.progress.toFixed(3) / 1.5,
             ease: 'elastic'
         });
         gsap.to(".scrollIndicatorContainer", {
             opacity: 1 - self.progress.toFixed(3),
-            filter: `blur(${self.progress.toFixed(3) * 8}px)`,
+            filter: `blur(${self.progress.toFixed(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64}px)`,
             scale: 1 - self.progress.toFixed(3) / 5,
             ease: 'elastic'
         });
