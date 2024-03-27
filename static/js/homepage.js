@@ -86,6 +86,13 @@ anime({
     easing: 'easeInOutCirc'
 });
 
+let noise = openSimplexNoise.makeNoise4D(Date.now());
+const STEP = 69420
+function noiseForIdx(idx) {
+    let _idx = idx * 3
+    return noise(STEP * _idx, STEP * (_idx + 1), STEP * (_idx + 2), frame / 100)
+}
+
 function upPosition() {
     var x = 0;
     var y = 0;
@@ -103,7 +110,7 @@ function upPosition() {
         )
     }
 
-    return [x, y]
+    return [x + noiseForIdx(1) * 8, y + noiseForIdx(2) * 8]
 }
 
 function questionPosition() {
@@ -123,7 +130,7 @@ function questionPosition() {
         )
     }
 
-    return [x, y]
+    return [x + noiseForIdx(3) * 8, y + noiseForIdx(4) * 8]
 }
 
 function shuttlePosition() {
@@ -143,7 +150,7 @@ function shuttlePosition() {
         )
     }
 
-    return [x, y]
+    return [x + noiseForIdx(5) * 8, y + noiseForIdx(6) * 8]
 }
 
 function pianoPosition() {
@@ -163,7 +170,7 @@ function pianoPosition() {
         )
     }
 
-    return [x, y]
+    return [x + noiseForIdx(7) * 8, y + noiseForIdx(8) * 8]
 }
 
 function bracketsPosition() {
@@ -183,7 +190,7 @@ function bracketsPosition() {
         )
     }
 
-    return [x, y]
+    return [x + noiseForIdx(9) * 8, y + noiseForIdx(10) * 8]
 }
 
 function starPosition() {
@@ -203,7 +210,7 @@ function starPosition() {
         )
     }
 
-    return [x, y]
+    return [x + noiseForIdx(11) * 8, y + noiseForIdx(12) * 8]
 }
 
 ScrollTrigger.create({
@@ -231,8 +238,6 @@ ScrollTrigger.create({
         });
     },
 });
-
-let noise = openSimplexNoise.makeNoise4D(Date.now());
 
 // Mainloop
 var frame = 0;
