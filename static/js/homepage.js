@@ -100,7 +100,7 @@ function upPosition() {
     if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
         x = interpolate(
             window.innerWidth / 2 - 32,
-            window.innerWidth / 7 - 32,
+            window.innerWidth / 7 * 6 - 32,
             animatedScroll / window.innerHeight
         )
         y = interpolate(
@@ -120,7 +120,7 @@ function questionPosition() {
     if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
         x = interpolate(
             window.innerWidth / 2 + 140,
-            window.innerWidth / 7 * 2 - 32,
+            window.innerWidth / 7 * 5 - 32,
             animatedScroll / window.innerHeight
         )
         y = interpolate(
@@ -140,7 +140,7 @@ function shuttlePosition() {
     if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
         x = interpolate(
             window.innerWidth / 2 + 120,
-            window.innerWidth / 7 * 3 - 32,
+            window.innerWidth / 7 * 4 - 32,
             animatedScroll / window.innerHeight
         )
         y = interpolate(
@@ -160,7 +160,7 @@ function pianoPosition() {
     if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
         x = interpolate(
             window.innerWidth / 2 - 32,
-            window.innerWidth / 7 * 4 - 32,
+            window.innerWidth / 7 * 3 - 32,
             animatedScroll / window.innerHeight
         )
         y = interpolate(
@@ -180,7 +180,7 @@ function bracketsPosition() {
     if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
         x = interpolate(
             window.innerWidth / 2 - 190,
-            window.innerWidth / 7 * 5 - 32,
+            window.innerWidth / 7 * 2 - 32,
             animatedScroll / window.innerHeight
         )
         y = interpolate(
@@ -200,7 +200,7 @@ function starPosition() {
     if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
         x = interpolate(
             window.innerWidth / 2 - 190,
-            window.innerWidth / 7 * 6 - 32,
+            window.innerWidth / 7 - 32,
             animatedScroll / window.innerHeight
         )
         y = interpolate(
