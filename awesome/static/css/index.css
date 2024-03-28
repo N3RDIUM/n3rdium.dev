@@ -1,0 +1,132 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: cell;
+    user-select: none;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+.container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    background: transparent;
+    overflow: hidden;
+}
+.cursor {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: antiquewhite;
+    border: solid 2px antiquewhite;
+    mix-blend-mode: difference;
+    top: 0;
+    left: 0;
+    z-index: 69;
+    opacity: 0;
+}
+.page-intro {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-intro {
+    background: url('../img/milkyway.avif') no-repeat;
+    background-size: 100% auto;
+    background-position: center 50%;
+}
+.intro-dialog {
+    height: 25vh;
+    width: 50vw;
+    min-width: 318px;
+    background-color: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    box-shadow: 16px 16px 42px black,
+             -4px -4px 42px #fdfdfd;
+}
+.dialog-header {
+    background-color: rgba(255, 255, 255, 0.16);
+    width: 100%;
+    height: 32px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.dialog-header-btn {
+    width: 16px;
+    height: 16px;
+    background-color: aliceblue;
+    margin: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 8px;
+}
+.green {
+    background-color: green;
+}
+.orange {
+    background-color: orange;
+}
+.red {
+    background-color: red;
+    margin-right: 8px;
+}
+.dialog-content {
+    width: 100%;
+    height: calc(25vh - 48px);
+    margin-top: -24px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    max-height: calc(25vh - 48px);
+}
+.dialog-heading {
+    font-size: 48px;
+}
+.dialog-text {
+    font-size: 16px;
+    padding: 8px;
+    text-align: justify center;
+}

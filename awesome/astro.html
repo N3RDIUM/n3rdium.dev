@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Metadata-->
+        <link rel=preconnect href="https://www.googletagmanager.com">
+        <link rel=preconnect href="https://stats.g.doubleclick.net">
+        <title>Astro Grid: N3RDIUM's Hideout</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="N3RDIUM's Hideout">
+        <meta name="author" content="N3RDIUM">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="../static/img/n3rdium.avif" type="image/x-icon">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./static/css/index.css">
+        <link rel="stylesheet" href="./static/css/astro.css">
+        
+        <!-- Import map -->
+        <script type="importmap">
+            {
+              "imports": {
+                "opensimplex": "https://cdn.skypack.dev/open-simplex-noise"
+              }
+            }
+        </script>
+
+        <!-- Libs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../static/js/lenis.min.js"></script>
+        <script src="../static/js/anime.min.js"></script>
+
+        <!-- JS -->
+        <script src="../static/js/darkreader_notify.min.js" type="module"></script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
+        <script async>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-DRCTBWSMF2');
+        </script>
+    </head>
+
+    <body>
+        <div class="cursor"></div>
+        <div class="page-intro">
+            <div class="intro-dialog">
+                <div class="dialog-header">
+                    <div class="dialog-header-btn green"></div>
+                    <div class="dialog-header-btn orange"></div>
+                    <div class="dialog-header-btn red"></div>
+                </div>
+                <div class="dialog-content">
+                    <h1 class="dialog-heading">awesome-astro</h1>
+                    <p class="dialog-text">Looking for some resources for astronomy or astrophotography? Look no more, because you have just found the treasure you deserve.</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-container">
+        </div>
+    </body>
+</html>

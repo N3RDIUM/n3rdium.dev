@@ -132,21 +132,13 @@
     opacity: 0;
 }
 
-.c2-topleft {
-    width: 50%;
-    height: 50%;
-    transform: translateX(-50%);
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.c2-heading {
+    font-size: 5vw;
+    position: absolute;
+    transform: translateY(-38vh);
 }
-.c2-bottomright {
-    width: 50%;
-    height: 50%;
-    transform: translateX(50%);
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media screen and (min-width: calc(800px)) {
+    .c2-heading {
+       font-size: 40px;
+    }
 }

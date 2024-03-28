@@ -11,4 +11,5 @@ The website is [here](https://n3rdium.dev).
 - https://cubic-bezier.com
 - https://duckduckgo.com/?q=color+picker
 - https://www.blobmaker.app/
+- https://dev.to/arjuncodess/feeling-stuck-with-css-open-this-4g9f
 - No, I don't use Figma.

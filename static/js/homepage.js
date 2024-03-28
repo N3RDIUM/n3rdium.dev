@@ -2,8 +2,6 @@
 import openSimplexNoise from 'opensimplex';
 function interpolate(initial,final,progress){return initial-(initial-final)*progress}
 
-gsap.registerPlugin(ScrollTrigger);
-
 // DOM stuff setup
 const lenis = new Lenis();
 var animatedScroll = 0;
