@@ -9,9 +9,6 @@ const lenis = new Lenis();
 var animatedScroll = 0;
 lenis.on('scroll', function (scroll) {
     animatedScroll = scroll.animatedScroll;
-    gsap.to('.welcome', {
-        x: -animatedScroll / 2
-    })
 });
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,10 +76,17 @@ anime({
     easing: 'easeInOutQuad'
 });
 anime({
+    targets: '.anomaly',
+    opacity: 1,
+    duration: 2000,
+    delay: 2000,
+    easing: 'easeInOutQuad'
+});
+anime({
     targets: '.storyteller',
     delay: anime.stagger(256, { start: 2000 }),
     opacity: 1,
-    duration: 3000,
+    duration: 2000,
     easing: 'easeInOutCirc'
 });
 
@@ -93,124 +97,161 @@ function noiseForIdx(idx) {
     return noise(STEP * _idx, STEP * (_idx + 1), STEP * (_idx + 2), frame / 100)
 }
 
+// Storyteller timelines
 function upPosition() {
     var x = 0;
     var y = 0;
 
-    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
-        x = interpolate(
-            window.innerWidth / 2 - 32,
-            window.innerWidth / 7 * 6 - 32,
-            animatedScroll / window.innerHeight
-        )
-        y = interpolate(
-            window.innerHeight / 2 - 350 - 24,
-            window.innerHeight / 7 - 32,
-            animatedScroll / window.innerHeight
-        )
-    }
+    var timeline = [
+        [window.innerWidth / 2 - 32, window.innerHeight / 2 - 350 - 24],
+        [window.innerWidth / 7 * 6 - 32, window.innerHeight / 7 - 32],
+        [0, 0]
+    ]
 
-    return [x + noiseForIdx(1) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(2) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
+    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
+    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
+    x = interpolate(
+        timeline[idx][0],
+        timeline[idx + 1][0],
+        progress
+    )
+    y = interpolate(
+        timeline[idx][1],
+        timeline[idx + 1][1],
+        progress
+    )
+
+    return [x + noiseForIdx(1) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(2) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
 }
 
 function questionPosition() {
     var x = 0;
     var y = 0;
 
-    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
-        x = interpolate(
-            window.innerWidth / 2 + 140,
-            window.innerWidth / 7 * 5 - 32,
-            animatedScroll / window.innerHeight
-        )
-        y = interpolate(
-            window.innerHeight / 2 - 215 - 64,
-            window.innerHeight / 7 * 2 - 32,
-            animatedScroll / window.innerHeight
-        )
-    }
+    var timeline = [
+        [window.innerWidth / 2 + 140, window.innerHeight / 2 - 215 - 64],
+        [window.innerWidth / 7 * 5 - 32, window.innerHeight / 7 * 2 - 32],
+        [0, 0]
+    ]
 
-    return [x + noiseForIdx(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(4) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
+    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
+    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
+    x = interpolate(
+        timeline[idx][0],
+        timeline[idx + 1][0],
+        progress
+    )
+    y = interpolate(
+        timeline[idx][1],
+        timeline[idx + 1][1],
+        progress
+    )
+
+    return [x + noiseForIdx(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(4) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
 }
 
 function shuttlePosition() {
     var x = 0;
     var y = 0;
 
-    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
-        x = interpolate(
-            window.innerWidth / 2 + 120,
-            window.innerWidth / 7 * 4 - 32,
-            animatedScroll / window.innerHeight
-        )
-        y = interpolate(
-            window.innerHeight / 2 - 28 - 64,
-            window.innerHeight / 7 * 3 - 32,
-            animatedScroll / window.innerHeight
-        )
-    }
+    var timeline = [
+        [window.innerWidth / 2 + 120, window.innerHeight / 2 - 28 - 64],
+        [window.innerWidth / 7 * 4 - 3, window.innerHeight / 7 * 3 - 32],
+        [0, 0]
+    ]
 
-    return [x + noiseForIdx(5) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(6) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
+    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
+    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
+    x = interpolate(
+        timeline[idx][0],
+        timeline[idx + 1][0],
+        progress
+    )
+    y = interpolate(
+        timeline[idx][1],
+        timeline[idx + 1][1],
+        progress
+    )
+
+    return [x + noiseForIdx(5) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(6) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
 }
 
 function pianoPosition() {
     var x = 0;
     var y = 0;
 
-    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
-        x = interpolate(
-            window.innerWidth / 2 - 32,
-            window.innerWidth / 7 * 3 - 32,
-            animatedScroll / window.innerHeight
-        )
-        y = interpolate(
-            window.innerHeight / 2 + 8,
-            window.innerHeight / 7 * 4 - 32,
-            animatedScroll / window.innerHeight
-        )
-    }
+    var timeline = [
+        [window.innerWidth / 2 - 32, window.innerHeight / 2 + 8],
+        [window.innerWidth / 7 * 3 - 32, window.innerHeight / 7 * 4 - 32],
+        [0, 0]
+    ]
+    
+    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
+    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
+    x = interpolate(
+        timeline[idx][0],
+        timeline[idx + 1][0],
+        progress
+    )
+    y = interpolate(
+        timeline[idx][1],
+        timeline[idx + 1][1],
+        progress
+    )
 
-    return [x + noiseForIdx(7) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(8) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
+    return [x + noiseForIdx(7) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(8) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
 }
 
 function bracketsPosition() {
     var x = 0;
     var y = 0;
 
-    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
-        x = interpolate(
-            window.innerWidth / 2 - 190,
-            window.innerWidth / 7 * 2 - 32,
-            animatedScroll / window.innerHeight
-        )
-        y = interpolate(
-            window.innerHeight / 2 - 32 - 64,
-            window.innerHeight / 7 * 5 - 32,
-            animatedScroll / window.innerHeight
-        )
-    }
+    var timeline = [
+        [window.innerWidth / 2 - 190, window.innerHeight / 2 - 32 - 64],
+        [window.innerWidth / 7 * 2 - 32, window.innerHeight / 7 * 5 - 32],
+        [0, 0]
+    ]
 
-    return [x + noiseForIdx(9) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(10) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
+    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
+    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
+    x = interpolate(
+        timeline[idx][0],
+        timeline[idx + 1][0],
+        progress
+    )
+    y = interpolate(
+        timeline[idx][1],
+        timeline[idx + 1][1],
+        progress
+    )
+
+    return [x + noiseForIdx(9) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(10) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
 }
 
 function starPosition() {
     var x = 0;
     var y = 0;
 
-    if(animatedScroll >= 0 && animatedScroll <= window.innerHeight) {
-        x = interpolate(
-            window.innerWidth / 2 - 190,
-            window.innerWidth / 7 - 32,
-            animatedScroll / window.innerHeight
-        )
-        y = interpolate(
-            window.innerHeight / 2 - 225 - 64,
-            window.innerHeight / 7 * 6 - 32,
-            animatedScroll / window.innerHeight
-        )
-    }
+    var timeline = [
+        [window.innerWidth / 2 - 190, window.innerHeight / 2 - 225 - 64],
+        [window.innerWidth / 7 - 32, window.innerHeight / 7 * 6 - 32],
+        [0, 0]
+    ]
 
-    return [x + noiseForIdx(11) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(12) * Math.sqrt(window.innerWidth * window.innerHeight) / 64]
+    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
+    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
+    x = interpolate(
+        timeline[idx][0],
+        timeline[idx + 1][0],
+        progress
+    )
+    y = interpolate(
+        timeline[idx][1],
+        timeline[idx + 1][1],
+        progress
+    )
+
+    return [x + noiseForIdx(11) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(12) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
 }
 
 ScrollTrigger.create({
@@ -247,27 +288,39 @@ function animate(time) {
     
     gsap.to('#up', {
         x: upPosition()[0],
-        y: upPosition()[1]
+        y: upPosition()[1],
+        scale: upPosition()[2],
+        rotation: upPosition()[3]
     })
     gsap.to('#question', {
         x: questionPosition()[0],
-        y: questionPosition()[1]
+        y: questionPosition()[1],
+        scale: questionPosition()[2],
+        rotation: questionPosition()[3]
     })
     gsap.to('#shuttle', {
         x: shuttlePosition()[0],
-        y: shuttlePosition()[1]
+        y: shuttlePosition()[1],
+        scale: shuttlePosition()[2],
+        rotation: shuttlePosition()[3]
     })
     gsap.to('#piano', {
         x: pianoPosition()[0],
-        y: pianoPosition()[1]
+        y: pianoPosition()[1],
+        scale: pianoPosition()[2],
+        rotation: pianoPosition()[3]
     })
     gsap.to('#brackets', {
         x: bracketsPosition()[0],
-        y: bracketsPosition()[1]
+        y: bracketsPosition()[1],
+        scale: bracketsPosition()[2],
+        rotation: bracketsPosition()[3]
     })
     gsap.to('#star', {
         x: starPosition()[0],
-        y: starPosition()[1]
+        y: starPosition()[1],
+        scale: starPosition()[2],
+        rotation: starPosition()[3]
     })
 
     frame ++;
