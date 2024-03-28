@@ -5,6 +5,7 @@ Hey there! This is my portfolio website and blog. Not much to see here, is there
 The website is [here](https://n3rdium.dev).
 
 ## Useful web dev resources!
+- https://svgrepo.com
 - https://animejs.com
 - https://gsap.com
 - https://cssgradient.io
