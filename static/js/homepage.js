@@ -103,9 +103,9 @@ function upPosition() {
     var y = 0;
 
     var timeline = [
-        [window.innerWidth / 2 - 32, window.innerHeight / 2 - 350 - 24],
-        [window.innerWidth / 7 * 6 - 32, window.innerHeight / 7 - 32],
-        [0, 0]
+        [window.innerWidth / 2 - 32, window.innerHeight / 2 - 350 - 24, 1, 0],
+        [window.innerWidth - 80, 0, 1, 0],
+        [0, 0, 1, 0]
     ]
 
     let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
@@ -121,7 +121,13 @@ function upPosition() {
         progress
     )
 
-    return [x + noiseForIdx(1) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(2) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
+    return [
+        x + noiseForIdx(1) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
+        y + noiseForIdx(2) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
+        timeline[idx][2],
+        timeline[idx][3],
+        timeline[idx][4]
+    ]
 }
 
 function questionPosition() {
@@ -129,9 +135,9 @@ function questionPosition() {
     var y = 0;
 
     var timeline = [
-        [window.innerWidth / 2 + 140, window.innerHeight / 2 - 215 - 64],
-        [window.innerWidth / 7 * 5 - 32, window.innerHeight / 7 * 2 - 32],
-        [0, 0]
+        [window.innerWidth / 2 + 140, window.innerHeight / 2 - 215 - 64, 1, 0],
+        [window.innerWidth - 64, 120, 1, 0],
+        [0, 0, 1, 0]
     ]
 
     let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
@@ -147,7 +153,13 @@ function questionPosition() {
         progress
     )
 
-    return [x + noiseForIdx(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(4) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
+    return [
+        x + noiseForIdx(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
+        y + noiseForIdx(4) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
+        timeline[idx][2],
+        timeline[idx][3],
+        timeline[idx][4]
+    ]
 }
 
 function shuttlePosition() {
@@ -155,9 +167,9 @@ function shuttlePosition() {
     var y = 0;
 
     var timeline = [
-        [window.innerWidth / 2 + 120, window.innerHeight / 2 - 28 - 64],
-        [window.innerWidth / 7 * 4 - 3, window.innerHeight / 7 * 3 - 32],
-        [0, 0]
+        [window.innerWidth / 2 + 120, window.innerHeight / 2 - 28 - 64, 1, 0],
+        [128, window.innerHeight - 96, 1, 0],
+        [0, 0, 1, 0]
     ]
 
     let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
@@ -173,7 +185,13 @@ function shuttlePosition() {
         progress
     )
 
-    return [x + noiseForIdx(5) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(6) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
+    return [
+        x + noiseForIdx(5) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
+        y + noiseForIdx(6) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
+        timeline[idx][2],
+        timeline[idx][3],
+        timeline[idx][4]
+    ]
 }
 
 function pianoPosition() {
@@ -181,9 +199,9 @@ function pianoPosition() {
     var y = 0;
 
     var timeline = [
-        [window.innerWidth / 2 - 32, window.innerHeight / 2 + 8],
-        [window.innerWidth / 7 * 3 - 32, window.innerHeight / 7 * 4 - 32],
-        [0, 0]
+        [window.innerWidth / 2 - 32, window.innerHeight / 2 + 8, 1, 0],
+        [32, window.innerHeight - 96, 1, 0],
+        [0, 0, 1, 0]
     ]
     
     let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
@@ -199,7 +217,13 @@ function pianoPosition() {
         progress
     )
 
-    return [x + noiseForIdx(7) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(8) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
+    return [
+        x + noiseForIdx(7) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
+        y + noiseForIdx(8) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
+        timeline[idx][2],
+        timeline[idx][3],
+        timeline[idx][4]
+    ]
 }
 
 function bracketsPosition() {
@@ -207,9 +231,9 @@ function bracketsPosition() {
     var y = 0;
 
     var timeline = [
-        [window.innerWidth / 2 - 190, window.innerHeight / 2 - 32 - 64],
-        [window.innerWidth / 7 * 2 - 32, window.innerHeight / 7 * 5 - 32],
-        [0, 0]
+        [window.innerWidth / 2 - 190, window.innerHeight / 2 - 32 - 64, 1, 0],
+        [32, window.innerHeight - 200, 1, 0],
+        [0, 0, 1, 0]
     ]
 
     let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
@@ -225,7 +249,13 @@ function bracketsPosition() {
         progress
     )
 
-    return [x + noiseForIdx(9) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(10) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
+    return [
+        x + noiseForIdx(9) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
+        y + noiseForIdx(10) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
+        timeline[idx][2],
+        timeline[idx][3],
+        timeline[idx][4]
+    ]
 }
 
 function starPosition() {
@@ -233,9 +263,9 @@ function starPosition() {
     var y = 0;
 
     var timeline = [
-        [window.innerWidth / 2 - 190, window.innerHeight / 2 - 225 - 64],
-        [window.innerWidth / 7 - 32, window.innerHeight / 7 * 6 - 32],
-        [0, 0]
+        [window.innerWidth / 2 - 190, window.innerHeight / 2 - 225 - 64, 1, 0],
+        [window.innerWidth - 176, 0, 1, 0],
+        [0, 0, 1, 0]
     ]
 
     let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
@@ -251,7 +281,13 @@ function starPosition() {
         progress
     )
 
-    return [x + noiseForIdx(11) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, y + noiseForIdx(12) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 1, 0]
+    return [
+        x + noiseForIdx(11) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
+        y + noiseForIdx(12) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
+        timeline[idx][2],
+        timeline[idx][3],
+        timeline[idx][4]
+    ]
 }
 
 ScrollTrigger.create({
