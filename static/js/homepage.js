@@ -101,7 +101,7 @@ function onMouseDown() {
 // Startup animations
 anime({
     targets: '.uletter',
-    opacity: 0.32,
+    opacity: 1,
     delay: anime.stagger(128),
     margin: 2,
     duration: 256,
@@ -132,12 +132,6 @@ function animate(time) {
             if(i >= hackerIdx) {
                 let content = randomChar();
                 uletters[i].innerHTML = content;
-                anime({
-                    targets: uletters[i],
-                    opacity: 1,
-                    duration: 2000,
-                    easing: 'easeInOutCirc'
-                });
                 iter++;
             }
             if (i == hackerIdx) {
