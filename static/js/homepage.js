@@ -1,6 +1,14 @@
 // Imports / Plugins
-import openSimplexNoise from 'opensimplex';
-function interpolate(initial,final,progress){return initial-(initial-final)*progress}
+gsap.registerPlugin(ScrollTrigger);
+
+// Misc funcs
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
+
+function randomChar() {
+    return String.fromCharCode(Math.random() * 94 + 33);
+}
 
 // DOM stuff setup
 const lenis = new Lenis();
@@ -9,6 +17,43 @@ lenis.on('scroll', function (scroll) {
     animatedScroll = scroll.animatedScroll;
 });
 gsap.registerPlugin(ScrollTrigger);
+
+// Create a uniform field of randomly placed points
+const numDots = 512;
+const dots = [];
+document.getElementById('dots').children = [];
+for (let i = 0; i < numDots; i++) {
+    let dot = document.createElement('div')
+    dot.className = 'dot';
+    dot.id = `dot${i}`
+    dots.push({
+        el: dot,
+        position: [
+            Math.random(),
+            Math.random(),
+            Math.random() * 10
+        ]
+    })
+
+    document.getElementById('dots').appendChild(dot);
+
+    anime({
+        targets: dot,
+        translateX: window.innerWidth / 2,
+        translateY: window.innerHeight / 2,
+        duration: 0,
+        ease: 'linear'
+    })
+    anime({
+        targets: dot,
+        opacity: 1,
+        translateX: dots[i].position[0] * window.innerWidth * 2 - window.innerWidth / 2,
+        translateY: dots[i].position[1] * window.innerHeight * 2 - window.innerHeight / 2,
+        duration: 1000,
+        delay: i * 4,
+        ease: 'easeInOutElastic'
+    })
+}
 
 // Mouse move callback
 let mouseX = 0;
@@ -23,12 +68,19 @@ function onMouseMove(e){
         y: mouseY - 34,
         opacity: 1
     })
+    gsap.to('.username', {
+        x: -((mouseX / window.innerWidth) * 2 - 1) * 48,
+        y: -((mouseY / window.innerHeight) * 2 - 1) * 48,
+        duration: 0.8
+    })
 }
 
 // Mouse button callback
+let mouseDown = false;
 window.addEventListener('mousedown', onMouseDown, false);
 window.addEventListener('mouseup', onMouseUp, false);
 function onMouseUp() {
+    mouseDown = false;
     gsap.to('.cursor', {
         scale: 1,
         duration: 0.32,
@@ -37,6 +89,7 @@ function onMouseUp() {
     })
 }
 function onMouseDown() {
+    mouseDown = true;
     gsap.to('.cursor', {
         scale: 0.84,
         duration: 0.32,
@@ -45,316 +98,131 @@ function onMouseDown() {
     })
 }
 
-// Animations
-anime({
-    targets: '.username',
-    backgroundPosition: `56vw 0`,
-    duration: 2000,
-    easing: 'linear',
-    loop: true
-});
+// Startup animations
 anime({
     targets: '.uletter',
+    opacity: 0.32,
+    delay: anime.stagger(128),
+    margin: 2,
+    duration: 256,
+    easing: 'easeInOutCirc'
+});
+anime({
+    targets: '.link',
     opacity: 1,
     delay: anime.stagger(128),
-    duration: 2000,
+    duration: 512,
     easing: 'easeInOutCirc'
-});
-anime({
-    targets: '.avatarContainer',
-    opacity: 1,
-    duration: 2000,
-    easing: 'easeOutQuint'
-});
-anime({
-    targets: '.scrollIndicatorContainer',
-    opacity: 1,
-    duration: 2000,
-    delay: 5000,
-    easing: 'easeInOutQuad'
-});
-anime({
-    targets: '.anomaly',
-    opacity: 1,
-    duration: 2000,
-    delay: 2000,
-    easing: 'easeInOutQuad'
-});
-anime({
-    targets: '.storyteller',
-    delay: anime.stagger(256, { start: 2000 }),
-    opacity: 1,
-    duration: 2000,
-    easing: 'easeInOutCirc'
-});
-
-let noise = openSimplexNoise.makeNoise4D(Date.now());
-const STEP = 69420
-function noiseForIdx(idx) {
-    let _idx = idx * 3
-    return noise(STEP * _idx, STEP * (_idx + 1), STEP * (_idx + 2), frame / 100)
-}
-
-// Storyteller timelines
-function upPosition() {
-    var x = 0;
-    var y = 0;
-
-    var timeline = [
-        [window.innerWidth / 2 - 32, window.innerHeight / 2 - 350 - 24, 1, 0],
-        [window.innerWidth - 80, 0, 1, 0],
-        [0, 0, 1, 0]
-    ]
-
-    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
-    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
-    x = interpolate(
-        timeline[idx][0],
-        timeline[idx + 1][0],
-        progress
-    )
-    y = interpolate(
-        timeline[idx][1],
-        timeline[idx + 1][1],
-        progress
-    )
-
-    return [
-        x + noiseForIdx(1) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
-        y + noiseForIdx(2) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
-        timeline[idx][2],
-        timeline[idx][3],
-        timeline[idx][4]
-    ]
-}
-
-function questionPosition() {
-    var x = 0;
-    var y = 0;
-
-    var timeline = [
-        [window.innerWidth / 2 + 140, window.innerHeight / 2 - 215 - 64, 1, 0],
-        [window.innerWidth - 64, 120, 1, 0],
-        [0, 0, 1, 0]
-    ]
-
-    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
-    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
-    x = interpolate(
-        timeline[idx][0],
-        timeline[idx + 1][0],
-        progress
-    )
-    y = interpolate(
-        timeline[idx][1],
-        timeline[idx + 1][1],
-        progress
-    )
-
-    return [
-        x + noiseForIdx(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
-        y + noiseForIdx(4) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
-        timeline[idx][2],
-        timeline[idx][3],
-        timeline[idx][4]
-    ]
-}
-
-function shuttlePosition() {
-    var x = 0;
-    var y = 0;
-
-    var timeline = [
-        [window.innerWidth / 2 + 120, window.innerHeight / 2 - 28 - 64, 1, 0],
-        [128, window.innerHeight - 96, 1, 0],
-        [0, 0, 1, 0]
-    ]
-
-    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
-    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
-    x = interpolate(
-        timeline[idx][0],
-        timeline[idx + 1][0],
-        progress
-    )
-    y = interpolate(
-        timeline[idx][1],
-        timeline[idx + 1][1],
-        progress
-    )
-
-    return [
-        x + noiseForIdx(5) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
-        y + noiseForIdx(6) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
-        timeline[idx][2],
-        timeline[idx][3],
-        timeline[idx][4]
-    ]
-}
-
-function pianoPosition() {
-    var x = 0;
-    var y = 0;
-
-    var timeline = [
-        [window.innerWidth / 2 - 32, window.innerHeight / 2 + 8, 1, 0],
-        [32, window.innerHeight - 96, 1, 0],
-        [0, 0, 1, 0]
-    ]
-    
-    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
-    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
-    x = interpolate(
-        timeline[idx][0],
-        timeline[idx + 1][0],
-        progress
-    )
-    y = interpolate(
-        timeline[idx][1],
-        timeline[idx + 1][1],
-        progress
-    )
-
-    return [
-        x + noiseForIdx(7) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
-        y + noiseForIdx(8) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
-        timeline[idx][2],
-        timeline[idx][3],
-        timeline[idx][4]
-    ]
-}
-
-function bracketsPosition() {
-    var x = 0;
-    var y = 0;
-
-    var timeline = [
-        [window.innerWidth / 2 - 190, window.innerHeight / 2 - 32 - 64, 1, 0],
-        [32, window.innerHeight - 200, 1, 0],
-        [0, 0, 1, 0]
-    ]
-
-    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
-    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
-    x = interpolate(
-        timeline[idx][0],
-        timeline[idx + 1][0],
-        progress
-    )
-    y = interpolate(
-        timeline[idx][1],
-        timeline[idx + 1][1],
-        progress
-    )
-
-    return [
-        x + noiseForIdx(9) * Math.sqrt(window.innerWidth * window.innerHeight) / 64, 
-        y + noiseForIdx(10) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
-        timeline[idx][2],
-        timeline[idx][3],
-        timeline[idx][4]
-    ]
-}
-
-function starPosition() {
-    var x = 0;
-    var y = 0;
-
-    var timeline = [
-        [window.innerWidth / 2 - 190, window.innerHeight / 2 - 225 - 64, 1, 0],
-        [window.innerWidth - 176, 0, 1, 0],
-        [0, 0, 1, 0]
-    ]
-
-    let idx = Math.round(animatedScroll / window.innerHeight - 0.5);
-    let progress = (animatedScroll % window.innerHeight) / window.innerHeight;
-    x = interpolate(
-        timeline[idx][0],
-        timeline[idx + 1][0],
-        progress
-    )
-    y = interpolate(
-        timeline[idx][1],
-        timeline[idx + 1][1],
-        progress
-    )
-
-    return [
-        x + noiseForIdx(11) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
-        y + noiseForIdx(12) * Math.sqrt(window.innerWidth * window.innerHeight) / 64,
-        timeline[idx][2],
-        timeline[idx][3],
-        timeline[idx][4]
-    ]
-}
-
-ScrollTrigger.create({
-    trigger: "#c1",
-    start: "top top",
-    end: "+=100%",
-    onUpdate: (self) => {
-        gsap.to(".username", {
-            opacity: 1 - self.progress.toFixed(3),
-            filter: `blur(${self.progress.toFixed(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64}px)`,
-            scale: 1 - self.progress.toFixed(3) / 2,
-            ease: 'elastic'
-        });
-        gsap.to(".avatar", {
-            opacity: 1 - self.progress.toFixed(3),
-            filter: `blur(${self.progress.toFixed(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64}px)`,
-            scale: 1 - self.progress.toFixed(3) / 1.5,
-            ease: 'elastic'
-        });
-        gsap.to(".scrollIndicatorContainer", {
-            opacity: 1 - self.progress.toFixed(3),
-            filter: `blur(${self.progress.toFixed(3) * Math.sqrt(window.innerWidth * window.innerHeight) / 64}px)`,
-            scale: 1 - self.progress.toFixed(3) / 5,
-            ease: 'elastic'
-        });
-    },
 });
 
 // Mainloop
 var frame = 0;
+var hackerIdx = 0;
+var iter = 0;
+const max_iterations = 24;
+const username = ['N', '3', 'R', 'D', 'I', 'U', 'M'];
 function animate(time) {
     lenis.raf(time);
     requestAnimationFrame(animate);
-    
-    gsap.to('#up', {
-        x: upPosition()[0],
-        y: upPosition()[1],
-        scale: upPosition()[2],
-        rotation: upPosition()[3]
+
+    // Loop thru all .uletter els
+    let uletters = document.querySelectorAll('.uletter');
+    for (let i=0; i<uletters.length; i++) {
+        if(frame > 60) {
+            if(i >= hackerIdx) {
+                let content = randomChar();
+                uletters[i].innerHTML = content;
+                anime({
+                    targets: uletters[i],
+                    opacity: 1,
+                    duration: 2000,
+                    easing: 'easeInOutCirc'
+                });
+                iter++;
+            }
+            if (i == hackerIdx) {
+                if(iter > max_iterations) {
+                    uletters[i].innerHTML = username[i];
+                    hackerIdx++;
+                    iter = 0;
+                }
+            }
+        }
+
+        // Get its center
+        let cx = uletters[i].offsetLeft + uletters[i].offsetParent.offsetLeft;
+        let cy = uletters[i].offsetTop + uletters[i].offsetParent.offsetTop;
+
+        // Get its proximity to the mouse
+        let dx = cx - mouseX;
+        let dy = cy - mouseY;
+
+        // Calculate distance
+        let dist = Math.sqrt((dx * dx) + (dy * dy));
+
+        // Update its size and margin based on distance
+        if(!mouseDown){
+            anime({
+                targets: uletters[i],
+                margin: 2 + clamp(1024 / dist, 0, 12),
+                duration: 256,
+                ease: 'easeInOutElastic'
+            })
+        } else {
+            anime({
+                targets: uletters[i],
+                margin: 2 + 2 * clamp(1024 / dist, 0, 16),
+                duration: 256,
+                ease: 'easeInOutElastic'
+            })
+        }
+    }
+
+    // Loop thru all the dots
+    for (let i = 0; i < dots.length; i++) {
+        // Get its position
+        let cx = dots[i].el.offsetLeft + 1;
+        let cy = dots[i].el.offsetTop + 1;
+
+        // Get its proximity to the mouse
+        let dx = cx - (mouseX - window.innerWidth / 2);
+        let dy = cy - (mouseY - window.innerHeight / 2) - animatedScroll * 4;
+
+        // Make the points move a bit away from the mouse
+        if(frame > 60) {
+            gsap.to(dots[i].el, {
+                x: (dots[i].position[0] * window.innerWidth * 2 - window.innerWidth / 2) + dx / dots[i].position[2] / 4,
+                y: (dots[i].position[1] * window.innerHeight * 2 - window.innerHeight / 2) + dy / dots[i].position[2] / 4,
+                duration: 0.8
+            })
+        }
+    }
+
+    // Move the links
+    gsap.to('#about-link', {
+        x: window.innerWidth / 8 * 2 - ((mouseX / window.innerWidth) * 2 - 1) * 64,
+        y: window.innerHeight / 8 * 1 - ((mouseY / window.innerHeight) * 2 - 1) * 64,
+        duration: 0.8
     })
-    gsap.to('#question', {
-        x: questionPosition()[0],
-        y: questionPosition()[1],
-        scale: questionPosition()[2],
-        rotation: questionPosition()[3]
+    gsap.to('#work-link', {
+        x: window.innerWidth / 8 * 1 - ((mouseX / window.innerWidth) * 2 - 1) * 96,
+        y: window.innerHeight / 8 * 2 - ((mouseY / window.innerHeight) * 2 - 1) * 96,
+        duration: 0.8
     })
-    gsap.to('#shuttle', {
-        x: shuttlePosition()[0],
-        y: shuttlePosition()[1],
-        scale: shuttlePosition()[2],
-        rotation: shuttlePosition()[3]
+    gsap.to('#projects-link', {
+        x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 48,
+        y: window.innerHeight / 8 * 3 - ((mouseY / window.innerHeight) * 2 - 1) * 48,
+        duration: 0.8
     })
-    gsap.to('#piano', {
-        x: pianoPosition()[0],
-        y: pianoPosition()[1],
-        scale: pianoPosition()[2],
-        rotation: pianoPosition()[3]
+    gsap.to('#blog-link', {
+        x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 128,
+        y: window.innerHeight / 8 * 7 - ((mouseY / window.innerHeight) * 2 - 1) * 128,
+        duration: 0.8
     })
-    gsap.to('#brackets', {
-        x: bracketsPosition()[0],
-        y: bracketsPosition()[1],
-        scale: bracketsPosition()[2],
-        rotation: bracketsPosition()[3]
-    })
-    gsap.to('#star', {
-        x: starPosition()[0],
-        y: starPosition()[1],
-        scale: starPosition()[2],
-        rotation: starPosition()[3]
+    gsap.to('#contact-link', {
+        x: window.innerWidth / 8 * 3 - ((mouseX / window.innerWidth) * 2 - 1) * 80,
+        y: window.innerHeight / 8 * 6 - ((mouseY / window.innerHeight) * 2 - 1) * 80,
+        duration: 0.8
     })
 
     frame ++;

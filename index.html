@@ -33,8 +33,7 @@
         <script src="./static/js/anime.min.js"></script>
 
         <!-- JS -->
-        <script src="../static/js/homepage.js" type="module"></script>
-        <script src="../static/js/darkreader_notify.min.js" type="module"></script>
+        <script src="./static/js/homepage.js" defer></script>
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
@@ -49,37 +48,23 @@
 
     <body>
         <div class="cursor"></div>
-        <div class="storyteller" id="up"> ^ </div>
-        <div class="storyteller" id="question">?</div>
-        <div class="storyteller" id="shuttle">
-            <!--Shuttle icon from svgrepo.com-->
-            <svg class="svg-storyteller" fill="#ffffff" viewBox="0 -0.42 42.356 42.356" xmlns="http://www.w3.org/2000/svg" style="--darkreader-inline-fill: #181a1b;" data-darkreader-inline-fill=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="shuttlecock" d="M157.288,169.268l2.295,5.865s-8.735,11.6-9.88,13.583-4.124,3.328-4.124,3.328l-1.666,3.2,2.738,2.738,1.709-1.709a49.942,49.942,0,0,1,2.636-5.656c1.212-2.013,9.826-13.669,9.826-13.669L167.7,178.3l1.354,6.882s-11.6,8.556-13.669,9.826a46.424,46.424,0,0,1-5.656,2.636l-1.709,1.709,2.693,2.693,3.363-1.745s1.327-2.963,3.3-4.1,13.5-9.8,13.5-9.8l5.852,2.307-1.6,5.511s-13.267,5.661-15.275,6.735a48.208,48.208,0,0,1-5.477,1.733l-6.765,3.887.711.711-2.45,2.45-.092-.092a6.523,6.523,0,0,1-8.253-.714l-1.83-1.83c-2.214-2.214-1.388-4.625.6-6.938l-.034-.034.942-.942h0l1.508-1.508.665.665,3.8-6.589a21.029,21.029,0,0,1,1.759-5.5c1.146-1.986,6.814-15.355,6.814-15.355l5.536-1.63M142.993,197l-1.7,3.259,2.223,2.223-.686-.686,2.479-2.479Zm3.689,3.689L144.2,203.17l1.483,1.483,3.265-1.694Z" transform="translate(-134.376 -169.268)"></path> </g></svg>
-        </div>
-        <div class="storyteller" id="piano">
-            <!--Piano icon from svgrepo.com-->
-            <svg class="svg-storyteller" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#ffffff" d="M60,0H4C1.789,0,0,1.789,0,4v56c0,2.211,1.789,4,4,4h56c2.211,0,4-1.789,4-4V4C64,1.789,62.211,0,60,0z M15,62H4c-1.104,0-2-0.896-2-2V4c0-1.104,0.641-2,2-2h7v39c0,0.553,0.447,1,1,1h3V62z M31,62H17V42h3c0.553,0,1-0.447,1-1V2h6v39 c0,0.553,0.447,1,1,1h3V62z M47,62H33V42h3c0.553,0,1-0.447,1-1V2h6v39c0,0.553,0.447,1,1,1h3V62z M62,60c0,1.104-0.896,2-2,2H49V42 h3c0.553,0,1-0.447,1-1V2h7c1.016,0,2,0.896,2,2V60z"></path> </g></svg>
-        </div>
-        <div class="storyteller" id="brackets">{ }</div>
-        <div class="storyteller" id="star">*</div>
-        <div class="container" id="c1">
-            <div class="anomaly-container" id="ac">
-                <svg id="c1c" class="anomaly" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#00b596" d="M35.8,-38.5C47.2,-24.4,57.8,-12.2,63.3,5.5C68.9,23.3,69.4,46.6,58,53.3C46.6,60.1,23.3,50.3,5.8,44.5C-11.8,38.8,-23.5,37,-37.5,30.3C-51.5,23.5,-67.6,11.8,-71.5,-3.9C-75.4,-19.5,-66.9,-39,-53,-53.1C-39,-67.1,-19.5,-75.7,-3.6,-72.1C12.2,-68.4,24.4,-52.5,35.8,-38.5Z" transform="translate(100 100)" />
-                </svg>                
-            </div>
-            <div class="avatarContainer">
-                <img src="./static/img/n3rdium.avif" alt="N3RDIUM's avatar" class="avatar">
-            </div>
-            <h1 class="username">
-                <span class="uletter">N</span><span class="uletter">3</span><span class="uletter">R</span><span class="uletter">D</span><span class="uletter">I</span><span class="uletter">U</span><span class="uletter">M</span>
+        <div class="container">
+            <h1 class="username" id="uname">
+                <span class="uletter"></span>
+                <span class="uletter"></span>
+                <span class="uletter"></span>
+                <span class="uletter"></span>
+                <span class="uletter"></span>
+                <span class="uletter"></span>
+                <span class="uletter"></span>
             </h1>
-            <div class="scrollIndicatorContainer">
-                <div class="scrollIndicator" id="sInd1"></div>
-                <div class="scrollIndicator" id="sInd2"></div>
-            </div>
-        </div>
-        <div class="container" id="c2">
-            <div class="c2-heading">ABOUT ME</div>
+            <div class="layer starfield-bg" id="dots"></div>
+            
+            <a class="link" id="about-link" href="/about">About</a>
+            <a class="link" id="work-link" href="/work">Work</a>
+            <a class="link" id="projects-link" href="/projects">Projects</a>
+            <a class="link" id="blog-link" href="/blog">Blog</a>
+            <a class="link" id="contact-link" href="/contact">Contact</a>
         </div>
     </body>
 </html>
