@@ -49,6 +49,7 @@ for (let i = 0; i < numDots; i++) {
         opacity: 1,
         translateX: dots[i].position[0] * window.innerWidth * 2 - window.innerWidth / 2,
         translateY: dots[i].position[1] * window.innerHeight * 2 - window.innerHeight / 2,
+        filter: `blur(${dots[i].position[2] / 2}px)`,
         duration: 1000,
         delay: i * 4,
         ease: 'easeInOutElastic'
@@ -71,6 +72,11 @@ function onMouseMove(e){
     gsap.to('.username', {
         x: -((mouseX / window.innerWidth) * 2 - 1) * 48,
         y: -((mouseY / window.innerHeight) * 2 - 1) * 48,
+        duration: 0.8
+    })
+    gsap.to('.starfield-bg', {
+        x: -((mouseX / window.innerWidth) * 2 - 1) * 16 - window.innerWidth / 10,
+        y: -((mouseY / window.innerHeight) * 2 - 1) * 16 - window.innerHeight / 10,
         duration: 0.8
     })
 }
