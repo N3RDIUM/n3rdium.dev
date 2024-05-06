@@ -18,26 +18,26 @@
         <link rel="stylesheet" href="../static/css/homepage.css">
         
         <!-- Import map -->
-        <script type="importmap">
+        <!-- <script async type="importmap">
             {
               "imports": {
                 "opensimplex": "https://cdn.skypack.dev/open-simplex-noise"
               }
             }
-        </script>
+        </script> -->
 
         <!-- Libs -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="./static/js/lenis.min.js"></script>
-        <script src="./static/js/anime.min.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script async src="./static/js/lenis.min.js"></script> --> <!--Unneeded for now, preserving for other pages-->
+        <script async src="./static/js/anime.min.js"></script>
 
         <!-- JS -->
-        <script src="./static/js/homepage.js" defer></script>
+        <script defer src="./static/js/homepage.js"></script>
 
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
-        <script async>
+        <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
+        <script defer async>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());

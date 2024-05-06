@@ -1,6 +1,3 @@
-// Imports / Plugins
-gsap.registerPlugin(ScrollTrigger);
-
 // Misc funcs
 function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
@@ -9,14 +6,6 @@ function clamp(value, min, max) {
 function randomChar() {
     return String.fromCharCode(Math.random() * 94 + 33);
 }
-
-// DOM stuff setup
-const lenis = new Lenis();
-var animatedScroll = 0;
-lenis.on('scroll', function (scroll) {
-    animatedScroll = scroll.animatedScroll;
-});
-gsap.registerPlugin(ScrollTrigger);
 
 // Create a uniform field of randomly placed points
 const numDots = 512;
@@ -50,6 +39,7 @@ for (let i = 0; i < numDots; i++) {
         translateX: dots[i].position[0] * window.innerWidth * 2 - window.innerWidth / 2,
         translateY: dots[i].position[1] * window.innerHeight * 2 - window.innerHeight / 2,
         filter: `blur(${dots[i].position[2] / 2}px)`,
+        scale: 1 + dots[i].position[2] / 16,
         duration: 1000,
         delay: i * 4,
         ease: 'easeInOutElastic'
@@ -107,14 +97,6 @@ function onMouseDown() {
 
 // Startup animations
 anime({
-    targets: '.uletter',
-    opacity: 1,
-    delay: anime.stagger(128),
-    margin: 2,
-    duration: 256,
-    easing: 'easeInOutCirc'
-});
-anime({
     targets: '.link',
     opacity: 1,
     delay: anime.stagger(128),
@@ -124,7 +106,7 @@ anime({
 anime({
     targets: '.starfield-bg',
     opacity: 1,
-    duration: 1024,
+    duration: 2048,
     easing: 'easeInOutSine'
 })
 
@@ -134,28 +116,25 @@ var hackerIdx = 0;
 var iter = 0;
 const max_iterations = 24;
 const username = ['N', '3', 'R', 'D', 'I', 'U', 'M'];
+const start = Date.now();
 function animate(time) {
-    lenis.raf(time);
     requestAnimationFrame(animate);
 
     // Loop thru all .uletter els
     let uletters = document.querySelectorAll('.uletter');
     for (let i=0; i<uletters.length; i++) {
-        if(frame > 60) {
-            if(i >= hackerIdx) {
-                let content = randomChar();
-                uletters[i].innerHTML = content;
-                iter++;
-            }
-            if (i == hackerIdx) {
-                if(iter > max_iterations) {
-                    uletters[i].innerHTML = username[i];
-                    hackerIdx++;
-                    iter = 0;
-                }
+        if(i >= hackerIdx) {
+            let content = randomChar();
+            uletters[i].innerHTML = content;
+            iter++;
+        }
+        if (i == hackerIdx) {
+            if(iter > max_iterations) {
+                uletters[i].innerHTML = username[i];
+                hackerIdx++;
+                iter = 0;
             }
         }
-
         // Get its center
         let cx = uletters[i].offsetLeft + uletters[i].offsetParent.offsetLeft;
         let cy = uletters[i].offsetTop + uletters[i].offsetParent.offsetTop;
@@ -193,10 +172,10 @@ function animate(time) {
 
         // Get its proximity to the mouse
         let dx = cx - (mouseX - window.innerWidth / 2);
-        let dy = cy - (mouseY - window.innerHeight / 2) - animatedScroll * 4;
+        let dy = cy - (mouseY - window.innerHeight / 2);
 
         // Make the points move a bit away from the mouse
-        if(frame > 60) {
+        if(Date.now() - start > numDots * 4) {
             gsap.to(dots[i].el, {
                 x: (dots[i].position[0] * window.innerWidth * 2 - window.innerWidth / 2) + dx / dots[i].position[2] / 4,
                 y: (dots[i].position[1] * window.innerHeight * 2 - window.innerHeight / 2) + dy / dots[i].position[2] / 4,
