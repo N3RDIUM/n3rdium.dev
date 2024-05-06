@@ -114,6 +114,12 @@ anime({
     duration: 512,
     easing: 'easeInOutCirc'
 });
+anime({
+    targets: '.starfield-bg',
+    opacity: 1,
+    duration: 1024,
+    easing: 'easeInOutSine'
+})
 
 // Mainloop
 var frame = 0;
@@ -199,23 +205,23 @@ function animate(time) {
         duration: 0.8
     })
     gsap.to('#work-link', {
-        x: window.innerWidth / 8 * 1 - ((mouseX / window.innerWidth) * 2 - 1) * 96,
-        y: window.innerHeight / 8 * 2 - ((mouseY / window.innerHeight) * 2 - 1) * 96,
+        x: window.innerWidth / 8 * 1 - ((mouseX / window.innerWidth) * 2 - 1) * 48,
+        y: window.innerHeight / 8 * 2 - ((mouseY / window.innerHeight) * 2 - 1) * 48,
         duration: 0.8
     })
     gsap.to('#projects-link', {
-        x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 48,
-        y: window.innerHeight / 8 * 3 - ((mouseY / window.innerHeight) * 2 - 1) * 48,
+        x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 32,
+        y: window.innerHeight / 8 * 3 - ((mouseY / window.innerHeight) * 2 - 1) * 32,
         duration: 0.8
     })
     gsap.to('#blog-link', {
-        x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 128,
-        y: window.innerHeight / 8 * 7 - ((mouseY / window.innerHeight) * 2 - 1) * 128,
+        x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 80,
+        y: window.innerHeight / 8 * 7 - ((mouseY / window.innerHeight) * 2 - 1) * 80,
         duration: 0.8
     })
     gsap.to('#contact-link', {
-        x: window.innerWidth / 8 * 3 - ((mouseX / window.innerWidth) * 2 - 1) * 80,
-        y: window.innerHeight / 8 * 6 - ((mouseY / window.innerHeight) * 2 - 1) * 80,
+        x: window.innerWidth / 8 * 3 - ((mouseX / window.innerWidth) * 2 - 1) * 128,
+        y: window.innerHeight / 8 * 6 - ((mouseY / window.innerHeight) * 2 - 1) * 128,
         duration: 0.8
     })
 

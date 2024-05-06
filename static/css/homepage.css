@@ -38,5 +38,6 @@
     background-image: url('../img/pixart-galaxy.jpg');
     background-position: center;
     background-size: cover;
-    filter: brightness(0.64);
+    filter: brightness(1);
+    opacity: 0;
 }
