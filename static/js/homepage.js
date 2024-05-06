@@ -67,17 +67,18 @@ function onMouseMove(e){
     gsap.to('.cursor', {
         x: mouseX - 34,
         y: mouseY - 34,
-        opacity: 1
+        opacity: 1,
+        duration: 0.8
     })
     gsap.to('.username', {
         x: -((mouseX / window.innerWidth) * 2 - 1) * 48,
         y: -((mouseY / window.innerHeight) * 2 - 1) * 48,
-        duration: 0.8
+        duration: 1.2
     })
     gsap.to('.starfield-bg', {
         x: -((mouseX / window.innerWidth) * 2 - 1) * 16 - window.innerWidth / 10,
         y: -((mouseY / window.innerHeight) * 2 - 1) * 16 - window.innerHeight / 10,
-        duration: 0.8
+        duration: 1.2
     })
 }
 
@@ -199,7 +200,7 @@ function animate(time) {
             gsap.to(dots[i].el, {
                 x: (dots[i].position[0] * window.innerWidth * 2 - window.innerWidth / 2) + dx / dots[i].position[2] / 4,
                 y: (dots[i].position[1] * window.innerHeight * 2 - window.innerHeight / 2) + dy / dots[i].position[2] / 4,
-                duration: 0.8
+                duration: 1.28
             })
         }
     }
@@ -226,8 +227,8 @@ function animate(time) {
         duration: 0.8
     })
     gsap.to('#contact-link', {
-        x: window.innerWidth / 8 * 3 - ((mouseX / window.innerWidth) * 2 - 1) * 128,
-        y: window.innerHeight / 8 * 6 - ((mouseY / window.innerHeight) * 2 - 1) * 128,
+        x: window.innerWidth / 8 * 3 - ((mouseX / window.innerWidth) * 2 - 1) * 100,
+        y: window.innerHeight / 8 * 6 - ((mouseY / window.innerHeight) * 2 - 1) * 100,
         duration: 0.8
     })
 
