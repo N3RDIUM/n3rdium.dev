@@ -66,11 +66,6 @@ function onMouseMove(e){
         y: -((mouseY / window.innerHeight) * 2 - 1) * 48,
         duration: 1.2
     })
-    gsap.to('.starfield-bg', {
-        x: -((mouseX / window.innerWidth) * 2 - 1) * 16 - window.innerWidth / 10,
-        y: -((mouseY / window.innerHeight) * 2 - 1) * 16 - window.innerHeight / 10,
-        duration: 1.2
-    })
 }
 
 // Mouse button callback

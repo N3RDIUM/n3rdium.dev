@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Metadata-->
+        <link rel=preconnect href="https://www.googletagmanager.com">
+        <link rel=preconnect href="https://stats.g.doubleclick.net">
+        <title>N3RDIUM's Hideout</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="N3RDIUM's Hideout">
+        <meta name="author" content="N3RDIUM">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="../img/n3rdium.avif" type="image/x-icon">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="./css/contact.css">
+        
+        <!-- Import map -->
+        <!-- <script type="importmap">
+            {
+              "imports": {
+                "opensimplex": "https://cdn.skypack.dev/open-simplex-noise"
+              }
+            }
+        </script> -->
+
+        <!-- Libs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../js/lenis.min.js"></script>
+        <script src="../js/anime.min.js"></script>
+
+        <!-- JS -->
+        <script defer src="./js/contact.js"></script>
+        <script defer src="../js/nav.js"></script>
+
+        <!-- Google tag (gtag.js) -->
+        <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
+        <script defer async>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-DRCTBWSMF2');
+        </script>
+    </head>
+
+    <body>
+        <header class="site-header" id="header">
+            <a href="/" class="header-left header-homelink">
+                <img src="../img/n3rdium.avif" alt="avatar" class="header-avatar">
+            </a>
+            <div class="header-center">
+                <div class="header-username">N3RDIUM</div>
+                <div class="header-slash">/contact</div>
+            </div>
+            <div class="header-right">
+                <button class="header-nav-button">
+                    <div class="hamburger" onmouseenter="hover()" onmouseleave="unhover()" onclick="toggleNav()">
+                        <div class="hamburger-line" id="hamburger-line1"></div>
+                        <div class="hamburger-line" id="hamburger-line2"></div>
+                        <div class="hamburger-line" id="hamburger-line3"></div>
+                    </div>
+                </button>
+            </div>
+        </header>
+
+        <div class="nav" id="navtray"></div>
+        <div class="content-cover" id="content-cover"></div>
+        <div class="cursor"></div>
+
+        <div class="container"></div>
+        <div class="container"></div>
+    </body>
+</html>
