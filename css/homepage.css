@@ -23,7 +23,6 @@ html, body {
     height: 3px;
     position: absolute;
     background-color: white;
-    opacity: 0;
     pointer-events: none;
     filter: brightness(4);
 }

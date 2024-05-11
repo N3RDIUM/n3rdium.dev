@@ -26,6 +26,7 @@ for (let i = 0; i < numDots; i++) {
 
     document.getElementById('dots').appendChild(dot);
 
+
     anime({
         targets: dot,
         translateX: window.innerWidth / 2,
@@ -36,8 +37,6 @@ for (let i = 0; i < numDots; i++) {
     anime({
         targets: dot,
         opacity: 1,
-        translateX: dots[i].position[0] * window.innerWidth * 2 - window.innerWidth / 2,
-        translateY: dots[i].position[1] * window.innerHeight * 2 - window.innerHeight / 2,
         filter: `blur(${dots[i].position[2] / 2}px)`,
         scale: 1 + dots[i].position[2] / 16,
         duration: 1000,
