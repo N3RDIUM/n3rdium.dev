@@ -22,4 +22,5 @@
     font-size: 64px;
     color: white;
     position: absolute;
+    text-shadow: 0 0 24px rgba(255, 255, 255, 1);
 }
