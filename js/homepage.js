@@ -58,7 +58,8 @@ function onMouseMove(e){
         x: mouseX - 34,
         y: mouseY - 34,
         opacity: 1,
-        duration: 0.8
+        duration: 1,
+        ease: 'expo'
     })
     gsap.to('.username', {
         x: -((mouseX / window.innerWidth) * 2 - 1) * 48,

@@ -11,12 +11,14 @@ html, body {
     user-select: none;
     cursor: cell;
 }
-
 body {
     background-color: black;
     overflow-x: hidden;
 }
 
+.hidden {
+    display: none;
+}
 .lenis.lenis-smooth {
     scroll-behavior: auto;
 }
@@ -68,4 +70,62 @@ body {
     left: 0;
     overflow: hidden;
     pointer-events: none;
+}
+.site-header {
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: #0009;
+    backdrop-filter: blur(16px);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left {
+    margin-left: 16px;
+    height: 48px;
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.header-homelink {
+    text-decoration: none;
+}
+.header-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+}
+.header-username {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-shadow: 0 0 8px rgba(0,226,255,1);
+    color: rgb(0, 225, 255);
+    font-size: 32px;
+}
+.header-nav-button {
+    all: unset;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.hamburger {
+    width: 32px;
+    height: 32px;
+}
+.hamburger-line {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin: 6px auto;
+    background-color: white;
+    position: static;
 }
