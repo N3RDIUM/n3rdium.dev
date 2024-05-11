@@ -5,6 +5,7 @@ const lenis = new Lenis()
 // Lenis stuff
 var animatedScroll = 0;
 lenis.on('scroll', (e) => {
+    animatedScroll = e.animatedScroll;
 })
 
 // Event handlers

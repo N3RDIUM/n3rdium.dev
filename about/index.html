@@ -48,7 +48,7 @@
     </head>
 
     <body>
-        <header class="site-header">
+        <header class="site-header" id="header">
             <a href="/" class="header-left header-homelink">
                 <img src="../img/n3rdium.avif" alt="avatar" class="header-avatar">
             </a>
@@ -57,8 +57,8 @@
                 <div class="header-slash">/about</div>
             </div>
             <div class="header-right">
-                <button class="header-nav-button"> <!--For mobiles-->
-                    <div class="hamburger" onmouseenter="enter()" onmouseleave="leave()">
+                <button class="header-nav-button">
+                    <div class="hamburger" onmouseenter="hover()" onmouseleave="unhover()" onclick="toggleNav()">
                         <div class="hamburger-line" id="hamburger-line1"></div>
                         <div class="hamburger-line" id="hamburger-line2"></div>
                         <div class="hamburger-line" id="hamburger-line3"></div>
@@ -67,9 +67,11 @@
             </div>
         </header>
 
+        <div class="nav" id="navtray"></div>
+        <div class="content-cover" id="content-cover"></div>
         <div class="cursor"></div>
-        <div class="container">
-            
-        </div>
+
+        <div class="container"></div>
+        <div class="container"></div>
     </body>
 </html>
