@@ -118,7 +118,7 @@ var last = Date.now();
 function raf(time) {
 	lenis.raf(time);
 
-	if(Date.now() - last > 3000) {
+	if(Date.now() - last > 4000) {
 		last = Date.now();
 
 		idx++;
