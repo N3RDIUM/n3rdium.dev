@@ -1,0 +1,107 @@
+.sep {
+    width: 64px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    margin-top: 4px;
+}
+.nerd-text {
+    font-size: 24vw;
+    background: linear-gradient(90deg, rgba(0,226,255,1) 0%, rgb(0, 255, 157) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 32px rgba(0,226,255,1);
+}
+.astro-text {
+    font-size: 12vw;
+    background: linear-gradient(90deg, rgb(139, 255, 201) 0%, rgb(132, 255, 157) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 32px rgb(0, 255, 247);
+}
+.dev-text {
+    font-size: 14vw;
+    background: linear-gradient(90deg, rgb(255, 0, 0) 0%,rgb(255, 47, 0) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 32px rgb(255, 69, 69);
+}
+.exp-text {
+    font-size: 12vw;
+    background: linear-gradient(90deg, rgb(255, 179, 0) 0%,rgb(255, 47, 0) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 32px rgb(255, 69, 69);
+}
+.alive-text {
+    font-size: 24vw;
+    background: linear-gradient(90deg, rgb(181, 255, 70) 0%,rgb(127, 255, 72) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 32px rgb(0, 255, 234);
+}
+.scroll-indicator-0 {
+    position: absolute;
+    bottom: 64px;
+    font-size: 64px;
+    animation: scroll-indicator 2s infinite ease-in-out;
+}
+.scroll-indicator-1 {
+    position: absolute;
+    bottom: 64px;
+    font-size: 64px;
+    animation: scroll-indicator 2s 0.66s infinite ease-in-out;
+}
+.scroll-indicator-2 {
+    position: absolute;
+    bottom: 64px;
+    font-size: 64px;
+    animation: scroll-indicator 2s 1.32s infinite ease-in-out;
+}
+@keyframes scroll-indicator {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    25% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 16px);
+    }
+    75% {
+        opacity: 0;
+        transform: translate(0, 16px);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+}
+* {
+    z-index: 1;
+}
+
+.bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    filter: blur(8px) brightness(0.48);
+}
+.credit {
+    position: absolute;
+    font-size: 12px;
+    color: rgba(203, 203, 203, 0.8);
+    top: 0; left: 0;
+    transform: translate(calc(100vw - 150px), calc(100vh - 16px));
+}

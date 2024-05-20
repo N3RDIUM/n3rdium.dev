@@ -23,7 +23,7 @@ html, body {
     height: 3px;
     border-radius: 50%;
     position: absolute;
-    background-color: white;
+    background-color: rgb(128, 255, 255);
     pointer-events: none;
     box-shadow: 0 0 12px 3px white;
 }

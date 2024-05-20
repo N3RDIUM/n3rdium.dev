@@ -23,11 +23,6 @@ function onMouseMove(e){
         duration: 1,
         ease: 'expo'
     })
-    gsap.to('.contact-label', {
-        x: -((mouseX / window.innerWidth) * 2 - 1) * 16,
-        y: -((mouseY / window.innerHeight) * 2 - 1) * 16,
-        duration: 1.2
-    })
 }
 
 // Mouse button callback
@@ -57,32 +52,7 @@ function onMouseDown() {
 function raf(time) {
     lenis.raf(time)
 
-    // Move the links
-    gsap.to('#github', {
-        x: window.innerWidth / 8 * 1.4 - ((mouseX / window.innerWidth) * 2 - 1) * 20,
-        y: window.innerHeight / 8 * 1.63 - ((mouseY / window.innerHeight) * 2 - 1) * 20,
-        duration: 0.8
-    })
-    gsap.to('#devpost', {
-        x: window.innerWidth / 8 * 3.23 - ((mouseX / window.innerWidth) * 2 - 1) * 35,
-        y: window.innerHeight / 8 * 5.21 - ((mouseY / window.innerHeight) * 2 - 1) * 35,
-        duration: 0.8
-    })
-    gsap.to('#discord', {
-        x: window.innerWidth / 8 * 5.61 - ((mouseX / window.innerWidth) * 2 - 1) * 48,
-        y: window.innerHeight / 8 * 1.2 - ((mouseY / window.innerHeight) * 2 - 1) * 48,
-        duration: 0.8
-    })
-    gsap.to('#email', {
-        x: window.innerWidth / 8 * 2.42 - ((mouseX / window.innerWidth) * 2 - 1) * 28,
-        y: window.innerHeight / 8 * 7.12 - ((mouseY / window.innerHeight) * 2 - 1) * 28,
-        duration: 0.8
-    })
-    gsap.to('#website', {
-        x: window.innerWidth / 8 * 4.32 - ((mouseX / window.innerWidth) * 2 - 1) * 56,
-        y: window.innerHeight / 8 * 3.21 - ((mouseY / window.innerHeight) * 2 - 1) * 56,
-        duration: 0.8
-    })
+    // Move the thingies
 
     requestAnimationFrame(raf)
 }
