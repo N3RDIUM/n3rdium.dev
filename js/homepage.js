@@ -43,7 +43,7 @@ for (let i = 0; i < numDots; i++) {
     anime({
         targets: dot,
         opacity: 1,
-        filter: `blur(${dots[i].position[2] / 2}px)`,
+        filter: `blur(${dots[i].position[2]}px)`,
         scale: 1 + dots[i].position[2] / 16,
         duration: 1000,
         ease: 'easeInOutElastic'
@@ -68,6 +68,11 @@ function onMouseMove(e){
     gsap.to('.username', {
         x: -((mouseX / window.innerWidth) * 2 - 1) * 48,
         y: -((mouseY / window.innerHeight) * 2 - 1) * 48,
+        duration: 1.2
+    })
+    gsap.to('.starfield-bg', {
+        x: -((mouseX / window.innerWidth) * 2 - 1) * 16 - window.innerWidth / 10,
+        y: -((mouseY / window.innerHeight) * 2 - 1) * 16 - window.innerHeight / 10,
         duration: 1.2
     })
 }
