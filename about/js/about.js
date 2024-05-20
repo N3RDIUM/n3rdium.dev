@@ -112,7 +112,7 @@ function resetLetters() {
 resetLetters()
 var hackerIdx = 0;
 var iter = 0;
-var max_iterations = 12;
+var max_iterations = 4;
 var frame = 0;
 var last = Date.now();
 function raf(time) {
