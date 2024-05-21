@@ -151,7 +151,7 @@ function raf(time) {
 		document.getElementById('type-stuff').innerHTML = `<span class="${classnames[idx]}">${letters.join('')}</span>`
 	}
 
-	let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom;
+	let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom + animatedScroll;
 	gsap.to('#reason', { top: ry })
 
 	requestAnimationFrame(raf);
