@@ -33,6 +33,7 @@ const stuff = [
 	"ASTRONOMER",
 	"DEVELOPER",
 	"EXPERIMENTER",
+	"COMPOSER",
 	"ALIVE"
 ];
 const classnames = [
@@ -40,6 +41,7 @@ const classnames = [
 	"astro-text",
 	"dev-text",
 	"exp-text",
+	"comp-text",
 	"alive-text"
 ]
 let backgrounds = [
@@ -47,6 +49,7 @@ let backgrounds = [
 	"./img/astro.jpg",
 	"./img/dev.jpg",
 	"./img/exp.jpg",
+	"./img/comp.jpg",
 	"./img/alive.jpg"
 ]
 var avif = new Image();
@@ -57,6 +60,7 @@ avif.onload = function () {
 		"./img/astro.avif",
 		"./img/dev.avif",
 		"./img/exp.avif",
+		"./img/comp.avif",
 		"./img/alive.avif"
 	]
 };
@@ -146,6 +150,9 @@ function raf(time) {
 		}
 		document.getElementById('type-stuff').innerHTML = `<span class="${classnames[idx]}">${letters.join('')}</span>`
 	}
+
+	let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom;
+	gsap.to('#reason', { top: ry })
 
 	requestAnimationFrame(raf);
 	frame += 1;
