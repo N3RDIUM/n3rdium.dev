@@ -113,7 +113,7 @@
     background-position: center;
     background-size: cover;
     z-index: 0;
-    filter: blur(8px) brightness(0.64);
+    filter: blur(8px) brightness(0.69) saturate(2);
 }
 .credit {
     position: absolute;
