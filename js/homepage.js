@@ -7,49 +7,6 @@ function randomChar() {
     return String.fromCharCode(Math.random() * 94 + 33);
 }
 
-// Create a uniform field of randomly placed points
-const numDots = 512;
-const dots = [];
-document.getElementById('dots').children = [];
-for (let i = 0; i < numDots; i++) {
-    let dot = document.createElement('div')
-    dot.className = 'dot';
-    dot.id = `dot${i}`
-    dots.push({
-        el: dot,
-        position: [
-            Math.random(),
-            Math.random(),
-            Math.random() * 10
-        ]
-    })
-
-    document.getElementById('dots').appendChild(dot);
-
-    anime({
-        targets: dot,
-        translateX: (Math.random() * window.innerWidth * 2 - window.innerWidth / 2),
-        translateY: (Math.random() * window.innerHeight * 2 - window.innerHeight / 2),
-        duration: 0,
-        ease: 'linear'
-    })
-    anime({
-        targets: dot,
-        translateX: (dots[dots.length - 1].position[0] * window.innerWidth * 2 - window.innerWidth / 2),
-        translateY: (dots[dots.length - 1].position[1] * window.innerHeight * 2 - window.innerHeight / 2),
-        duration: 1000,
-        ease: 'linear'
-    })
-    anime({
-        targets: dot,
-        opacity: 1,
-        filter: `blur(${dots[i].position[2]}px)`,
-        scale: 1 + dots[i].position[2] / 16,
-        duration: 1000,
-        ease: 'easeInOutElastic'
-    })
-}
-
 // Mouse move callback
 let mouseX = 0;
 let mouseY = 0;
@@ -174,29 +131,6 @@ function animate(time) {
                 duration: 256,
                 ease: 'easeInOutElastic'
             })
-        }
-    }
-
-    // Loop thru all the dots
-    for (let i = 0; i < dots.length; i++) {
-        // Get its position
-        let cx = dots[i].el.offsetLeft + 1;
-        let cy = dots[i].el.offsetTop + 1;
-
-        // Get its proximity to the mouse
-        let dx = cx - (mouseX - window.innerWidth / 2);
-        let dy = cy - (mouseY - window.innerHeight / 2);
-
-        // Make the points move a bit away from the mouse
-        if(Date.now() - start > 1000) {
-            gsap.to(dots[i].el, {
-                x: (dots[i].position[0] * window.innerWidth * 2 - window.innerWidth / 2) + dx / dots[i].position[2] / 4,
-                y: (dots[i].position[1] * window.innerHeight * 2 - window.innerHeight / 2) + dy / dots[i].position[2] / 4,
-                duration: 1.28
-            })
-            dots[i].position[0] += (Math.random() * 2 - 1) / 512
-            dots[i].position[1] += (Math.random() * 2 - 1) / 512
-            last = Date.now()
         }
     }
 
