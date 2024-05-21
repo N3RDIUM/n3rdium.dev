@@ -46,7 +46,6 @@ html, body {
     margin-right: 4px;
 }
 .starfield-bg {
-    background-image: url('../img/bg.jpg');
     background-position: center;
     background-size: cover;
     filter: blur(8px) brightness(0.8);
