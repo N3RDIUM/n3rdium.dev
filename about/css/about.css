@@ -95,7 +95,7 @@
     background-position: center;
     background-size: cover;
     z-index: 0;
-    filter: blur(12px) brightness(0.69) saturate(0.64) contrast(1.42);
+    filter: blur(12px) brightness(0.69) saturate(0.64);
 }
 .credit {
     position: absolute;
@@ -103,4 +103,21 @@
     color: rgba(203, 203, 203, 0.8);
     top: 0; left: 0;
     transform: translate(calc(100vw - 150px), calc(100vh - 16px));
+}
+.vparallax {
+    position: absolute;
+    top: 0; left: 0;
+    width: 8vw;
+    min-width: 80px;
+    z-index: -1;
+}
+.over {
+    background: #2e3440;
+}
+.portal1 {
+    position: absolute;
+    width: 50vw;
+    z-index: 1;
+    top: 100vh; left: 0;
+    rotate: 180deg;
 }

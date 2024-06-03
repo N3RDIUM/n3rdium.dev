@@ -3,8 +3,10 @@ const lenis = new Lenis()
 
 // Lenis stuff
 var animatedScroll = 0;
+let velocity = 0;
 lenis.on('scroll', (e) => {
 	animatedScroll = e.animatedScroll;
+	velocity = e.velocity;
 })
 function randomChar() {
     return String.fromCharCode(Math.random() * 94 + 33);
@@ -153,6 +155,49 @@ function raf(time) {
 
 	let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom + animatedScroll;
 	gsap.to('#reason', { top: ry })
+
+	gsap.to('#code', {
+		top: window.innerHeight * 1.64 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3.8,
+		left: window.innerWidth * 0.05,
+		rotate: (animatedScroll / window.innerHeight * 1.5) * 8 - 8 + velocity * 0.2,
+		duration: 1,
+		ease: 'sine'
+	})
+	gsap.to('#music', {
+		top: window.innerHeight * 1.42 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
+		left: window.innerWidth * 0.32,
+		rotate: -(animatedScroll / window.innerHeight * 1.5) * 16 + 16 + velocity * 0.1,
+		duration: 1,
+		ease: 'sine'
+	})
+	gsap.to('#stars', {
+		top: window.innerHeight * 1.84 + (animatedScroll - window.innerHeight * 1.5) / 10 * 2,
+		left: window.innerWidth * 0.12,
+		rotate: -(animatedScroll / window.innerHeight * 1.5) * 12 + 12 - velocity * 0.4,
+		duration: 1,
+		ease: 'sine'
+	})
+	gsap.to('#shuttle', {
+		top: window.innerHeight * 1.94 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
+		left: window.innerWidth * 0.24,
+		rotate: -(animatedScroll / window.innerHeight * 1.5) * 24 + 24 + velocity * 0.2,
+		duration: 1,
+		ease: 'sine'
+	})
+	gsap.to('#testube', {
+		top: window.innerHeight * 1.17 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
+		left: window.innerWidth * 0.28,
+		rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity,
+		duration: 1,
+		ease: 'sine'
+	})
+	gsap.to('#book', {
+		top: window.innerHeight * 1.44 + (animatedScroll - window.innerHeight * 1.5) / 10 * 4.5,
+		left: window.innerWidth * 0.04,
+		rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity * 0.2,
+		duration: 1,
+		ease: 'sine'
+	})
 
 	requestAnimationFrame(raf);
 	frame += 1;

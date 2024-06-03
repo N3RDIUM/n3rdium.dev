@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: #2e3440;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-user-select: none;
@@ -127,7 +127,7 @@ body {
     height: 4px;
     border-radius: 2px;
     margin: 6px auto;
-    background-color: white;
+    background-color: #d8dee9;
     position: static;
 }
 .nav {
@@ -136,7 +136,7 @@ body {
     height: calc(100vh - 64px);
     position: fixed;
     top: 64px; right: -318px;
-    background-color: #000a;
+    background-color: #3b4252aa;
     backdrop-filter: blur(16px);
     z-index: 8;
 }
