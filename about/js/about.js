@@ -156,48 +156,93 @@ function raf(time) {
 	let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom + animatedScroll;
 	gsap.to('#reason', { top: ry })
 
-	gsap.to('#code', {
-		top: window.innerHeight * 1.64 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3.8,
-		left: window.innerWidth * 0.05,
-		rotate: (animatedScroll / window.innerHeight * 1.5) * 8 - 8 + velocity * 0.2,
-		duration: 1,
-		ease: 'sine'
-	})
-	gsap.to('#music', {
-		top: window.innerHeight * 1.42 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
-		left: window.innerWidth * 0.32,
-		rotate: -(animatedScroll / window.innerHeight * 1.5) * 16 + 16 + velocity * 0.1,
-		duration: 1,
-		ease: 'sine'
-	})
-	gsap.to('#stars', {
-		top: window.innerHeight * 1.84 + (animatedScroll - window.innerHeight * 1.5) / 10 * 2,
-		left: window.innerWidth * 0.12,
-		rotate: -(animatedScroll / window.innerHeight * 1.5) * 12 + 12 - velocity * 0.4,
-		duration: 1,
-		ease: 'sine'
-	})
-	gsap.to('#shuttle', {
-		top: window.innerHeight * 1.94 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
-		left: window.innerWidth * 0.24,
-		rotate: -(animatedScroll / window.innerHeight * 1.5) * 24 + 24 + velocity * 0.2,
-		duration: 1,
-		ease: 'sine'
-	})
-	gsap.to('#testube', {
-		top: window.innerHeight * 1.17 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
-		left: window.innerWidth * 0.28,
-		rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity,
-		duration: 1,
-		ease: 'sine'
-	})
-	gsap.to('#book', {
-		top: window.innerHeight * 1.44 + (animatedScroll - window.innerHeight * 1.5) / 10 * 4.5,
-		left: window.innerWidth * 0.04,
-		rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity * 0.2,
-		duration: 1,
-		ease: 'sine'
-	})
+	if(window.innerWidth > 700) {
+		gsap.to('#code', {
+			top: window.innerHeight * 1.64 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3.8,
+			left: window.innerWidth * 0.05,
+			rotate: (animatedScroll / window.innerHeight * 1.5) * 8 - 8 + velocity * 0.2,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#music', {
+			top: window.innerHeight * 1.42 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
+			left: window.innerWidth * 0.32,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 16 + 16 + velocity * 0.1,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#stars', {
+			top: window.innerHeight * 1.84 + (animatedScroll - window.innerHeight * 1.5) / 10 * 2,
+			left: window.innerWidth * 0.12,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 12 + 12 - velocity * 0.4,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#shuttle', {
+			top: window.innerHeight * 1.74 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
+			left: window.innerWidth * 0.24,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 24 + 24 + velocity * 0.2,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#testube', {
+			top: window.innerHeight * 1.17 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
+			left: window.innerWidth * 0.28,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#book', {
+			top: window.innerHeight * 1.44 + (animatedScroll - window.innerHeight * 1.5) / 100 * 32,
+			left: window.innerWidth * 0.04,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity * 0.2,
+			duration: 1,
+			ease: 'sine'
+		})
+	} else {
+		gsap.to('#code', {
+			top: window.innerHeight * 1.34 + (animatedScroll - window.innerHeight * 1.5) / 100 * 48,
+			left: window.innerWidth * 0.65,
+			rotate: (animatedScroll / window.innerHeight * 1.5) * 8 - 8 + velocity * 0.2,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#music', {
+			top: window.innerHeight * 1.52 + (animatedScroll - window.innerHeight * 1.5) / 100 * 40,
+			left: window.innerWidth * 0.32,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 16 + 16 + velocity * 0.1,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#stars', {
+			top: window.innerHeight * 1.42 + (animatedScroll - window.innerHeight * 1.5) / 100 * 40,
+			left: window.innerWidth * 0.48,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 12 + 12 - velocity * 0.4,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#shuttle', {
+			top: window.innerHeight * 1.54 + (animatedScroll - window.innerHeight * 1.5) / 100 * 44,
+			left: window.innerWidth * 0.84,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 24 + 24 + velocity * 0.2,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#testube', {
+			top: window.innerHeight * 1.27 + (animatedScroll - window.innerHeight * 1.5) / 100 * 52,
+			left: window.innerWidth * 0.28,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity,
+			duration: 1,
+			ease: 'sine'
+		})
+		gsap.to('#book', {
+			top: window.innerHeight * 1.54 + (animatedScroll - window.innerHeight * 1.5) / 100 * 50,
+			left: window.innerWidth * 0.04,
+			rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity * 0.2,
+			duration: 1,
+			ease: 'sine'
+		})
+	}
 
 	requestAnimationFrame(raf);
 	frame += 1;
