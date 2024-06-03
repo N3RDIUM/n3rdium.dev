@@ -3,18 +3,20 @@ var barVisible = true;
 var barMoved = false;
 
 lenis.on('scroll', (e) => {
-    if(e.velocity > 0) {
-        if(barVisible) {
-            barVisible = false;
-            barMoved = false;
-        }
-    } else {
-        if(!barVisible) {
-            barVisible = true;
-            barMoved = false;
+    if(e.velocity != 0) {
+        if(e.velocity > 0) {
+            if(barVisible) {
+                barVisible = false;
+                barMoved = false;
+            }
+        } else {
+            if(!barVisible) {
+                barVisible = true;
+                barMoved = false;
+            }
         }
     }
-
+    
     if(!barVisible) {
         if(!barMoved) {
             anime({

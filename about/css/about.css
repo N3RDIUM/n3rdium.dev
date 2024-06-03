@@ -2,60 +2,42 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
     font-weight: 200;
     font-size: 24vw;
-    background: linear-gradient(90deg, rgba(0,226,255,1) 0%, rgb(0, 255, 157) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 32px rgba(0,226,255,1);
+    color: #68deff;
+    text-shadow: 0 0 32px #55b6d1;
 }
 .astro-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
     font-size: 12vw;
-    background: linear-gradient(90deg, rgb(139, 255, 201) 0%, rgb(132, 255, 157) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 32px rgb(0, 255, 247);
+    color: #00cdc9;
+    text-shadow: 0 0 32px #88c0d0;
 }
 .dev-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
     font-weight: bold;
     font-size: 14vw;
-    background: linear-gradient(90deg, rgb(255, 0, 0) 0%,rgb(255, 47, 0) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 32px rgb(255, 69, 69);
+    color: #ff4457;
+    text-shadow: 0 0 32px #bf616a;
 }
 .exp-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
     font-weight: 300;
     font-size: 12vw;
-    background: linear-gradient(90deg, rgb(255, 179, 0) 0%,rgb(255, 47, 0) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 32px rgb(255, 69, 69);
+    color: #ff693b;
+    text-shadow: 0 0 32px #d08770;
 }
 .comp-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
     font-weight: 600;
     font-size: 16vw;
-    background: linear-gradient(90deg, rgb(0, 213, 255) 0%,rgb(0, 110, 255) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 32px rgb(71, 126, 255);
+    color: #81a1c1;
+    text-shadow: 0 0 32px #5e81ac;
 }
 .alive-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
     font-weight: normal;
     font-size: 24vw;
-    background: linear-gradient(90deg, rgb(181, 255, 70) 0%,rgb(127, 255, 72) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 32px rgb(0, 255, 234);
+    color: #90c264;
+    text-shadow: 0 0 32px #a3be8c;
 }
 .for-a-reason {
     font-family: Arial, Helvetica, sans-serif, monospace;
@@ -113,7 +95,7 @@
     background-position: center;
     background-size: cover;
     z-index: 0;
-    filter: blur(8px) brightness(0.69) saturate(2) contrast(1.42);
+    filter: blur(12px) brightness(0.69) saturate(0.64) contrast(1.42);
 }
 .credit {
     position: absolute;
