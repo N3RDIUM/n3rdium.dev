@@ -6,13 +6,13 @@
 }
 .astro-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
-    font-size: 64px;
+    font-size: 52px;
     color: #88c0d0;
     text-shadow: 0 0 32px #8fbcbb;
 }
 .dev-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
-    font-size: 64px;
+    font-size: 52px;
     color: #bf616a;
     text-shadow: 0 0 32px #d08770;
 }
@@ -24,7 +24,7 @@
 }
 .comp-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
-    font-size: 64px;
+    font-size: 52px;
     color: #81a1c1;
     text-shadow: 0 0 32px #88c0d0;
 }
