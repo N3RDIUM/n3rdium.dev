@@ -93,13 +93,6 @@ function updateBG() {
 		let randomX = elements[i].getAttribute('data-x');
 		let randomY = elements[i].getAttribute('data-y');
 
-		if(window.innerWidth > 700) {
-			randomX = randomX / 1200 * window.innerWidth;
-		}
-		if(window.innerWidth > 900) {
-			randomY = randomY / 700 * window.innerHeight;
-		}
-
 		anime({
 			targets: `#${elements[i].id}`,
 			opacity: 1,
@@ -153,7 +146,6 @@ var iter = 0;
 var max_iterations = 4;
 var frame = 0;
 var last = Date.now();
-var done = false;
 function raf(time) {
 	lenis.raf(time);
 
@@ -185,33 +177,6 @@ function raf(time) {
 			}
 		}
 		document.getElementById('type-stuff').innerHTML = `<span class="${classnames[idx]}">${letters.join('')}</span>`
-	}
-
-	let interval = done ? 500 : 3500;
-	if(Date.now() - lastBgUpdate > interval) {
-		done = true; 
-
-		let elements = document.getElementsByClassName(backgrounds[idx]);
-		for(let i = 0; i < elements.length; i++) {
-			let el = elements[i];
-			let randomX = elements[i].getAttribute('data-x');
-			let randomY = elements[i].getAttribute('data-y');
-				
-			if(window.innerWidth > 700) {
-				randomX = randomX / 1200 * window.innerWidth;
-			}
-			if(window.innerWidth > 900) {
-				randomY = randomY / 700 * window.innerHeight;
-			}
-
-			gsap.to(`#${el.id}`, {
-				x: randomX,
-				y: randomY,
-				rotate: elements[i].getAttribute('data-rot'),
-			})
-		}
-
-		// lastBgUpdate = Date.now();
 	}
 
 	let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom + animatedScroll;
