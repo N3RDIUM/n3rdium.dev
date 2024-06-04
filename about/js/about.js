@@ -94,10 +94,10 @@ function updateBG() {
 		let randomY = elements[i].getAttribute('data-y');
 
 		if(window.innerWidth > 700) {
-			randomX = randomX / 900 * window.innerWidth;
+			randomX = randomX / 1200 * window.innerWidth;
 		}
 		if(window.innerWidth > 900) {
-			randomY = randomY / 900 * window.innerHeight;
+			randomY = randomY / 700 * window.innerHeight;
 		}
 
 		anime({
@@ -198,10 +198,10 @@ function raf(time) {
 			let randomY = elements[i].getAttribute('data-y');
 				
 			if(window.innerWidth > 700) {
-				randomX = randomX / 900 * window.innerWidth;
+				randomX = randomX / 1200 * window.innerWidth;
 			}
 			if(window.innerWidth > 900) {
-				randomY = randomY / 900 * window.innerHeight;
+				randomY = randomY / 700 * window.innerHeight;
 			}
 
 			gsap.to(`#${el.id}`, {
