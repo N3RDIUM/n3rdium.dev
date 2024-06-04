@@ -187,7 +187,7 @@ function raf(time) {
 		document.getElementById('type-stuff').innerHTML = `<span class="${classnames[idx]}">${letters.join('')}</span>`
 	}
 
-	let interval = done ? 500 : 2500;
+	let interval = done ? 500 : 3500;
 	if(Date.now() - lastBgUpdate > interval) {
 		done = true; 
 
