@@ -22,7 +22,7 @@ lenis.on('scroll', (e) => {
             anime({
                 targets: '#header',
                 top: -64,
-                duration: 800,
+                duration: 400,
                 easing: 'easeInOutExpo'
             })
             barMoved = true;
@@ -32,7 +32,7 @@ lenis.on('scroll', (e) => {
             anime({
                 targets: '#header',
                 top: 0,
-                duration: 400,
+                duration: 300,
                 easing: 'easeInOutExpo'
             })
             barMoved = true;

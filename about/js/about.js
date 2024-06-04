@@ -99,9 +99,9 @@ function updateBG() {
 			translateX: randomX,
 			translateY: randomY,
 			rotate: elements[i].getAttribute('data-rot'),
-			duration: Math.random() * 500 + 1000,
+			duration: Math.random() * 1000 + 1000,
 			easing: 'easeOutElastic',
-			delay: 1000,
+			delay: 500,
 		})
 	}
 
