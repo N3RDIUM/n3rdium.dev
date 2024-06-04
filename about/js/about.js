@@ -47,40 +47,72 @@ const classnames = [
 	"alive-text"
 ]
 let backgrounds = [
-	"./img/nerd.jpg",
-	"./img/astro.jpg",
-	"./img/dev.jpg",
-	"./img/exp.jpg",
-	"./img/comp.jpg",
-	"./img/alive.jpg"
+	"nerd-svg",
+	"astro-svg",
+	"dev-svg",
+	"exp-svg",
+	"comp-svg",
+	"alive-svg",
 ]
-var avif = new Image();
-avif.src = "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=";
-avif.onload = function () {
-	backgrounds = [
-		"./img/nerd.avif",
-		"./img/astro.avif",
-		"./img/dev.avif",
-		"./img/exp.avif",
-		"./img/comp.avif",
-		"./img/alive.avif"
-	]
-};
 var idx = 0;
+var lastBgUpdate = 0;
+for(let i = 0; i < backgrounds.length; i++) {
+	anime({
+		targets: '.' + backgrounds[i],
+		opacity: 0,
+		translateX: 0,
+		translateY: 0,
+		rotate: 0,
+		duration: 0
+	})
+};
+
+// https://stackoverflow.com/questions/18295825/determine-if-point-is-within-bounding-box
+function doesPointCollide(p,box) {
+    return !(p.x < box.left || p.x > box.right || p.y > box.bottom || p.y < box.top)
+}
 
 function updateBG() {
-	gsap.to('#bg', {
-		opacity: 0,
-		duration: 1,
-	})
-	setTimeout(() => {
-		document.getElementById('bg').setAttribute('style', `background-image: url(${backgrounds[idx]});`)
-	}, 1000)
-	gsap.to('#bg', {
-		opacity: 1,
-		duration: 1,
-		delay: 1
-	})
+	for(let i = 0; i < backgrounds.length; i++) {
+		if(i == idx) continue
+		anime({
+			targets: '.' + backgrounds[i],
+			opacity: 0,
+			translateX: 0,
+			translateY: 0,
+			rotate: 0,
+			duration: 500,
+			easing: 'easeInElastic'
+		})
+	};
+
+	let elements = document.getElementsByClassName(backgrounds[idx]);
+	for(let i = 0; i < elements.length; i++) {
+		elements[i].id = backgrounds[idx] + i.toString();
+
+		let randomX = elements[i].getAttribute('data-x');
+		let randomY = elements[i].getAttribute('data-y');
+
+		if(window.innerWidth > 700) {
+			randomX = randomX / 900 * window.innerWidth;
+		}
+		if(window.innerWidth > 900) {
+			randomY = randomY / 900 * window.innerHeight;
+		}
+
+		anime({
+			targets: `#${elements[i].id}`,
+			opacity: 1,
+			translateX: randomX,
+			translateY: randomY,
+			rotate: elements[i].getAttribute('data-rot'),
+			duration: Math.random() * 500 + 1000,
+			easing: 'easeOutElastic',
+			delay: 1000,
+		})
+	}
+
+	lastBgUpdate = Date.now();
 }
 updateBG()
 
@@ -121,6 +153,7 @@ var iter = 0;
 var max_iterations = 4;
 var frame = 0;
 var last = Date.now();
+var done = false;
 function raf(time) {
 	lenis.raf(time);
 
@@ -128,6 +161,7 @@ function raf(time) {
 		last = Date.now();
 
 		idx++;
+		
 		if(idx > stuff.length - 1) {
 			idx = 0;
 		}
@@ -153,96 +187,35 @@ function raf(time) {
 		document.getElementById('type-stuff').innerHTML = `<span class="${classnames[idx]}">${letters.join('')}</span>`
 	}
 
+	let interval = done ? 500 : 2500;
+	if(Date.now() - lastBgUpdate > interval) {
+		done = true; 
+
+		let elements = document.getElementsByClassName(backgrounds[idx]);
+		for(let i = 0; i < elements.length; i++) {
+			let el = elements[i];
+			let randomX = elements[i].getAttribute('data-x');
+			let randomY = elements[i].getAttribute('data-y');
+				
+			if(window.innerWidth > 700) {
+				randomX = randomX / 900 * window.innerWidth;
+			}
+			if(window.innerWidth > 900) {
+				randomY = randomY / 900 * window.innerHeight;
+			}
+
+			gsap.to(`#${el.id}`, {
+				x: randomX,
+				y: randomY,
+				rotate: elements[i].getAttribute('data-rot'),
+			})
+		}
+
+		// lastBgUpdate = Date.now();
+	}
+
 	let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom + animatedScroll;
 	gsap.to('#reason', { top: ry })
-
-	if(window.innerWidth > 700) {
-		gsap.to('#code', {
-			top: window.innerHeight * 1.64 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3.8,
-			left: window.innerWidth * 0.05,
-			rotate: (animatedScroll / window.innerHeight * 1.5) * 8 - 8 + velocity * 0.2,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#music', {
-			top: window.innerHeight * 1.42 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
-			left: window.innerWidth * 0.32,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 16 + 16 + velocity * 0.1,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#stars', {
-			top: window.innerHeight * 1.84 + (animatedScroll - window.innerHeight * 1.5) / 10 * 2,
-			left: window.innerWidth * 0.12,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 12 + 12 - velocity * 0.4,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#shuttle', {
-			top: window.innerHeight * 1.74 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
-			left: window.innerWidth * 0.24,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 24 + 24 + velocity * 0.2,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#testube', {
-			top: window.innerHeight * 1.17 + (animatedScroll - window.innerHeight * 1.5) / 10 * 3,
-			left: window.innerWidth * 0.28,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#book', {
-			top: window.innerHeight * 1.44 + (animatedScroll - window.innerHeight * 1.5) / 100 * 32,
-			left: window.innerWidth * 0.04,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity * 0.2,
-			duration: 1,
-			ease: 'sine'
-		})
-	} else {
-		gsap.to('#code', {
-			top: window.innerHeight * 1.34 + (animatedScroll - window.innerHeight * 1.5) / 100 * 48,
-			left: window.innerWidth * 0.65,
-			rotate: (animatedScroll / window.innerHeight * 1.5) * 8 - 8 + velocity * 0.2,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#music', {
-			top: window.innerHeight * 1.52 + (animatedScroll - window.innerHeight * 1.5) / 100 * 40,
-			left: window.innerWidth * 0.32,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 16 + 16 + velocity * 0.1,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#stars', {
-			top: window.innerHeight * 1.42 + (animatedScroll - window.innerHeight * 1.5) / 100 * 40,
-			left: window.innerWidth * 0.48,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 12 + 12 - velocity * 0.4,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#shuttle', {
-			top: window.innerHeight * 1.54 + (animatedScroll - window.innerHeight * 1.5) / 100 * 44,
-			left: window.innerWidth * 0.84,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 24 + 24 + velocity * 0.2,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#testube', {
-			top: window.innerHeight * 1.27 + (animatedScroll - window.innerHeight * 1.5) / 100 * 52,
-			left: window.innerWidth * 0.28,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity,
-			duration: 1,
-			ease: 'sine'
-		})
-		gsap.to('#book', {
-			top: window.innerHeight * 1.54 + (animatedScroll - window.innerHeight * 1.5) / 100 * 50,
-			left: window.innerWidth * 0.04,
-			rotate: -(animatedScroll / window.innerHeight * 1.5) * 18 + 18 + velocity * 0.2,
-			duration: 1,
-			ease: 'sine'
-		})
-	}
 
 	requestAnimationFrame(raf);
 	frame += 1;

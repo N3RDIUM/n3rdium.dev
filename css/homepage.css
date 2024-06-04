@@ -46,10 +46,3 @@ html, body {
     width: 120vw;
     height: 120vh;
 }
-.credit {
-    position: absolute;
-    font-size: 12px;
-    color: rgba(203, 203, 203, 0.8);
-    top: 0; left: 0;
-    transform: translate(calc(100vw - 150px), calc(100vh - 16px));
-}

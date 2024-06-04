@@ -1,43 +1,38 @@
 .nerd-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
-    font-weight: 200;
-    font-size: 24vw;
-    color: #68deff;
-    text-shadow: 0 0 32px #55b6d1;
+    font-size: 128px;
+    color: #5e81ac;
+    text-shadow: 0 0 32px #5e81ac;
 }
 .astro-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
-    font-size: 12vw;
-    color: #00cdc9;
-    text-shadow: 0 0 32px #88c0d0;
+    font-size: 64px;
+    color: #88c0d0;
+    text-shadow: 0 0 32px #8fbcbb;
 }
 .dev-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
-    font-weight: bold;
-    font-size: 14vw;
-    color: #ff4457;
-    text-shadow: 0 0 32px #bf616a;
+    font-size: 64px;
+    color: #bf616a;
+    text-shadow: 0 0 32px #d08770;
 }
 .exp-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
-    font-weight: 300;
-    font-size: 12vw;
-    color: #ff693b;
-    text-shadow: 0 0 32px #d08770;
+    font-size: 48px;
+    color: #d08770;
+    text-shadow: 0 0 32px #ebcb8b;
 }
 .comp-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
-    font-weight: 600;
-    font-size: 16vw;
+    font-size: 64px;
     color: #81a1c1;
-    text-shadow: 0 0 32px #5e81ac;
+    text-shadow: 0 0 32px #88c0d0;
 }
 .alive-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, monospace;
-    font-weight: normal;
-    font-size: 24vw;
-    color: #90c264;
-    text-shadow: 0 0 32px #a3be8c;
+    font-size: 128px;
+    color: #a3be8c;
+    text-shadow: 0 0 32px #8fbcbb;
 }
 .for-a-reason {
     font-family: Arial, Helvetica, sans-serif, monospace;
@@ -87,37 +82,17 @@
 * {
     z-index: 1;
 }
-
-.bg {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background-position: center;
-    background-size: cover;
-    z-index: 0;
-    filter: blur(12px) brightness(0.69) saturate(0.64);
-}
-.credit {
-    position: absolute;
-    font-size: 12px;
-    color: rgba(203, 203, 203, 0.8);
-    top: 0; left: 0;
-    transform: translate(calc(100vw - 150px), calc(100vh - 16px));
-}
 .vparallax {
     position: absolute;
     top: 0; left: 0;
     width: 8vw;
-    min-width: 80px;
+    min-width: 100px;
     z-index: -1;
 }
 .over {
     background: #2e3440;
 }
-.portal1 {
+.intro-svg {
     position: absolute;
-    width: 50vw;
-    z-index: 1;
-    top: 100vh; left: 0;
-    rotate: 180deg;
+    width: 128px;
 }
