@@ -53,8 +53,8 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 64px;
-    background-color: antiquewhite;
-    border: solid 2px antiquewhite;
+    background-color: #d8dee9;
+    border: solid 2px #e5e9f0;
     mix-blend-mode: difference;
     top: 0;
     left: 0;
@@ -76,7 +76,7 @@ body {
     height: 64px;
     position: fixed;
     top: 0; left: 0;
-    background-color: #0004;
+    background-color: #4c566a88;
     backdrop-filter: blur(16px);
     z-index: 10;
 
@@ -130,7 +130,7 @@ body {
     height: 4px;
     border-radius: 2px;
     margin: 6px auto;
-    background-color: #d8dee9;
+    background-color: #81a1c1;
     position: static;
 }
 .nav {
@@ -139,9 +139,9 @@ body {
     height: calc(100vh - 64px);
     position: fixed;
     top: 64px; right: -318px;
-    background-color: #3b4252aa;
+    background-color: #4c566a88;
     backdrop-filter: blur(16px);
-    z-index: 8;
+    z-index: 69;
 }
 .content-cover {
     pointer-events: none;
