@@ -172,7 +172,7 @@ function rebuildTimeline() {
 			{
 				x: 0,
 				y: window.innerHeight,
-				rot: -64,
+				rot: 64,
 				scale: 1,
 				opacity: 1,
 				ihtml: box
@@ -207,7 +207,7 @@ function rebuildTimeline() {
 			{
 				x: 0,
 				y: window.innerHeight,
-				rot: -64,
+				rot: 64,
 				scale: 1,
 				opacity: 1,
 				ihtml: box
