@@ -135,11 +135,12 @@ function onMouseDown() {
 // Object timeline
 var timeline = [];
 var timestamps = [];
+const box = '<svg class="object" fill="#d8dee9" height="128px" width="128px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Continuous-Integration-Filled"> <path d="M22.91,6.66v11.88L13,23.5V11.62L22.91,6.66z M12,9.88l9.88-4.94L12,0L2.12,4.94L12,9.88z M11,11.62L1.09,6.66v11.88 L11,23.5V11.62z"></path> </g> </g></svg>';
 function rebuildTimeline() {
 	timestamps = [
 		-1,
 		window.innerHeight,
-		window.innerHeight + 10,
+		window.innerHeight + 1,
 		window.innerHeight * 2
 	]
 	if(window.innerWidth > 1000) {
@@ -148,29 +149,33 @@ function rebuildTimeline() {
 				x: -window.innerWidth / 4 - 128,
 				y: -512,
 				rot: 0,
-				scale: 0,
-				opacity: 0.5
+				scale: 4,
+				opacity: 0.2,
+				ihtml: box
 			},
 			{
 				x: -window.innerWidth / 4 - 128,
 				y: -window.innerHeight / 3 + 240,
 				rot: -64,
 				scale: 1,
-				opacity: 1
+				opacity: 1,
+				ihtml: box
 			},
 			{
-				x: window.innerWidth / 8 + 128,
-				y: window.innerHeight / 5 + 128,
+				x: window.innerWidth / 8 + 180,
+				y: window.innerHeight / 5 + 80,
 				rot: -64,
 				scale: 1,
-				opacity: 1
+				opacity: 1,
+				ihtml: box
 			},
 			{
 				x: 0,
 				y: window.innerHeight,
 				rot: -64,
 				scale: 1,
-				opacity: 1
+				opacity: 1,
+				ihtml: box
 			}
 		]
 	} else {
@@ -179,29 +184,33 @@ function rebuildTimeline() {
 				x: -window.innerWidth / 4,
 				y: -512,
 				rot: 0,
-				scale: 0,
-				opacity: 0.5
+				scale: 4,
+				opacity: 0.2,
+				ihtml: box
 			},
 			{
 				x: -window.innerWidth / 2 + 12,
 				y: -window.innerHeight / 3 + 240,
 				rot: 64,
 				scale: 1,
-				opacity: 1
+				opacity: 1,
+				ihtml: box
 			},
 			{
-				x: window.innerWidth / 8 + 128,
-				y: window.innerHeight / 5 + 128,
+				x: window.innerWidth / 8 + 180,
+				y: window.innerHeight / 5 + 80,
 				rot: -64,
 				scale: 1,
-				opacity: 1
+				opacity: 1,
+				ihtml: box
 			},
 			{
 				x: 0,
 				y: window.innerHeight,
 				rot: -64,
 				scale: 1,
-				opacity: 1
+				opacity: 1,
+				ihtml: box
 			}
 		]
 	}
@@ -312,6 +321,7 @@ function raf(time) {
 			opacity: lerp(timeline[index].opacity, timeline[index + 1].opacity, progress),
 			duration: 0
 		})
+		document.getElementById('object').innerHTML = timeline[index].ihtml;
 	}
 
 	requestAnimationFrame(raf);
