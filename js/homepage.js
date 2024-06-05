@@ -90,76 +90,78 @@ var last = 0
 function animate(time) {
     requestAnimationFrame(animate);
 
-    // Loop thru all .uletter els
-    let uletters = document.querySelectorAll('.uletter');
-    for (let i=0; i<uletters.length; i++) {
-        if(i >= hackerIdx) {
-            let content = randomChar();
-            uletters[i].innerHTML = content;
-            iter++;
-        }
-        if (i == hackerIdx) {
-            if(iter > max_iterations) {
-                uletters[i].innerHTML = username[i];
-                hackerIdx++;
-                iter = 0;
+    if (document.hasFocus()) {
+        // Loop thru all .uletter els
+        let uletters = document.querySelectorAll('.uletter');
+        for (let i=0; i<uletters.length; i++) {
+            if(i >= hackerIdx) {
+                let content = randomChar();
+                uletters[i].innerHTML = content;
+                iter++;
+            }
+            if (i == hackerIdx) {
+                if(iter > max_iterations) {
+                    uletters[i].innerHTML = username[i];
+                    hackerIdx++;
+                    iter = 0;
+                }
+            }
+            // Get its center
+            let cx = uletters[i].offsetLeft + uletters[i].offsetParent.offsetLeft;
+            let cy = uletters[i].offsetTop + uletters[i].offsetParent.offsetTop;
+
+            // Get its proximity to the mouse
+            let dx = cx - mouseX;
+            let dy = cy - mouseY;
+
+            // Calculate distance
+            let dist = Math.sqrt((dx * dx) + (dy * dy));
+
+            // Update its size and margin based on distance
+            if(!mouseDown){
+                anime({
+                    targets: uletters[i],
+                    margin: 2 + clamp(1024 / dist, 0, 12),
+                    duration: 256,
+                    ease: 'easeInOutElastic'
+                })
+            } else {
+                anime({
+                    targets: uletters[i],
+                    margin: 2 + 2 * clamp(1024 / dist, 0, 16),
+                    duration: 256,
+                    ease: 'easeInOutElastic'
+                })
             }
         }
-        // Get its center
-        let cx = uletters[i].offsetLeft + uletters[i].offsetParent.offsetLeft;
-        let cy = uletters[i].offsetTop + uletters[i].offsetParent.offsetTop;
 
-        // Get its proximity to the mouse
-        let dx = cx - mouseX;
-        let dy = cy - mouseY;
-
-        // Calculate distance
-        let dist = Math.sqrt((dx * dx) + (dy * dy));
-
-        // Update its size and margin based on distance
-        if(!mouseDown){
-            anime({
-                targets: uletters[i],
-                margin: 2 + clamp(1024 / dist, 0, 12),
-                duration: 256,
-                ease: 'easeInOutElastic'
-            })
-        } else {
-            anime({
-                targets: uletters[i],
-                margin: 2 + 2 * clamp(1024 / dist, 0, 16),
-                duration: 256,
-                ease: 'easeInOutElastic'
-            })
-        }
+        // Move the links
+        gsap.to('#about-link', {
+            x: window.innerWidth / 8 * 2 - ((mouseX / window.innerWidth) * 2 - 1) * 64,
+            y: window.innerHeight / 8 * 1 - ((mouseY / window.innerHeight) * 2 - 1) * 64,
+            duration: 0.8
+        })
+        gsap.to('#work-link', {
+            x: window.innerWidth / 8 * 1 - ((mouseX / window.innerWidth) * 2 - 1) * 48,
+            y: window.innerHeight / 8 * 2 - ((mouseY / window.innerHeight) * 2 - 1) * 48,
+            duration: 0.8
+        })
+        gsap.to('#projects-link', {
+            x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 32,
+            y: window.innerHeight / 8 * 3 - ((mouseY / window.innerHeight) * 2 - 1) * 32,
+            duration: 0.8
+        })
+        gsap.to('#blog-link', {
+            x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 80,
+            y: window.innerHeight / 8 * 7 - ((mouseY / window.innerHeight) * 2 - 1) * 80,
+            duration: 0.8
+        })
+        gsap.to('#contact-link', {
+            x: window.innerWidth / 8 * 3 - ((mouseX / window.innerWidth) * 2 - 1) * 100,
+            y: window.innerHeight / 8 * 6 - ((mouseY / window.innerHeight) * 2 - 1) * 100,
+            duration: 0.8
+        })
     }
-
-    // Move the links
-    gsap.to('#about-link', {
-        x: window.innerWidth / 8 * 2 - ((mouseX / window.innerWidth) * 2 - 1) * 64,
-        y: window.innerHeight / 8 * 1 - ((mouseY / window.innerHeight) * 2 - 1) * 64,
-        duration: 0.8
-    })
-    gsap.to('#work-link', {
-        x: window.innerWidth / 8 * 1 - ((mouseX / window.innerWidth) * 2 - 1) * 48,
-        y: window.innerHeight / 8 * 2 - ((mouseY / window.innerHeight) * 2 - 1) * 48,
-        duration: 0.8
-    })
-    gsap.to('#projects-link', {
-        x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 32,
-        y: window.innerHeight / 8 * 3 - ((mouseY / window.innerHeight) * 2 - 1) * 32,
-        duration: 0.8
-    })
-    gsap.to('#blog-link', {
-        x: window.innerWidth / 8 * 6 - ((mouseX / window.innerWidth) * 2 - 1) * 80,
-        y: window.innerHeight / 8 * 7 - ((mouseY / window.innerHeight) * 2 - 1) * 80,
-        duration: 0.8
-    })
-    gsap.to('#contact-link', {
-        x: window.innerWidth / 8 * 3 - ((mouseX / window.innerWidth) * 2 - 1) * 100,
-        y: window.innerHeight / 8 * 6 - ((mouseY / window.innerHeight) * 2 - 1) * 100,
-        duration: 0.8
-    })
 
     frame ++;
 }

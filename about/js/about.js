@@ -149,38 +149,40 @@ var last = Date.now();
 function raf(time) {
 	lenis.raf(time);
 
-	if(Date.now() - last > 4000) {
-		last = Date.now();
+	if (document.hasFocus()) {
+		if(Date.now() - last > 4000) {
+			last = Date.now();
 
-		idx++;
-		
-		if(idx > stuff.length - 1) {
-			idx = 0;
-		}
-		hackerIdx = 0;
-		iter = 0;
-		resetLetters();
-		updateBG();
-	}
-
-	for (let i=0; i<letters.length; i++) {
-		if(i >= hackerIdx) {
-			let content = randomChar();
-			letters[i] = content;
-			iter++;
-		}
-		if (i == hackerIdx) {
-			if(iter > max_iterations) {
-				letters[i] = stuff[idx][i];
-				hackerIdx++;
-				iter = 0;
+			idx++;
+			
+			if(idx > stuff.length - 1) {
+				idx = 0;
 			}
+			hackerIdx = 0;
+			iter = 0;
+			resetLetters();
+			updateBG();
 		}
-		document.getElementById('type-stuff').innerHTML = `<span class="${classnames[idx]}">${letters.join('')}</span>`
-	}
 
-	let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom + animatedScroll;
-	gsap.to('#reason', { top: ry })
+		for (let i=0; i<letters.length; i++) {
+			if(i >= hackerIdx) {
+				let content = randomChar();
+				letters[i] = content;
+				iter++;
+			}
+			if (i == hackerIdx) {
+				if(iter > max_iterations) {
+					letters[i] = stuff[idx][i];
+					hackerIdx++;
+					iter = 0;
+				}
+			}
+			document.getElementById('type-stuff').innerHTML = `<span class="${classnames[idx]}">${letters.join('')}</span>`
+		}
+
+		let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom + animatedScroll;
+		gsap.to('#reason', { top: ry })
+	}
 
 	requestAnimationFrame(raf);
 	frame += 1;
