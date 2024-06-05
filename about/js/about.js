@@ -184,20 +184,20 @@ function rebuildTimeline() {
 				x: -window.innerWidth / 4,
 				y: -512,
 				rot: 0,
-				scale: 4,
+				scale: 2,
 				opacity: 0.2,
 				ihtml: box
 			},
 			{
 				x: -window.innerWidth / 2 + 12,
 				y: -window.innerHeight / 3 + 240,
-				rot: 64,
+				rot: -64,
 				scale: 1,
 				opacity: 1,
 				ihtml: box
 			},
 			{
-				x: window.innerWidth / 8 + 180,
+				x: window.innerWidth / 8 + 100,
 				y: window.innerHeight / 5 + 80,
 				rot: -64,
 				scale: 1,
