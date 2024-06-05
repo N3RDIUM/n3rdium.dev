@@ -132,6 +132,87 @@ function onMouseDown() {
 	})
 }
 
+// Object timeline
+var timeline = [];
+var timestamps = [];
+function rebuildTimeline() {
+	timestamps = [
+		-1,
+		window.innerHeight,
+		window.innerHeight + 10,
+		window.innerHeight * 2
+	]
+	if(window.innerWidth > 1000) {
+		timeline = [
+			{
+				x: -window.innerWidth / 4 - 128,
+				y: -512,
+				rot: 0,
+				scale: 0,
+				opacity: 0.5
+			},
+			{
+				x: -window.innerWidth / 4 - 128,
+				y: -window.innerHeight / 3 + 240,
+				rot: -64,
+				scale: 1,
+				opacity: 1
+			},
+			{
+				x: window.innerWidth / 8 + 128,
+				y: window.innerHeight / 5 + 128,
+				rot: -64,
+				scale: 1,
+				opacity: 1
+			},
+			{
+				x: 0,
+				y: window.innerHeight,
+				rot: -64,
+				scale: 1,
+				opacity: 1
+			}
+		]
+	} else {
+		timeline = [
+			{
+				x: -window.innerWidth / 4,
+				y: -512,
+				rot: 0,
+				scale: 0,
+				opacity: 0.5
+			},
+			{
+				x: -window.innerWidth / 2 + 12,
+				y: -window.innerHeight / 3 + 240,
+				rot: 64,
+				scale: 1,
+				opacity: 1
+			},
+			{
+				x: window.innerWidth / 8 + 128,
+				y: window.innerHeight / 5 + 128,
+				rot: -64,
+				scale: 1,
+				opacity: 1
+			},
+			{
+				x: 0,
+				y: window.innerHeight,
+				rot: -64,
+				scale: 1,
+				opacity: 1
+			}
+		]
+	}
+}
+rebuildTimeline()
+
+// Interpolate function
+function lerp(a, b, t) {
+	return a + (b - a) * t
+}
+
 // Mainloop
 var letters = [];
 function resetLetters() {
@@ -182,6 +263,55 @@ function raf(time) {
 
 		let ry = document.querySelector('#type-stuff').getBoundingClientRect().bottom + animatedScroll;
 		gsap.to('#reason', { top: ry })
+	}
+
+	if(window.innerWidth > 1000) {
+		gsap.to('#portal1', {
+			x: -window.innerWidth / 4 - 128,
+			y: -window.innerHeight / 3 + 128,
+			duration: 1
+		})
+		gsap.to('#portal2', {
+			x: window.innerWidth / 8 + 128,
+			y: window.innerHeight / 5 + 128,
+			rotate: -160,
+			duration: 1
+		})
+	} else {
+		gsap.to('#portal1', {
+			x: -window.innerWidth / 2 + 12,
+			y: -window.innerHeight / 3 + 128,
+			duration: 1
+		})
+		gsap.to('#portal2', {
+			x: window.innerWidth / 8 + 128,
+			y: window.innerHeight / 5 + 128,
+			rotate: -160,
+			duration: 1
+		})
+	}
+
+	rebuildTimeline();
+	let progress = animatedScroll % window.innerHeight / window.innerHeight;
+	let index = 0;
+
+	// match the timeline
+	for(let i of timestamps) {
+		if(animatedScroll > i) {
+			index = timestamps.indexOf(i);
+		}
+	}
+
+	// update the object
+	if(index < timeline.length - 1) {
+		gsap.to('#object', {
+			x: lerp(timeline[index].x, timeline[index + 1].x, progress),
+			y: lerp(timeline[index].y, timeline[index + 1].y, progress),
+			rotate: lerp(timeline[index].rot, timeline[index + 1].rot, progress),
+			scale: lerp(timeline[index].scale, timeline[index + 1].scale, progress),
+			opacity: lerp(timeline[index].opacity, timeline[index + 1].opacity, progress),
+			duration: 0
+		})
 	}
 
 	requestAnimationFrame(raf);

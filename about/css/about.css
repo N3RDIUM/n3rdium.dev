@@ -116,3 +116,52 @@
     z-index: 2;
     filter: brightness(1.2);
 }
+.portal-blue {
+    position: absolute;
+    width: 256px;
+    height: 24px;
+    background-image: linear-gradient(#0000, #81a1c1);
+    border-radius: 6px;
+}
+.portal-body-blue {
+    width: 256px;
+    height: 12px;
+    transform: translateY(12px);
+    background-color: #81a1c1;
+}
+.portal-orange {
+    position: absolute;
+    width: 256px;
+    height: 24px;
+    background-image: linear-gradient(#0000, #d08770);
+    border-radius: 6px;
+}
+.portal-body-orange {
+    width: 256px;
+    height: 12px;
+    transform: translateY(12px);
+    background-color: #d08770;
+}
+.portal-rim {
+    width: 260px;
+    height: 4px;
+    transform: translate(-2px, -1px);
+    background-color: #d8dee9;
+    border-radius: 2px;
+}
+.portal-curtain {
+    width: 300px;
+    height: 180px;
+    transform: translate(-2px, 6px);
+    background-color: #2e3440;
+    z-index: 100;
+}
+.portal-immune {
+    z-index: 128;
+}
+#object {
+    position: absolute;
+}
+.object {
+    width: 128px;
+}
