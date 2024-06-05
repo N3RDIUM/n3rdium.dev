@@ -121,14 +121,14 @@ function animate(time) {
             if(!mouseDown){
                 anime({
                     targets: uletters[i],
-                    margin: 2 + clamp(1024 / dist, 0, 12),
+                    margin: 2 + clamp(1024 / dist, 0, 4),
                     duration: 256,
                     ease: 'easeInOutElastic'
                 })
             } else {
                 anime({
                     targets: uletters[i],
-                    margin: 2 + 2 * clamp(1024 / dist, 0, 16),
+                    margin: 2 + clamp(1024 / dist, 0, 6),
                     duration: 256,
                     ease: 'easeInOutElastic'
                 })
