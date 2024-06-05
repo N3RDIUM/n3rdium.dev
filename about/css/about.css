@@ -96,3 +96,23 @@
     position: absolute;
     width: 128px;
 }
+.heythere {
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.username-container {
+    font-size: 48px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.username {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    background: linear-gradient(90deg, #88c0d0 0%, #8fbcbb 50%, #88c0d0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 32px #81a1c1;
+    pointer-events: none;
+    z-index: 2;
+    filter: brightness(1.2);
+}
