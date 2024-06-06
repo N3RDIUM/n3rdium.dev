@@ -218,7 +218,8 @@ function raf(time) {
 	}
 	// Object timeline
 	if(window.innerWidth > 1000) {
-		let progress_tp1 = (animatedScroll - 100) / window.innerHeight;
+		let tp12_overlap = 118;
+		let progress_tp1 = (animatedScroll - tp12_overlap) / window.innerHeight;
 		gsap.to('#tp1', {
 			x: lerp(
 				-window.innerWidth / 4 - 128, 
@@ -248,7 +249,7 @@ function raf(time) {
 			duration: 1
 		})
 
-		let progress_tp2 = (animatedScroll - window.innerHeight + 100) / window.innerHeight;
+		let progress_tp2 = (animatedScroll - window.innerHeight + tp12_overlap) / window.innerHeight;
 		gsap.to('#tp2', {
 			x: lerp(
 				window.innerWidth / 8 + 180, 
@@ -266,7 +267,7 @@ function raf(time) {
 				progress_tp2
 			),
 			scale: lerp(
-				1.4, 
+				1.64, 
 				1, 
 				progress_tp2
 			),
