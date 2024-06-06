@@ -132,93 +132,10 @@ function onMouseDown() {
 	})
 }
 
-// Object timeline
-var timeline = [];
-var timestamps = [];
-const box = '<svg class="object" fill="#d8dee9" height="128px" width="128px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Continuous-Integration-Filled"> <path d="M22.91,6.66v11.88L13,23.5V11.62L22.91,6.66z M12,9.88l9.88-4.94L12,0L2.12,4.94L12,9.88z M11,11.62L1.09,6.66v11.88 L11,23.5V11.62z"></path> </g> </g></svg>';
-function rebuildTimeline() {
-	timestamps = [
-		-1,
-		window.innerHeight,
-		window.innerHeight + 1,
-		window.innerHeight * 2
-	]
-	if(window.innerWidth > 1000) {
-		timeline = [
-			{
-				x: -window.innerWidth / 4 - 128,
-				y: -512,
-				rot: 0,
-				scale: 4,
-				opacity: 0.2,
-				ihtml: box
-			},
-			{
-				x: -window.innerWidth / 4 - 128,
-				y: -window.innerHeight / 3 + 240,
-				rot: -64,
-				scale: 1,
-				opacity: 1,
-				ihtml: box
-			},
-			{
-				x: window.innerWidth / 8 + 180,
-				y: window.innerHeight / 5 + 80,
-				rot: -64,
-				scale: 1,
-				opacity: 1,
-				ihtml: box
-			},
-			{
-				x: 0,
-				y: window.innerHeight,
-				rot: 64,
-				scale: 1,
-				opacity: 1,
-				ihtml: box
-			}
-		]
-	} else {
-		timeline = [
-			{
-				x: -window.innerWidth / 4,
-				y: -512,
-				rot: 0,
-				scale: 2,
-				opacity: 0.2,
-				ihtml: box
-			},
-			{
-				x: -window.innerWidth / 2 + 12,
-				y: -window.innerHeight / 3 + 240,
-				rot: -64,
-				scale: 1,
-				opacity: 1,
-				ihtml: box
-			},
-			{
-				x: window.innerWidth / 8 + 100,
-				y: window.innerHeight / 5 + 80,
-				rot: -64,
-				scale: 1,
-				opacity: 1,
-				ihtml: box
-			},
-			{
-				x: 0,
-				y: window.innerHeight,
-				rot: 64,
-				scale: 1,
-				opacity: 1,
-				ihtml: box
-			}
-		]
-	}
-}
-rebuildTimeline()
-
 // Interpolate function
 function lerp(a, b, t) {
+	if(t > 1) return b
+	if(t < 0) return a
 	return a + (b - a) * t
 }
 
@@ -299,30 +216,68 @@ function raf(time) {
 			duration: 1
 		})
 	}
-
-	rebuildTimeline();
-	let progress = animatedScroll % window.innerHeight / window.innerHeight;
-	let index = 0;
-
-	// match the timeline
-	for(let i of timestamps) {
-		if(animatedScroll > i) {
-			index = timestamps.indexOf(i);
-		}
-	}
-
-	// update the object
-	if(index < timeline.length - 1) {
-		gsap.to('#object', {
-			x: lerp(timeline[index].x, timeline[index + 1].x, progress),
-			y: lerp(timeline[index].y, timeline[index + 1].y, progress),
-			rotate: lerp(timeline[index].rot, timeline[index + 1].rot, progress),
-			scale: lerp(timeline[index].scale, timeline[index + 1].scale, progress),
-			opacity: lerp(timeline[index].opacity, timeline[index + 1].opacity, progress),
-			duration: 0
+	// Object timeline
+	if(window.innerWidth > 1000) {
+		let progress_tp1 = (animatedScroll - 100) / window.innerHeight;
+		gsap.to('#tp1', {
+			x: lerp(
+				-window.innerWidth / 4 - 128, 
+				-window.innerWidth / 4 - 128, 
+				progress_tp1
+			),
+			y: lerp(
+				-512, 
+				-window.innerHeight / 3 + 240, 
+				progress_tp1
+			),
+			rotate: lerp(
+				0, 
+				-64, 
+				progress_tp1
+			),
+			scale: lerp(
+				4, 
+				1, 
+				progress_tp1
+			),
+			opacity: lerp(
+				0.1, 
+				1, 
+				progress_tp1
+			),
+			duration: 1
 		})
-		document.getElementById('object').innerHTML = timeline[index].ihtml;
-	}
+
+		let progress_tp2 = (animatedScroll - window.innerHeight + 100) / window.innerHeight;
+		gsap.to('#tp2', {
+			x: lerp(
+				window.innerWidth / 8 + 180, 
+				0, 
+				progress_tp2
+			),
+			y: lerp(
+				window.innerHeight / 5 + 80, 
+				window.innerHeight,
+				progress_tp2
+			),
+			rotate: lerp(
+				-32, 
+				-128, 
+				progress_tp2
+			),
+			scale: lerp(
+				1.4, 
+				1, 
+				progress_tp2
+			),
+			opacity: lerp(
+				0.8, 
+				1, 
+				progress_tp2
+			),
+			duration: 1
+		})
+	} else {}
 
 	requestAnimationFrame(raf);
 	frame += 1;

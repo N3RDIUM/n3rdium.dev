@@ -159,7 +159,7 @@
 .portal-immune {
     z-index: 128;
 }
-#object {
+.objcontainer {
     position: absolute;
 }
 .object {
