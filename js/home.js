@@ -3,8 +3,8 @@ const lenis = new Lenis();
 const titles = [
   "00_INTR0",
   "01_AB0UT",
-  "02_A$TR0_$H0WCASE",
-  "03_A$TR0",
+  "02_A$TR0",
+  "03_A$TR0_$H0WCASE",
   "04_WIP",
 ];
 
@@ -53,7 +53,7 @@ function raf(time) {
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 128 -
       (mouseY / window.innerHeight) * 128 -
-      80,
+      180,
     duration: t,
   });
 
@@ -104,12 +104,12 @@ function raf(time) {
 
   gsap.to(".anomaly", {
     x: lerp(
-      (animatedScroll - window.innerHeight * 2) / window.innerHeight - 1,
+      (animatedScroll - window.innerHeight * 2) / window.innerHeight,
       -window.innerWidth - 138,
       10,
     ),
     y: lerp(
-      (animatedScroll - window.innerHeight * 2) / window.innerHeight - 1,
+      (animatedScroll - window.innerHeight * 2) / window.innerHeight,
       -window.innerWidth - 138,
       10,
     ),

@@ -281,12 +281,36 @@ html {
 }
 
 .anomaly {
-    width: 128px;
-    height: 128px;
+    width: 256px;
+    height: 256px;
     position: absolute;
-    border-radius: 12px;
+    border-radius: 16px;
     background-color: #d8dee9;
     box-shadow:
         5px 5px 11px #3b4252,
         -5px -5px 11px #434c5e;
+    mix-blend-mode: difference;
+    z-index: 42;
+}
+
+.quote {
+    width: 60%;
+    max-width: 84rem;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 4vw;
+    font-style: italic;
+    margin-bottom: -0.42rem;
+}
+
+.sagan {
+    width: 60%;
+    max-width: 80rem;
+    text-align: right;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.42rem;
+    font-style: italic;
+    font-weight: bolder;
+    margin-bottom: -0.42rem;
+    margin-bottom: 3rem;
 }
