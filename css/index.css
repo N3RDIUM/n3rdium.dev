@@ -60,12 +60,17 @@ html {
     border: solid 1px #d8dee9;
     border-radius: 4px;
     transform: rotate(45deg);
-    animation: down-one 1s ease-in-out infinite;
+    animation: down-one 2s ease-in-out infinite;
 }
 
 @keyframes down-one {
     0% {
         opacity: 0;
+        transform: rotate(45deg);
+    }
+
+    25% {
+        opacity: 1;
         transform: rotate(45deg);
     }
 
