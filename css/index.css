@@ -210,9 +210,11 @@ html {
     0% {
         opaciy: 100%;
     }
+
     90% {
         opacity: 0%;
     }
+
     100% {
         opacity: 100%;
     }
@@ -229,9 +231,48 @@ html {
     position: absolute;
     border-radius: 16px;
     object-fit: cover;
+    filter: none;
     box-shadow:
         5px 5px 11px #3b4252,
         -5px -5px 11px #434c5e;
+    animation: unblur 0.1s ease-in-out;
+}
+
+.showcase:hover {
+    filter: blur(4px);
+    animation: blur 0.1s ease-in-out;
+    box-shadow:
+        5px 5px 42px #3b4252,
+        -5px -5px 42px #434c5e;
+}
+
+@keyframes unblur {
+    from {
+        filter: blur(4px);
+        box-shadow:
+            5px 5px 42px #3b4252,
+            -5px -5px 42px #434c5e;
+    }
+    to {
+        filter: none;
+        box-shadow:
+            5px 5px 11px #3b4252,
+            -5px -5px 11px #434c5e;
+    }
+}
+@keyframes blur {
+    from {
+        filter: none;
+        box-shadow:
+            5px 5px 11px #3b4252,
+            -5px -5px 11px #434c5e;
+    }
+    to {
+        filter: blur(4px);
+        box-shadow:
+            5px 5px 42px #3b4252,
+            -5px -5px 42px #434c5e;
+    }
 }
 
 .showcase-moon {
