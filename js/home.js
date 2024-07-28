@@ -1,124 +1,124 @@
-const lenis = new Lenis();
+const lenis = new Lenis()
 
 const titles = [
-  "00_INTR0",
-  "01_AB0UT",
-  "02_A$TR0_$H0WCASE",
-  "03_A$TR0",
-  "04_WIP",
-];
+  '00_INTR0',
+  '01_AB0UT',
+  '02_A$TR0_$H0WCASE',
+  '03_A$TR0',
+  '04_WIP'
+]
 
-let mouseX = 0;
-let mouseY = 0;
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
+let mouseX = 0
+let mouseY = 0
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX
+  mouseY = e.clientY
+})
 
-let animatedScroll = 0;
-lenis.on("scroll", (e) => {
-  let progress =
-    e.animatedScroll / (document.body.clientHeight - window.innerHeight);
-  let height = progress * window.innerHeight;
-  let idx = Math.round(e.animatedScroll / window.innerHeight);
+let animatedScroll = 0
+lenis.on('scroll', (e) => {
+  const progress =
+    e.animatedScroll / (document.body.clientHeight - window.innerHeight)
+  const height = progress * window.innerHeight
+  const idx = Math.round(e.animatedScroll / window.innerHeight)
 
   document
-    .getElementById("progress")
-    .setAttribute("style", `height: ${height}px;`);
-  document.getElementById("progress-label").innerHTML = titles[idx];
+    .getElementById('progress')
+    .setAttribute('style', `height: ${height}px;`)
+  document.getElementById('progress-label').innerHTML = titles[idx]
 
-  animatedScroll = e.animatedScroll;
-});
+  animatedScroll = e.animatedScroll
+})
 
-function lerp(t, a, b) {
-  return a * t + b * (t - 1);
+function lerp (t, a, b) {
+  return a * t + b * (t - 1)
 }
 
-const t = 1.248;
-function raf(time) {
-  lenis.raf(time);
+const t = 1.248
+function raf (time) {
+  lenis.raf(time)
 
-  gsap.to(".showcase-m42", {
+  gsap.to('.showcase-m42', {
     // TODO: Use lerp() here
     x: -(mouseX / window.innerHeight) * 42 + 21 - 128,
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 42 -
       (mouseY / window.innerHeight) * 42 +
       168,
-    duration: t,
-  });
+    duration: t
+  })
 
-  gsap.to(".showcase-moon", {
+  gsap.to('.showcase-moon', {
     x: -(mouseX / window.innerHeight) * 128 + 64 + 300,
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 128 -
       (mouseY / window.innerHeight) * 128 -
       80,
-    duration: t,
-  });
+    duration: t
+  })
 
-  gsap.to(".showcase-saturn", {
+  gsap.to('.showcase-saturn', {
     x: -(mouseX / window.innerHeight) * 80 + 40 + 200,
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 80 -
       (mouseY / window.innerHeight) * 128 +
       256,
-    duration: t,
-  });
+    duration: t
+  })
 
-  gsap.to(".showcase-m57", {
+  gsap.to('.showcase-m57', {
     x: -(mouseX / window.innerHeight) * 64 + 32 - 256,
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 64 -
       (mouseY / window.innerHeight) * 64 -
       200,
-    duration: t,
-  });
+    duration: t
+  })
 
-  gsap.to(".showcase-jupiter", {
+  gsap.to('.showcase-jupiter', {
     x: -(mouseX / window.innerHeight) * 50 + 25 - 320,
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 50 -
       (mouseY / window.innerHeight) * 50 +
       42,
-    duration: t,
-  });
+    duration: t
+  })
 
-  gsap.to(".showcase-m13", {
+  gsap.to('.showcase-m13', {
     x: -(mouseX / window.innerHeight) * 42 + 21 - 384,
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 42 -
       (mouseY / window.innerHeight) * 42 +
       256,
-    duration: t,
-  });
+    duration: t
+  })
 
-  gsap.to(".showcase-milkyway", {
+  gsap.to('.showcase-milkyway', {
     x: -(mouseX / window.innerHeight) * 42 + 21 + 550,
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 52 -
       (mouseY / window.innerHeight) * 42 +
       234,
-    duration: t,
-  });
+    duration: t
+  })
 
-  gsap.to(".anomaly", {
+  gsap.to('.anomaly', {
     x: lerp(
       (animatedScroll - window.innerHeight * 2) / window.innerHeight - 1,
       -window.innerWidth - 138,
-      10,
+      10
     ),
     y: lerp(
       (animatedScroll - window.innerHeight * 2) / window.innerHeight - 1,
       -window.innerWidth - 138,
-      10,
+      10
     ),
     rotation:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 256 -
-      128,
-  });
+      128
+  })
 
-  requestAnimationFrame(raf);
+  requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf);
+requestAnimationFrame(raf)
