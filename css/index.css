@@ -4,6 +4,7 @@ html {
     background-color: #2e3440;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .panel {
@@ -83,11 +84,12 @@ html {
     width: 8vw;
     max-width: 42px;
     height: 100vh;
-    background-color: #2e3440;
+    background: transparent;
     color: #eceff4;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 
 .leftbar-progress {
@@ -98,7 +100,7 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 11;
     border-radius: 8px;
     margin: solid 4px #2e3440;
 }
@@ -214,4 +216,24 @@ html {
     100% {
         opacity: 100%;
     }
+}
+
+.astro-heading {
+    rotate: 90deg;
+    font-size: 9vh;
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+
+.showcase {
+    position: absolute;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow:
+        5px 5px 11px #3b4252,
+        -5px -5px 11px #434c5e;
+}
+
+.showcase-moon {
+    rotate: 180deg;
 }
