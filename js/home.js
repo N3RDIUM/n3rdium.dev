@@ -116,6 +116,12 @@ function raf(time) {
     rotation:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 256 -
       128,
+    borderRadius: Math.max(
+      ((animatedScroll - window.innerHeight * 1.8) / window.innerHeight) *
+        2 *
+        256,
+      12,
+    ),
   });
 
   requestAnimationFrame(raf);
