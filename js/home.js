@@ -24,6 +24,7 @@ lenis.on("scroll", (e) => {
   animatedScroll = e.animatedScroll;
 });
 
+const t = 1.248;
 function raf(time) {
   lenis.raf(time);
 
@@ -33,6 +34,7 @@ function raf(time) {
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 128 -
       (mouseY / window.innerHeight) * 42 +
       168,
+    duration: t,
   });
 
   gsap.to(".showcase-moon", {
@@ -41,6 +43,7 @@ function raf(time) {
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 128 -
       (mouseY / window.innerHeight) * 128 -
       80,
+    duration: t,
   });
 
   gsap.to(".showcase-saturn", {
@@ -49,6 +52,7 @@ function raf(time) {
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 80 -
       (mouseY / window.innerHeight) * 128 +
       256,
+    duration: t,
   });
 
   gsap.to(".showcase-m57", {
@@ -57,6 +61,7 @@ function raf(time) {
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 64 -
       (mouseY / window.innerHeight) * 64 -
       200,
+    duration: t,
   });
 
   gsap.to(".showcase-jupiter", {
@@ -65,6 +70,7 @@ function raf(time) {
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 50 -
       (mouseY / window.innerHeight) * 50 +
       42,
+    duration: t,
   });
 
   gsap.to(".showcase-m13", {
@@ -73,6 +79,7 @@ function raf(time) {
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 42 -
       (mouseY / window.innerHeight) * 42 +
       256,
+    duration: t,
   });
 
   gsap.to(".showcase-milkyway", {
@@ -81,6 +88,7 @@ function raf(time) {
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 52 -
       (mouseY / window.innerHeight) * 42 +
       234,
+    duration: t,
   });
 
   requestAnimationFrame(raf);
