@@ -1,6 +1,12 @@
 const lenis = new Lenis();
 
-const titles = ["00_INTR0", "01_AB0UT", "02_A$TR0_$H0WCASE", "03_ASTR0"];
+const titles = [
+  "00_INTR0",
+  "01_AB0UT",
+  "02_A$TR0_$H0WCASE",
+  "03_A$TR0",
+  "04_WIP",
+];
 
 let mouseX = 0;
 let mouseY = 0;
@@ -24,14 +30,19 @@ lenis.on("scroll", (e) => {
   animatedScroll = e.animatedScroll;
 });
 
+function lerp(t, a, b) {
+  return a * t + b * (t - 1);
+}
+
 const t = 1.248;
 function raf(time) {
   lenis.raf(time);
 
   gsap.to(".showcase-m42", {
+    // TODO: Use lerp() here
     x: -(mouseX / window.innerHeight) * 42 + 21 - 128,
     y:
-      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 128 -
+      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 42 -
       (mouseY / window.innerHeight) * 42 +
       168,
     duration: t,
@@ -89,6 +100,22 @@ function raf(time) {
       (mouseY / window.innerHeight) * 42 +
       234,
     duration: t,
+  });
+
+  gsap.to(".anomaly", {
+    x: lerp(
+      (animatedScroll - window.innerHeight * 2) / window.innerHeight - 1,
+      -window.innerWidth - 138,
+      10,
+    ),
+    y: lerp(
+      (animatedScroll - window.innerHeight * 2) / window.innerHeight - 1,
+      -window.innerWidth - 138,
+      10,
+    ),
+    rotation:
+      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 256 -
+      128,
   });
 
   requestAnimationFrame(raf);

@@ -220,7 +220,7 @@ html {
     }
 }
 
-.astro-heading {
+.astro-heading-vert {
     rotate: 90deg;
     font-size: 9vh;
     z-index: 2;
@@ -244,6 +244,7 @@ html {
     box-shadow:
         5px 5px 42px #3b4252,
         -5px -5px 42px #434c5e;
+    cursor: pointer;
 }
 
 @keyframes unblur {
@@ -277,4 +278,15 @@ html {
 
 .showcase-moon {
     rotate: 180deg;
+}
+
+.anomaly {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    border-radius: 12px;
+    background-color: #d8dee9;
+    box-shadow:
+        5px 5px 11px #3b4252,
+        -5px -5px 11px #434c5e;
 }
