@@ -149,6 +149,7 @@ html {
     width: 12px;
     height: 12px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .aboutty-yellow {
@@ -156,6 +157,7 @@ html {
     width: 12px;
     height: 12px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .aboutty-green {
@@ -163,6 +165,7 @@ html {
     width: 12px;
     height: 12px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .aboutty-content {

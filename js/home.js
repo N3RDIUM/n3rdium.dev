@@ -98,7 +98,7 @@ function raf(time) {
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 52 -
       (mouseY / window.innerHeight) * 42 +
-      234,
+      256,
     duration: t,
   });
 
