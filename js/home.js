@@ -5,7 +5,9 @@ const titles = [
   "01_AB0UT",
   "02_A$TR0",
   "03_A$TR0_$H0WCASE",
-  "04_WIP",
+  "04_C0DE",
+  "04_TECH$TACK",
+  "04_INTERESTS",
 ];
 
 let mouseX = 0;
@@ -53,7 +55,7 @@ function raf(time) {
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 128 -
       (mouseY / window.innerHeight) * 128 -
-      180,
+      300,
     duration: t,
   });
 
@@ -62,7 +64,7 @@ function raf(time) {
     y:
       ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 80 -
       (mouseY / window.innerHeight) * 128 +
-      256,
+      128,
     duration: t,
   });
 

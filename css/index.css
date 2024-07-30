@@ -231,7 +231,6 @@ html {
 .astro-heading-vert {
     rotate: 90deg;
     font-size: 9vh;
-    z-index: 2;
     mix-blend-mode: difference;
 }
 
@@ -240,10 +239,9 @@ html {
     border-radius: 16px;
     object-fit: cover;
     filter: none;
-    box-shadow:
-        5px 5px 11px #3b4252,
-        -5px -5px 11px #434c5e;
+    box-shadow: 5px 5px 11px #3b4252;
     animation: unblur 0.1s ease-in-out;
+    z-index: 40;
 }
 
 .showcase:hover {
@@ -262,6 +260,7 @@ html {
             5px 5px 42px #3b4252,
             -5px -5px 42px #434c5e;
     }
+
     to {
         filter: none;
         box-shadow:
@@ -269,6 +268,7 @@ html {
             -5px -5px 11px #434c5e;
     }
 }
+
 @keyframes blur {
     from {
         filter: none;
@@ -276,16 +276,13 @@ html {
             5px 5px 11px #3b4252,
             -5px -5px 11px #434c5e;
     }
+
     to {
         filter: blur(4px);
         box-shadow:
             5px 5px 42px #3b4252,
             -5px -5px 42px #434c5e;
     }
-}
-
-.showcase-moon {
-    rotate: 180deg;
 }
 
 .anomaly {
@@ -304,7 +301,7 @@ html {
 .quote {
     width: 60%;
     max-width: 84rem;
-    text-align: center;
+    text-align: justify;
     font-family: "Times New Roman", Times, serif;
     font-size: 4vw;
     font-style: italic;
@@ -321,4 +318,38 @@ html {
     font-weight: bolder;
     margin-bottom: -0.42rem;
     margin-bottom: 3rem;
+}
+
+.code-heading {
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 360%;
+}
+
+.code-para {
+    font-family: monospace;
+    width: 80%;
+    max-width: 42rem;
+    font-size: 240%;
+    text-align: justify;
+}
+
+.dark2light {
+    position: absolute;
+    width: 0;
+    height: 0;
+    mix-blend-mode: difference;
+    border-left: 100vw solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 100vh solid #eceff4;
+}
+
+.light2dark {
+    position: absolute;
+    width: 0;
+    height: 0;
+    mix-blend-mode: difference;
+    border-left: 0 solid transparent;
+    border-right: 100vw solid transparent;
+    border-top: 100vh solid #eceff4;
 }
