@@ -7,7 +7,10 @@ const titles = [
   "03_A$TR0_$H0WCASE",
   "04_C0DE",
   "04_TECH$TACK",
-  "04_INTERESTS",
+  "05_INTERESTS",
+  "06_MUSIC",
+  "07_BADMINT0N",
+  "08_THE_END?",
 ];
 
 let mouseX = 0;
@@ -124,6 +127,16 @@ function raf(time) {
         256,
       12,
     ),
+  });
+
+  let shuttle_progress =
+    (animatedScroll - window.innerHeight * 7) / window.innerHeight;
+  gsap.to(".shuttle", {
+    x: shuttle_progress * window.innerWidth - window.innerWidth + 42,
+    y:
+      ((shuttle_progress * window.innerHeight - window.innerHeight + 42) / 4) *
+      3,
+    rotation: shuttle_progress * 256 - 128,
   });
 
   requestAnimationFrame(raf);
