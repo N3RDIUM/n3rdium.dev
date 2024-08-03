@@ -250,7 +250,7 @@ html {
     position: absolute;
     border-radius: 16px;
     object-fit: cover;
-    z-index: 40;
+    z-index: 3;
 
     filter: none;
     box-shadow: 5px 5px 11px #3b4252;
@@ -387,4 +387,13 @@ html {
     position: absolute;
     width: 24vw;
     max-width: 12rem;
+}
+
+.blackhole {
+    position: absolute;
+    z-index: 4;
+    scale: 42;
+}
+.blackhole:hover {
+    /* TODO: Add some cool stuff here */
 }

@@ -4,7 +4,7 @@ const titles = [
   "00_INTR0",
   "01_AB0UT",
   "02_A$TR0",
-  "03_A$TR0_$H0WCASE",
+  "03_A$TR0",
   "04_C0DE",
   "04_TECH$TACK",
   "05_INTERESTS",
@@ -20,7 +20,33 @@ document.addEventListener("mousemove", (e) => {
   mouseY = e.clientY;
 });
 
+window.onload = () => {
+  gsap.to(".blackhole", {
+    scale: 0.4,
+    x: 100,
+    ease: "strong.inOut",
+    duration: 2
+  })
+  gsap.to(".blackhole", {
+    startAt: {y: -128},
+    y: -148,
+    yoyo: true,
+    yoyoEase: "strong.inOut",
+    repeat: -1,
+    duration: 4
+  })
+  gsap.to(".blackhole", {
+    rotate: -360,
+    repeat: -1,
+    duration: 16,
+    ease: "linear",
+  })
+}
+
 let animatedScroll = 0;
+document.addEventListener("scroll", (e) => {
+  console.log(e);
+});
 lenis.on("scroll", (e) => {
   let progress =
     e.animatedScroll / (document.body.clientHeight - window.innerHeight);
@@ -123,8 +149,8 @@ function raf(time) {
       128,
     borderRadius: Math.max(
       ((animatedScroll - window.innerHeight * 1.8) / window.innerHeight) *
-        2 *
-        256,
+      2 *
+      256,
       12,
     ),
   });

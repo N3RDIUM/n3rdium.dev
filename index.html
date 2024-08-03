@@ -1,285 +1,352 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--Metadata-->
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://stats.g.doubleclick.net" />
-        <title>N3RDIUM's Hideout</title>
+  <head>
+    <!--Metadata-->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://stats.g.doubleclick.net" />
+    <title>N3RDIUM's Hideout</title>
 
-        <meta charset="utf-8" />
-        <meta name="description" content="N3RDIUM's Hideout" />
-        <meta name="author" content="N3RDIUM" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="description" content="N3RDIUM's Hideout" />
+    <meta name="author" content="N3RDIUM" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="icon" href="../img/n3rdium.avif" type="image/x-icon" />
+    <link rel="icon" href="../img/n3rdium.avif" type="image/x-icon" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="./css/index.css" />
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/lenis@1.1.8/dist/lenis.css"
-        />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.8/dist/lenis.css"
+    />
 
-        <!-- Libs -->
-        <script src="https://unpkg.com/lenis@1.1.8/dist/lenis.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- Libs -->
+    <script src="https://unpkg.com/lenis@1.1.8/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-        <!-- JS -->
-        <script src="./js/home.js"></script>
+    <!-- JS -->
+    <script src="./js/home.js"></script>
 
-        <!-- Google tag (gtag.js) -->
-        <script
-            defer
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"
-        ></script>
-        <script defer async>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+      defer
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"
+    ></script>
+    <script defer async>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-            gtag("config", "G-DRCTBWSMF2");
-        </script>
-    </head>
+      gtag("config", "G-DRCTBWSMF2");
+    </script>
+  </head>
 
-    <body>
-        <div class="leftbar">
+  <body>
+    <div class="leftbar">
+      <div class="leftbar-progress" style="height: 0px" id="progress"></div>
+      <div class="leftbar-label" id="progress-label">00_INTR0</div>
+    </div>
+
+    <div class="panel">
+      <div class="intro">
+        <p class="intro-hellothere">Hello there! I'm</p>
+        <h1 class="intro-username">N3RDIUM.</h1>
+        <p class="intro-welcome">Welcome to my hideout!</p>
+      </div>
+      <svg
+        class="blackhole"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <circle
+            cx="12"
+            cy="12"
+            r="2"
+            stroke="#b48ead"
+            stroke-width="1.5"
+          ></circle>
+          <path
+            d="M12 10C17 10 16.6 22 9 22"
+            stroke="#b48ead"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M12.3115 14C7.31152 14 7.71152 2 15.3115 2"
+            stroke="#b48ead"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          ></path>
+          <path
+            opacity="0.5"
+            d="M10.6313 10.6961C14.1669 7.16053 22.3693 15.9287 16.9953 21.3027"
+            stroke="#b48ead"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-dasharray="2 2"
+          ></path>
+          <path
+            opacity="0.5"
+            d="M13.6802 13.3039C10.1447 16.8395 1.94222 8.07135 7.31623 2.69734"
+            stroke="#b48ead"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-dasharray="2 2"
+          ></path>
+          <path
+            opacity="0.5"
+            d="M10.8516 13.5242C7.31605 9.98865 16.0842 1.78622 21.4582 7.16023"
+            stroke="#b48ead"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-dasharray="2 2"
+          ></path>
+          <path
+            opacity="0.5"
+            d="M13.4599 10.4758C16.9955 14.0113 8.22736 22.2138 2.85334 16.8398"
+            stroke="#b48ead"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-dasharray="2 2"
+          ></path>
+          <path
+            d="M10 12.3115C10 7.31152 22 7.71152 22 15.3115"
+            stroke="#b48ead"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M14 12C14 17 2 16.6 2 9"
+            stroke="#b48ead"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          ></path>
+        </g>
+      </svg>
+      <div class="scrolldown">
+        <div class="down-one"></div>
+      </div>
+    </div>
+
+    <div class="panel" id="panel2">
+      <div class="aboutty">
+        <div class="aboutty-header">
+          <div class="aboutty-title">zsh: ~/about/</div>
+          <div class="aboutty-actions">
             <div
-                class="leftbar-progress"
-                style="height: 0px"
-                id="progress"
+              class="aboutty-green"
+              onclick="alert('What does this button do?')"
             ></div>
-            <div class="leftbar-label" id="progress-label">00_INTR0</div>
+            <div
+              class="aboutty-yellow"
+              onclick="alert('You found an EASTER EGG!')"
+            ></div>
+            <div
+              class="aboutty-red"
+              onclick="alert('Curious of you to try pressing these. What makes you want to close this terminal?')"
+            ></div>
+          </div>
         </div>
+        <div class="aboutty-content">
+          <span class="aboutty-prompt">$</span>
+          <span class="aboutty-command">cat</span>
+          <span class="aboutty-arg">about.md</span><br />
+          Hey there! I'm N3RDIUM, a <span id="age">16</span> year old passionate
+          lifelong student and experimenter. As you can see, I love Linux. I'm a
+          HUGE supporter of the open source movement.<br /><br />
 
-        <div class="panel">
-            <div class="intro">
-                <p class="intro-hellothere">Hello there! I'm</p>
-                <h1 class="intro-username">N3RDIUM.</h1>
-                <p class="intro-welcome">Welcome to my hideout!</p>
-            </div>
-            <div class="scrolldown">
-                <div class="down-one"></div>
-            </div>
+          <span class="aboutty-prompt">$</span>
+          <span class="aboutty-command">cat</span>
+          <span class="aboutty-arg">goal.md</span><br />
+          My dream is to become an astrophysicist, and to contribute to Humanity
+          in its journey up the
+          <a
+            class="aboutty-link hoverlink"
+            href="https://en.wikipedia.org/wiki/Kardashev_scale"
+            target="_blank"
+            >Kardashev Scale</a
+          >, as fast as I can.<br /><br />
+
+          <span class="aboutty-prompt">$</span>
+          <span class="aboutty-command">cat</span>
+          <span class="aboutty-arg">hobbies.md</span><br />
+          -
+          <a class="aboutty-warp hoverlink" href="">Amateur astronomy</a><br />
+          -
+          <a class="aboutty-warp hoverlink" href="">Programming</a><br />
+          -
+          <a class="aboutty-warp hoverlink" href="">Badminton</a><br />
+          -
+          <a class="aboutty-warp hoverlink" href="">Piano</a><br /><br />
+
+          <span class="aboutty-prompt">$</span>
+          <span class="aboutty-cursor">█</span>
         </div>
+      </div>
+    </div>
 
-        <div class="panel" id="panel2">
-            <div class="aboutty">
-                <div class="aboutty-header">
-                    <div class="aboutty-title">zsh: ~/about/</div>
-                    <div class="aboutty-actions">
-                        <div
-                            class="aboutty-green"
-                            onclick="alert('What does this button do?')"
-                        ></div>
-                        <div
-                            class="aboutty-yellow"
-                            onclick="alert('You found an EASTER EGG!')"
-                        ></div>
-                        <div
-                            class="aboutty-red"
-                            onclick="alert('Curious of you to try pressing these. What makes you want to close this terminal?')"
-                        ></div>
-                    </div>
-                </div>
-                <div class="aboutty-content">
-                    <span class="aboutty-prompt">$</span>
-                    <span class="aboutty-command">cat</span>
-                    <span class="aboutty-arg">about.md</span><br />
-                    Hey there! I'm N3RDIUM, a <span id="age">16</span> year old
-                    passionate lifelong student and experimenter. As you can
-                    see, I love Linux. I'm a HUGE supporter of the open source
-                    movement.<br /><br />
+    <div class="panel">
+      <div class="anomaly"></div>
+      <p class="quote">
+        “For me, it is far better to grasp the Universe as it really is than to
+        persist in delusion, however satisfying and reassuring.”
+      </p>
+      <p class="sagan">- Carl Sagan</p>
 
-                    <span class="aboutty-prompt">$</span>
-                    <span class="aboutty-command">cat</span>
-                    <span class="aboutty-arg">goal.md</span><br />
-                    My dream is to become an astrophysicist, and to contribute
-                    to Humanity in its journey up the
-                    <a
-                        class="aboutty-link hoverlink"
-                        href="https://en.wikipedia.org/wiki/Kardashev_scale"
-                        target="_blank"
-                        >Kardashev Scale</a
-                    >, as fast as I can.<br /><br />
+      <div class="dark2light"></div>
+    </div>
 
-                    <span class="aboutty-prompt">$</span>
-                    <span class="aboutty-command">cat</span>
-                    <span class="aboutty-arg">hobbies.md</span><br />
-                    -
-                    <a class="aboutty-warp hoverlink" href=""
-                        >Amateur astronomy</a
-                    ><br />
-                    -
-                    <a class="aboutty-warp hoverlink" href="">Programming</a
-                    ><br />
-                    -
-                    <a class="aboutty-warp hoverlink" href="">Badminton</a
-                    ><br />
-                    -
-                    <a class="aboutty-warp hoverlink" href="">Piano</a
-                    ><br /><br />
+    <div class="panel" style="overflow: hidden">
+      <h1 class="astro-heading-vert">Astro = life.</h1>
+      <img
+        class="showcase showcase-m42"
+        src="./img/M42_Latest.png"
+        alt="The Orion Nebula"
+        width="200"
+        height="256"
+      />
+      <img
+        class="showcase showcase-moon"
+        src="./img/Moon_Latest.jpg"
+        alt="The Moon"
+        width="384"
+        height="384"
+      />
+      <img
+        class="showcase showcase-saturn"
+        src="./img/Saturn_Latest.png"
+        alt="Saturn"
+        width="256"
+        height="256"
+      />
+      <img
+        class="showcase showcase-m57"
+        src="./img/M57_Latest.png"
+        alt="The Ring Nebula"
+        width="384"
+        height="218"
+      />
+      <img
+        class="showcase showcase-jupiter"
+        src="./img/Jupiter_Latest.png"
+        alt="Jupiter"
+        width="128"
+        height="142"
+      />
+      <img
+        class="showcase showcase-m13"
+        src="./img/M13_Latest.png"
+        alt="The Great Globular Cluster in Hercules"
+        width="242"
+        height="242"
+      />
+      <img
+        class="showcase showcase-milkyway"
+        src="./img/MilkyWay_Latest.png"
+        alt="The Milky Way"
+        width="384"
+        height="242"
+      />
 
-                    <span class="aboutty-prompt">$</span>
-                    <span class="aboutty-cursor">█</span>
-                </div>
-            </div>
-        </div>
+      <div class="light2dark"></div>
+    </div>
 
-        <div class="panel">
-            <div class="anomaly"></div>
-            <p class="quote">
-                “For me, it is far better to grasp the Universe as it really is
-                than to persist in delusion, however satisfying and reassuring.”
-            </p>
-            <p class="sagan">- Carl Sagan</p>
+    <div class="panel">
+      <h1 class="code-heading">Go for launch.</h1>
+      <p class="code-para">
+        I've been an open-source developer for the past
+        <span id="dev-age">5</span> years, and I always like to keep up with the
+        latest tech. My tech stack is as diverse as my interests.
+      </p>
 
-            <div class="dark2light"></div>
-        </div>
+      <div class="dark2light"></div>
+    </div>
 
-        <div class="panel" style="overflow: hidden">
-            <h1 class="astro-heading-vert">Astro = life.</h1>
-            <img
-                class="showcase showcase-m42"
-                src="./img/M42_Latest.png"
-                alt="The Orion Nebula"
-                width="200"
-                height="256"
-            />
-            <img
-                class="showcase showcase-moon"
-                src="./img/Moon_Latest.jpg"
-                alt="The Moon"
-                width="384"
-                height="384"
-            />
-            <img
-                class="showcase showcase-saturn"
-                src="./img/Saturn_Latest.png"
-                alt="Saturn"
-                width="256"
-                height="256"
-            />
-            <img
-                class="showcase showcase-m57"
-                src="./img/M57_Latest.png"
-                alt="The Ring Nebula"
-                width="384"
-                height="218"
-            />
-            <img
-                class="showcase showcase-jupiter"
-                src="./img/Jupiter_Latest.png"
-                alt="Jupiter"
-                width="128"
-                height="142"
-            />
-            <img
-                class="showcase showcase-m13"
-                src="./img/M13_Latest.png"
-                alt="The Great Globular Cluster in Hercules"
-                width="242"
-                height="242"
-            />
-            <img
-                class="showcase showcase-milkyway"
-                src="./img/MilkyWay_Latest.png"
-                alt="The Milky Way"
-                width="384"
-                height="242"
-            />
+    <div class="panel">
+      <div class="light2dark"></div>
 
-            <div class="light2dark"></div>
-        </div>
+      <div class="techstack-head">TECH_$TACK [WIP]</div>
+    </div>
 
-        <div class="panel">
-            <h1 class="code-heading">Go for launch.</h1>
-            <p class="code-para">
-                I've been an open-source developer for the past
-                <span id="dev-age">5</span> years, and I always like to keep up
-                with the latest tech. My tech stack is as diverse as my
-                interests.
-            </p>
+    <div class="panel">
+      <div class="dark2light"></div>
 
-            <div class="dark2light"></div>
-        </div>
+      <div class="interests-head">INTERESTS [WIP]</div>
+    </div>
 
-        <div class="panel">
-            <div class="light2dark"></div>
+    <div class="panel-light"></div>
+    <div class="panel">
+      <div class="light2dark"></div>
+      <svg
+        class="shuttle"
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 502 502"
+        xml:space="preserve"
+        fill="#d8dee9"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <g>
+            <g>
+              <path
+                style="fill: #e5e9f0"
+                d="M103.29,343.692c-51.523,0-93.29-41.767-93.29-93.29s41.768-93.29,93.29-93.29V343.692z"
+              ></path>
+              <rect
+                x="103.29"
+                y="157.112"
+                style="fill: #d8dee9"
+                width="63.39"
+                height="186.581"
+              ></rect>
+              <polygon
+                style="fill: #e5e9f0"
+                points="492,451.335 166.68,343.692 166.68,157.112 492,50.665 "
+              ></polygon>
+              <polygon
+                style="fill: #e5e9f0"
+                points="492,353.261 166.68,293.698 166.68,204.953 492,147.543 "
+              ></polygon>
+            </g>
+            <g>
+              <path
+                d="M497.87,42.569c-2.595-1.88-5.931-2.405-8.979-1.408L165.086,147.112h-61.795C46.336,147.112,0,193.448,0,250.402 c0,56.955,46.336,103.291,103.291,103.291h61.778l323.79,107.136c1.026,0.34,2.086,0.506,3.14,0.506 c2.077,0,4.131-0.647,5.857-1.894c2.603-1.88,4.144-4.896,4.144-8.106v-98.074V147.544V50.665 C502,47.46,500.464,44.45,497.87,42.569z M482,239.206H176.68v-25.864L482,159.463V239.206z M176.68,259.206H482v82.058 l-305.32-55.901V259.206z M482,139.154l-305.32,53.88v-28.672L482,64.459V139.154z M20,250.402 c0-42.543,32.061-77.738,73.291-82.693v165.387C52.061,328.141,20,292.945,20,250.402z M113.291,167.112h43.389v37.841v88.746 v39.994h-43.389C113.291,333.693,113.291,167.112,113.291,167.112z M176.68,336.468v-30.773L482,361.596v75.897L176.68,336.468z"
+              ></path>
+              <path
+                d="M77.327,295.035C62.094,285.438,53,268.976,53,251c0-5.523-4.477-10-10-10s-10,4.477-10,10 c0,24.888,12.585,47.675,33.666,60.957c1.656,1.043,3.499,1.541,5.321,1.541c3.32,0,6.569-1.654,8.47-4.671 C83.401,304.153,82,297.979,77.327,295.035z"
+              ></path>
+              <path
+                d="M67.832,189.325c-9.997,6.036-18.471,14.51-24.506,24.506c-2.854,4.728-1.336,10.875,3.392,13.729 c1.617,0.977,3.398,1.441,5.159,1.441c3.387,0,6.691-1.722,8.57-4.833c4.365-7.229,10.493-13.357,17.722-17.722 c4.728-2.854,6.247-9.001,3.392-13.729C78.706,187.989,72.559,186.471,67.832,189.325z"
+              ></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
 
-            <div class="techstack-head">TECH_$TACK [WIP]</div>
-        </div>
-
-        <div class="panel">
-            <div class="dark2light"></div>
-
-            <div class="interests-head">INTERESTS [WIP]</div>
-        </div>
-
-        <div class="panel-light"></div>
-        <div class="panel">
-            <div class="light2dark"></div>
-            <svg
-                class="shuttle"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 502 502"
-                xml:space="preserve"
-                fill="#d8dee9"
-            >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                    <g>
-                        <g>
-                            <path
-                                style="fill: #e5e9f0"
-                                d="M103.29,343.692c-51.523,0-93.29-41.767-93.29-93.29s41.768-93.29,93.29-93.29V343.692z"
-                            ></path>
-                            <rect
-                                x="103.29"
-                                y="157.112"
-                                style="fill: #d8dee9"
-                                width="63.39"
-                                height="186.581"
-                            ></rect>
-                            <polygon
-                                style="fill: #e5e9f0"
-                                points="492,451.335 166.68,343.692 166.68,157.112 492,50.665 "
-                            ></polygon>
-                            <polygon
-                                style="fill: #e5e9f0"
-                                points="492,353.261 166.68,293.698 166.68,204.953 492,147.543 "
-                            ></polygon>
-                        </g>
-                        <g>
-                            <path
-                                d="M497.87,42.569c-2.595-1.88-5.931-2.405-8.979-1.408L165.086,147.112h-61.795C46.336,147.112,0,193.448,0,250.402 c0,56.955,46.336,103.291,103.291,103.291h61.778l323.79,107.136c1.026,0.34,2.086,0.506,3.14,0.506 c2.077,0,4.131-0.647,5.857-1.894c2.603-1.88,4.144-4.896,4.144-8.106v-98.074V147.544V50.665 C502,47.46,500.464,44.45,497.87,42.569z M482,239.206H176.68v-25.864L482,159.463V239.206z M176.68,259.206H482v82.058 l-305.32-55.901V259.206z M482,139.154l-305.32,53.88v-28.672L482,64.459V139.154z M20,250.402 c0-42.543,32.061-77.738,73.291-82.693v165.387C52.061,328.141,20,292.945,20,250.402z M113.291,167.112h43.389v37.841v88.746 v39.994h-43.389C113.291,333.693,113.291,167.112,113.291,167.112z M176.68,336.468v-30.773L482,361.596v75.897L176.68,336.468z"
-                            ></path>
-                            <path
-                                d="M77.327,295.035C62.094,285.438,53,268.976,53,251c0-5.523-4.477-10-10-10s-10,4.477-10,10 c0,24.888,12.585,47.675,33.666,60.957c1.656,1.043,3.499,1.541,5.321,1.541c3.32,0,6.569-1.654,8.47-4.671 C83.401,304.153,82,297.979,77.327,295.035z"
-                            ></path>
-                            <path
-                                d="M67.832,189.325c-9.997,6.036-18.471,14.51-24.506,24.506c-2.854,4.728-1.336,10.875,3.392,13.729 c1.617,0.977,3.398,1.441,5.159,1.441c3.387,0,6.691-1.722,8.57-4.833c4.365-7.229,10.493-13.357,17.722-17.722 c4.728-2.854,6.247-9.001,3.392-13.729C78.706,187.989,72.559,186.471,67.832,189.325z"
-                            ></path>
-                        </g>
-                    </g>
-                </g>
-            </svg>
-        </div>
-
-        <div class="panel"></div>
-        <div class="panel">
-            <div class="dark2light"></div>
-        </div>
-        <div class="panel-light"></div>
-    </body>
+    <div class="panel"></div>
+    <div class="panel">
+      <div class="dark2light"></div>
+    </div>
+    <div class="panel-light"></div>
+  </body>
 </html>
