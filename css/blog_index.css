@@ -10,7 +10,7 @@ html {
 
 .intro-container {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../img/banner.png);
+    background-image: url(/img/banner.png);
     background-position: center;
     background-size: cover;
     color: #d8dee9;
@@ -72,11 +72,11 @@ html {
     object-fit: cover;
 }
 .post-glimpse {
-    color: #eceff4e9;
+    color: #eceff4;
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 8px;
 }
 .onward {
-    color: #81a1c1;
+    color: #d8dee9;
     text-align: right;
 }
