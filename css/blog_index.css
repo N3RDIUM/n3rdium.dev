@@ -76,6 +76,7 @@ html.lenis body {
     cursor: pointer;
     background-color: #4c566a;
     padding: 16px;
+    padding-bottom: 12px;
     border-radius: 8px;
     box-shadow: 0 0 12px #4c566a;
     max-width: 42rem;
@@ -87,7 +88,6 @@ html.lenis body {
     margin-bottom: 8px;
 }
 .post-image {
-    margin-bottom: 6px;
     width: 100%;
     max-height: 16rem;
     border-radius: 8px;
@@ -100,10 +100,11 @@ html.lenis body {
 }
 .tags {
     color: #d8dee9;
-    margin-top: -4px;
-    margin-bottom: 12px;
+    margin-top: -6px;
+    margin-bottom: 16px;
 }
 .onward {
+    margin-top: 16px;
     color: #d8dee9;
     text-align: right;
 }
