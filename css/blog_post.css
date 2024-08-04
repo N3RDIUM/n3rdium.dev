@@ -10,7 +10,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 24px;
+    padding-top: 84px;
+    padding-bottom: 24px;
 }
 
 .title {
@@ -22,6 +23,7 @@ html {
     width: 80%;
     max-width: 64rem;
     align-self: center;
+    margin-top: 0px;
 }
 .small {
     margin-top: -1rem;
@@ -58,4 +60,49 @@ p {
     font-size: 12spx;
     color: #eceff4;
     font-family: monospace;
+}
+
+h2, h3, h4, h5, h6 {
+    width: 80%;
+    max-width: 42rem;
+    text-align: left;
+    color: #d8dee9;
+    margin-bottom: -4px;
+}
+
+ul {
+    width: 80%;
+    max-width: 42rem;
+}
+li {
+    color: #e5e9f0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+a {
+    color: #e5e9f0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    font-family: monospace;
+}
+a:active {
+    color: #d08770;
+}
+a:hover {
+    color: #88c0d0;
+}
+a:visited {
+    color: #88c0d0;
+}
+
+.back {
+    width: 80%;
+    max-width: 64rem;
+    color: #e5e9f0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    font-family: monospace;
+    text-decoration: none;
 }
