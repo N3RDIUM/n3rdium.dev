@@ -392,7 +392,7 @@ html {
 .blackhole {
     position: absolute;
     z-index: 4;
-    scale: 42;
+    opacity: 0;
 }
 .blackhole:hover {
     /* TODO: Add some cool stuff here */

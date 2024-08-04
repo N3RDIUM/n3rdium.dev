@@ -22,7 +22,11 @@ document.addEventListener("mousemove", (e) => {
 
 window.onload = () => {
   gsap.to(".blackhole", {
-    scale: 1,
+    opacity: 1,
+    duration: 4,
+    delay: 1
+  })
+  gsap.to(".blackhole", {
     width: 128,
     x: 100,
     ease: "strong.inOut",
