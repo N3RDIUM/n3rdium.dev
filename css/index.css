@@ -388,12 +388,3 @@ html {
     width: 24vw;
     max-width: 12rem;
 }
-
-.blackhole {
-    position: absolute;
-    z-index: 4;
-    opacity: 0;
-}
-.blackhole:hover {
-    /* TODO: Add some cool stuff here */
-}

@@ -20,24 +20,7 @@ document.addEventListener("mousemove", (e) => {
   mouseY = e.clientY;
 });
 
-window.onload = () => {
-  gsap.to(".blackhole", {
-    opacity: 1,
-    duration: 4,
-    delay: 1
-  })
-  gsap.to(".blackhole", {
-    width: 128,
-    x: 100,
-    ease: "strong.inOut",
-    duration: 2
-  })
-  gsap.to(".blackhole", {
-    rotate: 3600,
-    ease: "strong.out",
-    duration: 0.1
-  })
-}
+window.onload = () => {}
 
 let animatedScroll = 0;
 lenis.on("scroll", (e) => {
@@ -159,17 +142,6 @@ function raf(time) {
       3,
     rotation: shuttle_progress * 256 - 128,
   });
-
-  
-  gsap.to(".blackhole", {
-    y: -window.innerHeight / 100 * 16 - 24 * Math.sin(frame / 100),
-    x: window.innerWidth / 4
-  })
-  gsap.to(".blackhole", {
-    rotate: -frame,
-    delay: 0.8
-  })
-  
 
   frame += 1;
   requestAnimationFrame(raf);
