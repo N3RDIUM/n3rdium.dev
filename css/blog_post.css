@@ -53,3 +53,9 @@ p {
     padding: 8px;
     margin: 8px;
 }
+
+.caption {
+    font-size: 12spx;
+    color: #eceff4;
+    font-family: monospace;
+}
