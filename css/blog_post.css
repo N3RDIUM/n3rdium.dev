@@ -6,4 +6,50 @@ html {
     padding: 0;
     max-width: 100%;
     overflow-x: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.title {
+    margin-top: 84px;
+    color: #d8dee9;
+    font-size: 2rem;
+    font-family: monospace;
+    font-weight: bolder;
+    width: 80%;
+    max-width: 64rem;
+    align-self: center;
+}
+.small {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    color: #d8dee9;
+    width: 80%;
+    max-width: 64rem;
+}
+.tags {
+    float: left;
+}
+.date {
+    float: right;
+}
+
+.post-image {
+    width: 80%;
+    max-width: 42rem;
+    border-radius: 8px;
+}
+
+p {
+    width: 80%;
+    max-width: 42rem;
+    color: #e5e9f0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    padding: 8px;
+    margin: 8px;
 }
