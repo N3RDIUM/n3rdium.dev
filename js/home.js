@@ -1,150 +1,67 @@
 const lenis = new Lenis();
 
-const titles = [
-  "00_INTR0",
-  "01_AB0UT",
-  "02_A$TR0",
-  "03_A$TR0",
-  "04_C0DE",
-  "04_TECH$TACK",
-  "05_INTERESTS",
-  "06_MUSIC",
-  "07_BADMINT0N",
-  "08_THE_END?",
-];
+// D O M
+// const letters = [
+//   document.getElementById("username-n"),
+//   document.getElementById("username-3"),
+//   document.getElementById("username-r"),
+//   document.getElementById("username-d"),
+//   document.getElementById("username-i"),
+//   document.getElementById("username-u"),
+//   document.getElementById("username-m"),
+// ];
 
-let mouseX = 0;
-let mouseY = 0;
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
-
-window.onload = () => {}
-
-let animatedScroll = 0;
+// S C R O L L
+var scroll = null;
 lenis.on("scroll", (e) => {
-  let progress =
-    e.animatedScroll / (document.body.clientHeight - window.innerHeight);
-  let height = progress * window.innerHeight;
-  let idx = Math.round(e.animatedScroll / window.innerHeight);
-
-  document
-    .getElementById("progress")
-    .setAttribute("style", `height: ${height}px;`);
-  document.getElementById("progress-label").innerHTML = titles[idx];
-
-  animatedScroll = e.animatedScroll;
+  scroll = e;
 });
 
-function lerp(t, a, b) {
-  return a * t + b * (t - 1);
-}
-
-const t = 1.248;
-let frame = 0;
-let start = Date.now()
 function raf(time) {
   lenis.raf(time);
 
-  gsap.to(".showcase-m42", {
-    // TODO: Use lerp() here
-    x: -(mouseX / window.innerHeight) * 42 + 21 - 128,
-    y:
-      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 42 -
-      (mouseY / window.innerHeight) * 42 +
-      168,
-    duration: t,
+  // C O N S T A N T S
+  let LETTER_SPACING = window.innerWidth / 7;
+
+  // V A R I A B L E S
+  let animatedScroll = scroll != null ? scroll.animatedScroll : 0;
+
+  ////////////////////////////////////////////////////////////////
+  // U S E R N A M E /////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////
+  gsap.to(".username", {
+    scale: (animatedScroll / window.innerHeight + 1) ** 3,
   });
 
-  gsap.to(".showcase-moon", {
-    x: -(mouseX / window.innerHeight) * 128 + 64 + 300,
-    y:
-      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 128 -
-      (mouseY / window.innerHeight) * 128 -
-      300,
-    duration: t,
+  gsap.to(".letter-n", {
+    scale: (animatedScroll / window.innerHeight + 1) ** 3,
+    margin: (animatedScroll / window.innerHeight) * 512,
+  });
+  gsap.to(".letter-3", {
+    scale: (animatedScroll / window.innerHeight + 1) ** 2,
+    margin: (animatedScroll / window.innerHeight) * 256,
+  });
+  gsap.to(".letter-r", {
+    scale: animatedScroll / window.innerHeight + 1,
+    margin: (animatedScroll / window.innerHeight) * 128,
   });
 
-  gsap.to(".showcase-saturn", {
-    x: -(mouseX / window.innerHeight) * 80 + 40 + 200,
-    y:
-      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 80 -
-      (mouseY / window.innerHeight) * 128 +
-      128,
-    duration: t,
+  gsap.to(".letter-i", {
+    scale: animatedScroll / window.innerHeight + 1,
+    margin: (animatedScroll / window.innerHeight) * 128,
+  });
+  gsap.to(".letter-u", {
+    scale: (animatedScroll / window.innerHeight + 1) ** 2,
+    margin: (animatedScroll / window.innerHeight) * 256,
+  });
+  gsap.to(".letter-m", {
+    scale: (animatedScroll / window.innerHeight + 1) ** 3,
+    margin: (animatedScroll / window.innerHeight) * 512,
   });
 
-  gsap.to(".showcase-m57", {
-    x: -(mouseX / window.innerHeight) * 64 + 32 - 256,
-    y:
-      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 64 -
-      (mouseY / window.innerHeight) * 64 -
-      200,
-    duration: t,
-  });
-
-  gsap.to(".showcase-jupiter", {
-    x: -(mouseX / window.innerHeight) * 50 + 25 - 320,
-    y:
-      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 50 -
-      (mouseY / window.innerHeight) * 50 +
-      42,
-    duration: t,
-  });
-
-  gsap.to(".showcase-m13", {
-    x: -(mouseX / window.innerHeight) * 42 + 21 - 384,
-    y:
-      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 42 -
-      (mouseY / window.innerHeight) * 42 +
-      256,
-    duration: t,
-  });
-
-  gsap.to(".showcase-milkyway", {
-    x: -(mouseX / window.innerHeight) * 42 + 21 + 550,
-    y:
-      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 52 -
-      (mouseY / window.innerHeight) * 42 +
-      256,
-    duration: t,
-  });
-
-  gsap.to(".anomaly", {
-    x: lerp(
-      (animatedScroll - window.innerHeight * 2) / window.innerHeight,
-      -window.innerWidth - 138,
-      10,
-    ),
-    y: lerp(
-      (animatedScroll - window.innerHeight * 2) / window.innerHeight,
-      -window.innerWidth - 138,
-      10,
-    ),
-    rotation:
-      ((animatedScroll - window.innerHeight * 2) / window.innerHeight) * 256 -
-      128,
-    borderRadius: Math.max(
-      ((animatedScroll - window.innerHeight * 1.8) / window.innerHeight) *
-      2 *
-      256,
-      12,
-    ),
-  });
-
-  let shuttle_progress =
-    (animatedScroll - window.innerHeight * 7) / window.innerHeight;
-  gsap.to(".shuttle", {
-    x: shuttle_progress * window.innerWidth - window.innerWidth + 42,
-    y:
-      ((shuttle_progress * window.innerHeight - window.innerHeight + 42) / 4) *
-      3,
-    rotation: shuttle_progress * 256 - 128,
-  });
-
-  frame += 1;
   requestAnimationFrame(raf);
 }
 
-requestAnimationFrame(raf);
+document.addEventListener("DOMContentLoaded", (event) => {
+  requestAnimationFrame(raf);
+});
