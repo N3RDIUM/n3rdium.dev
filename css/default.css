@@ -24,12 +24,12 @@ html {
 }
 
 .username {
-    font-size: 42px;
     top: 5vh;
     left: 5vw;
     width: 90vw;
     height: 90vh;
     display: flex;
+    font-size: 64px;
     align-items: center;
     justify-content: space-around;
     pointer-events: none;
@@ -48,9 +48,8 @@ a:visited {
 }
 
 .link-container {
-    width: 80vw;
-    height: 30vh;
-    padding: 10vh 10vw;
+    width: 100vw;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -75,13 +74,10 @@ a:visited {
     }
 
     .link-container {
-        width: 30vw;
-        height: 80vh;
-        padding: 10vh 10vw;
-        display: flex;
+        width: 50vw;
+        height: 100vh;
+        padding: 0;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
     }
 
     .up {
