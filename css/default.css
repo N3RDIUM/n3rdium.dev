@@ -63,10 +63,10 @@ a:visited {
     top: 50%;
 }
 .low {
-    padding-top: 42px;
+    margin-top: 42px;
 }
 .high {
-    padding-bottom: 42px;
+    margin-bottom: 42px;
 }
 
 @media (max-aspect-ratio: 3/4) {
@@ -94,9 +94,9 @@ a:visited {
         left: 50%;
     }
     .low {
-        padding-left: 42px;
+        margin-left: 42px;
     }
     .high {
-        padding-right: 42px;
+        margin-right: 42px;
     }
 }
