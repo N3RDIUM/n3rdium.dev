@@ -90,9 +90,11 @@ a:visited {
         left: 50%;
     }
     .low {
+        margin-top: 0;
         margin-left: 42px;
     }
     .high {
+        margin-bottom: 0;
         margin-right: 42px;
     }
 }
