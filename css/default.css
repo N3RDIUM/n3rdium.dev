@@ -37,13 +37,13 @@ html {
     position: absolute;
 }
 
-a {
+.home-link {
     color: white;
 }
-a:active {
+.home-link:active {
     color: white;
 }
-a:visited {
+.home-link:visited {
     color: white;
 }
 
@@ -74,7 +74,9 @@ a:visited {
     align-items: center;
     width: 100%;
     padding: 8px;
-    border-bottom: solid 1px white;
+
+    color: black;
+    background: white;
 }
 .nav-footer {
     display: flex;
@@ -82,21 +84,31 @@ a:visited {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    bottom: 12px;
-    border-top: solid 1px white;
+    bottom: 0;
+    padding: 4px 0;
+
+    color: black;
+    background: white;
 }
 .lv2 {
-    bottom: 48px;
-    border-top: solid 1px #fffa;
+    bottom: 35px;
+    background: #fffd;
 }
 .lv3 {
-    bottom: 84px;
-    border-top: solid 1px #fff8;
+    bottom: 70px;
+    background: #fffa;
 }
 .nav-username {
     margin-left: 4px;
     font-size: 24px;
     text-decoration: none;
+    color: black;
+}
+.nav-username:active {
+    all: unset;
+}
+.nav-username:visited {
+    all: unset;
 }
 .nav-links {
     position: absolute;
@@ -107,8 +119,28 @@ a:visited {
     top: 9px;
 }
 .nav-link {
+    color: black;
     margin: 4px;
     font-size: 14px;
+}
+.nav-link:active {
+    color: black;
+    margin: 4px;
+    font-size: 14px;
+}
+.nav-link:visited {
+    color: black;
+    margin: 4px;
+    font-size: 14px;
+}
+
+.content {
+    padding: 16px;
+    width: calc(100% - 32px);
+    height: calc(100% - 90px);
+
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 @media (max-aspect-ratio: 3/4) {
