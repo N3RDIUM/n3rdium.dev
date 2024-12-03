@@ -1,18 +1,17 @@
 .showcase {
-    width: 100%;
+    width: 100vw;
     max-width: 800px;
     object-fit: contain;
 }
 .caption {
-    width: 100%;
+    width: 100vw;
     max-width: 600px;
     color: aqua;
     font-size: 24px;
     text-align: center;
 }
 .description {
-    width: 100%;
+    width: 100vw;
     max-width: 700px;
     text-align: left;
-    margin-bottom: 16vw;
 }
