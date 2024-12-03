@@ -90,14 +90,6 @@ html {
     color: black;
     background: white;
 }
-.lv2 {
-    bottom: 35px;
-    background: #fffd;
-}
-.lv3 {
-    bottom: 70px;
-    background: #fffa;
-}
 .nav-username {
     margin-left: 4px;
     font-size: 24px;
@@ -105,10 +97,16 @@ html {
     color: black;
 }
 .nav-username:active {
-    all: unset;
+    margin-left: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
 }
 .nav-username:visited {
-    all: unset;
+    margin-left: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
 }
 .nav-links {
     position: absolute;
