@@ -1,59 +1,92 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <!-- M E T A D A T A -->
+        <title>Astro - N3RDIUM's Hideout</title>
 
-<head>
-    <!-- M E T A D A T A -->
-    <title>N3RDIUM's Hideout</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="N3RDIUM's Hideout" />
+        <meta name="author" content="N3RDIUM" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta charset="utf-8" />
-    <meta name="description" content="N3RDIUM's Hideout" />
-    <meta name="author" content="N3RDIUM" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/img/n3rdium.avif" type="image/x-icon" />
 
-    <link rel="icon" href="/img/n3rdium.avif" type="image/x-icon" />
+        <!-- P R E C O N N E C T S -->
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://stats.g.doubleclick.net" />
 
-    <!-- P R E C O N N E C T S -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://stats.g.doubleclick.net" />
+        <!-- F O N T S -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- F O N T S -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" />
+        <!-- C S S -->
+        <link rel="stylesheet" href="/css/default.css" />
+        <link rel="stylesheet" href="/css/astro.css" />
 
-    <!-- C S S -->
-    <link rel="stylesheet" href="/css/default.css" />
+        <!-- J S -->
+        <script defer src="/js/default.js"></script>
 
-    <!-- J S -->
-    <script defer src="/js/default.js"></script>
+        <!-- G T A G -->
+        <script
+            defer
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"
+        ></script>
+        <script defer async>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-    <!-- G T A G -->
-    <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
-    <script defer async>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
+            gtag("config", "G-DRCTBWSMF2");
+        </script>
+    </head>
 
-        gtag("config", "G-DRCTBWSMF2");
-    </script>
-</head>
+    <body>
+        <div class="container">
+            <div class="nav-header">
+                <a class="nav-username fira-code" href="/">N3RDIUM</a>
 
-<body>
-    <div class="container">
-        <div class="nav-header">
-            <a class="nav-username fira-code" href="/">N3RDIUM</a>
+                <div class="nav-links">
+                    <a class="nav-link fira-code" href="/about">About</a>
+                    <a class="nav-link fira-code" href="/astro"> >Astro< </a>
+                    <a class="nav-link fira-code" href="/blog">Blog</a>
+                    <a class="nav-link fira-code" href="/contact">Contact</a>
+                    <a class="nav-link fira-code" href="/projects">Projects</a>
+                </div>
+            </div>
 
-            <div class="nav-links">
-                <a class="nav-link fira-code" href="/about">About</a>
-                <a class="nav-link fira-code" href="/astro"> >Astro< </a>
-                        <a class="nav-link fira-code" href="/blog">Blog</a>
-                        <a class="nav-link fira-code" href="/contact">Contact</a>
-                        <a class="nav-link fira-code" href="/projects">Projects</a>
+            <div class="content centered fira-code">
+                <img
+                    class="showcase"
+                    src="/astro/assets/rpi-milkyway-camp.png"
+                />
+                <p class="caption">The Milky Way</p>
+                <p class="description">
+                    This image is part of the AstroPi project.<br /><br />
+                    Gear used: <br />
+                    - Raspberry Pi 3b+ <br />
+                    - Raspberry Pi Camera V3 <br /><br />
+                    TODO: Write good descriptions for these, and add all your
+                    images. Also, do one of either avif or webp.
+                </p>
+            </div>
+
+            <div class="nav-footer">
+                <a class="nav-link fira-code" href="/astro/history/0.html"
+                    >Oldest</a
+                >
+                <a class="nav-link fira-code" href="/astro/history/1.html"
+                    >Previous</a
+                >
+                <a class="nav-link fira-code" href="/astro">Next</a>
+                <a class="nav-link fira-code" href="/astro">Newest</a>
             </div>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>

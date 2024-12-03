@@ -139,6 +139,15 @@ html {
 
     overflow-x: hidden;
     overflow-y: scroll;
+
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+}
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 @media (max-aspect-ratio: 3/4) {
