@@ -68,6 +68,49 @@ a:visited {
     margin-bottom: 42px;
 }
 
+.nav-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    border-bottom: solid 1px white;
+}
+.nav-footer {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    bottom: 12px;
+    border-top: solid 1px white;
+}
+.lv2 {
+    bottom: 48px;
+    border-top: solid 1px #fffa;
+}
+.lv3 {
+    bottom: 84px;
+    border-top: solid 1px #fff8;
+}
+.nav-username {
+    margin-left: 4px;
+    font-size: 24px;
+    text-decoration: none;
+}
+.nav-links {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    width: min-content;
+    right: 12px;
+    top: 9px;
+}
+.nav-link {
+    margin: 4px;
+    font-size: 14px;
+}
+
 @media (max-aspect-ratio: 3/4) {
     .username {
         flex-direction: column;
