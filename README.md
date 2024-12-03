@@ -8,3 +8,5 @@ TODOs:
 - [ ] Make the blog page
 - [ ] Make the contact page
 - [ ] Make the projects page
+- [ ] Do your meta tags (author, description, tags, banner image, etc.)
+- [ ] Get it back up on Google Search
