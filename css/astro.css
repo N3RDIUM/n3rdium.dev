@@ -2,7 +2,7 @@
     width: 100vw;
     max-width: 800px;
     object-fit: contain;
-    margin-top: min(50vw, 600px);
+    margin-top: min(80vw, 800px);
 }
 .caption {
     width: 100vw;
