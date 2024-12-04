@@ -2,7 +2,7 @@
     width: 100vw;
     max-width: 800px;
     object-fit: contain;
-    margin-top: 32vw;
+    margin-top: min(50vw, 600px);
 }
 .caption {
     width: 100vw;
@@ -13,7 +13,8 @@
 }
 .description {
     width: 100vw;
+    padding: 0 42px;
     max-width: 700px;
     text-align: left;
-    margin-bottom: 16vw;
+    margin-bottom: 256px;
 }
