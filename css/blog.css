@@ -27,6 +27,10 @@
     width: 80%;
     max-width: 800px;
     padding: 24px;
+    margin-bottom: 42px;
+}
+.post:hover {
+    cursor: pointer;
 }
 .post-banner {
     width: 100%;
