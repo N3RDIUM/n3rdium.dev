@@ -1,0 +1,51 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.welcome-heading {
+    font-size: 42px;
+    margin-bottom: 0;
+}
+.welcome-subhead {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.posts {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+.post {
+    all: unset;
+    color: white;
+    text-decoration: none;
+    border: solid 1px white;
+    width: 80%;
+    max-width: 800px;
+    padding: 24px;
+}
+.post-banner {
+    width: 100%;
+    aspect-ratio: calc(16 / 7);
+    object-fit: cover;
+}
+.post-title {
+    margin-top: 0px;
+}
+.metadata {
+    float: right;
+    font-size: 12px;
+    margin-top: -12px;
+    margin-bottom: 12px;
+}
+.preview {
+    font-size: 14px;
+}
+.clicky {
+    margin-bottom: -4px;
+    float: right;
+}
