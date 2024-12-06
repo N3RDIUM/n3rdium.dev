@@ -4,8 +4,8 @@ The website is [here](https://n3rdium.dev).
 
 TODOs:
 - [x] Complete the about page
-- [ ] Add all your astrophotography (as WEBP) with good descriptions
-- [ ] Make the blog page
+- [x] Add all your astrophotography (as WEBP) with good descriptions
+- [x] Make the blog page
 - [ ] Make the contact page
 - [ ] Make the projects page
 - [ ] Do your meta tags (author, description, tags, banner image, etc.)
