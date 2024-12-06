@@ -119,17 +119,17 @@ html {
 .nav-link {
     color: black;
     margin: 4px;
-    font-size: 13px;
+    font-size: 12px;
 }
 .nav-link:active {
     color: black;
     margin: 4px;
-    font-size: 13px;
+    font-size: 12px;
 }
 .nav-link:visited {
     color: black;
     margin: 4px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .content {
