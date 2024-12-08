@@ -1,69 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--Metadata-->
-        <link rel=preconnect href="https://www.googletagmanager.com">
-        <link rel=preconnect href="https://stats.g.doubleclick.net">
-        <title>N3RDIUM's Hideout</title>
 
-        <meta charset="utf-8">
-        <meta name="description" content="N3RDIUM's Hideout">
-        <meta name="author" content="N3RDIUM">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="icon" href="../img/n3rdium.avif" type="image/x-icon">
+<head>
+    <!--Metadata-->
+    <link rel=preconnect href="https://www.googletagmanager.com">
+    <link rel=preconnect href="https://stats.g.doubleclick.net">
+    <title>N3RDIUM</title>
 
-        <!-- JS -->
-        <script async>
-            const redirects = {
-                "source": "https://github.com/n3rdium/n3rdium.dev",
-                "everskill": "https://github.com/n3rdium/Everskill",
-                "esct": "https://github.com/n3rdium/everskill-course-template",
-                "genuine": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            }
+    <meta charset="utf-8">
+    <meta name="description" content="N3RDIUM">
+    <meta name="author" content="N3RDIUM">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            function parse_query_string(query) {
-                var vars = query.split("&");
-                var query_string = {};
-                for (var i = 0; i < vars.length; i++) {
-                    var pair = vars[i].split("=");
-                    var key = decodeURIComponent(pair.shift());
-                    var value = decodeURIComponent(pair.join("="));
-                    // If first entry with this name
-                    if (typeof query_string[key] === "undefined") {
-                        query_string[key] = value;
+    <link rel="icon" href="../img/n3rdium.avif" type="image/x-icon">
+
+    <!-- JS -->
+    <script async>
+        const redirects = {
+            "source": "https://github.com/n3rdium/n3rdium.dev",
+            "everskill": "https://github.com/n3rdium/Everskill",
+            "esct": "https://github.com/n3rdium/everskill-course-template",
+            "genuine": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+
+        function parse_query_string(query) {
+            var vars = query.split("&");
+            var query_string = {};
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                var key = decodeURIComponent(pair.shift());
+                var value = decodeURIComponent(pair.join("="));
+                // If first entry with this name
+                if (typeof query_string[key] === "undefined") {
+                    query_string[key] = value;
                     // If second entry with this name
-                    } else if (typeof query_string[key] === "string") {
-                        var arr = [query_string[key], value];
-                        query_string[key] = arr;
+                } else if (typeof query_string[key] === "string") {
+                    var arr = [query_string[key], value];
+                    query_string[key] = arr;
                     // If third or later entry with this name
-                    } else {
-                        query_string[key].push(value);
-                    }
+                } else {
+                    query_string[key].push(value);
                 }
-                return query_string;
             }
+            return query_string;
+        }
 
-            var query = window.location.search.substring(1);
-            var qs = parse_query_string(query);
-            var id = qs.id
-            if(id in redirects) {
-                window.location.href = redirects[id];
-            } else {
-                window.location.href = "/";
-            }
-        </script>
+        var query = window.location.search.substring(1);
+        var qs = parse_query_string(query);
+        var id = qs.id
+        if (id in redirects) {
+            window.location.href = redirects[id];
+        } else {
+            window.location.href = "/";
+        }
+    </script>
 
-        <!-- Google tag (gtag.js) -->
-        <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
-        <script defer async>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-DRCTBWSMF2');
-        </script>
-    </head>
+    <!-- Google tag (gtag.js) -->
+    <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
+    <script defer async>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    <body></body>
+        gtag('config', 'G-DRCTBWSMF2');
+    </script>
+</head>
+
+<body></body>
+
 </html>
