@@ -116,8 +116,8 @@ html {
     display: flex;
     flex-wrap: nowrap;
     width: min-content;
-    right: 12px;
-    top: 9px;
+    right: 28px;
+    top: 10px;
 }
 .nav-link {
     color: black;
