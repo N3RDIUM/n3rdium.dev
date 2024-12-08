@@ -145,6 +145,9 @@ html {
     justify-content: center;
     flex-direction: column;
 }
+.greyed {
+    color: gray;
+}
 
 @media (max-aspect-ratio: 3/4) {
     .username {

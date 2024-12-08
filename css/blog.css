@@ -54,3 +54,33 @@
     margin-bottom: -4px;
     float: right;
 }
+
+.post-container {
+    align-self: center;
+    align-items: center;
+}
+.title-container {
+    text-align: center;
+}
+.title-subhead {
+    margin-top: -24px;
+    margin-bottom: 24px;
+}
+.limwidth {
+    max-width: 800px;
+}
+.title-back {
+    text-align: left;
+}
+.title-meta {
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+}
+.next {
+    float: right;
+}
+.blog-content {
+    max-width: 800px;
+    margin: 42px 0;
+}
