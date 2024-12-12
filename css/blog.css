@@ -24,11 +24,11 @@
     all: unset;
     color: white;
     text-decoration: none;
-    border: solid 1px white;
     width: 80%;
     max-width: 800px;
     padding: 24px;
     margin-bottom: 42px;
+    boder: solid 1px white;
 }
 .post:hover {
     cursor: pointer;
