@@ -1,6 +1,7 @@
 const quotes = [
     // Real quotes
 	"I'd rather keep my face completely blank than wear a fake smile.",
+    "The best time to start learning piano was several years ago. The second best time is now.",
 
     // Jokes
     "Aim for the stars. You'll probably miss. Seriously, try it right now with a laser pointer!",
@@ -9,6 +10,8 @@ const quotes = [
     // What?!
     "The future sounds like Synthwave. The work needed to get there sounds like [neo]classical piano (with some violin).",
     "The realisation that you're currently playing the most realistic open-world game known to mankind is just...",
+    "Who else is still distro-hoppin'?",
+    "Fira Code has great ligatures <=> >= ||"
 ];
 
 function generateQuote() {
