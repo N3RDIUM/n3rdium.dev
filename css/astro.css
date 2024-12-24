@@ -1,22 +1,30 @@
 .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 800px;
+    margin-left: calc(50% - 400px);
+}
+@media screen and (max-width: 800px) {
+  .content {
+    margin-left: 0;
+  }
 }
 .showcase {
-    width: 80%;
+    width: 80vw;
     max-width: 800px;
     object-fit: contain;
     margin-top: min(8vw, 80px);
 }
 .caption {
-    width: 100vw;
+    width: 80vw;
     max-width: 600px;
     color: aqua;
     font-size: 24px;
     text-align: center;
 }
 .description {
-    width: 100vw;
-    padding: 0 42px;
+    width: calc(95vw - 16px);
     max-width: 700px;
     text-align: left;
     margin-top: min(8vw, 80px);

@@ -4,6 +4,7 @@ The website is [here](https://n3rdium.dev).
 
 TODOs:
 - [ ] Make the entire site gruvbox.
+- [ ] Limit the content width in the about pages
 - [x] Complete the about page
 - [x] Add all your astrophotography (as WEBP) with good descriptions
 - [x] Make the blog page
