@@ -1,5 +1,8 @@
+.content {
+    max-width: 800px;
+}
 .showcase {
-    width: 100vw;
+    width: 80%;
     max-width: 800px;
     object-fit: contain;
     margin-top: min(8vw, 80px);
