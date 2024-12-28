@@ -25,10 +25,9 @@
     color: white;
     text-decoration: none;
     width: 80%;
-    max-width: 800px;
+    max-width: 700px;
     padding: 24px;
     margin-bottom: 42px;
-    boder: solid 1px white;
 }
 .post:hover {
     cursor: pointer;
@@ -48,7 +47,7 @@
     margin-bottom: 12px;
 }
 .preview {
-    font-size: 14px;
+    font-size: 13px;
 }
 .clicky {
     margin-bottom: -4px;
@@ -56,27 +55,27 @@
 }
 
 .post-container {
-    align-self: center;
-    align-items: center;
+    max-width: 700px;
 }
 .title-container {
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .title-subhead {
-    margin-top: -24px;
-    margin-bottom: 24px;
-    max-width: 600px;
+    margin-top: -12px;
+    margin-bottom: 12px;
+    max-width: 700px;
+    text-align: left;
+    font-size: 13px;
 }
 .limwidth {
-    max-width: 600px;
+    max-width: 700px;
 }
 .title-back {
     text-align: left;
 }
 .title-meta {
+    margin-top: 12px;
     width: 100%;
     font-size: 12px;
     text-align: right;
@@ -85,7 +84,7 @@
     float: right;
 }
 .blog-content {
-    max-width: 800px;
+    max-width: 700px;
     margin: 42px 0;
 }
 pre {

@@ -11,7 +11,8 @@ const quotes = [
     "The future sounds like Synthwave. The work needed to get there sounds like [neo]classical piano (with some violin).",
     "The realisation that you're currently playing the most realistic open-world game known to mankind is just...",
     "Who else is still distro-hoppin'?",
-    "Fira Code has great ligatures <=> >= ||"
+    "Fira Code has great ligatures <=> >= ||",
+    "NixOS + Hyprland + Astal + Neovim = <3"
 ];
 
 function generateQuote() {
