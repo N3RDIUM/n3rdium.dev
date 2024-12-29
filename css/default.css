@@ -3,14 +3,14 @@ html {
     margin: 0;
     padding: 0;
 
-    color: white;
-    background-color: black;
+    color: #ebdbb2;
+    background-color: #282828;
 
-    scrollbar-color: white black;
+    scrollbar-color: #d5c4a1 #282828;
     scrollbar-width: thin;
 }
 
-.container {background: black;}
+.container { background: #282828; }
 
 .fira-code {
     font-family: "Fira Code", monospace;
@@ -34,13 +34,13 @@ html {
 }
 
 .home-link {
-    color: white;
+    color: #ebdbb2;
 }
 .home-link:active {
-    color: white;
+    color: #fbf1c7;
 }
 .home-link:visited {
-    color: white;
+    color: #d5c4a1;
 }
 
 .link-container {
@@ -71,9 +71,10 @@ html {
     align-items: center;
     width: 100%;
     padding: 8px;
+    z-index: 10;
 
-    color: black;
-    background: white;
+    color: #1d2021;
+    background: #ebdbb2;
 }
 .nav-footer {
     display: flex;
@@ -83,27 +84,28 @@ html {
     width: 100%;
     bottom: 0;
     padding: 4px 0;
+    z-index: 10;
 
-    color: black;
-    background: white;
+    color: #1d2021;
+    background: #ebdbb2;
 }
 .nav-username {
     margin-left: 4px;
     font-size: 24px;
     text-decoration: none;
-    color: black;
+    color: #458588;
 }
 .nav-username:active {
     margin-left: 4px;
     font-size: 24px;
     text-decoration: none;
-    color: black;
+    color: #83a598;
 }
 .nav-username:visited {
     margin-left: 4px;
     font-size: 24px;
     text-decoration: none;
-    color: black;
+    color: #458588;
 }
 .nav-links {
     position: absolute;
@@ -114,17 +116,17 @@ html {
     top: 10px;
 }
 .nav-link {
-    color: black;
+    color: #1d2021;
     margin: 4px;
     font-size: 12px;
 }
 .nav-link:active {
-    color: black;
+    color: #282828;
     margin: 4px;
     font-size: 12px;
 }
 .nav-link:visited {
-    color: black;
+    color: #1d2021;
     margin: 4px;
     font-size: 12px;
 }
@@ -140,7 +142,7 @@ html {
     flex-direction: column;
 }
 .greyed {
-    color: gray;
+    color: #928374;
 }
 
 @media (max-aspect-ratio: 3/4) {
