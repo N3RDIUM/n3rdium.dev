@@ -36,6 +36,9 @@ html {
 .home-link {
     color: #ebdbb2;
 }
+.home-link:hover {
+    text-decoration: underline wavy #cc241d;
+}
 .home-link:active {
     color: #fbf1c7;
 }
@@ -120,10 +123,17 @@ html {
     margin: 4px;
     font-size: 12px;
 }
+.nav-link:hover {
+    color: #282828;
+    margin: 4px;
+    font-size: 12px;
+    text-decoration: underline wavy #cc241d;
+}
 .nav-link:active {
     color: #282828;
     margin: 4px;
     font-size: 12px;
+    background: #8ec07c;
 }
 .nav-link:visited {
     color: #1d2021;
