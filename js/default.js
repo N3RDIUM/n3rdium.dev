@@ -17,6 +17,7 @@ const quotes = [
     "Who else is still distro-hoppin'?",
     "Fira Code has great ligatures <=> >= ||",
     "NixOS + Hyprland + Astal + Neovim = <3",
+    "1/137 might be the 42 of real life.",
 ];
 
 function generateQuote() {
