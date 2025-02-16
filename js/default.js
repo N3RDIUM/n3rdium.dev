@@ -1,8 +1,7 @@
 const quotes = [
     // Real quotes
     "Fourty Two.",
-	"I'd rather keep my face completely blank than wear a fake smile.",
-    "The best time to start learning piano was several years ago. The second best time is now.",
+    "The best time to start learning piano was when you were three. The second best time is now.",
     "Mankind Was Born On Earth. It Was Never Meant To Die Here. - Cooper",
     "People worry about artificial intelligence taking over the world, but they don't realise that natural stupidity already has.",
 
