@@ -33,6 +33,18 @@
     border-radius: 6px;
     transition-duration: 128ms;
 }
+.post-unclickable {
+    all: unset;
+    color: #ebdbb2;
+    background: #3c3836;
+    text-decoration: none;
+    width: 80%;
+    max-width: 700px;
+    padding: 24px;
+    margin-bottom: 42px;
+    border-radius: 6px;
+    transition-duration: 128ms;
+}
 .post:hover {
     background: #504945;
     cursor: pointer;
