@@ -10,6 +10,7 @@ const quotes = [
     "I have a joke about HTTP, but you probably wouldn't GET it.",
     "In Order to Play the Joker, Joaquin Phoenix had to use both tabs AND spaces at once.",
     "Electron is light.<br>Physicists: Yes.<br>Developers: No.",
+    "Wise old nerds proved Heliocentrism. It was a revolutionary achievement.",
 
     // What?!
     "The future sounds like Synthwave. The work needed to get there sounds like [neo]classical piano (with some violin).",
