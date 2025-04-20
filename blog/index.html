@@ -29,6 +29,7 @@
 
         <!-- J S -->
         <script defer src="/js/default.js"></script>
+        <script defer src="/js/blog.js"></script>
 
         <!-- G T A G -->
         <script
@@ -67,31 +68,11 @@
                     <p class="welcome-subhead">Welcome to my blog!</p>
                 </div>
 
-                <div class="posts">
-                    <a
-                        href="/blog/posts/2.html"
-                        class="post"
-                    >
-                        <h2 class="post-title fira-code">
-                            Making an Astrophotography Camera For $150
-                        </h2>
-                        <div class="post-preview">
-                            <p class="fira-code preview">
-                                Astrophotography is as expensive as it is addictive.
-                                Many people are working to fix the "expensive" bit,
-                                and I'd like to be one of them. That's why I decided
-                                to make my own astrophotography camera using a
-                                Raspberry Pi and the official HQ Camera. 
-                            </p>
-                            <div class="fira-code metadata">
-                                28-12-2024 [Astrophotography]
-                            </div>
-                        </div>
-                    </a>
-                    
-                    Stay tuned for more!
-                    <div style="margin-bottom: 18px"></div>
-                </div>
+                <div class="posts" id="list-view" />
+            </div>
+            
+            <div class="loadmore-container">
+                <button class="loadmore fira-code" id="loadmore" onClick="loadMore()">Load More</button>
             </div>
         </div>
     </body>
