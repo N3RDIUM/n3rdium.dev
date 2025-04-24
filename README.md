@@ -3,6 +3,7 @@ Hey there! This is my portfolio website and blog. Not much to see here, is there
 The website is [here](https://n3rdium.dev).
 
 TODOs:
+- [ ] GitHub Action w/ py script to auto-update the sitemap and post json files
 - [x] Make the entire site gruvbox.
 - [x] Limit the content width in the about pages
 - [x] Fix the y-size of your homepage on mobile devices

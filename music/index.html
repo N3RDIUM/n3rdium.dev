@@ -27,6 +27,7 @@
 
     <!-- J S -->
     <script defer src="/js/default.js"></script>
+    <script defer src="/js/music.js"></script>
 
     <!-- G T A G -->
     <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
@@ -61,30 +62,11 @@
                 <h1 class="welcome-heading">Music Releases</h1>
             </div>
 
-            <div class="posts">
-                <a
-                    href="https://youtube.com/@N3RDITE"
-                    target="_blank"
-                    class="post"
-                >
-                    <h2 class="post-title fira-code">
-                        Reminiscence (unreleased)
-                    </h2>
-                        
-                    <div class="post-preview">
-                        <p class="fira-code preview">
-                            I consider this to be my first release-worthy
-                            piano composition. Original dropping today!
-                        </p>
-                        <div class="fira-code metadata">
-                            23-03-2025 [Original - WIP]
-                        </div>
-                    </div>
-                </a>
-
-                Stay tuned for more!
-                <div style="margin-bottom: 18px"></div>
-            </div>
+            <div class="posts" id="list-view" />
+        </div>
+        
+        <div class="loadmore-container">
+            <button class="loadmore fira-code" id="loadmore" onClick="loadMore()">Load More</button>
         </div>
     </div>
 </body>

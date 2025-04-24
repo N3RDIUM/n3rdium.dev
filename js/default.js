@@ -9,15 +9,15 @@ const quotes = [
     "Aim for the stars. You'll probably miss. Seriously, try it right now with a laser pointer!",
     "I have a joke about HTTP, but you probably wouldn't GET it.",
     "In Order to Play the Joker, Joaquin Phoenix had to use both tabs AND spaces at once.",
-    "Electron is light.<br>Physicists: Yes.<br>Developers: No.",
+    "The Electron is light.<br>Physicists: Yes.<br>Developers: No.",
     "Wise old nerds proved Heliocentrism. It was a revolutionary achievement.",
 
     // What?!
     "The future sounds like Synthwave. The work needed to get there sounds like [neo]classical piano (with some violin).",
-    "The realisation that you're currently playing the most realistic open-world game known to mankind is just...",
+    "The realisation that you're currently playing the most realistic open-world game known to mankind...",
     "Who else is still distro-hoppin'?",
     "Fira Code has great ligatures <=> >= ||",
-    "NixOS + Hyprland + Astal + Neovim = <3",
+    "NixOS + Hyprland + Astal + Neovim <3",
     "1/137 might be the 42 of real life.",
 ];
 

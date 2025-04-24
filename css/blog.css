@@ -139,9 +139,6 @@ h2, h3, h4, h5, h6 {
 a {
     color: #ebdbb2;
 }
-a:hover {
-    text-decoration: underline wavy #cc241d;
-}
 a:active {
     color: #fbf1c7;
 }

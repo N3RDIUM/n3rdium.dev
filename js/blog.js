@@ -1,5 +1,22 @@
 const content = [
     `<a
+        href="/blog/posts/3.html"
+        class="post"
+    >
+        <h2 class="post-title fira-code">
+            How to Make Vibe Coding Not Suck
+        </h2>
+        <div class="post-preview">
+            <p class="fira-code preview">
+                {description}
+            </p>
+            <div class="fira-code metadata">
+                24-04-2025 [Programming]
+            </div>
+        </div>
+    </a>`,
+
+    `<a
         href="/blog/posts/2.html"
         class="post"
     >
@@ -18,7 +35,7 @@ const content = [
                 28-12-2024 [Astrophotography]
             </div>
         </div>
-    </a>`
+    </a>`,
 ];
 let current = 0;
 
