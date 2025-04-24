@@ -21,6 +21,9 @@ jobs:
       - name: Build Sitemap
         run: python sitemap_builder.py
         
-      - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.PAT }}
+      - name: Push Sitemap
+        run: |
+          git config --global user.name 'n3rdium'
+          git config --global user.email 'n3rdium@users.noreply.github.com'
+          git commit -am "Automated Sitemap Build"
+          git push
