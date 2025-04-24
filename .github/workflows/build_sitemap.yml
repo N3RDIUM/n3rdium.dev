@@ -21,9 +21,4 @@ jobs:
       - name: Build Sitemap
         run: python sitemap_builder.py
         
-      - name: Commit & Push Sitemap
-        run: |
-          git config --global user.name 'n3rdium'
-          git config --global user.email 'n3rdium@users.noreply.github.com'
-          git commit -am "Automated Sitemap Build"
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v5
