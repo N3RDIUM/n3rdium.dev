@@ -121,6 +121,7 @@ sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 </urlset>
 """
 
+# DO IT
 with open("sitemap.xml", "w") as f:
     f.write(sitemap)
 
