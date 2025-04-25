@@ -13,7 +13,7 @@ const quotes = [
     "Wise old nerds proved Heliocentrism. It was a revolutionary achievement.",
 
     // What?!
-    "The future sounds like Synthwave. The work needed to get there sounds like [neo]classical piano (with some violin).",
+    "The future sounds like Synthwave. The journey to it sounds like classical piano.",
     "The realisation that you're currently playing the most realistic open-world game known to mankind...",
     "Who else is still distro-hoppin'?",
     "Fira Code has great ligatures <=> >= ||",
