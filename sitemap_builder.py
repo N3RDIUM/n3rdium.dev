@@ -9,7 +9,8 @@ FORBIDDEN_DIRS = [
     "./.git",
 ]
 FORBIDDEN_FILES = [
-    "404.html"
+    "404.html",
+    "template.html"
 ]
 
 def is_dir_forbidden(root: str) -> bool:
