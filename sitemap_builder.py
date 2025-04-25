@@ -77,7 +77,7 @@ def get_lastmod(path: str) -> str:
     if file_changed(path):
         return TODAY
 
-    return hashes["path"]["lastmod"]
+    return hashes[path]["lastmod"]
 
 for (root, dirs, files) in os.walk(".", topdown = True):
     if is_dir_forbidden(root):
