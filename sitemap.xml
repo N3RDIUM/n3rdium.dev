@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://n3rdium.dev/</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-04-25</lastmod>
         <priority>1</priority>
     </url>
     <url>
@@ -12,37 +12,32 @@
     </url>
     <url>
         <loc>https://n3rdium.dev/projects/</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-04-25</lastmod>
         <priority>1</priority>
     </url>
     <url>
         <loc>https://n3rdium.dev/blog/</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-04-25</lastmod>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://n3rdium.dev/blog/posts/1.html</loc>
-        <lastmod>2025-04-24</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
         <loc>https://n3rdium.dev/blog/posts/2.html</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-04-25</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://n3rdium.dev/blog/posts/3.html</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-04-25</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://n3rdium.dev/music/</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-04-25</lastmod>
         <priority>1</priority>
     </url>
     <url>
         <loc>https://n3rdium.dev/astro/</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-04-25</lastmod>
         <priority>1</priority>
     </url>
     <url>
@@ -58,6 +53,11 @@
     <url>
         <loc>https://n3rdium.dev/astro/history/8.html</loc>
         <lastmod>2025-04-24</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/latest.html</loc>
+        <lastmod>2025-04-25</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
