@@ -128,45 +128,6 @@ sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 with open("sitemap.xml", "w") as f:
     f.write(sitemap)
 
-# Nothing
-DIR = "./astro/history/"
-i = 0
-
-def gen_date():
-    global i
-
-    timestamp = 1735669800 + 24 * 60 * 60 * i
-    date = datetime.fromtimestamp(timestamp)
-    i += 1
-    return date.strftime("%d-%m-%Y")
-
-for file in os.listdir(DIR):
-    path = os.path.join(DIR, file)
-
-    with open(path) as f:
-        content = f.read()
-        title = content.split("<title>")[1].split("</title>")[0]
-        description = content.split('<meta name="description" content="')[1]\
-            .split('" />')[0].strip()
-        written = gen_date()
-        tags = []
-    
-    meta = f"""<!--
-N3RDIUM META START
-{json.dumps({
-    "title": title,
-    "description": description,
-    "written": written,
-    "tags": tags
-}, indent=4)}
-N3RDIUM META END
--->
-"""
-
-    with open(path, "w+") as f:
-        content = f.read()
-        f.write(meta + content)
-
 # STAGE TWO: PAGE INDEX UPDATE
 SEARCH_PATHS = [
     "./blog/posts/",
