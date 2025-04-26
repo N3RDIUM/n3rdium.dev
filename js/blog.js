@@ -1,43 +1,35 @@
-const content = [
-    `<a
-        href="/blog/posts/3.html"
-        class="post"
-    >
-        <h2 class="post-title fira-code">
-            How to Make Vibe Coding Not Suck
-        </h2>
-        <div class="post-preview">
-            <p class="fira-code preview">
-                {description}
-            </p>
-            <div class="fira-code metadata">
-                24-04-2025 [Programming]
-            </div>
-        </div>
-    </a>`,
-
-    `<a
-        href="/blog/posts/2.html"
-        class="post"
-    >
-        <h2 class="post-title fira-code">
-            Making an Astrophotography Camera For $150
-        </h2>
-        <div class="post-preview">
-            <p class="fira-code preview">
-                Astrophotography is as expensive as it is addictive.
-                Many people are working to fix the "expensive" bit,
-                and I'd like to be one of them. That's why I decided
-                to make my own astrophotography camera using a
-                Raspberry Pi and the official HQ Camera. 
-            </p>
-            <div class="fira-code metadata">
-                28-12-2024 [Astrophotography]
-            </div>
-        </div>
-    </a>`,
-];
+let content = []
 let current = 0;
+
+function taggify(tags) {
+    let ret = "";
+    for(i=0; i<tags.length; i++) {
+        ret += `[${tags[i]}]`;
+        if(i != tags.length - 1) {
+            ret += " "
+        }
+    }
+    return ret
+}
+
+function render({ url, title, description, written, tags }) {
+    return `<a
+        href="${url}"
+        class="post"
+    >
+        <h2 class="post-title fira-code">
+            ${title}
+        </h2>
+        <div class="post-preview">
+            <p class="fira-code preview">
+                ${description}
+            </p>
+            <div class="fira-code metadata">
+                ${written} ${taggify(tags)}
+            </div>
+        </div>
+    </a>`
+}
 
 function loadMore() {
     const el = document.getElementById("list-view");
@@ -45,7 +37,7 @@ function loadMore() {
     for(i=0; i<10; i++) {
         if(content[current] == undefined) break;
 
-        el.innerHTML += content[current];
+        el.innerHTML += render(content[current]);
         current += 1;
 
         if(current >= content.length) {
@@ -62,4 +54,8 @@ function allDone() {
     button.innerHTML = "Stay tuned for more!";
 }
 
-loadMore();
+fetch("/blog/posts/index.json").then(async res => {
+    content = await res.json();
+    loadMore();
+}).catch(() => alert("Couldn't load blog posts!"));
+
