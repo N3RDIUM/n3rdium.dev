@@ -108,7 +108,9 @@ def build_sitemap_entry(map_item: dict) -> str:
 
     priority = 0.5
     if url.endswith("/"):
-        priority = 1
+        priority = 0.75
+    if url == "https://n3rdium.dev/":
+        priority = 1.0
 
     return f"""    <url>
         <loc>{url}</loc>
