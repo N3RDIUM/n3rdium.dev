@@ -1,0 +1,20 @@
+[
+    {
+        "title": "How to Make Vibe Coding Not Suck",
+        "description": "{description}",
+        "written": "24-04-2025",
+        "tags": [
+            "Programming"
+        ],
+        "url": "https://n3rdium.dev/blog/posts/3.html"
+    },
+    {
+        "title": "Making an Astrophotography Camera For $150",
+        "description": "Astrophotography is as expensive as it is addictive. Many people are working to fix the 'expensive' bit, and I'd like to be one of them. That's why I decided to make my own astrophotography camera using a Raspberry Pi and the official HQ Camera.",
+        "written": "28-12-2024",
+        "tags": [
+            "Astrophotography"
+        ],
+        "url": "https://n3rdium.dev/blog/posts/2.html"
+    }
+]

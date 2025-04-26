@@ -128,5 +128,84 @@ sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 with open("sitemap.xml", "w") as f:
     f.write(sitemap)
 
+# Nothing
+DIR = "./astro/history/"
+i = 0
+
+def gen_date():
+    global i
+
+    timestamp = 1735669800 + 24 * 60 * 60 * i
+    date = datetime.fromtimestamp(timestamp)
+    i += 1
+    return date.strftime("%d-%m-%Y")
+
+for file in os.listdir(DIR):
+    path = os.path.join(DIR, file)
+
+    with open(path) as f:
+        content = f.read()
+        title = content.split("<title>")[1].split("</title>")[0]
+        description = content.split('<meta name="description" content="')[1]\
+            .split('" />')[0].strip()
+        written = gen_date()
+        tags = []
+    
+    meta = f"""<!--
+N3RDIUM META START
+{json.dumps({
+    "title": title,
+    "description": description,
+    "written": written,
+    "tags": tags
+}, indent=4)}
+N3RDIUM META END
+-->
+"""
+
+    with open(path, "w+") as f:
+        content = f.read()
+        f.write(meta + content)
+
 # STAGE TWO: PAGE INDEX UPDATE
+SEARCH_PATHS = [
+    "./blog/posts/",
+    "./astro/history/",
+]
+BLACKLIST = [
+    "template.html"
+]
+
+def date_to_timestamp(date: str) -> int:
+    date_object = datetime.strptime(date, '%d-%m-%Y')
+    return int(date_object.timestamp())
+
+def the_key(thing: dict) -> int:
+    return date_to_timestamp(thing["written"])
+
+for root in SEARCH_PATHS:
+    index = []
+
+    for file in os.listdir(root):
+        if file in BLACKLIST:
+            continue
+
+        if not file.endswith(".html"):
+            continue
+
+        path = os.path.join(root, file)
+        url = urlify(path)
+        
+        with open(path) as f:
+            metadata = f.read().split("N3RDIUM META START")[1].split("N3RDIUM META END")[0].strip()
+
+        metadata = json.loads(metadata)
+        metadata["url"] = url
+        
+        index.append(metadata)
+
+    index.sort(key=the_key, reverse=True)
+
+    with open(os.path.join(root, "index.json"), "w") as f:
+        json.dump(index, f, indent=4)
 
