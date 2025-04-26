@@ -3,6 +3,7 @@ import hashlib
 import json
 from datetime import datetime
 
+# STAGE ONE: SITEMAP BUILD
 FORBIDDEN_DIRS = [
     "./r",
     "./.well-known",
@@ -124,7 +125,8 @@ sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 </urlset>
 """
 
-# DO IT
 with open("sitemap.xml", "w") as f:
     f.write(sitemap)
+
+# STAGE TWO: PAGE INDEX UPDATE
 
