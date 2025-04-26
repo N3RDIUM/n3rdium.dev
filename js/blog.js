@@ -57,5 +57,5 @@ function allDone() {
 fetch("/blog/posts/index.json").then(async res => {
     content = await res.json();
     loadMore();
-}).catch(() => alert("Couldn't load blog posts!"));
+}).catch(() => alert("Couldn't load blog posts! Please try again."));
 
