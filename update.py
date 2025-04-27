@@ -57,7 +57,7 @@ def file_changed(path: str) -> bool:
     if path not in hashes:
         return True
 
-    return hash_file(path) == hashes[path]["hash"]
+    return hash_file(path) != hashes[path]["hash"]
 
 def write_hashes():
     with open(HASH_FILE, "w") as f:
