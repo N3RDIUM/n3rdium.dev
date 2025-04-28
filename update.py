@@ -64,12 +64,13 @@ def write_hashes():
         json.dump(hashes, f, indent = 4)
 
 
+# TODO: urlify() and stuff: relpaths starting with / instead of https://n3rdium.dev
 TODAY = datetime.today().strftime('%Y-%m-%d')
 map = []
 
 def urlify(path: str) -> str:
     path = path.strip().strip("/").strip("./").strip("/")
-    return f"https://n3rdium.dev/{path}".removesuffix("index.html")
+    return f"/{path}".removesuffix("index.html")
 
 def get_lastmod(path: str) -> str:
     if path not in hashes:
@@ -110,7 +111,7 @@ def build_sitemap_entry(map_item: dict) -> str:
     priority = 0.5
     if url.endswith("/"):
         priority = 0.75
-    if url == "https://n3rdium.dev/":
+    if url == "/":
         priority = 1.0
 
     return f"""    <url>
