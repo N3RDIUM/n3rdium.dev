@@ -1,10 +1,11 @@
 [
     {
         "title": "The Rubber Duck Just Got Smarter",
-        "description": "The rubber duck is an invaluable debugging tool, essential to becoming a good programmer. In this post, join me as I humbly attempt to make a rubber ducky that can talk and respond (spoiler alert: it's still dumb).",
+        "description": "The rubber duck is an invaluable debugging tool, essential to many programmers. In this post, join me as I humbly attempt to make a rubber ducky that can talk and respond (spoiler alert: it's still dumb).",
         "written": "28-04-2025",
         "tags": [
-            "Programming"
+            "Programming",
+            "Weekend Project"
         ],
         "url": "/blog/posts/4.html"
     },
