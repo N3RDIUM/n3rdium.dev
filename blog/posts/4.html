@@ -132,7 +132,11 @@ from faster_whisper import WhisperModel</code></pre>
                         </p>
 
                         <pre><code class="language-python">MODEL = "small.en"
-model = WhisperModel(MODEL, device="cpu", compute_type="int8")
+model = WhisperModel(
+    MODEL,
+    device="cpu",
+    compute_type="int8"
+)
 pipeline = model.transcribe</code></pre>
 
                         <p>
@@ -163,7 +167,10 @@ with m as source:
 
     t = time.perf_counter()
     with torch.inference_mode():
-        segments, info = pipeline("audio.wav", vad_filter=True)
+        segments, info = pipeline(
+            "audio.wav", 
+            vad_filter=True
+        )
 
     recognized = ""
     for segment in segments:
@@ -206,9 +213,17 @@ FILE = "s.wav"</code></pre>
                         </p>
 
                         <pre><code class="language-python">def speak(text):
-    generator = pipeline(text, voice='af_heart')
+    generator = pipeline(
+        text,
+        voice='af_heart'
+    )
+
     for i, (gs, ps, audio) in enumerate(generator):
-        sf.write(FILE, audio, 24000)
+        sf.write(
+            FILE, 
+            audio,
+            24000
+        )
         audio = AudioSegment.from_wav(FILE)
         play(audio)
         os.remove(FILE)
@@ -237,13 +252,8 @@ from tts import speak</code></pre>
                             I'm no prompt engineer, but this prompt works pretty well:
                         </p>
 
-                        <pre><code class="language-python">
-SYSPROMPT = """I'm a programmer. You are my rubber duck.
-Your responses should be short, concise, insightful and motivating.
-Your responses should be REALLY short. One sentence, not more than 15 words.
-You're not allowed to see the code.
-Be a good listener, give insightful hints."""</code></pre>
-
+                        <pre><code class="language-python"> SYSPROMPT = """I'm a programmer. You are my rubber duck. Your responses should be short, concise, insightful and motivating. Your responses should be REALLY short. One sentence, not more than 15 words. You're not allowed to see the code. Be a good listener, give insightful hints."""</code></pre>
+                        
                         <p>
                             Now, we can initialize the <code>ollama</code> client 
                             and set up some stuff:
@@ -263,11 +273,21 @@ messages = [
                         </p>
 
                         <pre><code class="language-python">while True:
-    print("speak now.")
-    messages.append({"role": "user", "content": recognize()})
-    print(messages[-1]["content"])
-    response = client.chat(model=model, messages=messages)
-    messages.append({"role": "assistant", "content": response["message"].content})
+    print("Say something!")
+    messages.append({
+        "role": "user",
+        "content": recognize()
+    })
+
+    response = client.chat(
+        model=model,
+        messages=messages
+    )
+    messages.append({
+        "role": "assistant",
+        "content": response["message"].content
+    })
+
     speak(response["message"].content)
     print(messages[-1]["content"])</code></pre>
 
