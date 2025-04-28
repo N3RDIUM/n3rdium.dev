@@ -1,5 +1,14 @@
 [
     {
+        "title": "The Rubber Duck Just Got Smarter",
+        "description": "The rubber duck is an invaluable debugging tool, essential to becoming good programmer. In this post, join me as I humbly attempt to make a rubber ducky that can talk and respond (spoiler alert: it's still dumb).",
+        "written": "28-04-2025",
+        "tags": [
+            "Programming"
+        ],
+        "url": "https://n3rdium.dev/blog/posts/4.html"
+    },
+    {
         "title": "Everything You Need To Know About Vibe Coding",
         "description": "{description}",
         "written": "24-04-2025",

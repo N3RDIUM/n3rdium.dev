@@ -11,68 +11,48 @@
         <priority>0.75</priority>
     </url>
     <url>
+        <loc>https://n3rdium.dev/projects/</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/blog/</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/blog/posts/2.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/blog/posts/3.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/blog/posts/4.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/music/</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
         <loc>https://n3rdium.dev/astro/</loc>
         <lastmod>2025-04-27</lastmod>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://n3rdium.dev/astro/history/20.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/3.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/18.html</loc>
-        <lastmod>2025-04-25</lastmod>
+        <loc>https://n3rdium.dev/astro/history/14.html</loc>
+        <lastmod>2025-04-27</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://n3rdium.dev/astro/history/1.html</loc>
         <lastmod>2025-04-27</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/13.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/7.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/6.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/5.html</loc>
-        <lastmod>2025-04-27</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/10.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/4.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/22.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/19.html</loc>
-        <lastmod>2025-04-25</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
@@ -86,32 +66,7 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://n3rdium.dev/astro/history/16.html</loc>
-        <lastmod>2025-04-27</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/17.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/14.html</loc>
-        <lastmod>2025-04-27</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/12.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/21.html</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/astro/history/11.html</loc>
+        <loc>https://n3rdium.dev/astro/history/6.html</loc>
         <lastmod>2025-04-25</lastmod>
         <priority>0.5</priority>
     </url>
@@ -121,7 +76,72 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://n3rdium.dev/astro/history/17.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/0.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/10.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/20.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://n3rdium.dev/astro/history/9.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/3.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/5.html</loc>
+        <lastmod>2025-04-27</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/11.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/4.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/13.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/16.html</loc>
+        <lastmod>2025-04-27</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/19.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/21.html</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n3rdium.dev/astro/history/18.html</loc>
         <lastmod>2025-04-25</lastmod>
         <priority>0.5</priority>
     </url>
@@ -131,37 +151,17 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://n3rdium.dev/astro/history/0.html</loc>
+        <loc>https://n3rdium.dev/astro/history/7.html</loc>
         <lastmod>2025-04-25</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://n3rdium.dev/projects/</loc>
+        <loc>https://n3rdium.dev/astro/history/12.html</loc>
         <lastmod>2025-04-25</lastmod>
-        <priority>0.75</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/music/</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.75</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/blog/</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.75</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/blog/posts/3.html</loc>
-        <lastmod>2025-04-28</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://n3rdium.dev/blog/posts/4.html</loc>
-        <lastmod>2025-04-28</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://n3rdium.dev/blog/posts/2.html</loc>
+        <loc>https://n3rdium.dev/astro/history/22.html</loc>
         <lastmod>2025-04-25</lastmod>
         <priority>0.5</priority>
     </url>
