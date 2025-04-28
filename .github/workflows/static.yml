@@ -32,6 +32,7 @@ jobs:
       
       - name: Run update script
         run: python update.py
+        continue-on-error: true
         
       - name: Push Sitemap
         run: |
@@ -39,6 +40,7 @@ jobs:
           git config --global user.email 'n3rdium@users.noreply.github.com'
           git commit -am "Automated Sitemap Build"
           git push
+        continue-on-error: true
           
       - name: Checkout
         uses: actions/checkout@v4
