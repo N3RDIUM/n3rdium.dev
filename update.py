@@ -160,7 +160,6 @@ for root in SEARCH_PATHS:
         with open(path) as f:
             metadata = f.read().split("N3RDIUM META START")[1].split("N3RDIUM META END")[0].strip()
 
-        print(metadata)
         metadata = json.loads(metadata)
         metadata["url"] = url
         
