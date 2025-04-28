@@ -6,7 +6,7 @@
         "tags": [
             "Programming"
         ],
-        "url": "https://n3rdium.dev/blog/posts/4.html"
+        "url": "/blog/posts/4.html"
     },
     {
         "title": "Everything You Need To Know About Vibe Coding",
@@ -15,7 +15,7 @@
         "tags": [
             "Programming"
         ],
-        "url": "https://n3rdium.dev/blog/posts/3.html"
+        "url": "/blog/posts/3.html"
     },
     {
         "title": "Making an Astrophotography Camera For $150",
@@ -24,6 +24,6 @@
         "tags": [
             "Astrophotography"
         ],
-        "url": "https://n3rdium.dev/blog/posts/2.html"
+        "url": "/blog/posts/2.html"
     }
 ]
