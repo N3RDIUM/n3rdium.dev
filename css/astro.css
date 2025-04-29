@@ -29,3 +29,51 @@
     text-align: left;
     margin-top: min(8vw, 80px);
 }
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 42px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 21px;
+    padding: 42px;
+    grid-template-rows: masonry;
+    width: 100vw;
+    max-width: calc(100vw - 84px);
+    width: min-content;
+}
+.big-tile {
+    width: 180px;
+    height: 224px;
+    grid-row: auto / span 3;
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.smol-tile {
+    width: 180px;
+    height: 141px;
+    grid-row: auto / span 2;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.tile-image {
+    transition-duration: 420ms;
+    transition-timing-function: ease-in-out;
+}
+.tile-image:hover {
+    scale: 1.2;
+    filter: brightness(1.2) saturate(1.2);
+}
+.tile-image:active {
+    scale: 1.1;
+    transition-duration: 100ms;
+}
+

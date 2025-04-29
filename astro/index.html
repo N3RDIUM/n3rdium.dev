@@ -5,28 +5,30 @@
     <!-- M E T A D A T A -->
     <title>Astro - N3RDIUM</title>
 
-    <meta charset="utf-8" />
-    <meta name="description" content="(Work in progress) Gallery of all my latest astrophotography." />
-    <meta name="author" content="N3RDIUM" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" ></div>
+    <meta name="description" content="Gallery of all my latest astrophotography." ></div>
+    <meta name="author" content="N3RDIUM" ></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1" ></div>
 
-    <link rel="icon" href="/img/n3rdium.png" type="image/x-icon" />
+    <link rel="icon" href="/img/n3rdium.png" type="image/x-icon" ></div>
 
     <!-- P R E C O N N E C T S -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://stats.g.doubleclick.net" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" ></div>
+    <link rel="preconnect" href="https://stats.g.doubleclick.net" ></div>
 
     <!-- F O N T S -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" ></div>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin ></div>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" ></div>
 
     <!-- C S S -->
-    <link rel="stylesheet" href="/css/default.css" />
-    <link rel="stylesheet" href="/css/astro.css" />
+    <link rel="stylesheet" href="/css/default.css" ></div>
+    <link rel="stylesheet" href="/css/blog.css" ></div>
+    <link rel="stylesheet" href="/css/astro.css" ></div>
 
     <!-- J S -->
     <script defer src="/js/default.js"></script>
+    <script defer src="/js/astro.js"></script>
 
     <!-- G T A G -->
     <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"></script>
@@ -42,7 +44,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" style="overflow-x: hidden">
         <div class="nav-header">
             <a class="nav-username fira-code" href="/">N3RDIUM</a>
 
@@ -55,24 +57,23 @@
             </div>
         </div>
 
-        <div class="content centered fira-code">
-            <img alt="An zoomed-in image of a random patch of sky." class="showcase"
-                src="/astro/assets/rpi-milkyway-camp.webp" />
-            <p class="caption">The Milky Way</p>
-            <div class="insert-quote-here"></div>
-            <p class="description">
-                <p>
-                    This is a reprocess of some year-old data, taken
-                    from a bortle four.
-                </p>
-            </p>
-        </div>
-
-        <div class="nav-footer">
-            <a class="nav-link fira-code" href="/astro/history/0.html">Oldest</a>
-            <a class="nav-link fira-code" href="/astro/history/22.html">Previous</a>
-            <a class="nav-link fira-code greyed">Next</a>
-            <a class="nav-link fira-code greyed">Newest</a>
+        <div class="content fira-code">
+            <div class="welcome-container">
+                <h1 class="welcome-heading">Astro Gallery</h1>
+            </div>
+            
+            <div class="gallery-container">
+            <div class="gallery" id="gallery">
+                <div class="big-tile">
+                    <img
+                        src="/astro/assets/dob-moon-naneghat.webp"
+                        height=224
+                        class="tile-image"
+                    />
+                </div>
+                <div class="smol-tile"></div>
+            </div>
+            </div>
         </div>
     </div>
 </body>

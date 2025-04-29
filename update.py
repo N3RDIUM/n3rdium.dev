@@ -64,7 +64,6 @@ def write_hashes():
         json.dump(hashes, f, indent = 4)
 
 
-# TODO: urlify() and stuff: relpaths starting with / instead of https://n3rdium.dev
 TODAY = datetime.today().strftime('%Y-%m-%d')
 map = []
 
