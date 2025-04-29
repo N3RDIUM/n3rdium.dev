@@ -6,7 +6,6 @@ function render({ url, image, big }) {
     <a href="${url}">
         <img
             src="${image}"
-            width=360
             class="tile-image ${big == 1 ? 'big-image' : 'smol-image'}"
         />
     </a>
