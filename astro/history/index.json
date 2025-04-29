@@ -27,6 +27,7 @@
         "title": "The Moon: Take 3 - N3RDIUM",
         "description": "I took this stunning image from a Bortle 4. I also imaged the orion nebula, and the data looks quite good. Stay tuned for that!",
         "written": "21-01-2025",
+        "big": 1,
         "image": "/astro/assets/dob-moon-naneghat.webp",
         "tags": [],
         "url": "/astro/history/20.html"

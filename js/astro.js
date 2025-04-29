@@ -1,29 +1,23 @@
 let content = []
 let current = 0;
 
-function render({ url, image }) {
-    return `<a
-        href="${url}"
-        class="post"
-    >
-        <h2 class="post-title fira-code">
-            ${title}
-        </h2>
-        <div class="post-preview">
-            <p class="fira-code preview">
-                ${description}
-            </p>
-            <div class="fira-code metadata">
-                ${written} ${taggify(tags)}
-            </div>
-        </div>
-    </a>`
+function render({ url, image, big }) {
+    return `<div class="${big == 1 ? 'big-tile': 'smol-tile'}">
+    <a href="${url}">
+        <img
+            src="${image}"
+            width=360
+            class="tile-image ${big == 1 ? 'big-image' : 'smol-image'}"
+        />
+    </a>
+</div>
+`
 }
 
 function loadMore() {
-    const el = document.getElementById("list-view");
+    const el = document.getElementById("gallery");
     
-    for(i=0; i<10; i++) {
+    for(i=0; i<100; i++) {
         if(content[current] == undefined) break;
 
         el.innerHTML += render(content[current]);
@@ -43,7 +37,7 @@ function allDone() {
     button.innerHTML = "Stay tuned for more!";
 }
 
-fetch("/blog/posts/index.json").then(async res => {
+fetch("/astro/history/index.json").then(async res => {
     content = await res.json();
     loadMore();
 }).catch(() => alert("Couldn't load blog posts! Please try again."));
