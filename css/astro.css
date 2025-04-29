@@ -79,23 +79,23 @@
 
 @media (max-width: 825px) {
     .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
     .big-tile {
-        width: 180px;
+        width: 120px;
         height: 224px;
     }
     .smol-tile {
-        width: 180px;
+        width: 120px;
         height: 141px;
     }
     .big-image {
         height: 230px;
-        width: 180px;
+        width: 120px;
     }
     .smol-image {
         height: 145px;
-        width: 180px;
+        width: 120px;
     }
 }
 
