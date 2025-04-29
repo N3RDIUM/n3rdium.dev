@@ -46,6 +46,7 @@
         "description": "I don't know why I captured these images. They look a bit sharper and have a bit more resolution, I guess!",
         "written": "18-01-2025",
         "tags": [],
+        "big": 1,
         "url": "/astro/history/17.html"
     },
     {
@@ -81,6 +82,7 @@
         "description": "Being honest, this target was really hard to find from a Bortle 6-7 place, despite having an 8-inch aperture. It was taken in the same way as the previous Hercules Globular Cluster ones.",
         "written": "13-01-2025",
         "tags": [],
+        "big": 1,
         "url": "/astro/history/12.html"
     },
     {
@@ -88,6 +90,7 @@
         "description": "Being honest, this target was really hard to find from a Bortle 6-7 place, despite having an 8-inch aperture. It was taken in the same way as the previous Hercules Globular Cluster ones.",
         "written": "12-01-2025",
         "tags": [],
+        "big": 1,
         "url": "/astro/history/11.html"
     },
     {
@@ -95,6 +98,7 @@
         "description": "This image was taken in the same conditions as the last, but about 24 hours later. The smudgy artifact is the reflection of the phone's IR proximity sensor (used for focus adjustments). It got aggregated during the stacking process.",
         "written": "11-01-2025",
         "tags": [],
+        "big": 1,
         "url": "/astro/history/10.html"
     },
     {
@@ -116,6 +120,7 @@
         "description": "Yet another wide-field test. I went to a Bortle 4 for this one!",
         "written": "08-01-2025",
         "tags": [],
+        "big": 1,
         "url": "/astro/history/7.html"
     },
     {
@@ -130,6 +135,7 @@
         "description": "Yet another wide-field test. I went to a Bortle 4 for this one!",
         "written": "06-01-2025",
         "tags": [],
+        "big": 1,
         "url": "/astro/history/5.html"
     },
     {
@@ -151,6 +157,7 @@
         "description": "This is one of six tests I ran of a mobile app called 'DeepSkyCamera' (it's amazing). I played around with the camera settings a lot, and managed to bag a surprising number of stars from my Bortle 6-7 home.",
         "written": "03-01-2025",
         "tags": [],
+        "big": 1,
         "url": "/astro/history/2.html"
     },
     {
