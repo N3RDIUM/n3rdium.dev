@@ -3,6 +3,7 @@
         "title": "The Milky Way - N3RDIUM",
         "description": "This image is part of the AstroPi Project. Reprocess, data captured at a Bortle 4.",
         "written": "24-01-2025",
+        "image": "/astro/assets/rpi-milkyway-camp.webp",
         "tags": [],
         "url": "/astro/history/latest.html"
     },
@@ -10,6 +11,7 @@
         "title": "EQ Platform Tracking Test - N3RDIUM",
         "description": "I got a new EQ Platform! This is the first test image using it. I can now take MUCH longer exposures without worrying about the trails. (insert mad scientist laugh here)",
         "written": "23-01-2025",
+        "image": "/astro/assets/tracking-test.webp",
         "tags": [],
         "url": "/astro/history/22.html"
     },
@@ -17,6 +19,7 @@
         "title": "The Orion Nebula: Take 2 - N3RDIUM",
         "description": "Here it is. My best image of the Orion Nebula to date! Taken with a phone and an 8-inch dobsonian from a Bortle 4. I'm quite amazed at the fact that I managed not to over-expose the core. The trapesium is still visible!",
         "written": "22-01-2025",
+        "image": "/astro/assets/dob-m42-naneghat.webp",
         "tags": [],
         "url": "/astro/history/21.html"
     },
@@ -24,6 +27,7 @@
         "title": "The Moon: Take 3 - N3RDIUM",
         "description": "I took this stunning image from a Bortle 4. I also imaged the orion nebula, and the data looks quite good. Stay tuned for that!",
         "written": "21-01-2025",
+        "image": "/astro/assets/dob-moon-naneghat.webp",
         "tags": [],
         "url": "/astro/history/20.html"
     },
@@ -31,6 +35,7 @@
         "title": "Pleiades - N3RDIUM",
         "description": "My first shot at this (relatively speaking) large open star cluster. I couldn't even get it all in one frame! Stacked in Siril. Maybe I'll try a mosaic when I get AstroPi working.",
         "written": "20-01-2025",
+        "image": "/astro/assets/dob-m45.webp",
         "tags": [],
         "url": "/astro/history/19.html"
     },
@@ -38,6 +43,7 @@
         "title": "Jupiter: Take 3 - N3RDIUM",
         "description": "I don't know why I captured these images. They look a bit sharper and have a bit more resolution, I guess!",
         "written": "19-01-2025",
+        "image": "/astro/assets/dob-jupiter-take3.webp",
         "tags": [],
         "url": "/astro/history/18.html"
     },
@@ -45,6 +51,7 @@
         "title": "Jupiter: Take 2 - N3RDIUM",
         "description": "I don't know why I captured these images. They look a bit sharper and have a bit more resolution, I guess!",
         "written": "18-01-2025",
+        "image": "/astro/assets/dob-jupiter-take2.webp",
         "tags": [],
         "big": 1,
         "url": "/astro/history/17.html"
@@ -53,6 +60,7 @@
         "title": "The Orion Nebula - N3RDIUM",
         "description": "My first shot of the orion nebula! I impressed myself with this one. Although it was hard to get things working, I figured out how to use Siril! Yes, this one was stacked with Siril.",
         "written": "17-01-2025",
+        "image": "/astro/assets/dob-m42.webp",
         "tags": [],
         "url": "/astro/history/16.html"
     },
@@ -60,6 +68,7 @@
         "title": "The Moon - N3RDIUM",
         "description": "Another planetary image. I decided to go for the moon this time. Same gear, acquisition process and software as before.",
         "written": "16-01-2025",
+        "image": "/astro/assets/dob-moon.webp",
         "tags": [],
         "url": "/astro/history/15.html"
     },
@@ -67,6 +76,7 @@
         "title": "Saturn - N3RDIUM",
         "description": "After Jupiter, I decided to try Saturn. This stack, as you'll notice, is a lot sharper than the Jupiter one. I guess AutoStakkert found it easier to allign the frames.",
         "written": "15-01-2025",
+        "image": "/astro/assets/dob-saturn.webp",
         "tags": [],
         "url": "/astro/history/14.html"
     },
@@ -74,6 +84,7 @@
         "title": "Jupiter - N3RDIUM",
         "description": "My first 'decent' planetary image. Taken with a phone and my 8-inch dob. I used the Kellner 9mm eyepiece this time. It was quite a pain to keep the target framed.",
         "written": "14-01-2025",
+        "image": "/astro/assets/dob-jupiter.webp",
         "tags": [],
         "url": "/astro/history/13.html"
     },
@@ -81,6 +92,7 @@
         "title": "Ring Nebula: Take 2 - N3RDIUM",
         "description": "Being honest, this target was really hard to find from a Bortle 6-7 place, despite having an 8-inch aperture. It was taken in the same way as the previous Hercules Globular Cluster ones.",
         "written": "13-01-2025",
+        "image": "/astro/assets/dob-m57-take2.webp",
         "tags": [],
         "big": 1,
         "url": "/astro/history/12.html"
@@ -89,6 +101,7 @@
         "title": "Ring Nebula - N3RDIUM",
         "description": "Being honest, this target was really hard to find from a Bortle 6-7 place, despite having an 8-inch aperture. It was taken in the same way as the previous Hercules Globular Cluster ones.",
         "written": "12-01-2025",
+        "image": "/astro/assets/dob-m57.webp",
         "tags": [],
         "big": 1,
         "url": "/astro/history/11.html"
@@ -97,6 +110,7 @@
         "title": "The Great Globular Cluster in Hercules: Take 2 - N3RDIUM",
         "description": "This image was taken in the same conditions as the last, but about 24 hours later. The smudgy artifact is the reflection of the phone's IR proximity sensor (used for focus adjustments). It got aggregated during the stacking process.",
         "written": "11-01-2025",
+        "image": "/astro/assets/dob-m13-take2.webp",
         "tags": [],
         "big": 1,
         "url": "/astro/history/10.html"
@@ -105,6 +119,7 @@
         "title": "The Great Globular Cluster in Hercules - N3RDIUM",
         "description": "This is the first astro image I took using my f/6 8-inch Dobsonian telescope. At the time, I was still refining my image processing skills, and this is the best I could make it. This is a stack of one-second exposures taken with a phone attached to the eyepiece.",
         "written": "10-01-2025",
+        "image": "/astro/assets/dob-m13.webp",
         "tags": [],
         "url": "/astro/history/9.html"
     },
@@ -112,6 +127,7 @@
         "title": "Ursa Major with a Raspberry Pi - N3RDIUM",
         "description": "This image is part of the AstroPi project. I just captured a bunch of images of the sky with my Raspberry Pi for a test. This is what it gave me. It's a stack of 13-second exposures from my Bortle 6-7 home.",
         "written": "09-01-2025",
+        "image": "/astro/assets/rpi-ursa-major.webp",
         "tags": [],
         "url": "/astro/history/8.html"
     },
@@ -119,6 +135,7 @@
         "title": "Dark Sky Widefield Test 4 - N3RDIUM",
         "description": "Yet another wide-field test. I went to a Bortle 4 for this one!",
         "written": "08-01-2025",
+        "image": "/astro/assets/dark-widefield-test4.webp",
         "tags": [],
         "big": 1,
         "url": "/astro/history/7.html"
@@ -127,6 +144,7 @@
         "title": "Dark Sky Widefield Test 3 - N3RDIUM",
         "description": "Yet another wide-field test. I went to a Bortle 4 for this one!",
         "written": "07-01-2025",
+        "image": "/astro/assets/dark-widefield-test3.webp",
         "tags": [],
         "url": "/astro/history/6.html"
     },
@@ -134,6 +152,7 @@
         "title": "Dark Sky Widefield Test 2 - N3RDIUM",
         "description": "Yet another wide-field test. I went to a Bortle 4 for this one!",
         "written": "06-01-2025",
+        "image": "/astro/assets/dark-widefield-test2.webp",
         "tags": [],
         "big": 1,
         "url": "/astro/history/5.html"
@@ -142,6 +161,7 @@
         "title": "Dark Sky Widefield Test 1 - N3RDIUM",
         "description": "Yet another wide-field test. I went to a Bortle 4 for this one!",
         "written": "05-01-2025",
+        "image": "/astro/assets/dark-widefield-test1.webp",
         "tags": [],
         "url": "/astro/history/4.html"
     },
@@ -149,6 +169,7 @@
         "title": "Widefield Test 2 - N3RDIUM",
         "description": "Just another wide-field test. Although it isn't as good as the first one, it looks kinda cool!",
         "written": "04-01-2025",
+        "image": "/astro/assets/widefield-test2.webp",
         "tags": [],
         "url": "/astro/history/3.html"
     },
@@ -156,6 +177,7 @@
         "title": "Widefield Test - N3RDIUM",
         "description": "This is one of six tests I ran of a mobile app called 'DeepSkyCamera' (it's amazing). I played around with the camera settings a lot, and managed to bag a surprising number of stars from my Bortle 6-7 home.",
         "written": "03-01-2025",
+        "image": "/astro/assets/widefield-test.webp",
         "tags": [],
         "big": 1,
         "url": "/astro/history/2.html"
@@ -164,6 +186,7 @@
         "title": "C/2022 E3 ZTF - N3RDIUM",
         "description": "This is probably one of my most memorable astrophotographs ever. This is actually the last (and most successful) out of three attempts at bagging the green comet.",
         "written": "02-01-2025",
+        "image": "/astro/assets/C2022E3ZTF.webp",
         "tags": [],
         "url": "/astro/history/1.html"
     },
@@ -171,6 +194,7 @@
         "title": "First Moon - N3RDIUM",
         "description": "This is my first-ever astrophotograph. It was taken with a camera that's older than myself - the Nikon 5600D.",
         "written": "01-01-2025",
+        "image": "/astro/assets/moon-first.webp",
         "tags": [],
         "url": "/astro/history/0.html"
     }
