@@ -4,6 +4,7 @@ The website is [here](https://n3rdium.dev).
 
 TODOs:
 - [ ] Global page search
+- [ ] Add alt text in the astro image index
 - [x] GitHub Action w/ py script to auto-update the sitemap and post json files
 - [x] Make the entire site gruvbox.
 - [x] Limit the content width in the about pages
