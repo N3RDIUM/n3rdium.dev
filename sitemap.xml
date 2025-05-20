@@ -6,24 +6,9 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/about/</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.75</priority>
-    </url>
-    <url>
-        <loc>/projects/</loc>
-        <lastmod>2025-04-25</lastmod>
-        <priority>0.75</priority>
-    </url>
-    <url>
         <loc>/blog/</loc>
         <lastmod>2025-04-28</lastmod>
         <priority>0.75</priority>
-    </url>
-    <url>
-        <loc>/blog/posts/2.html</loc>
-        <lastmod>2025-04-28</lastmod>
-        <priority>0.5</priority>
     </url>
     <url>
         <loc>/blog/posts/3.html</loc>
@@ -36,6 +21,16 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>/blog/posts/2.html</loc>
+        <lastmod>2025-04-28</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/projects/</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
         <loc>/music/</loc>
         <lastmod>2025-04-25</lastmod>
         <priority>0.75</priority>
@@ -46,7 +41,47 @@
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>/astro/history/14.html</loc>
+        <loc>/astro/history/16.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/3.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/22.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/15.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/5.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/13.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/12.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/21.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/17.html</loc>
         <lastmod>2025-04-29</lastmod>
         <priority>0.5</priority>
     </url>
@@ -56,7 +91,32 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>/astro/history/8.html</loc>
+        <loc>/astro/history/10.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/7.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/20.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/19.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/14.html</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>/astro/history/9.html</loc>
         <lastmod>2025-04-29</lastmod>
         <priority>0.5</priority>
     </url>
@@ -71,42 +131,7 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>/astro/history/2.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/17.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/0.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/10.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/20.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/9.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/3.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/5.html</loc>
+        <loc>/astro/history/4.html</loc>
         <lastmod>2025-04-29</lastmod>
         <priority>0.5</priority>
     </url>
@@ -116,27 +141,17 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>/astro/history/4.html</loc>
+        <loc>/astro/history/0.html</loc>
         <lastmod>2025-04-29</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>/astro/history/13.html</loc>
+        <loc>/astro/history/8.html</loc>
         <lastmod>2025-04-29</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>/astro/history/16.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/19.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/21.html</loc>
+        <loc>/astro/history/2.html</loc>
         <lastmod>2025-04-29</lastmod>
         <priority>0.5</priority>
     </url>
@@ -146,23 +161,8 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>/astro/history/15.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/7.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/12.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>/astro/history/22.html</loc>
-        <lastmod>2025-04-29</lastmod>
-        <priority>0.5</priority>
+        <loc>/about/</loc>
+        <lastmod>2025-04-25</lastmod>
+        <priority>0.75</priority>
     </url>
 </urlset>
