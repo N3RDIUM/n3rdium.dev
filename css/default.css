@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Iosevka";
+    src: url("/fonts/Iosevka-Light.ttf") format("ttf");
+}
+
 body,
 html {
     margin: 0;
@@ -10,10 +15,12 @@ html {
     scrollbar-width: thin;
 }
 
-.container { background: #282828; }
+.container {
+    background: #282828;
+}
 
-.fira-code {
-    font-family: "Fira Code", monospace;
+.thefont {
+    font-family: "Iosevka", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
