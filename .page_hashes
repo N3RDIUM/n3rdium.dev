@@ -4,11 +4,11 @@
         "lastmod": "2025-05-22"
     },
     "./about/index.html": {
-        "hash": "3ca0ed7c2a6beff243fc6373bc5b439c4f71a3dc336ce1ab0c090801a1fe7882",
+        "hash": "08354484099950b5fea805f3f29c546c5fed34182613642dadf688900d5136f5",
         "lastmod": "2025-05-22"
     },
     "./work/astro/index.html": {
-        "hash": "9cb5cfb4824faf3fc4f36110ecf880cc04fc2ccaef6a16f24c727b5b80a3a1bc",
+        "hash": "52e92ac8131b310e0eba03dbf52c5d11c91b37e092d8f32138849660518b17a2",
         "lastmod": "2025-05-22"
     },
     "./work/astro/history/20.html": {
@@ -116,7 +116,7 @@
         "lastmod": "2025-04-25"
     },
     "./work/blog/index.html": {
-        "hash": "208a2608d7682ccc5986d4169df74bedc8d9b71659e74941773645b9aed63e34",
+        "hash": "388a18ba9b9e5acd181c4ab641790e2d9939b40ef615fc60a951e7fe1613a537",
         "lastmod": "2025-05-22"
     },
     "./work/blog/posts/3.html": {
@@ -132,11 +132,23 @@
         "lastmod": "2025-05-22"
     },
     "./work/index.html": {
-        "hash": "2affa4c6bed5a29498916b9c271a01c0bd7c856e55ba1ee0e5a52290f0f369b6",
+        "hash": "a565bec4f41f5ccdcbbd5fc0adf46f28f293c5894d43e513bb3ef89ac6b55716",
         "lastmod": "2025-05-22"
     },
     "./work/blog/posts/5.html": {
         "hash": "177eef680437b2efc0aa3aa5a0e24c6b8fc9421286d6b3bca43ae7243cdc95e2",
+        "lastmod": "2025-05-22"
+    },
+    "./page-template.html": {
+        "hash": "f41052b088db54cc39e40c894a335e7396a2230647082cc77e89700b8459a593",
+        "lastmod": "2025-05-22"
+    },
+    "./social/index.html": {
+        "hash": "eb4844a522487e1239df05d2b89a3b2c9583f7c7604f88873d8e834121572125",
+        "lastmod": "2025-05-22"
+    },
+    "./contact/index.html": {
+        "hash": "eb4844a522487e1239df05d2b89a3b2c9583f7c7604f88873d8e834121572125",
         "lastmod": "2025-05-22"
     }
 }
