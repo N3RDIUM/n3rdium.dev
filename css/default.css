@@ -17,6 +17,21 @@ html {
 
 .container {
     background: #282828;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/img/starfield.svg");
 }
 
 .thefont {
@@ -27,17 +42,14 @@ html {
 }
 
 .username {
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
     display: flex;
-    font-size: 64px;
+    font-size: 80px;
     align-items: center;
     justify-content: space-around;
     pointer-events: none;
     user-select: none;
-    position: absolute;
+    font-weight: bolder;
+    letter-spacing: 8px;
 }
 
 .home-link {
@@ -53,25 +65,14 @@ html {
     color: #d5c4a1;
 }
 
-.link-container {
-    width: 100%;
-    height: 42%;
+.home-link-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.up {
-    position: absolute;
-}
-.down {
-    position: absolute;
-    top: 50%;
-}
-.low {
-    margin-top: 42px;
-}
-.high {
-    margin-bottom: 42px;
+.home-link-sep {
+    padding: 0 8px;
+    font-size: 12px;
 }
 
 .nav-header {
@@ -160,37 +161,6 @@ html {
 }
 .greyed {
     color: #928374;
-}
-
-@media (max-aspect-ratio: 3/4) {
-    .username {
-        flex-direction: column;
-    }
-
-    .link-container {
-        width: 50vw;
-        height: 100vh;
-        padding: 0;
-        flex-direction: column;
-    }
-
-    .up {
-        position: absolute;
-        top: 0;
-    }
-    .down {
-        position: absolute;
-        top: 0;
-        left: 50%;
-    }
-    .low {
-        margin-top: 0;
-        margin-left: 42px;
-    }
-    .high {
-        margin-bottom: 0;
-        margin-right: 42px;
-    }
 }
 
 code {

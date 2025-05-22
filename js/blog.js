@@ -17,14 +17,14 @@ function render({ url, title, description, written, tags }) {
         href="${url}"
         class="post"
     >
-        <h2 class="post-title fira-code">
+        <h2 class="post-title thefont">
             ${title}
         </h2>
         <div class="post-preview">
-            <p class="fira-code preview">
+            <p class="thefont preview">
                 ${description}
             </p>
-            <div class="fira-code metadata">
+            <div class="thefont metadata">
                 ${written} ${taggify(tags)}
             </div>
         </div>
@@ -54,7 +54,7 @@ function allDone() {
     button.innerHTML = "Stay tuned for more!";
 }
 
-fetch("/blog/posts/index.json").then(async res => {
+fetch("/work/blog/posts/index.json").then(async res => {
     content = await res.json();
     loadMore();
 }).catch(() => alert("Couldn't load blog posts! Please try again."));

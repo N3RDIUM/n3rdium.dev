@@ -36,7 +36,7 @@ function allDone() {
     button.innerHTML = "Stay tuned for more!";
 }
 
-fetch("/astro/history/index.json").then(async res => {
+fetch("/work/astro/history/index.json").then(async res => {
     content = await res.json();
     loadMore();
 }).catch(() => alert("Couldn't load blog posts! Please try again."));

@@ -11,3 +11,7 @@
     color: #83a598;
     font-weight: bolder;
 }
+.pfp {
+    width: 80vw;
+    max-width: 460px;
+}

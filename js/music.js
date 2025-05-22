@@ -4,15 +4,15 @@ const content = [
         target="_blank"
         class="post"
     >
-        <h2 class="post-title fira-code">
+        <h2 class="post-title thefont">
             Unnamed
         </h2>
                         
         <div class="post-preview">
-            <p class="fira-code preview">
+            <p class="thefont preview">
                 Releasing soon!
             </p>
-            <div class="fira-code metadata">
+            <div class="thefont metadata">
                 23-03-2025 [Original - WIP]
             </div>
         </div>
