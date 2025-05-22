@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Iosevka";
-    src: url("/fonts/Iosevka-Light.woff2") format("woff2");
+    src: url("/fonts/Iosevka-Light.woff2") format("woff2"),
+        url("/fonts/Iosevka-Light.ttf") format("truetype");
 }
 
 body,
@@ -13,6 +14,10 @@ html {
 
     scrollbar-color: #d5c4a1 #282828;
     scrollbar-width: thin;
+
+    font-family: "Iosevka";
+    font-optical-sizing: auto;
+    font-weight: 400;
 }
 
 .container {
@@ -32,13 +37,6 @@ html {
     width: 100vw;
     height: 100vh;
     background-image: url("/img/starfield.svg");
-}
-
-.thefont {
-    font-family: "Iosevka", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
 }
 
 .username {
