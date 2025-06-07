@@ -54,7 +54,7 @@ function allDone() {
     button.innerHTML = "Stay tuned for more!";
 }
 
-fetch("/work/blog/posts/index.json").then(async res => {
+fetch("/blog/posts/index.json").then(async res => {
     content = await res.json();
     loadMore();
 }).catch(() => alert("Couldn't load blog posts! Please try again."));

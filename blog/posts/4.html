@@ -1,0 +1,319 @@
+<!--
+N3RDIUM META START
+{
+    "title": "The Rubber Duck Just Got Smarter",
+    "description": "The rubber duck is an invaluable debugging tool, essential to many programmers. In this post, join me as I humbly attempt to make a rubber ducky that can talk and respond (spoiler alert: it's still dumb).",
+    "written": "28-04-2025",
+    "tags": [
+        "Programming",
+        "Weekend Project"
+    ]
+}
+N3RDIUM META END
+-->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- M E T A D A T A -->
+        <title>The Rubber Duck Just Got Smarter - n3rdland</title>
+
+        <meta charset="utf-8" />
+        <meta
+            name="description"
+            content="The rubber duck is an invaluable debugging tool, essential to many programmers. In this post, join me as I humbly attempt to make a rubber ducky that can talk and respond (spoiler alert: it's still dumb)."
+        />
+        <meta name="author" content="N3RDIUM" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="icon" href="/img/n3rdium.png" type="image/x-icon" />
+
+        <!-- P R E C O N N E C T S -->
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://stats.g.doubleclick.net" />
+
+        <!-- C S S -->
+        <link rel="stylesheet" href="/css/default.css" />
+        <link rel="stylesheet" href="/css/blog.css" />
+        <link rel="stylesheet" href="/css/gruv.css" />
+
+        <!-- J S -->
+        <script defer src="/js/default.js"></script>
+        <script defer src="/js/highlight.min.js"></script>
+
+        <!-- G T A G -->
+        <script
+            defer
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-DRCTBWSMF2"
+        ></script>
+        <script defer async>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-DRCTBWSMF2");
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="nav-header" id="nav"></div>
+
+            <div class="content centered thefont">
+                <div class="post-container">
+                    <div class="title-container">
+                        <h1 class="title-heading">
+                            The Rubber Duck Just Got Smarter
+                        </h1>
+                        <p class="title-subhead">
+                            The rubber duck is an invaluable debugging tool,
+                            essential to becoming a good programmer. In this
+                            post, join me as I humbly attempt to make a rubber
+                            ducky that can talk and respond (spoiler alert: it's
+                            still dumb).
+                        </p>
+                        <div class="thefont title-meta">
+                            28-04-2025 [Programming] [Weekend Project]
+                        </div>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="insert-quote-here"></div>
+
+                        <p>
+                            We've all been there. Your program isn't doing what
+                            you want it to, even though nothing seems
+                            <i>off</i> about the code.
+                        </p>
+
+                        <p>
+                            In a scenario like this, one has no choice but to
+                            turn to the rubber duck. You explain your code to
+                            it, and (seemingly out of thin air) you find out
+                            exactly what the problem is.
+                        </p>
+
+                        <p>
+                            Why not take this mundane, one-way interaction to
+                            the next level? (seriously, why not?)
+                        </p>
+
+                        <br />
+                        <h2>Speech Recognition</h2>
+                        <p>
+                            To recognize speech, we're using the
+                            <code>speech_recognition</code> library with
+                            <code>faster_whisper</code>.
+                        </p>
+
+                        <pre><code class="language-python">import os
+import time
+
+import speech_recognition as sr
+import torch
+from faster_whisper import WhisperModel</code></pre>
+
+                        <p>
+                            First, let's load the model weights required for
+                            <code>faster_whisper</code>:
+                        </p>
+
+                        <pre><code class="language-python">MODEL = "small.en"
+model = WhisperModel(
+    MODEL,
+    device="cpu",
+    compute_type="int8"
+)
+pipeline = model.transcribe</code></pre>
+
+                        <p>Next, let's initialize the mic and recognizer:</p>
+
+                        <pre><code class="language-python">r = sr.Recognizer()
+m = sr.Microphone()
+with m as source:
+    print("SIIIIIILLLLEENNCE")
+    r.adjust_for_ambient_noise(source)</code></pre>
+
+                        <p>
+                            Finally, let's create the
+                            <code>recognize</code> function. I don't know why
+                            I'm doing it this way, even though the
+                            <code>speech_recognition</code> library has its own
+                            <code>faster_whisper</code>
+                            integration (i yoinked this code out from an older
+                            repo of mine).
+                        </p>
+
+                        <pre><code class="language-python">def recognize():
+    with m as source:
+        audio = r.listen(source)
+
+    with open("audio.wav", "wb") as f:
+        f.write(audio.get_wav_data())
+
+    t = time.perf_counter()
+    with torch.inference_mode():
+        segments, info = pipeline(
+            "audio.wav",
+            vad_filter=True
+        )
+
+    recognized = ""
+    for segment in segments:
+        recognized += segment.text
+
+    os.remove("audio.wav")
+
+    return recognized</code></pre>
+
+                        <br />
+                        <h2>Text-To-Speech</h2>
+                        <p>
+                            I was just strolling around
+                            <a href="https://huggingface.co" target="_blank"
+                                >huggingface</a
+                            >
+                            the other day, when I found this intriguing
+                            text-to-speech model called
+                            <a
+                                href="https://huggingface.co/hexgrad/Kokoro-82M"
+                                target="_blank"
+                                ><code>kokoro</code></a
+                            >. I've been wanting to try it out for quite a while
+                            now, so I decided to use it for this project.
+                        </p>
+
+                        <p>
+                            It's REALLY fast, even on my potato PC. Anyway, back
+                            to the code. Let's import what we need real quick
+                            and set up some stuff:
+                        </p>
+
+                        <pre><code class="language-python">from kokoro import KPipeline
+import soundfile as sf
+from pydub import AudioSegment
+from pydub.playback import play
+import os
+
+pipeline = KPipeline(lang_code='a')
+FILE = "s.wav"</code></pre>
+
+                        <p>
+                            For the <code>speak</code> function, we just run
+                            inference, save it to an audio file, play the audio
+                            file and delete it.
+                        </p>
+
+                        <pre><code class="language-python">def speak(text):
+    generator = pipeline(
+        text,
+        voice='af_heart'
+    )
+
+    for i, (gs, ps, audio) in enumerate(generator):
+        sf.write(
+            FILE,
+            audio,
+            24000
+        )
+        audio = AudioSegment.from_wav(FILE)
+        play(audio)
+        os.remove(FILE)
+        break</code></pre>
+
+                        <br />
+                        <h2>Putting It All Together</h2>
+                        <p>
+                            For the actual responses, let's use
+                            <code>ollama</code>. Since my PC can't handle large
+                            models very well, I'll just stick to
+                            <code>llama3.2:3b</code> for now.
+                        </p>
+
+                        <p>
+                            Let's import <code>ollama</code>, as well as the
+                            other two files, which I saved as
+                            <code>microphone.py</code> and <code>tts.py</code>.
+                        </p>
+
+                        <pre><code class="language-python">import ollama
+
+from microphone import recognize
+from tts import speak</code></pre>
+
+                        <p>
+                            I'm no prompt engineer, but this prompt works pretty
+                            well:
+                        </p>
+
+                        <pre><code class="language-python">SYSPROMPT = """I'm a programmer. You are my rubber duck. Your responses should be short, concise, insightful and motivating. Your responses should be REALLY short. One sentence, not more than 15 words. You're not allowed to see the code. Be a good listener, give insightful hints."""</code></pre>
+
+                        <p>
+                            Now, we can initialize the
+                            <code>ollama</code> client and set up some stuff:
+                        </p>
+
+                        <pre><code class="language-python">client = ollama.Client()
+model = "llama3.2"
+messages = [
+    {
+        "role": "system",
+        "content": SYSPROMPT,
+    },
+]</code></pre>
+
+                        <p>And now for the mainloop!</p>
+
+                        <pre><code class="language-python">while True:
+    print("Say something!")
+    messages.append({
+        "role": "user",
+        "content": recognize()
+    })
+
+    response = client.chat(
+        model=model,
+        messages=messages
+    )
+    messages.append({
+        "role": "assistant",
+        "content": response["message"].content
+    })
+
+    speak(response["message"].content)
+    print(messages[-1]["content"])</code></pre>
+
+                        <p>
+                            It's never been easier to build AI applications.
+                            Seriously, it didn't take me TWO HOURS to make this!
+                            And it works surprizingly well (it's still dumb
+                            tho). Demo video coming soon!
+                        </p>
+
+                        <p>
+                            All the code is available on
+                            <a
+                                href="https://github.com/n3rdium/rubberducky"
+                                target="_blank"
+                                >GitHub</a
+                            >. Feel free to check it out! Fair warning: I'm new
+                            to NixOS. Even by my standards, the dependency
+                            management on the repo is quite trash. Most deps are
+                            managed throught <code>nix-shell</code>, except for
+                            the <code>kokoro</code> inference library, which
+                            uses <code>venv</code>.
+                        </p>
+                    </div>
+
+                    <a class="home-link" href="/blog/posts/3.html">
+                        <- Previous Post
+                    </a>
+                    <a class="home-link next greyed"> Next Post -> </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

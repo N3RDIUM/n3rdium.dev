@@ -131,8 +131,8 @@ with open("sitemap.xml", "w") as f:
 
 # STAGE TWO: PAGE INDEX UPDATE
 SEARCH_PATHS = [
-    "./work/blog/posts/",
-    "./work/astro/history/",
+    "./blog/posts/",
+    "./astro/history/",
 ]
 BLACKLIST = [
     "template.html"
