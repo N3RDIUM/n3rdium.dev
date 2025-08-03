@@ -1,14 +1,5 @@
 [
     {
-        "title": "How To (Not) Build A Website",
-        "description": "Hey there! Join me as I tell the tale of how this website came to be.",
-        "written": "20-05-2025",
-        "tags": [
-            "Programming"
-        ],
-        "url": "/blog/posts/5.html"
-    },
-    {
         "title": "The Rubber Duck Just Got Smarter",
         "description": "The rubber duck is an invaluable debugging tool, essential to many programmers. In this post, join me as I humbly attempt to make a rubber ducky that can talk and respond (spoiler alert: it's still dumb).",
         "written": "28-04-2025",
@@ -35,5 +26,14 @@
             "Astrophotography"
         ],
         "url": "/blog/posts/2.html"
+    },
+    {
+        "title": "How To (Not) Build A Website",
+        "description": "In this post, I tell the tale of how this website came to be.",
+        "written": "03-08-2024",
+        "tags": [
+            "Programming"
+        ],
+        "url": "/blog/posts/5.html"
     }
 ]
