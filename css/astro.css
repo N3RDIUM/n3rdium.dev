@@ -1,6 +1,16 @@
 .astro-heading {
     margin-top: 48px;
     height: 32vh;
+    background: url("/astro/assets/rpi-milkyway-camp.webp");
+    background-size: cover;
+    background-position: center;
+}
+.astro-heading-text {
+    background: #282828;
+    padding: 12px;
+    border-radius: 6px;
+    color: #ebdbb2;
+    font-size: 42px;
 }
 .content {
     display: flex;
@@ -16,7 +26,7 @@
 }
 .showcase {
     width: 80vw;
-    max-width: 800px;
+    max-width: 642px;
     object-fit: contain;
     margin-top: min(8vw, 80px);
 }
@@ -40,6 +50,7 @@
     justify-content: center;
     width: 100vw;
     padding: 42px;
+    background: #1d2021;
 }
 
 .gallery {
@@ -103,17 +114,22 @@
     }
 }
 
+.tile {
+    border: solid 2px #504945;
+}
+
 .tile-image {
     object-fit: cover;
     transition-duration: 420ms;
     transition-timing-function: ease-in-out;
 }
 .tile-image:hover {
-    scale: 1.2;
+    scale: 1.08;
     filter: brightness(1.2) saturate(1.2);
 }
 .tile-image:active {
-    scale: 1.1;
+    scale: 1.05;
+    filter: blur(4px);
     transition-duration: 100ms;
 }
 

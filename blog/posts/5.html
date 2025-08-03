@@ -2,8 +2,8 @@
 N3RDIUM META START
 {
     "title": "How To (Not) Build A Website",
-    "description": "Hey there! Join me as I tell the tale of how this website came to be.",
-    "written": "20-05-2025",
+    "description": "In this post, I tell the tale of how this website came to be.",
+    "written": "03-08-2024",
     "tags": [
         "Programming"
     ]
@@ -59,27 +59,99 @@ N3RDIUM META END
             <div class="content centered thefont">
                 <div class="post-container">
                     <div class="title-container">
-                        <h1 class="title-heading">Lorem Ipsum</h1>
+                        <h1 class="title-heading">How To (Not) Build A Website</h1>
                         <p class="title-subhead">
-                            This is a template for my blog posts.
+                            In this post, I tell the tale of how this website came to be.
                         </p>
-                        <img
-                            class="limwidth post-banner-nodim"
-                            src="/astro/assets/rpi-milkyway-camp.webp"
-                            alt=""
-                        />
                         <div class="thefont title-meta">
-                            08-12-2024 [Unclassified]
+                            03-08-2024 [Programming]
                         </div>
                     </div>
 
                     <div class="blog-content">
-                        <div class="insert-quote-here"></div>
-                        Nothing.
+                        <p>
+                            A lot (three) of my friends asked me how I made this website.
+                            Some even suspect me of 
+                            <a target="_blank" href="/blog/posts/3.html">Vibe Coding</a>
+                            it. Did I, really? Read on to find out!
+                        </p>
+
+                        <p>
+                            Despite what it looks like, this <i>isn't</i> your average
+                            static html-and-css site. There's a good few things going on
+                            under the hood (no, I'm not talking about google analytics).
+                        </p>
+                        <br>
+
+                        <h2>The Beginning?</h2>
+                        <p>
+                            About three years ago, I randomly decided that I wanted to have
+                            my own website. I put together a sloppy little homepage. I didn't
+                            like the way it looked. So I did some more design. I <i>still</i>
+                            didn't like it appearance-wise. So I did some more tweaking.
+                        </p>
+
+                        <p>
+                            The process continued for quite a while. Then, I just ditched all
+                            my work and started building a <i>new</i> homepage, design. After
+                            <i>months</i> of going through several remakes (some of which
+                            actually looked kind of impressive), I had made little progress.
+                        </p>
+
+                        <p>
+                            Then, I decided (I don't remember when) that I'm supposed to build
+                            <strong>a website</strong>, a <i>real</i> one at that. Not a
+                            <i>perfect</i> one. And if it's real, it's bound to have flaws.
+                            That's what it took to actually build this website.
+                        </p>
+                        <br>
+
+                        <h2>Under The Hood</h2>
+                        <p>
+                            This site is hosted on GitHub Pages. Yes, it's static HTML, CSS and
+                            some JS. But you see, that's just <i>half</i> the picture.
+                        </p>
+
+                        <p>
+                            I've made a hacky little redirect system at <code>/r</code>. Which
+                            is why,
+                            <a target="_blank" href="/r?id=genuine">do not click this link.</a>
+                            You have been warned!
+                        </p>
+
+                        <p>
+                            Every time update this website, a GitHub Action triggers. If you'll
+                            head over to the 
+                            <a target="_blank" href="/r?id=source">GitHub Repo</a>
+                            for this site, you'll find a few <code>index.json</code>s in the
+                            directories, as well as a <code>robots.txt</code>. You'll also find
+                            an <code>update.py</code>, which is actually run by the Action I
+                            mentioned earlier.
+                        </p>
+
+                        <p>
+                            The <code>update.py</code> file is where most of the magic happens.
+                            It updates the indexes and the <code>robots.txt</code> file 
+                            automatically. Yes, I could've just used Wordpress, but that wouldn't
+                            be very fun.
+                        </p>
+                        <br>
+
+                        <h2>Conclusion</h2>
+                        <p>
+                            This isn't the most professional website. But it's minimalistic.
+                            It's hand-made, most of the files hand-written in neovim.
+                        </p>
+                        <p>Speaking of
+                            neovim, in the next post, I'm taking you on a guided tour of my
+                            <a target="_blank" href="/r?id=dots">Dotfiles!</a> 
+                            I've also been working on a lightweight voice assistant for the 
+                            linux desktop. Stay tuned!
+                        </p>
                     </div>
 
-                    <a class="home-link greyed"> <- Previous Post </a>
-                    <a class="home-link next" href="/blog/posts/2.html">
+                    <a class="home-link" href="/blog/posts/4.html"> <- Previous Post </a>
+                    <a class="home-link next greyed">
                         Next Post ->
                     </a>
                 </div>

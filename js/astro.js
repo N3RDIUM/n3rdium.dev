@@ -2,7 +2,7 @@ let content = []
 let current = 0;
 
 function render({ url, image, big }) {
-    return `<div class="${big == 1 ? 'big-tile': 'smol-tile'}">
+    return `<div class="tile ${big == 1 ? 'big-tile': 'smol-tile'}">
     <a href="${url}">
         <img
             src="${image}"
