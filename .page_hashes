@@ -1,7 +1,7 @@
 {
     "./index.html": {
-        "hash": "562079fb5e5fcaed3be42e29df180130bd18754a2005da13b578741a9a1f4049",
-        "lastmod": "2025-05-22"
+        "hash": "5915330af9baae354bb18f202aabce098d1f9f511bd531ddaa5bcc9e3c4212bc",
+        "lastmod": "2025-08-04"
     },
     "./about/index.html": {
         "hash": "f3c67bc3bce8890259fdc81a0c8f8cd6de9319f5c0f92e03f5d8ffdd714c7864",
@@ -148,7 +148,7 @@
         "lastmod": "2025-08-04"
     },
     "./contact/index.html": {
-        "hash": "eb4844a522487e1239df05d2b89a3b2c9583f7c7604f88873d8e834121572125",
-        "lastmod": "2025-05-22"
+        "hash": "dab8a4d633b48203c8e2b2c8335c70e2447bc41b052d3db1d39bf785f30d8dff",
+        "lastmod": "2025-08-04"
     }
 }
