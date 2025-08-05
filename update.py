@@ -115,7 +115,7 @@ def build_sitemap_entry(map_item: dict) -> str:
         priority = 1.0
 
     return f"""    <url>
-        <loc>{url}</loc>
+        <loc>https://n3rdium.dev{url}</loc>
         <lastmod>{lastmod}</lastmod>
         <priority>{priority}</priority>
     </url>"""
