@@ -11,7 +11,8 @@ FORBIDDEN_DIRS = [
 ]
 FORBIDDEN_FILES = [
     "404.html",
-    "template.html"
+    "template.html",
+    "page-template.html",
 ]
 
 def is_dir_forbidden(root: str) -> bool:
