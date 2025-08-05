@@ -1,11 +1,11 @@
 {
     "./index.html": {
-        "hash": "5915330af9baae354bb18f202aabce098d1f9f511bd531ddaa5bcc9e3c4212bc",
-        "lastmod": "2025-08-04"
+        "hash": "8f143063a7eef201e02d49897a046b7b623bd63bcb6a6471905cc73e7285e551",
+        "lastmod": "2025-08-05"
     },
     "./about/index.html": {
-        "hash": "f3c67bc3bce8890259fdc81a0c8f8cd6de9319f5c0f92e03f5d8ffdd714c7864",
-        "lastmod": "2025-08-03"
+        "hash": "73d57a9161d814ddf695f8a28f50236f6dfbff3a0c6f8052c91bcf4a0cfc1630",
+        "lastmod": "2025-08-05"
     },
     "./astro/index.html": {
         "hash": "0286670980106639a3205fd9dcb5549986033980d52e5961ec749cf3305ce45f",
@@ -140,15 +140,19 @@
         "lastmod": "2025-08-03"
     },
     "./page-template.html": {
-        "hash": "f41052b088db54cc39e40c894a335e7396a2230647082cc77e89700b8459a593",
-        "lastmod": "2025-05-22"
+        "hash": "0ccb346aa2815a8b284bb091f5b31b4ceadd4fe2b37ae3a7446023ba089e4d23",
+        "lastmod": "2025-08-05"
     },
     "./social/index.html": {
         "hash": "2cf4b44c81411a7b0447a79ba990f1beeb9aea5361edeeacd3f1105ff4cabd64",
         "lastmod": "2025-08-04"
     },
     "./contact/index.html": {
-        "hash": "dab8a4d633b48203c8e2b2c8335c70e2447bc41b052d3db1d39bf785f30d8dff",
-        "lastmod": "2025-08-04"
+        "hash": "003260bdb34a182d7ee462e682fcdb54cdaf27069f2f59b116adede41b0a33b2",
+        "lastmod": "2025-08-05"
+    },
+    "./skills/index.html": {
+        "hash": "4f5abceded36a015dd412c5867ae5236de704b3fac9e6dee95eb337a47b302e3",
+        "lastmod": "2025-08-05"
     }
 }
