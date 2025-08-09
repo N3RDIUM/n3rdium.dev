@@ -42,11 +42,11 @@ jobs:
         run: python inline.py
         continue-on-error: true
         
-      - name: Push Sitemap
+      - name: Push Changes
         run: |
           git config --global user.name 'n3rdium'
           git config --global user.email 'n3rdium@users.noreply.github.com'
-          git commit -am "Automated Sitemap Build"
+          git commit -am "Automated Commit"
           git push
         continue-on-error: true
           
