@@ -33,6 +33,14 @@ jobs:
       - name: Run update script
         run: python update.py
         continue-on-error: true
+
+      - name: Run starfield script
+        run: python starfield.py
+        continue-on-error: true
+
+      - name: Run inline script
+        run: python inline.py
+        continue-on-error: true
         
       - name: Push Sitemap
         run: |

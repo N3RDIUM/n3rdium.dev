@@ -1,3 +1,6 @@
+# Yoinked from ChatGPT, this file was.
+# Beware.
+
 import random
 import xml.etree.ElementTree as ET
 
@@ -75,6 +78,6 @@ if __name__ == '__main__':
         min_radius=0.3,
         max_radius=1.5,
         colors=['#ebdbb2'],
-        output_file='starfield.svg'
+        output_file='./img/starfield.svg'
     )
 
