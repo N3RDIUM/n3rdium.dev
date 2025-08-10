@@ -91,6 +91,8 @@ for (root, dirs, files) in os.walk(".", topdown = True):
             continue
         
         path = os.path.join(root, file)
+        print(f"processing hashes for {path}")
+
         url = urlify(path)
         lastmod = get_lastmod(path)
 
@@ -108,6 +110,7 @@ write_hashes()
 
 def build_sitemap_entry(map_item: dict) -> str:
     url, lastmod = map_item["url"], map_item["lastmod"]
+    print(f"building sitemap entry for {url}")
 
     priority = 0.5
     if url.endswith("/"):
@@ -158,6 +161,7 @@ for root in SEARCH_PATHS:
 
         path = os.path.join(root, file)
         url = urlify(path)
+        print(f"processing blog entry {url}")
         
         with open(path) as f:
             metadata = f.read().split("N3RDIUM META START")[1].split("N3RDIUM META END")[0].strip()

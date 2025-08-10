@@ -1,12 +1,11 @@
 <!--
 N3RDIUM META START
 {
-    "title": "How To (Not) Optimize A Website",
-    "description": "It's okay if it looks funky, but if it doesn't load in time, your website WILL lose visitors. In this post, I'll show you how I was able to boost my website's Lighthouse performance score to more than 90%.",
-    "written": "10-08-2025",
+    "title": "Making an Astrophotography Camera For $150",
+    "description": "Astrophotography is as expensive as it is addictive. Many people are working to fix the 'expensive' bit, and I'd like to be one of them. That's why I decided to make my own astrophotography camera using a Raspberry Pi and the official HQ Camera.",
+    "written": "28-12-2024",
     "tags": [
-        "Programming",
-        "Web Dev"
+        "Astrophotography"
     ]
 }
 N3RDIUM META END
@@ -16,10 +15,13 @@ N3RDIUM META END
 <html lang="en">
     <head>
         <!-- M E T A D A T A -->
-        <title>How To (Not) Optimize A Website - v0y4g35</title>
+        <title>Making an Astrophotography Camera For $150 - v0y4g35</title>
 
         <meta charset="utf-8" />
-        <meta name="description" content="It's okay if it looks funky, but if it doesn't load in time, your website WILL lose visitors. In this post, I'll show you how I was able to boost my website's Lighthouse performance score to more than 90%." />
+        <meta
+            name="description"
+            content="Astrophotography is as expensive as it is addictive. Many people are working to fix the 'expensive' bit, and I'd like to be one of them. That's why I decided to make my own astrophotography camera using a Raspberry Pi and the official HQ Camera."
+        />
         <meta name="author" content="N3RDIUM" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -29,22 +31,21 @@ N3RDIUM META END
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://stats.g.doubleclick.net" />
 
-
         <!--INLINE START
             js:default
             js:highlight.min
-            css:default
             css:blog
+            css:default
             css:gruv
         INLINE END-->
         <!--AUTOGEN START-->
 
 <style>
-@font-face{font-family:"Iosevka";font-display:swap;src:url("/fonts/Iosevka-Light.woff2") format("woff2"),url("/fonts/Iosevka-Light.ttf") format("truetype")}body,html{margin:0;padding:0;color:#ebdbb2;background-color:#282828;scrollbar-color:#d5c4a1 #282828;scrollbar-width:thin;font-family:"Iosevka";font-optical-sizing:auto;font-weight:400;position:fixed;width:100%;height:100%;overflow:scroll;overflow-x:hidden}.container{background:#282828}.center{display:flex;flex-direction:column;align-items:center;justify-content:center}.home-container{width:100%;height:100%;background-image:url("/img/starfield.svg")}.username{display:flex;font-size:80px;align-items:center;justify-content:space-around;pointer-events:none;user-select:none;font-weight:bolder;letter-spacing:8px}.home-link{color:#ebdbb2}.home-link:hover{text-decoration:underline wavy #cc241d}.home-link:active{color:#fbf1c7}.home-link:visited{color:#d5c4a1}.home-link-container{display:flex;align-items:center;justify-content:space-around}.home-link-sep{padding:0 8px;font-size:12px}.nav-header{display:flex;position:fixed;flex-direction:row;align-items:center;width:100%;padding:8px;z-index:10;color:#1d2021;background:#ebdbb2}.nav-footer{display:flex;position:fixed;flex-direction:row;justify-content:space-around;width:100%;bottom:0;padding:4px 0;z-index:10;color:#1d2021;background:#ebdbb2}.nav-username{margin-left:4px;font-size:24px;text-decoration:none;color:#458588}.nav-username:active{margin-left:4px;font-size:24px;text-decoration:none;color:#83a598}.nav-username:visited{margin-left:4px;font-size:24px;text-decoration:none;color:#458588}.nav-links{position:absolute;display:flex;flex-wrap:nowrap;width:min-content;right:28px;top:10px}.nav-link{color:#1d2021;margin:4px;font-size:12px}.nav-link:hover{color:#282828;margin:4px;font-size:12px;text-decoration:underline wavy #cc241d}.nav-link:active{color:#282828;margin:4px;font-size:12px;background:#8ec07c}.nav-link:visited{color:#1d2021;margin:4px;font-size:12px}.content{padding:64px 16px;width:calc(100% - 32px)}.centered{display:flex;align-items:center;justify-content:center;flex-direction:column}.greyed{color:#928374}code{font-size:15px;background:#32303f}
+.welcome-container{display:flex;flex-direction:column;text-align:center;padding:42px}.welcome-heading{color:#458588;font-size:42px;margin-bottom:0}.welcome-subhead{margin-top:0;text-align:center;margin-bottom:42px}.posts{display:flex;width:100%;align-items:center;flex-direction:column}.post{all:unset;color:#ebdbb2;background:#3c3836;text-decoration:none;width:80%;max-width:700px;padding:24px;margin-bottom:42px;border-radius:6px;transition-duration:128ms}.post-unclickable{all:unset;color:#ebdbb2;background:#3c3836;text-decoration:none;width:80%;max-width:700px;padding:24px;margin-bottom:42px;border-radius:6px;transition-duration:128ms}.post:hover{background:#504945;cursor:pointer}.post-banner{width:100%;aspect-ratio:calc(16 / 7);object-fit:cover;filter:brightness(0.9) grayscale(1.0) hue-rotate(45deg);transition-duration:200ms;border-radius:6px}.post-banner-nodim{width:100%;aspect-ratio:calc(16 / 7);object-fit:cover;border-radius:6px}.post-banner:hover{filter:none}.post-title{margin-top:0px;color:#83a598}.metadata{color:#d5c4a1;float:right;font-size:12px;margin-top:-4px}.preview{font-size:13px;margin-top:16px}.clicky{margin-bottom:-4px;float:right}.post-container{max-width:700px}.title-container{display:flex;flex-direction:column;color:#83a598}.title-subhead{margin-top:-12px;margin-bottom:12px;max-width:800px;text-align:left;font-size:13px;color:#ebdbb2}.limwidth{max-width:800px}.title-back{text-align:left}.title-meta{margin-top:12px;width:100%;font-size:12px;text-align:right;color:#d5c4a1}.next{float:right}.blog-content{max-width:800px;margin:42px 0}.blog-image{width:100%}.blog-caption{width:60%;margin-left:20%;font-size:12px;color:#bdae93;margin-bottom:42px}h2,h3,h4,h5,h6{color:#fbf1c7}a{color:#ebdbb2}a:active{color:#fbf1c7}a:visited{color:#d5c4a1}pre{width:80%;margin-left:10%;text-wrap:wrap}.loadmore-container{width:100%;align-items:center;justify-content:center;display:flex}.loadmore{color:#ebdbb2;background:#458588;border:0px;font-size:16px;padding:8px;border-radius:6px}.loadmore:hover{background:#ebdbb2;color:#282828}.loadmore:active{background:#fbf1c7;color:#458588}.loadmore:disabled{background:#665c54;color:#a89984}
 </style>
 
 <style>
-.welcome-container{display:flex;flex-direction:column;text-align:center;padding:42px}.welcome-heading{color:#458588;font-size:42px;margin-bottom:0}.welcome-subhead{margin-top:0;text-align:center;margin-bottom:42px}.posts{display:flex;width:100%;align-items:center;flex-direction:column}.post{all:unset;color:#ebdbb2;background:#3c3836;text-decoration:none;width:80%;max-width:700px;padding:24px;margin-bottom:42px;border-radius:6px;transition-duration:128ms}.post-unclickable{all:unset;color:#ebdbb2;background:#3c3836;text-decoration:none;width:80%;max-width:700px;padding:24px;margin-bottom:42px;border-radius:6px;transition-duration:128ms}.post:hover{background:#504945;cursor:pointer}.post-banner{width:100%;aspect-ratio:calc(16 / 7);object-fit:cover;filter:brightness(0.9) grayscale(1.0) hue-rotate(45deg);transition-duration:200ms;border-radius:6px}.post-banner-nodim{width:100%;aspect-ratio:calc(16 / 7);object-fit:cover;border-radius:6px}.post-banner:hover{filter:none}.post-title{margin-top:0px;color:#83a598}.metadata{color:#d5c4a1;float:right;font-size:12px;margin-top:-4px}.preview{font-size:13px;margin-top:16px}.clicky{margin-bottom:-4px;float:right}.post-container{max-width:700px}.title-container{display:flex;flex-direction:column;color:#83a598}.title-subhead{margin-top:-12px;margin-bottom:12px;max-width:800px;text-align:left;font-size:13px;color:#ebdbb2}.limwidth{max-width:800px}.title-back{text-align:left}.title-meta{margin-top:12px;width:100%;font-size:12px;text-align:right;color:#d5c4a1}.next{float:right}.blog-content{max-width:800px;margin:42px 0}.blog-image{width:100%}.blog-caption{width:60%;margin-left:20%;font-size:12px;color:#bdae93;margin-bottom:42px}h2,h3,h4,h5,h6{color:#fbf1c7}a{color:#ebdbb2}a:active{color:#fbf1c7}a:visited{color:#d5c4a1}pre{width:80%;margin-left:10%;text-wrap:wrap}.loadmore-container{width:100%;align-items:center;justify-content:center;display:flex}.loadmore{color:#ebdbb2;background:#458588;border:0px;font-size:16px;padding:8px;border-radius:6px}.loadmore:hover{background:#ebdbb2;color:#282828}.loadmore:active{background:#fbf1c7;color:#458588}.loadmore:disabled{background:#665c54;color:#a89984}
+@font-face{font-family:"Iosevka";font-display:swap;src:url("/fonts/Iosevka-Light.woff2") format("woff2"),url("/fonts/Iosevka-Light.ttf") format("truetype")}body,html{margin:0;padding:0;color:#ebdbb2;background-color:#282828;scrollbar-color:#d5c4a1 #282828;scrollbar-width:thin;font-family:"Iosevka";font-optical-sizing:auto;font-weight:400;position:fixed;width:100%;height:100%;overflow:scroll;overflow-x:hidden}.container{background:#282828}.center{display:flex;flex-direction:column;align-items:center;justify-content:center}.home-container{width:100%;height:100%;background-image:url("/img/starfield.svg")}.username{display:flex;font-size:80px;align-items:center;justify-content:space-around;pointer-events:none;user-select:none;font-weight:bolder;letter-spacing:8px}.home-link{color:#ebdbb2}.home-link:hover{text-decoration:underline wavy #cc241d}.home-link:active{color:#fbf1c7}.home-link:visited{color:#d5c4a1}.home-link-container{display:flex;align-items:center;justify-content:space-around}.home-link-sep{padding:0 8px;font-size:12px}.nav-header{display:flex;position:fixed;flex-direction:row;align-items:center;width:100%;padding:8px;z-index:10;color:#1d2021;background:#ebdbb2}.nav-footer{display:flex;position:fixed;flex-direction:row;justify-content:space-around;width:100%;bottom:0;padding:4px 0;z-index:10;color:#1d2021;background:#ebdbb2}.nav-username{margin-left:4px;font-size:24px;text-decoration:none;color:#458588}.nav-username:active{margin-left:4px;font-size:24px;text-decoration:none;color:#83a598}.nav-username:visited{margin-left:4px;font-size:24px;text-decoration:none;color:#458588}.nav-links{position:absolute;display:flex;flex-wrap:nowrap;width:min-content;right:28px;top:10px}.nav-link{color:#1d2021;margin:4px;font-size:12px}.nav-link:hover{color:#282828;margin:4px;font-size:12px;text-decoration:underline wavy #cc241d}.nav-link:active{color:#282828;margin:4px;font-size:12px;background:#8ec07c}.nav-link:visited{color:#1d2021;margin:4px;font-size:12px}.content{padding:64px 16px;width:calc(100% - 32px)}.centered{display:flex;align-items:center;justify-content:center;flex-direction:column}.greyed{color:#928374}code{font-size:15px;background:#32303f}
 </style>
 
 <style>
@@ -120,77 +121,125 @@ return He}();"object"==typeof exports&&"undefined"!=typeof module&&(module.expor
             <div class="content centered thefont">
                 <div class="post-container">
                     <div class="title-container">
-                        <h1 class="title-heading">How To (Not) Optimize A Website</h1>
+                        <h1 class="title-heading">
+                            Making an Astrophotography Camera For $150
+                        </h1>
                         <p class="title-subhead">
-                            It's okay if it looks funky, but if it doesn't load in time, your website
-                            WILL lose visitors. In this post, I'll show you how I was able to boost 
-                            my website's Lighthouse performance score to more than 90%.
+                            Astrophotography is as expensive as it is addictive.
+                            Many people are working to fix the "expensive" bit,
+                            and I'd like to be one of them. That's why I decided
+                            to make my own astrophotography camera using a
+                            Raspberry Pi and the official HQ Camera.
                         </p>
                         <div class="thefont title-meta">
-                             10-08-2025 [Programming] [Web Dev]
+                            28-12-2024 [Astrophotography]
                         </div>
                     </div>
 
                     <div class="blog-content">
                         <p>
-                            My website, despite being quite minimal, had a not-very-good Lighthouse
-                            performance score. The other things were fine, but the performance was
-                            taking a big hit.
+                            Greetings from planet Earth. In this series of
+                            posts, I will share with you the progress I have
+                            made with the AstroPi project. Yeah, that's what I'm
+                            calling it as of now.
                         </p>
-
-                        <p>
-                            This weekend, I decided to optimize my website. <i>Just a little.</i>
-                            And then, this happened:
-                        </p>
-
                         <img
                             class="blog-image"
-                            src="/img/lighthouse-homepage.png"
-                            alt="Lighthouse report for n3rdium.dev"
+                            src="https://user-images.githubusercontent.com/74598401/225719282-0c3ecc35-4f5f-4f5d-8ac1-f31d5439f2c6.png"
+                            alt="AstroPi Logo"
                         />
-                        <br>
+                        <p class="blog-caption">The AstroPi Logo.</p>
 
-                        <h2>What have you done?!</h2>
+                        <br />
+                        <h2>What's the big idea?</h2>
                         <p>
-                            It was a simple problem: to inline all JS and CSS that a page required.
-                            But that isn't very maintainable, especially for a site like this one.
-                            Which is why, I wrote
-                            <a 
-                                href="https://github.com/N3RDIUM/n3rdium.dev/blob/main/inline.py" 
+                            Legendary astrophotographers have proved that even
+                            webcams can be used to capture some stunning
+                            astrophotography. However, I've only seen planetary
+                            images (do tell me if you find any DSOs!).
+                        </p>
+                        <p>
+                            I've been doing phone astrophotography for quite a
+                            while, now, and it really goes to show how powerful
+                            today's camera sensors are, despite their size. Feel
+                            free to check out the "Astro" section of this site!
+                            As of today, all of the images posted there have
+                            been captured using a phone camera or similar
+                            sensor.
+                        </p>
+                        <img
+                            class="blog-image"
+                            src="https://www.cloudynights.com/images/oldfield16.jpeg"
+                            alt="Image of Jupiter taken using a webcam"
+                        />
+                        <p class="blog-caption">
+                            Credit:
+                            <a
                                 target="_blank"
+                                href="https://www.cloudynights.com/articles/cat/user-reviews/photography/ccd-and-webcams/getting-started-in-astrophotography-using-a-webcam-r138"
+                                >This CN Post</a
                             >
-                                yet another python script</a>
-                            that runs at build-time.
+                        </p>
+                        <p>
+                            Long story short, I want to take it to the next
+                            level by using a
+                            <a target="_blank" href="https://raspberrypi.com"
+                                >Raspberry Pi</a
+                            >
+                            <a
+                                target="_blank"
+                                href="https://www.raspberrypi.com/products/raspberry-pi-high-quality-camera/"
+                                >HQ Camera</a
+                            >. I also plan to write my own control software in
+                            python.
                         </p>
 
+                        <br />
+                        <h2>How?!</h2>
                         <p>
-                            I have this kind of comment in the <code>head</code> of every page:
+                            Basically, an M12-to-1.25" adapter will be used to
+                            connect the HQ camera to the telescope's focuser.
+                            The camera will, of course, will be controlled using
+                            a Raspberry Pi 5. To control things, a Flask server
+                            will be hosted on the Raspberry Pi, which hosts HTML
+                            pages. That's the idea.
                         </p>
-                        
-                        <pre><code class="language-rust">&lt;!--INLINE START
-    js:default
-    js:highlight.min
-    css:default
-    css:blog
-    css:gruv
-INLINE END--&gt;
-&lt;!--AUTOGEN START--&gt;
-&lt;!--AUTOGEN END--&gt;</code></pre>
+                        <img
+                            class="blog-image"
+                            style="width: 30%; margin-left: 35%"
+                            src="/img/m12-to-telescope-adapter.jpg"
+                            alt='An M12 to 1.25" adapter.'
+                        />
+                        <p
+                            class="blog-caption"
+                            style="width: 30%; margin-left: 35%"
+                        >
+                            A cheap M12-to-1.25" adapter.
+                        </p>
+                        <p>
+                            I haven't yet decided what I'm going to do about the
+                            casing, but I guess I won't be worrying about that
+                            just yet. For now, I'm going for a random plastic
+                            box that happened to be lying around.
+                        </p>
 
+                        <br />
+                        <h2>Parts</h2>
                         <p>
-                            The script injects the files specified in the <code>INLINE</code>
-                            block into the <code>AUTOGEN</code> block. It's that simple!
-                            Feel free to inspect this page and see for yourself.
+                            Not much is required to build your own AstroPi
+                            (subject to change once I add a cooling system!).
+                            Just a Raspberry Pi, and the HQ Camera.
                         </p>
 
-                        <p>
-                            Of course, this still poses some challenges when it comes to
-                            maintainability, but I will eventually roll out fixes for that.
-                        </p>
+                        <br />
+                        <h2>Build</h2>
+                        <p>WIP</p>
                     </div>
 
-                    <a class="home-link" href="/blog/posts/4.html"> <- Previous Post </a>
-                    <a class="home-link next greyed"> Next Post -> </a>
+                    <a class="home-link greyed"> <- Previous Post </a>
+                    <a class="home-link next" href="/blog/posts/2.html">
+                        Next Post ->
+                    </a>
                 </div>
             </div>
         </div>

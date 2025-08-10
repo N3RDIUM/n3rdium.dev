@@ -1,4 +1,6 @@
 import os
+from rjsmin import jsmin
+from rcssmin import cssmin
 
 css = {}
 js = {}
@@ -11,7 +13,7 @@ for style in os.listdir("./css"):
         contents = file.read()
     name = style.removesuffix(".css")
 
-    css[name] = contents
+    css[name] = cssmin(contents)
     print(f"loaded stylesheet: {name}")
 
 for script in os.listdir("./js"):
@@ -22,7 +24,7 @@ for script in os.listdir("./js"):
         contents = file.read()
     name = script.removesuffix(".js")
 
-    js[name] = contents
+    js[name] = jsmin(contents)
     print(f"loaded script: {name}")
 
 INLINE_PREFIX = "<!--INLINE START"
@@ -81,7 +83,7 @@ def process_file(path: str):
         inline_block = contents.split(INLINE_PREFIX)[1]
         inline_block = inline_block.split(INLINE_SUFFIX)[0]
     except IndexError:
-        print(f"could not process inline block for {path}")
+        print(f"could not locate inline block for {path}")
         return
 
     stylesheets, scripts = process_inline_block(inline_block)
@@ -99,9 +101,15 @@ def process_file(path: str):
 
     print(f"processed file: {path}")
 
+BLACKLIST = [
+    "template.html",
+]
+
 for (root, dirs, files) in os.walk(".", topdown=True):
     for file in files:
         if not file.endswith(".html"):
+            continue
+        if file in BLACKLIST:
             continue
         process_file(os.path.join(root, file))
 

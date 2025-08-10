@@ -1,12 +1,23 @@
 [
     {
+        "title": "How To (Not) Optimize A Website",
+        "description": "It's okay if it looks funky, but if it doesn't load in time, your website WILL lose visitors. In this post, I'll show you how I was able to boost my website's Lighthouse performance score to more than 90%.",
+        "written": "10-08-2025",
+        "tags": [
+            "Programming",
+            "Web Dev"
+        ],
+        "url": "/blog/posts/5.html"
+    },
+    {
         "title": "How To (Not) Build A Website",
         "description": "In this post, I tell the tale of how this website came to be.",
         "written": "03-08-2025",
         "tags": [
-            "Programming"
+            "Programming",
+            "Web Dev"
         ],
-        "url": "/blog/posts/5.html"
+        "url": "/blog/posts/4.html"
     },
     {
         "title": "The Rubber Duck Just Got Smarter",
@@ -16,7 +27,7 @@
             "Programming",
             "Weekend Project"
         ],
-        "url": "/blog/posts/4.html"
+        "url": "/blog/posts/3.html"
     },
     {
         "title": "Everything You Need To Know About Vibe Coding",
@@ -25,7 +36,7 @@
         "tags": [
             "Programming"
         ],
-        "url": "/blog/posts/3.html"
+        "url": "/blog/posts/2.html"
     },
     {
         "title": "Making an Astrophotography Camera For $150",
@@ -34,6 +45,6 @@
         "tags": [
             "Astrophotography"
         ],
-        "url": "/blog/posts/2.html"
+        "url": "/blog/posts/1.html"
     }
 ]

@@ -122,9 +122,7 @@
     margin: 42px 0;
 }
 .blog-image {
-    width: 60%;
-    margin: 42px 20%;
-    margin-bottom: -12px;
+    width: 100%;
 }
 .blog-caption {
     width: 60%;
