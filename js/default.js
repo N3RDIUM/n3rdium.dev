@@ -1,6 +1,6 @@
 const isDarkReaderDetected = [...document.querySelectorAll('style')].some((el) => el.classList.contains('darkreader'));
 if(isDarkReaderDetected) {
-    alert("Greetings, elite Dark Reader user! This website has a dark theme that the extension doesn't seem to detect, which makes it look funky. Please consider disabling it for this site. I won't flash-bang you. Ever. That's a promise!");
+    // alert("Greetings, elite Dark Reader user! This website has a dark theme that the extension doesn't seem to detect, which makes it look funky. Please consider disabling it for this site. I won't flash-bang you. Ever. That's a promise!");
 }
 
 const nav = `<a class="nav-username thefont" href="/">N3RDIUM</a>
