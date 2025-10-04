@@ -53,16 +53,16 @@
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, 256px);
     grid-gap: 21px;
     padding-top: 64px;
     grid-template-rows: masonry;
     width: 100vw;
-    max-width: calc(100vw - 168px);
+    max-width: calc(100vw - 42px);
     width: min-content;
 }
 .big-tile {
-    width: 360px;
+    width: 256px;
     height: 400px;
     grid-row: auto / span 3;
     overflow: hidden;
@@ -71,7 +71,7 @@
     justify-content: center;
 }
 .smol-tile {
-    width: 360px;
+    width: 256px;
     height: 261px;
     grid-row: auto / span 2;
     overflow: hidden;
@@ -90,7 +90,7 @@
 
 @media (max-width: 825px) {
     .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fit, 120px);
     }
     .big-tile {
         width: 120px;
@@ -123,8 +123,5 @@
 .tile-image:active {
     scale: 1.05;
     filter: blur(4px);
-}
-.loadmore-container {
-    margin-bottom: 84px;
 }
 
