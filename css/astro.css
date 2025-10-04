@@ -8,7 +8,6 @@
 .astro-heading-text {
     background: #282828;
     padding: 12px;
-    border-radius: 6px;
     color: #ebdbb2;
     font-size: 42px;
 }
@@ -49,25 +48,23 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    padding: 42px;
-    background: #1d2021;
+    margin-bottom: 84px;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     grid-gap: 21px;
-    padding: 42px;
+    padding-top: 64px;
     grid-template-rows: masonry;
     width: 100vw;
-    max-width: calc(100vw - 84px);
+    max-width: calc(100vw - 168px);
     width: min-content;
 }
 .big-tile {
     width: 360px;
     height: 400px;
     grid-row: auto / span 3;
-    border-radius: 8px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -77,7 +74,6 @@
     width: 360px;
     height: 261px;
     grid-row: auto / span 2;
-    border-radius: 8px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -117,11 +113,8 @@
 .tile {
     border: solid 2px #504945;
 }
-
 .tile-image {
     object-fit: cover;
-    transition-duration: 420ms;
-    transition-timing-function: ease-in-out;
 }
 .tile-image:hover {
     scale: 1.08;
@@ -130,6 +123,8 @@
 .tile-image:active {
     scale: 1.05;
     filter: blur(4px);
-    transition-duration: 100ms;
+}
+.loadmore-container {
+    margin-bottom: 84px;
 }
 

@@ -7,7 +7,8 @@ const nav = `<a class="nav-username thefont" href="/">N3RDIUM</a>
 <div class="nav-links">
     <a class="nav-link thefont" href="/about/">About</a>
     <a class="nav-link thefont" href="/skills/">Skills</a>
-    <a class="nav-link thefont" href="/work/">Work</a>
+    <a class="nav-link thefont" href="/blog/">Blog</a>
+    <a class="nav-link thefont" href="/astro/">Astro</a>
     <a class="nav-link thefont" href="/contact/">Contact</a>
 </div>`
 

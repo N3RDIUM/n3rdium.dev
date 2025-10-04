@@ -24,13 +24,9 @@
     color: #ebdbb2;
     background: #1d2021;
     padding: 12px 32px;
-    border-radius: 8px;
-    transition-duration: 250ms;
-    transition-timing-function: ease-in-out;
 }
 .icon:hover{
-    filter: invert(1.0);
-    scale: 1.08
+    background: #665c54;
 }
 .icon-label {
     margin-top: 4px;

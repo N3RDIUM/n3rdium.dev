@@ -27,16 +27,13 @@
     background: #504945;
     border: solid 1px #665c54;
     border-radius: 4px;
-    transition-duration: 100ms;
 }
 .visit-blog:hover {
-    background: #83a598;
+    background: #665c54;
     border-color: #458588;
-    transition-duration: 42ms;
 }
 .visit-blog:active {
     background: #8ec07c;
     border-color: #689d68;
-    transition-duration: 100ms;
 }
 
