@@ -1,20 +1,21 @@
 .content {
-    width: 70vw;
-    margin-left: 15vw;
+    width: 90vw;
+    margin-left: 5vw;
 }
 .category {
-    width: 70vw;
+    width: 90vw;
 }
 .category-items {
-    max-width: 70vw;
+    max-width: 90vw;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 8px;
 }
 .icon {
-    width: 80px;
+    width: 64px;
+    font-size: 14px;
     aspect-ratio: 1;
     display: flex;
     flex-direction: column;
@@ -23,7 +24,7 @@
     text-decoration: underline solid 1px #ebdbb2;
     color: #ebdbb2;
     background: #1d2021;
-    padding: 12px 32px;
+    padding: 8px 12px;
 }
 .icon:hover{
     background: #665c54;

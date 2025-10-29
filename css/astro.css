@@ -90,28 +90,34 @@
 
 @media (max-width: 825px) {
     .gallery {
-        grid-template-columns: repeat(auto-fit, 120px);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 100px);
+        grid-gap: 8px;
+        padding-top: 64px;
+        grid-template-rows: masonry;
+        width: min-content;
+        max-width: calc(100vw - 42px);
     }
     .big-tile {
-        width: 120px;
+        width: 100px;
         height: 224px;
     }
     .smol-tile {
-        width: 120px;
+        width: 100px;
         height: 141px;
     }
     .big-image {
         height: 230px;
-        width: 120px;
+        width: 100px;
     }
     .smol-image {
         height: 145px;
-        width: 120px;
+        width: 100px;
     }
 }
 
 .tile {
-    border: solid 2px #504945;
+    border: solid 1px #ebdbb2;
 }
 .tile-image {
     object-fit: cover;
