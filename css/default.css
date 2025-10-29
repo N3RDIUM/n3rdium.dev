@@ -46,19 +46,18 @@ html {
 
 .username {
     display: flex;
-    font-size: 90px;
+    font-size: 80px;
     align-items: center;
     justify-content: space-around;
     pointer-events: none;
     user-select: none;
     font-weight: bolder;
-    letter-spacing: 8px;
     margin-bottom: -12px;
 }
 
 .home-link {
     color: #ebdbb2;
-    font-size: 20px;
+    font-size: 18px;
 }
 .home-link:hover {
     text-decoration: underline wavy #cc241d;
