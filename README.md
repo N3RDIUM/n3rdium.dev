@@ -3,7 +3,8 @@ Hey there! This is my portfolio website and blog. Not much to see here, is there
 The website is [here](https://n3rdium.dev).
 
 TODOs:
-- [ ] Fix the gallery page for mobile devices
+- [ ] Add more TODOs? 😅
+- [x] Fix the gallery page for mobile devices
 - [x] Add alt text in the astro image index
 - [x] GitHub Action w/ py script to auto-update the sitemap and post json files
 - [x] Make the entire site gruvbox.
