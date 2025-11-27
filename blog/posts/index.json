@@ -11,7 +11,7 @@
     },
     {
         "title": "How To (Not) Optimize A Website",
-        "description": "It's okay if it looks funky, but if it doesn't load in time, your website WILL lose visitors. In this post, I'll show you how I was able to boost my website's Lighthouse performance score to more than 90%.",
+        "description": "It's okay if it looks funky, but if it doesn't load in time, your website WILL lose visitors. In this post, I'll show you how I was able to boost my website's Lighthouse performance score to 100%.",
         "written": "10-08-2025",
         "tags": [
             "Programming",

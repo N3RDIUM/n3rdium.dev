@@ -7,6 +7,7 @@ function render({ url, image, big }) {
         <img
             src="${image}"
             class="tile-image ${big == 1 ? 'big-image' : 'smol-image'}"
+            loading="lazy"
         />
     </a>
 </div>
