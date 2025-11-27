@@ -112,9 +112,10 @@ def build_sitemap_entry(map_item: dict) -> str:
     url, lastmod = map_item["url"], map_item["lastmod"]
     print(f"building sitemap entry for {url}")
 
-    priority = 0.5
+    # Why? Because.
+    priority = 1.0
     if url.endswith("/"):
-        priority = 0.75
+        priority = 1.0
     if url == "/":
         priority = 1.0
 
