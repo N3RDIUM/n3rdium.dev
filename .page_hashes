@@ -1,111 +1,111 @@
 {
     "./index.html": {
-        "hash": "4946644f0e89ffbc414293e90b71c2a626934f486dc56719a401b7be194be494",
-        "lastmod": "2025-10-29"
+        "hash": "fe5d7769521968da429788b84030caa33d327c62509398b6197e271f7c699023",
+        "lastmod": "2025-11-27"
     },
     "./about/index.html": {
-        "hash": "b2cd0ba0d4df3efb5c7ab894f673480d1980ca95ce95a8479679694fe1b66251",
+        "hash": "63a84ad8b336cff7c6932133f7a8334568813913ddb55780737ce5dee3e68407",
         "lastmod": "2025-11-27"
     },
     "./astro/index.html": {
-        "hash": "736e5d4bca60ec3e938da966954d6a7de7b157e18b3262e35b927a9fb046b9b8",
-        "lastmod": "2025-10-29"
+        "hash": "230819b41328df49d5842319d82942d39d17b2bc64d0ffeaa234c042ea11a29a",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/20.html": {
-        "hash": "b7be9f602c07e3d69eba7b6dfd2e6d7f0a594a5ae8ced1835c4fb99e323df592",
-        "lastmod": "2025-10-29"
+        "hash": "7265cec83ce103e995a0552c608e64e0b8d8d93d743b4d1399224deca0db19b0",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/3.html": {
-        "hash": "b543888b61107c2c1482bf423e037f7d398f95ea82badd9aadae46fdde80e954",
-        "lastmod": "2025-10-29"
+        "hash": "7caf90a3887a2dbd1fc10722558d000bc2f9cf55ed592acd1e3f68d242c16f6b",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/18.html": {
-        "hash": "fb65496d0a4ff8dfe42b7a1c07090463c1a26b2498bda9a9d95eed284eaed409",
-        "lastmod": "2025-10-29"
+        "hash": "2dc68aeaa22e3df1e957168ce5770692967b4d4d4d371386298c4652e69f756e",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/1.html": {
-        "hash": "c9d26709cdddcc57469963c6077c05f8629419661fb06030a954faddb48f84c2",
-        "lastmod": "2025-10-29"
+        "hash": "a4ee1c4fe27d5355e99f6efd031ce01756b9fa02dd7e8c90aa1e8d0544d41de1",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/13.html": {
-        "hash": "91f10071d33fff785ff364dc4d5085e9b884be33af8d8a2c59f3285dd80a85f2",
-        "lastmod": "2025-10-29"
+        "hash": "248a67896223a945e0f54760dc063f4fa76232b7b682bd0d789874b972f5b929",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/7.html": {
-        "hash": "59d45c4ca25ecb0057d1f13323d572815e5e1fe353289dd217d374bb6b1a0d3d",
-        "lastmod": "2025-10-29"
+        "hash": "0d63df5ca6d1e43de7c7afbaef4ae968dd3601f96c2c4e009efbe6c9243edb41",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/6.html": {
-        "hash": "bb8650886254d6162ac357a9ad872c5d1d2437b585732ddde32c484f4a5f3727",
-        "lastmod": "2025-10-29"
+        "hash": "7007090f3b9b73b1a7b09c2dda1d52495d0fd6ce497a435da4b282409aa4a68f",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/5.html": {
-        "hash": "1c47fd657399f59b7d31116208db9d769ff0ba25bc17698abd7ff1fb41baac0c",
-        "lastmod": "2025-10-29"
+        "hash": "a92826c9b9b14a9bf02638b5fde9c9623646a9f2c6d2a18182f0e7e27f23f541",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/10.html": {
-        "hash": "72742e590cb775cbe9f042960126ca78d9547c6c587b30e05fa8d3b82ad3191c",
-        "lastmod": "2025-10-29"
+        "hash": "dee8275fbc4055c6fae9db30921bb822df96f15083aa0aa90375bdfc9f2acd1f",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/4.html": {
-        "hash": "387b1eea234b9bb50dcb6790e0ec36fd6340fd12d10b19385edefd56622a3d34",
-        "lastmod": "2025-10-29"
+        "hash": "db1487e29053f7afbcd4d113dfceb1f80b3512375db392bfb39a8ff21f5b9a6e",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/22.html": {
-        "hash": "cd28fbe82555361cd7ed0bc5bf690e31e68d8cb607fd9094ded23864e1da1116",
-        "lastmod": "2025-10-29"
+        "hash": "d096260d5fda6c6a0fd14fd0ae7186585274ff8424a30c07cf306b6fced4bc60",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/19.html": {
-        "hash": "61783744c4c8368ee8b547fc9c441ca9f8c1a7d3ef556cec048311c0d690a744",
-        "lastmod": "2025-10-29"
+        "hash": "86bd6f8fe400c4ae6869854d40f1333216f3cc91fc1f6c8062b4a2d1606f73a6",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/8.html": {
-        "hash": "6216090173810e18b5b10ae5e16e651d30acaf0b16c5fc0decf20e85f31bfb20",
-        "lastmod": "2025-10-29"
+        "hash": "cdc5c108c3be612df0cf161009e65ea16e21ade209b2a970715d48a1a83d7cac",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/latest.html": {
-        "hash": "c8e7346857b2a4fe54e11b6b9d6dc82bf3a9fd62fa7146fa17044e63948bb54e",
-        "lastmod": "2025-10-29"
+        "hash": "ba41f8f002e6cce5d8f0ed6dcfcb4f195c43312060b5e48f212e8ab9a0956cda",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/16.html": {
-        "hash": "5582cd0028d4240f8f14b668fc5de62006611621727819a172c20d9eee022ee5",
-        "lastmod": "2025-10-29"
+        "hash": "76dd343a07ab467a724a5b4131a48d2bccd48e69a9114e9fd646a8690d77952f",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/17.html": {
-        "hash": "2242d1813f3e3db63fb9bb8d54f5f02ad71d2fc27c764f524e0f9a45e3c115b5",
-        "lastmod": "2025-10-29"
+        "hash": "528f690b589e4ec9289b075ef139e8f314edc28fc68809c0dad52987929136a6",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/14.html": {
-        "hash": "1ff1913c64377e513aea39461e85b1a5b5fa3c67675d4081a3d909531e6c8bd6",
-        "lastmod": "2025-10-29"
+        "hash": "add182a54a48bb80d50c975cd7e784ef2512198fae84afd085151c2cded07491",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/12.html": {
-        "hash": "811ad9e1adc6ba6e8e9fefb0f07c9c64c0d430c4e98ebde51df359ec099b6a6c",
-        "lastmod": "2025-10-29"
+        "hash": "d8e59b378c11d33c6c7a8808eace47361424ac46258b4585b7bfcc2902a3e734",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/21.html": {
-        "hash": "943068074f88fdec9837d0cc4b9cd3c21046804a3f6c8630da091f6b1169703e",
-        "lastmod": "2025-10-29"
+        "hash": "a7cc9fba37420dcab524922b51cdd5b552754f35687b8f1255617fec4e5c2715",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/11.html": {
-        "hash": "fa930d3bdc4af8e1a8108942fecdf45b1cccfa1a74b8b85f1bcbdf2560e2d8a7",
-        "lastmod": "2025-10-29"
+        "hash": "571c82fdc2a5619af182870835aa67ec93046bf1b95e183824aad93992b9be3d",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/2.html": {
-        "hash": "59b5b3c9f09f0d54c2c16a59541760f705f8839611e275d7849d2d84a5b82dc9",
-        "lastmod": "2025-10-29"
+        "hash": "1cb2ba3b020b1b45d36db15c23ab0132d1ea54184e6799d048b5d0b219b05386",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/9.html": {
-        "hash": "3b85d5a4f4e6d20cd72d61991f1b2743d40a62045dad7216b185b6418ca45a38",
-        "lastmod": "2025-10-29"
+        "hash": "c7a8ea7a33798d5729ce48236ee944c76b335401d2c8506d4f59e7e225cebe9e",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/15.html": {
-        "hash": "94bcfe303fab1a3325ec4ca86383bdb5e73ca75a1d22db53166752019025b8c8",
-        "lastmod": "2025-10-29"
+        "hash": "6aece9315e030420eed3f1456d7dd59ad16ffda0ae128d51867ec78a35328392",
+        "lastmod": "2025-11-27"
     },
     "./astro/history/0.html": {
-        "hash": "8a61373d181395fca180fe4680189e33f21278aeac79e98d642e6e212734e990",
-        "lastmod": "2025-10-29"
+        "hash": "567b4a99f6ff38cb786a60abf2547d9b3769921e4beba4b131d96717aeaf8b83",
+        "lastmod": "2025-11-27"
     },
     "./projects/index.html": {
         "hash": "b30d33c4adb57dfc08b4786a417d22e6acbe220c5a5e256059f67c0e10d8f066",
@@ -116,19 +116,19 @@
         "lastmod": "2025-04-25"
     },
     "./blog/index.html": {
-        "hash": "fc5bef4fc0f6148a88d7ac47b524c7576f533a2eae9ad4166007d7e222ec49bd",
-        "lastmod": "2025-10-29"
+        "hash": "db241af1e8fe6e4eede930d8801337300af1ea8e27c0747be9b37f615174cfee",
+        "lastmod": "2025-11-27"
     },
     "./blog/posts/3.html": {
-        "hash": "0125918e26adf6b798ee026c7219b7930b4f8a922808cb6991e76c25b297ab3a",
+        "hash": "fd36e0c7a14bdaabf4a702385384fbd807040207d0332b485dee1292e5017562",
         "lastmod": "2025-11-27"
     },
     "./blog/posts/2.html": {
-        "hash": "9f4d7326bd2cec9f400094b0fccb8de09cf0cdfc1971f8edd59e548ec6ee015d",
+        "hash": "590c94d66c6b0e1834ed008f42f42012c297c8f931553d67974db50a8d6bd211",
         "lastmod": "2025-11-27"
     },
     "./blog/posts/4.html": {
-        "hash": "cd5321e320564823f12a7a7652f82efaad9b76d17c445e06f0af723e04c5aac6",
+        "hash": "1adae9c46e7fbe6fc972b021a6dcf79e09f988fdf7c2a3e5541507580a1e62f9",
         "lastmod": "2025-11-27"
     },
     "./work/index.html": {
@@ -136,7 +136,7 @@
         "lastmod": "2025-09-07"
     },
     "./blog/posts/5.html": {
-        "hash": "6149618e92fcfd4c3c9681197cc5604e1f6ca71a64ed6c9fe0ce1dee0210fe39",
+        "hash": "8578098924daf0f79f82f3e0ad387c19a5a50253b91b6f4c87c67a4500744796",
         "lastmod": "2025-11-27"
     },
     "./page-template.html": {
@@ -148,19 +148,19 @@
         "lastmod": "2025-08-04"
     },
     "./contact/index.html": {
-        "hash": "e85b60dd86bd7144abe327e43e6fb002f3751b62ba57a98fa76c7bf24eedb6fd",
-        "lastmod": "2025-10-29"
+        "hash": "384c7df01652448d9d11a03ed354a5c982cace876d8486857e11f994e7a87fa4",
+        "lastmod": "2025-11-27"
     },
     "./skills/index.html": {
-        "hash": "2d28d3341d1f12f10e345be25f035891aeb76a5c458e7d164c3518de3af1e311",
-        "lastmod": "2025-10-29"
+        "hash": "841e0998b16455f779fce9c55b58abdaf269aa71006193099af1c40e273787c2",
+        "lastmod": "2025-11-27"
     },
     "./blog/posts/1.html": {
-        "hash": "3a4afdbac10fe68c394b8d6b9a81e3ee9a6910db3efb84d7d3723a9eaf446109",
+        "hash": "edd262f203f076a1827acf6fb354f8d083426523103a813cf7f3d03f2ea7bd2b",
         "lastmod": "2025-11-27"
     },
     "./blog/posts/6.html": {
-        "hash": "2c1d478b09afbc9eb02677856be0c5307c45b8934bb1b70621cc0ba4a0d5c593",
+        "hash": "c632616690695b4533442f0ef1a3bc65942806fd9085c5785133225cc9253df5",
         "lastmod": "2025-11-27"
     }
 }
