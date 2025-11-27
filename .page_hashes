@@ -4,8 +4,8 @@
         "lastmod": "2025-10-29"
     },
     "./about/index.html": {
-        "hash": "83e676e364662fc3031e6cff25113cb60d54f45b07997469254cb8919640674f",
-        "lastmod": "2025-10-29"
+        "hash": "b2cd0ba0d4df3efb5c7ab894f673480d1980ca95ce95a8479679694fe1b66251",
+        "lastmod": "2025-11-27"
     },
     "./astro/index.html": {
         "hash": "736e5d4bca60ec3e938da966954d6a7de7b157e18b3262e35b927a9fb046b9b8",
@@ -120,24 +120,24 @@
         "lastmod": "2025-10-29"
     },
     "./blog/posts/3.html": {
-        "hash": "ce751ba752d7f8407f4c6f43730e2af93d1d5a850de973c77d57afd4787a00cd",
-        "lastmod": "2025-10-29"
+        "hash": "0125918e26adf6b798ee026c7219b7930b4f8a922808cb6991e76c25b297ab3a",
+        "lastmod": "2025-11-27"
     },
     "./blog/posts/2.html": {
-        "hash": "3f71eab535b2d898e00e33057f1f5a94032313be83775e083ceaa896acd3db54",
-        "lastmod": "2025-10-29"
+        "hash": "9f4d7326bd2cec9f400094b0fccb8de09cf0cdfc1971f8edd59e548ec6ee015d",
+        "lastmod": "2025-11-27"
     },
     "./blog/posts/4.html": {
-        "hash": "04bbf3f3ae75a36148d7148fff38a7dccd997e030983907a53b98c53649adc82",
-        "lastmod": "2025-10-29"
+        "hash": "cd5321e320564823f12a7a7652f82efaad9b76d17c445e06f0af723e04c5aac6",
+        "lastmod": "2025-11-27"
     },
     "./work/index.html": {
         "hash": "2711bceaa93aa1376e4cbeb17e62cc64fb5d2725ee557afd4aa03e80b16d9565",
         "lastmod": "2025-09-07"
     },
     "./blog/posts/5.html": {
-        "hash": "b84198a8f91a3f7becd3aba7ac548b86f4f2f53b45c2fd759133beca79377247",
-        "lastmod": "2025-10-29"
+        "hash": "6149618e92fcfd4c3c9681197cc5604e1f6ca71a64ed6c9fe0ce1dee0210fe39",
+        "lastmod": "2025-11-27"
     },
     "./page-template.html": {
         "hash": "0ccb346aa2815a8b284bb091f5b31b4ceadd4fe2b37ae3a7446023ba089e4d23",
@@ -156,7 +156,11 @@
         "lastmod": "2025-10-29"
     },
     "./blog/posts/1.html": {
-        "hash": "0cac0d73f23b2dcd97eb70ac301f7f1ea5266b99845467e937c82fbb2b186e34",
-        "lastmod": "2025-10-29"
+        "hash": "3a4afdbac10fe68c394b8d6b9a81e3ee9a6910db3efb84d7d3723a9eaf446109",
+        "lastmod": "2025-11-27"
+    },
+    "./blog/posts/6.html": {
+        "hash": "bec7afa3aaaa86e1bab66182435a0d8c3d2013ae0726b31a4ca83a16dbab74b1",
+        "lastmod": "2025-11-27"
     }
 }
