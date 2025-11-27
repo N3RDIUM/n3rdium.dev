@@ -214,29 +214,20 @@ monitor=NOTHING,1920x1080@60,1920x0,1  # headless
 exec-once = hyprctl output create headless NOTHING; wayvnc -f=60 -o=NOTHING -d -R 0.0.0.0 5900;</code></pre>
 
                         <p>
-                            Here's the minimal Hyprland config I have on the AIO
+                            Here's a minimal version of the Hyprland config I 
+                            have on the AIO
                             (<a 
                             href="https://github.com/N3RDIUM/mnmlst/tree/main/second_monitor"
                             target="_blank">view on github</a>):
                         </p>
 
-                        <pre><code>################
-### MONITORS ###
-################
-
-monitor=,1920x1080@60,0x0,1
-
+                        <pre><code>monitor=,1920x1080@60,0x0,1
 exec-once = wlvncc 192.168.1.42 5900
-
-env = XCURSOR_SIZE,0
-env = HYPRCURSOR_SIZE,0
 
 general {
     gaps_in = 0
     gaps_out = 0
     border_size = 0
-    allow_tearing = true
-    layout = dwindle
 }
 
 cursor {
@@ -262,38 +253,11 @@ animations {
     enabled = no
 }
 
-dwindle {
-    pseudotile = true
-    preserve_split = true
-}
-
 misc {
     force_default_wallpaper = 0
     disable_hyprland_logo = true
 }
-
-
-#############
-### INPUT ###
-#############
-
-input {
-    kb_layout = us
-    kb_variant =
-    kb_model =
-    kb_options =
-    kb_rules =
-
-    follow_mouse = 1
-    sensitivity = 0
-
-    touchpad {
-        natural_scroll = false
-    }
-}
-
-windowrule = suppressevent maximize, class:.*
-windowrule = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0</code></pre>
+</code></pre>
                         <br>
 
                         <h2>Conclusion</h2>
