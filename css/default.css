@@ -57,7 +57,8 @@ html {
 
 .home-link {
     color: #ebdbb2;
-    font-size: 18px;
+    font-size: 20px;
+    padding: 2px;
 }
 .home-link:hover {
     text-decoration: underline wavy #cc241d;
