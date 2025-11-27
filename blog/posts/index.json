@@ -1,5 +1,15 @@
 [
     {
+        "title": "Turning an old AIO into an Extra Monitor",
+        "description": "Not enough monitors? Have an old all-in-one machine lying around? Why waste it? Read along to find out how I turned potential e-waste into a 'free' extra monitor.",
+        "written": "27-11-2025",
+        "tags": [
+            "DIY",
+            "Weekend Project"
+        ],
+        "url": "/blog/posts/6.html"
+    },
+    {
         "title": "How To (Not) Optimize A Website",
         "description": "It's okay if it looks funky, but if it doesn't load in time, your website WILL lose visitors. In this post, I'll show you how I was able to boost my website's Lighthouse performance score to more than 90%.",
         "written": "10-08-2025",
