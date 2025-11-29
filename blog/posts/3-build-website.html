@@ -1,9 +1,9 @@
 <!--
 N3RDIUM META START
 {
-    "title": "How To (Not) Optimize A Website",
-    "description": "It's okay if it looks funky, but if it doesn't load in time, your website WILL lose visitors. In this post, I'll show you how I was able to boost my website's Lighthouse performance score to 100%.",
-    "written": "10-08-2025",
+    "title": "How To (Not) Build A Website",
+    "description": "In this post, I tell the tale of how this website came to be.",
+    "written": "03-08-2025",
     "tags": [
         "Programming",
         "Web Dev"
@@ -16,10 +16,10 @@ N3RDIUM META END
 <html lang="en">
     <head>
         <!-- M E T A D A T A -->
-        <title>How To (Not) Optimize A Website - v0y4g35</title>
+        <title>How to (not) Build A Website - v0y4g35</title>
 
         <meta charset="utf-8" />
-        <meta name="description" content="It's okay if it looks funky, but if it doesn't load in time, your website WILL lose visitors. In this post, I'll show you how I was able to boost my website's Lighthouse performance score to 100%." />
+        <meta name="description" content="In this post, I tell the tale of how this website came to be." />
         <meta name="author" content="N3RDIUM" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -120,89 +120,109 @@ return He}();"object"==typeof exports&&"undefined"!=typeof module&&(module.expor
             <div class="content centered thefont">
                 <div class="post-container">
                     <div class="title-container">
-                        <h1 class="title-heading">How To (Not) Optimize A Website</h1>
+                        <h1 class="title-heading">How To (Not) Build A Website</h1>
                         <p class="title-subhead">
-                            It's okay if it looks funky, but if it doesn't load in time, your website
-                            WILL lose visitors. In this post, I'll show you how I was able to boost 
-                            my website's Lighthouse performance score to 100%.
+                            In this post, I tell the tale of how this website came to be.
                         </p>
                         <div class="thefont title-meta">
-                             10-08-2025 [Programming] [Web Dev]
+                            03-08-2025 [Programming]
                         </div>
                     </div>
 
                     <div class="blog-content">
                         <p>
-                            This is going to be a short and (i hope you'll
-                            forgive me) <i>optimized</i> blog post covering how
-                            I made my website blazingly fast and maximized all
-                            the PageSpeed stats, and how you can too!
+                            A lot (three) of my friends asked me how I made this website.
+                            Some even suspect me of 
+                            <a target="_blank" href="/blog/posts/3.html">Vibe Coding</a>
+                            it. Did I, really? Read on to find out!
                         </p>
 
                         <p>
-                            My website, despite being quite minimal, had a not-very-good Lighthouse
-                            performance score. The other things were fine, but the performance was
-                            taking a big hit.
+                            Despite what it looks like, this <i>isn't</i> your average
+                            static html-and-css site. There's a good few things going on
+                            under the hood (no, I'm not talking about google analytics).
                         </p>
-
-                        <p>
-                            This weekend, I decided to optimize my website. <i>Just a little.</i>
-                            And then, this happened:
-                        </p>
-
-                        <img
-                            class="blog-image"
-                            src="/img/lighthouse-homepage.png"
-                            alt="Lighthouse report for n3rdium.dev"
-                            loading="lazy"
-                        />
                         <br>
 
-                        <h2>What have you done?!</h2>
+                        <h2>The Beginning?</h2>
                         <p>
-                            It was a simple problem: to inline all JS and CSS that a page required.
-                            But that isn't very maintainable, especially for a site like this one.
-                            Which is why, I wrote
-                            <a 
-                                href="https://github.com/N3RDIUM/n3rdium.dev/blob/main/inline.py" 
-                                target="_blank"
-                            >
-                                yet another python script</a>
-                            that runs at build-time.
+                            About three years ago, I randomly decided that I wanted to have
+                            my own website. I put together a sloppy little homepage. I didn't
+                            like the way it looked. So I did some more design. I <i>still</i>
+                            didn't like it, appearance-wise. So I did some more tweaking.
                         </p>
 
                         <p>
-                            I have this kind of comment in the <code>head</code> of every page:
-                        </p>
-                        
-                        <pre><code class="language-rust">&lt;!--INLINE START
-    js:default
-    js:highlight.min
-    css:default
-    css:blog
-    css:gruv
-INLINE END--&gt;
-&lt;!--AUTOGEN START--&gt;
-&lt;!--AUTOGEN END--&gt;</code></pre>
-
-                        <p>
-                            The script injects the files specified in the <code>INLINE</code>
-                            block into the <code>AUTOGEN</code> block. It's that simple!
-                            Feel free to inspect this page and see for yourself.
+                            The process continued for quite a while. Then, I just ditched all
+                            my work and started building a <i>new</i> homepage design. After
+                            <i>months</i> of going through several remakes (some of which
+                            actually looked kind of impressive), I had made little progress.
                         </p>
 
                         <p>
-                            Of course, this still poses some challenges when it comes to
-                            maintainability, but I will eventually roll out fixes for that.
+                            Then, I decided (I don't remember when) that I'm supposed to build
+                            <strong>a website</strong>, a <i>real</i> one at that. Not a
+                            <i>perfect</i> one. And if it's real, it's bound to have flaws.
+                            That's what it took to actually build this website.
                         </p>
+                        <br>
+
+                        <h2>Under The Hood</h2>
+                        <p>
+                            This site is hosted on GitHub Pages. Yes, it's static HTML, CSS and
+                            some JS. But you see, that's just <i>half</i> the picture.
+                        </p>
+
+                        <p>
+                            I've made a hacky little redirect system at <code>/r</code>. Which
+                            is why,
+                            <a target="_blank" href="/r?id=genuine">do not click this link.</a>
+                            You have been warned!
+                        </p>
+
+                        <p>
+                            Every time update this website, a GitHub Action triggers. If you'll
+                            head over to the 
+                            <a target="_blank" href="/r?id=source">GitHub Repo</a>
+                            for this site, you'll find a few <code>index.json</code>s in the
+                            directories, as well as a <code>robots.txt</code>. You'll also find
+                            an <code>update.py</code>, which is actually run by the Action I
+                            mentioned earlier.
+                        </p>
+
+                        <p>
+                            The <code>update.py</code> file is where most of the magic happens.
+                            It updates the indexes and the <code>robots.txt</code> file 
+                            automatically. Yes, I could've just used Wordpress, but that wouldn't
+                            be very fun.
+                        </p>
+                        <br>
+
+                        <h2>Conclusion</h2>
+                        <p>
+                            This isn't the most professional website. But it's minimalistic.
+                            It's hand-made, most of the files hand-written in neovim.
+                        </p>
+                        <p>
+                            If you're making something, don't repeat my mistakes. Seriously.
+                            If you want to really kick off the launchpad, keep this in mind.
+                            <i>You don't need to be perfect. You only need to be real.</i>
+                        </p>
+                        <p>Speaking of
+                            neovim, in the next post, I'm taking you on a guided tour of my
+                            <a target="_blank" href="/r?id=dots">Dotfiles!</a> 
+                            I've also been working on a lightweight voice assistant for the 
+                            linux desktop. Stay tuned for that!
+                        </p>
+                        <br>
                     </div>
 
-                    <a
-                        class="home-link"
-                        href="/blog/posts/4.html"> <- Previous Post </a>
-                    <a class="home-link next"
-                        href="/blog/posts/6.html"
-                    > Next Post -> </a>
+                    <a class="home-link" href="/blog/posts/2-ai-rubber-duck.html">
+                        <- Previous Post 
+                    </a>
+                    <a class="home-link next" href="/blog/posts/4-optimize-website.html">
+                        Next Post ->
+                    </a>
                 </div>
             </div>
         </div>

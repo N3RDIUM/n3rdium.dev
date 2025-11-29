@@ -7,7 +7,7 @@
             "DIY",
             "Weekend Project"
         ],
-        "url": "/blog/posts/6.html"
+        "url": "/blog/posts/5-aio-to-vnc-monitor.html"
     },
     {
         "title": "How To (Not) Optimize A Website",
@@ -17,7 +17,7 @@
             "Programming",
             "Web Dev"
         ],
-        "url": "/blog/posts/5.html"
+        "url": "/blog/posts/4-optimize-website.html"
     },
     {
         "title": "How To (Not) Build A Website",
@@ -27,7 +27,7 @@
             "Programming",
             "Web Dev"
         ],
-        "url": "/blog/posts/4.html"
+        "url": "/blog/posts/3-build-website.html"
     },
     {
         "title": "The Rubber Duck Just Got Smarter",
@@ -37,7 +37,7 @@
             "Programming",
             "Weekend Project"
         ],
-        "url": "/blog/posts/3.html"
+        "url": "/blog/posts/2-ai-rubber-duck.html"
     },
     {
         "title": "Everything You Need To Know About Vibe Coding",
@@ -46,7 +46,7 @@
         "tags": [
             "Programming"
         ],
-        "url": "/blog/posts/2.html"
+        "url": "/blog/posts/1-vibe-coding.html"
     },
     {
         "title": "Making an Astrophotography Camera For $150",
@@ -55,6 +55,6 @@
         "tags": [
             "Astrophotography"
         ],
-        "url": "/blog/posts/1.html"
+        "url": "/blog/posts/0-diy-astro-camera.html"
     }
 ]

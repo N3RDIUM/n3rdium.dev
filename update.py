@@ -66,7 +66,7 @@ def write_hashes():
         json.dump(hashes, f, indent = 4)
 
 
-TODAY = datetime.today().strftime('%Y-%m-%d')
+TODAY = datetime.today().strftime('%d-%m-%Y')
 map = []
 
 def urlify(path: str) -> str:
