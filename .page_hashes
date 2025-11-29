@@ -1,14 +1,14 @@
 {
     "./index.html": {
-        "hash": "2b904b0b1b7b644b22aea7299180cebf7ff25e25cc9db0fb0beb6a6be7dfa3c4",
+        "hash": "0bbc63b29d8e403588a844684a38e293d0fca319674be182b7b6b41494ffb993",
         "lastmod": "2025-11-29"
     },
     "./about/index.html": {
-        "hash": "63a84ad8b336cff7c6932133f7a8334568813913ddb55780737ce5dee3e68407",
+        "hash": "25c50cdeaf552891e492c1bb5afe772bb6bb806a0fedb741540cb046f70aeb07",
         "lastmod": "2025-11-29"
     },
     "./astro/index.html": {
-        "hash": "2b0348ddf5f46550e4e8d4e7f7708f0a8676e17ce42f6dacdeb2d04d022f4e47",
+        "hash": "48a323ceb97c213aabcb31aaa7262fd7110960ff99558196d21767405aafbe49",
         "lastmod": "2025-11-29"
     },
     "./astro/history/17-jupiter.html": {
@@ -108,15 +108,15 @@
         "lastmod": "2025-11-29"
     },
     "./contact/index.html": {
-        "hash": "384c7df01652448d9d11a03ed354a5c982cace876d8486857e11f994e7a87fa4",
+        "hash": "f7ad649e1b68c13c9597d58488c6f0096a3e18099cf7b29d8a8167e60613dc22",
         "lastmod": "2025-11-29"
     },
     "./skills/index.html": {
-        "hash": "841e0998b16455f779fce9c55b58abdaf269aa71006193099af1c40e273787c2",
+        "hash": "6282df3b61a8924bc0923616fddf17263f52c247f106d18e75a5611951c96ad7",
         "lastmod": "2025-11-29"
     },
     "./blog/index.html": {
-        "hash": "db241af1e8fe6e4eede930d8801337300af1ea8e27c0747be9b37f615174cfee",
+        "hash": "4a5650af152a6596d512d2de90c1dda77e28810d3899c5897d7598f15f0d7b71",
         "lastmod": "2025-11-29"
     },
     "./blog/posts/4-optimize-website.html": {
