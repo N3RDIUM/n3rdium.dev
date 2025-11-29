@@ -5,634 +5,142 @@
     },
     "./about/index.html": {
         "hash": "63a84ad8b336cff7c6932133f7a8334568813913ddb55780737ce5dee3e68407",
-        "lastmod": "2025-11-27"
+        "lastmod": "2025-11-29"
     },
     "./astro/index.html": {
-        "hash": "ff46f2b5db4873aff931082d59e844b92f420a142d5ec5d77a3225052e5d49ea",
-        "lastmod": "2025-11-27"
-    },
-    "./astro/history/20-moon.html": {
-        "hash": "097d95e4529da073a5fec2584cbb29bbc7ca1d7443d41014be902598d2688919",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/3-widefield-test.html": {
-        "hash": "1486f3d5a6d6d1f73fad5fe6482aa6a25664302890d93b34b394a439d49c4620",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/18-jupiter.html": {
-        "hash": "be34b0f64a363d26d47b774c5d63cea51cae5f7b5e8ec91078938b17f74ac008",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/1-green-comet.html": {
-        "hash": "c4a38b21db3849c5001070d4a09d514dc48f4d046977fc9b691ecbb51e2ff9aa",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/13-jupiter.html": {
-        "hash": "d97b93fd6d278adfeb6a1dcb8c677ff5ab2604899621b5cb9c70a002c5b61bcd",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/7-dark-widefield-test.html": {
-        "hash": "87150f83c9c0f6fc4db62969defae6d52c9e80cd2be0e9a0a107e3f3ba731b78",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/6-dark-widefield-test.html": {
-        "hash": "1145d375f22121e0f06607b4e8e9c657bba89c779e116e21832e68baf09ad98b",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/5-dark-widefield-test.html": {
-        "hash": "20ca2a10015d0e02ed4cbd28bf572760e1eb1495ca1845be757ff1fbbe52bad4",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/10-hercules-globular.html": {
-        "hash": "4cc24964936db4ea271707967ad9af132e876a4f79b74f18e4f99415d9250e07",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/4-dark-widefield-test.html": {
-        "hash": "33a397e5f9c4560085d66a16e13b7c825f190a230eb54a95cade9ea422f6839e",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/22-eq-platform-test.html": {
-        "hash": "477c8f16defbb5794a00cff098ccb313bf24d354fdeb5a358358ef9b98572c69",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/19-seven-sisters.html": {
-        "hash": "861c483f9b8c3083e45371fb84e60b0efcd19fba1e8fe426a08d13ef95fe4e35",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/8-ursa-major-astropi.html": {
-        "hash": "657dbc5a9214f3c5de80294181a3c1be72efc96a2100016fdcc4a94690aa7f16",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/latest-milky-way.html": {
-        "hash": "995123bde1c084413490a2c880429d4a6332ec346376dc2db6eb37e22e976a72",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/16-orion-nebula.html": {
-        "hash": "e18758e07254041b9204ae33387c963bba2f90befbb8c77ee38217200f82a567",
-        "lastmod": "29-11-2025"
+        "hash": "2b0348ddf5f46550e4e8d4e7f7708f0a8676e17ce42f6dacdeb2d04d022f4e47",
+        "lastmod": "2025-11-29"
     },
     "./astro/history/17-jupiter.html": {
-        "hash": "27aa4cd07433eca43182602ec3dd773ecdd7a3e6d1da86cbf77e20250431ad60",
-        "lastmod": "29-11-2025"
+        "hash": "afe9e596d6b46e1c333017e12d64d3ed75693f724516cf0f1c08422da14b3324",
+        "lastmod": "2025-11-29"
     },
     "./astro/history/14-saturn.html": {
-        "hash": "c3a5da8c405046812c15898c6a59f376f11badbe8a588985413a9a74602eca4d",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/12-ring-nebula.html": {
-        "hash": "cccb05cfbf0aebc99f6d1e325b36edabc387c1db2cbc8a490e9221548917ab8b",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/21-orion-nebula.html": {
-        "hash": "8a3285d8c3d0567d4e700a84243449316075643fc7b6c61928b49e3a1e9052c2",
-        "lastmod": "29-11-2025"
+        "hash": "a503766dd09d18d42ab0b1dcbfa2f074f007e02de35c71629b301c5381a11bda",
+        "lastmod": "2025-11-29"
     },
     "./astro/history/11-ring-nebula.html": {
-        "hash": "27ed092e32fc50eb6f387d72e1f45f78422e5798ec5fb14d9d18ac30964874e4",
-        "lastmod": "29-11-2025"
+        "hash": "47c0ebd81e9306e7be0c61803c35a5ef34445fa4026fa43a49bd57aaaf03111a",
+        "lastmod": "2025-11-29"
     },
-    "./astro/history/2-widefield-test.html": {
-        "hash": "fb4af81a1197f16e37451f9f98bb8c3ed993949397f01c216bd5576be6a18d9e",
-        "lastmod": "29-11-2025"
+    "./astro/history/8-ursa-major-astropi.html": {
+        "hash": "b3e9dba320cefdd6c9d08317400eaa2c7569a51b57846d444fb604b3fa37febb",
+        "lastmod": "2025-11-29"
     },
-    "./astro/history/9-hercules-globular.html": {
-        "hash": "b2ed9414eb7dcdbe937bac0c50e25e38756a981b09d900b55f2da0a8354b48bb",
-        "lastmod": "29-11-2025"
-    },
-    "./astro/history/15-moon.html": {
-        "hash": "17534a45cb6059defcecd635604ebb5d4267a8ae7e8ddd688d178dbefee836b1",
-        "lastmod": "29-11-2025"
+    "./astro/history/16-orion-nebula.html": {
+        "hash": "fa65da98ca4991d73071d0c2861e97fbaef1055079fa6f48f616a8807290a39b",
+        "lastmod": "2025-11-29"
     },
     "./astro/history/0-first-moon.html": {
-        "hash": "5c9e648effe3eead9b097465e6ecf931381ae164d898cf153ffd91fad8859f21",
-        "lastmod": "29-11-2025"
+        "hash": "f79a323747249e9e9d966b08015bc74c2d0b46ae226fbdc7d8ec0f1016b4192d",
+        "lastmod": "2025-11-29"
     },
-    "./projects/index.html": {
-        "hash": "b30d33c4adb57dfc08b4786a417d22e6acbe220c5a5e256059f67c0e10d8f066",
-        "lastmod": "2025-04-25"
+    "./astro/history/10-hercules-globular.html": {
+        "hash": "bef76a57aca90a069be0756553ceeb3e30348d2ef930ffb688e2a4cdf257cbaa",
+        "lastmod": "2025-11-29"
     },
-    "./music/index.html": {
-        "hash": "f04cdadb439470955dbbfeeebb1f9cc6750c2c2a5cb7f8657a301b925cd5bdaf",
-        "lastmod": "2025-04-25"
+    "./astro/history/20-moon.html": {
+        "hash": "8ec6d3d2371a7e0314918d29ed740bab920bd85c41f4dc88f86ab233bfbf9a77",
+        "lastmod": "2025-11-29"
     },
-    "./blog/index.html": {
-        "hash": "db241af1e8fe6e4eede930d8801337300af1ea8e27c0747be9b37f615174cfee",
-        "lastmod": "2025-11-27"
+    "./astro/history/19-seven-sisters.html": {
+        "hash": "fd6df54b951576c69036b293f50b0a1c5c9a84631efe2abbbf1eb131ba207087",
+        "lastmod": "2025-11-29"
     },
-    "./blog/posts/3.html": {
-        "hash": "fd36e0c7a14bdaabf4a702385384fbd807040207d0332b485dee1292e5017562",
-        "lastmod": "2025-11-27"
+    "./astro/history/18-jupiter.html": {
+        "hash": "5340176b84f9c09b8e40c1802747ba6ff572742c88b5621ca6f878e25854346b",
+        "lastmod": "2025-11-29"
     },
-    "./blog/posts/2.html": {
-        "hash": "590c94d66c6b0e1834ed008f42f42012c297c8f931553d67974db50a8d6bd211",
-        "lastmod": "2025-11-27"
+    "./astro/history/2-widefield-test.html": {
+        "hash": "1746e69b213126a4537b718363beabdea4d5c7658c4a5273e4d1c3bca9d80f07",
+        "lastmod": "2025-11-29"
     },
-    "./blog/posts/4.html": {
-        "hash": "1adae9c46e7fbe6fc972b021a6dcf79e09f988fdf7c2a3e5541507580a1e62f9",
-        "lastmod": "2025-11-27"
+    "./astro/history/13-jupiter.html": {
+        "hash": "0a2c880cab80be81c1598f4f3c8c57c0a420d44d4bad46cae8d15d38003b2d86",
+        "lastmod": "2025-11-29"
     },
-    "./work/index.html": {
-        "hash": "2711bceaa93aa1376e4cbeb17e62cc64fb5d2725ee557afd4aa03e80b16d9565",
-        "lastmod": "2025-09-07"
+    "./astro/history/1-green-comet.html": {
+        "hash": "bde3051f8696328a4fe7fbd663dad43695652f0015dd26a31c78a2af85875703",
+        "lastmod": "2025-11-29"
     },
-    "./blog/posts/5.html": {
-        "hash": "2dba63ca82ba899a1bf8e074e90ccde08d8bea2f8c5b8eec76c8fba17f6ea05d",
-        "lastmod": "2025-11-27"
+    "./astro/history/7-dark-widefield-test.html": {
+        "hash": "12cc98558f4afd20f5be21e00c2e9acd4da9be916eeab2ba41a2066b673a7eab",
+        "lastmod": "2025-11-29"
     },
-    "./page-template.html": {
-        "hash": "0ccb346aa2815a8b284bb091f5b31b4ceadd4fe2b37ae3a7446023ba089e4d23",
-        "lastmod": "2025-08-05"
+    "./astro/history/4-dark-widefield-test.html": {
+        "hash": "b9dc6f5a1e4a2c735b479a5630286bba5c89f54755ace1aed04c39e80e837ab6",
+        "lastmod": "2025-11-29"
     },
-    "./social/index.html": {
-        "hash": "2cf4b44c81411a7b0447a79ba990f1beeb9aea5361edeeacd3f1105ff4cabd64",
-        "lastmod": "2025-08-04"
+    "./astro/history/12-ring-nebula.html": {
+        "hash": "a3a744c625fb13ea12898f1ff2b5baac3ddf4f04b15280ba2c170111df982ea2",
+        "lastmod": "2025-11-29"
+    },
+    "./astro/history/9-hercules-globular.html": {
+        "hash": "eff5648ac43a447399c1de8c636a163045f53a9762cfe004ac34d968da8eb167",
+        "lastmod": "2025-11-29"
+    },
+    "./astro/history/15-moon.html": {
+        "hash": "21addc63ed54445c5f851175db1de081e7f43c4c6d1938be39d77f1474f315b0",
+        "lastmod": "2025-11-29"
+    },
+    "./astro/history/6-dark-widefield-test.html": {
+        "hash": "31d4bcf638c4f2ce6b35d12fce8e5a3a50e30b70d418fdd53beb1916d1d808bb",
+        "lastmod": "2025-11-29"
+    },
+    "./astro/history/21-orion-nebula.html": {
+        "hash": "f91cf24f98786ac1ce25ea296effe7ef894a780f0ba6368664d692a2d62dc24a",
+        "lastmod": "2025-11-29"
+    },
+    "./astro/history/5-dark-widefield-test.html": {
+        "hash": "4aeb81adbded2dddf30f15470b00e36221f46d0dc5e77215ebd5340e4ab1f397",
+        "lastmod": "2025-11-29"
+    },
+    "./astro/history/22-eq-platform-test.html": {
+        "hash": "5d9b6c58aa5e7ab5975a4f53b1edbfcf6f796acddbc190b7881926279c6e1000",
+        "lastmod": "2025-11-29"
+    },
+    "./astro/history/3-widefield-test.html": {
+        "hash": "862a85f240b2261ed9edebab46588189b4e322c9a1a1bf95221a6f4478f2eab9",
+        "lastmod": "2025-11-29"
+    },
+    "./astro/history/latest-milky-way.html": {
+        "hash": "8ebab8bc036fedee433815015f7d3b4561b508f9ac533f7007d8bfbdc052d23e",
+        "lastmod": "2025-11-29"
     },
     "./contact/index.html": {
         "hash": "384c7df01652448d9d11a03ed354a5c982cace876d8486857e11f994e7a87fa4",
-        "lastmod": "2025-11-27"
+        "lastmod": "2025-11-29"
     },
     "./skills/index.html": {
         "hash": "841e0998b16455f779fce9c55b58abdaf269aa71006193099af1c40e273787c2",
-        "lastmod": "2025-11-27"
-    },
-    "./blog/posts/1.html": {
-        "hash": "b51ea941751e25dcbac1c03f8d54ae454c44d772c6acc02157eebdb91fbde08f",
-        "lastmod": "2025-11-27"
-    },
-    "./blog/posts/6.html": {
-        "hash": "c632616690695b4533442f0ef1a3bc65942806fd9085c5785133225cc9253df5",
-        "lastmod": "2025-11-27"
-    },
-    "./.unlighthouse/192.168.1.42/3710/index.html": {
-        "hash": "d253f9408b997411b5c2531440b646309c2d318fafaa2aa35cf2a43f29b3cdb2",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/192.168.1.42/ee2e/index.html": {
-        "hash": "d253f9408b997411b5c2531440b646309c2d318fafaa2aa35cf2a43f29b3cdb2",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/index.html": {
-        "hash": "d253f9408b997411b5c2531440b646309c2d318fafaa2aa35cf2a43f29b3cdb2",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/payload.html": {
-        "hash": "fe5d7769521968da429788b84030caa33d327c62509398b6197e271f7c699023",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/lighthouse.html": {
-        "hash": "9aa786c2316e44e0352e0fa511c37367e0f64cee35b6b29d934c34bb5130dac2",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/about/payload.html": {
-        "hash": "63a84ad8b336cff7c6932133f7a8334568813913ddb55780737ce5dee3e68407",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/about/lighthouse.html": {
-        "hash": "f7f99bbe2e0c990b82c232733f001da260907984cb2f4084550411e7555d2f2e",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/riddots/payload.html": {
-        "hash": "d637bcb5e76f0987ae6ff52b9585f480d6fe2dd450a4a5350b9386e3d9396dd8",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/riddots/lighthouse.html": {
-        "hash": "00c7df1abaf46040785bca78f6381d1eb42c857895be47bd461e201f6469881b",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/ridgenuine/payload.html": {
-        "hash": "d637bcb5e76f0987ae6ff52b9585f480d6fe2dd450a4a5350b9386e3d9396dd8",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/ridgenuine/lighthouse.html": {
-        "hash": "1ce51ac00ebe8be1ecd9c9d45ef066e4b58765d1c9e0eb66f49d725ee1d43c0d",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/payload.html": {
-        "hash": "ff46f2b5db4873aff931082d59e844b92f420a142d5ec5d77a3225052e5d49ea",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/lighthouse.html": {
-        "hash": "c4da1ef1ad9446ee12a9a255e2eccdba6a50f64e8401188319d76d7d64ea5cac",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/12/payload.html": {
-        "hash": "d8e59b378c11d33c6c7a8808eace47361424ac46258b4585b7bfcc2902a3e734",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/12/lighthouse.html": {
-        "hash": "114044c036ccb1d69e312292e755f89efb19eb97f89ec86477c3694c3f045385",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/7/payload.html": {
-        "hash": "0d63df5ca6d1e43de7c7afbaef4ae968dd3601f96c2c4e009efbe6c9243edb41",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/7/lighthouse.html": {
-        "hash": "b743468a0f58955bb358a15228752a822283bfb768176dd05e364db16e5782e8",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/4/payload.html": {
-        "hash": "db1487e29053f7afbcd4d113dfceb1f80b3512375db392bfb39a8ff21f5b9a6e",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/4/lighthouse.html": {
-        "hash": "b8f620d9b59b4d406856d18e387cbf9a1f7db7fe0f988ea2f42ae4976f4976df",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/13/payload.html": {
-        "hash": "248a67896223a945e0f54760dc063f4fa76232b7b682bd0d789874b972f5b929",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/13/lighthouse.html": {
-        "hash": "8abd7271fbfd071c3cd0029e550f06fda0ecc55cda8366a747caa907d26e8501",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/21/payload.html": {
-        "hash": "a7cc9fba37420dcab524922b51cdd5b552754f35687b8f1255617fec4e5c2715",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/21/lighthouse.html": {
-        "hash": "7758437e19753160c1e2d0ed3d8aaed642964774044e97c90f3f169dba3ca8b1",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/9/payload.html": {
-        "hash": "c7a8ea7a33798d5729ce48236ee944c76b335401d2c8506d4f59e7e225cebe9e",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/9/lighthouse.html": {
-        "hash": "9779e5946ca5a67ee8568070ab235661263ea908caf06e9c0280d7d64856fb79",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/6/payload.html": {
-        "hash": "7007090f3b9b73b1a7b09c2dda1d52495d0fd6ce497a435da4b282409aa4a68f",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/6/lighthouse.html": {
-        "hash": "06c4b0cf2666c9fb46e3ece7679850b99c13f0ecb5608d45b1a70531742258c6",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/0/payload.html": {
-        "hash": "567b4a99f6ff38cb786a60abf2547d9b3769921e4beba4b131d96717aeaf8b83",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/astro/history/0/lighthouse.html": {
-        "hash": "545a51cb4077a15ecb26c9da6757ad86f86772da18899c3af2924c29aaed791f",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/ridsource/payload.html": {
-        "hash": "d637bcb5e76f0987ae6ff52b9585f480d6fe2dd450a4a5350b9386e3d9396dd8",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/ridsource/lighthouse.html": {
-        "hash": "e029de2c0e7d264e742a3d8a8ad8b9b701b1c1d22db15f5bdae131b1ad625f35",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/contact/payload.html": {
-        "hash": "384c7df01652448d9d11a03ed354a5c982cace876d8486857e11f994e7a87fa4",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/contact/lighthouse.html": {
-        "hash": "eb1e91bf8b4b1e5de1820776a61c0287d12be9061ee02e1c9a140dbda1dcf84f",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/skills/payload.html": {
-        "hash": "841e0998b16455f779fce9c55b58abdaf269aa71006193099af1c40e273787c2",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/skills/lighthouse.html": {
-        "hash": "819b2307564b086cfac1768640fb8995f583c4741e1ae44b26e55993eb572172",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/payload.html": {
-        "hash": "db241af1e8fe6e4eede930d8801337300af1ea8e27c0747be9b37f615174cfee",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/lighthouse.html": {
-        "hash": "f3c173b26ca271286b3cb284432bf981d07408f84fafbec516b0796ca3180412",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/4/payload.html": {
-        "hash": "1adae9c46e7fbe6fc972b021a6dcf79e09f988fdf7c2a3e5541507580a1e62f9",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/4/lighthouse.html": {
-        "hash": "fa4e5244561d46d39e1b9757c53eb23b6f2c133f866119cda4af3b5782d2d4ca",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/5/payload.html": {
-        "hash": "2dba63ca82ba899a1bf8e074e90ccde08d8bea2f8c5b8eec76c8fba17f6ea05d",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/5/lighthouse.html": {
-        "hash": "45736d64649eb4558197de7fb77ac3201ca639e94427d3aa9c0c7df035d35616",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/3/payload.html": {
-        "hash": "fd36e0c7a14bdaabf4a702385384fbd807040207d0332b485dee1292e5017562",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/3/lighthouse.html": {
-        "hash": "8ca6aad4784a0630198fd590996f05bfc9c6f53c369d0291e5182ab87b0bce29",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/6/payload.html": {
-        "hash": "c632616690695b4533442f0ef1a3bc65942806fd9085c5785133225cc9253df5",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/6/lighthouse.html": {
-        "hash": "f40e51d7628658327cb184962ff0925f9a5440456978a07eeb8b3f450d8c92d2",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/1/payload.html": {
-        "hash": "b51ea941751e25dcbac1c03f8d54ae454c44d772c6acc02157eebdb91fbde08f",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/1/lighthouse.html": {
-        "hash": "bf6aa28ae17777836ce96e1e2ec98e6fc2430b8649c3bc8b1373c9924cd37e44",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/2/payload.html": {
-        "hash": "590c94d66c6b0e1834ed008f42f42012c297c8f931553d67974db50a8d6bd211",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/1e80/reports/blog/posts/2/lighthouse.html": {
-        "hash": "0c54b69440b0d1b2e2ccd75236bf2cc3a91b06a8db72ded25f09228d97795e16",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/index.html": {
-        "hash": "d253f9408b997411b5c2531440b646309c2d318fafaa2aa35cf2a43f29b3cdb2",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/payload.html": {
-        "hash": "fe5d7769521968da429788b84030caa33d327c62509398b6197e271f7c699023",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/lighthouse.html": {
-        "hash": "bedcedaf444cf2ed1b67e1a929c7d098b4a52c7f0232000f9a71179c54cc1692",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/about/payload.html": {
-        "hash": "63a84ad8b336cff7c6932133f7a8334568813913ddb55780737ce5dee3e68407",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/about/lighthouse.html": {
-        "hash": "4b97627a4e174468e5e5db756115eb1c0e87fe8846df8dcd9a52ffcc2264ab6b",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/riddots/payload.html": {
-        "hash": "d637bcb5e76f0987ae6ff52b9585f480d6fe2dd450a4a5350b9386e3d9396dd8",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/riddots/lighthouse.html": {
-        "hash": "25ab475a80917de0e1f8aa5046283212563a77c94856beda99f2543a38594731",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/ridgenuine/payload.html": {
-        "hash": "d637bcb5e76f0987ae6ff52b9585f480d6fe2dd450a4a5350b9386e3d9396dd8",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/ridgenuine/lighthouse.html": {
-        "hash": "2f3f62d1be68bbbf80be3bf09dfa1e721a6bc0562eb667d0f6d68d53d3a95a5a",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/payload.html": {
-        "hash": "ff46f2b5db4873aff931082d59e844b92f420a142d5ec5d77a3225052e5d49ea",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/lighthouse.html": {
-        "hash": "dae12c3856e6feaba057fe5b98c88856d20b0b78b7b3499fe297a32308fedc4b",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/8/payload.html": {
-        "hash": "cdc5c108c3be612df0cf161009e65ea16e21ade209b2a970715d48a1a83d7cac",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/8/lighthouse.html": {
-        "hash": "9c26f679be20906e411bc4163606c3d2bd32b438473dd3b29e9f10122c61fa76",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/14/payload.html": {
-        "hash": "add182a54a48bb80d50c975cd7e784ef2512198fae84afd085151c2cded07491",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/14/lighthouse.html": {
-        "hash": "cf3789d16acf704f805fdcd237be309bffae3978c71653c91ef909a15988359a",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/13/payload.html": {
-        "hash": "248a67896223a945e0f54760dc063f4fa76232b7b682bd0d789874b972f5b929",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/13/lighthouse.html": {
-        "hash": "63a77ffce7f0b03e23706a0ce6e3476ed8976ab0c62351d8e3c56062a563a1b5",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/20/payload.html": {
-        "hash": "7265cec83ce103e995a0552c608e64e0b8d8d93d743b4d1399224deca0db19b0",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/20/lighthouse.html": {
-        "hash": "8611548818c1afc98162289396341471ae6585f9fdfb016edceb1e7dc48c34b4",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/21/payload.html": {
-        "hash": "a7cc9fba37420dcab524922b51cdd5b552754f35687b8f1255617fec4e5c2715",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/9/payload.html": {
-        "hash": "c7a8ea7a33798d5729ce48236ee944c76b335401d2c8506d4f59e7e225cebe9e",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/3/payload.html": {
-        "hash": "7caf90a3887a2dbd1fc10722558d000bc2f9cf55ed592acd1e3f68d242c16f6b",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/6/payload.html": {
-        "hash": "7007090f3b9b73b1a7b09c2dda1d52495d0fd6ce497a435da4b282409aa4a68f",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/1/payload.html": {
-        "hash": "a4ee1c4fe27d5355e99f6efd031ce01756b9fa02dd7e8c90aa1e8d0544d41de1",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/1/lighthouse.html": {
-        "hash": "228b3064dd519ce89c6a99aa8b433180204db71d9836eb9d91094db039512c06",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/11/payload.html": {
-        "hash": "571c82fdc2a5619af182870835aa67ec93046bf1b95e183824aad93992b9be3d",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/11/lighthouse.html": {
-        "hash": "eaa124dc8ae39ca08e6ee178c5f829c886b4069504c130bd50875da3f8c4ca6d",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/15/payload.html": {
-        "hash": "6aece9315e030420eed3f1456d7dd59ad16ffda0ae128d51867ec78a35328392",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/15/lighthouse.html": {
-        "hash": "339b5fd61f77f2d7dcb154cb8c089a829fa990cdd9f5bd8c6422dd45f86a0f5c",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/2/payload.html": {
-        "hash": "1cb2ba3b020b1b45d36db15c23ab0132d1ea54184e6799d048b5d0b219b05386",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/latest/payload.html": {
-        "hash": "ba41f8f002e6cce5d8f0ed6dcfcb4f195c43312060b5e48f212e8ab9a0956cda",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/latest/lighthouse.html": {
-        "hash": "60091bc02f6606c183e3e77bfcaf8a84b12b1505ad6e4be0a97b20afb123a861",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/0/payload.html": {
-        "hash": "567b4a99f6ff38cb786a60abf2547d9b3769921e4beba4b131d96717aeaf8b83",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/astro/history/0/lighthouse.html": {
-        "hash": "8017ae74b26ca7f220751837dd4397ab06a26e331d3454375d9743f100e049dc",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/ridsource/payload.html": {
-        "hash": "d637bcb5e76f0987ae6ff52b9585f480d6fe2dd450a4a5350b9386e3d9396dd8",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/ridsource/lighthouse.html": {
-        "hash": "8533f432abd34da4acc311c0939fb5d27147762683e03f5fa82e1bf6cff1879f",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/contact/payload.html": {
-        "hash": "384c7df01652448d9d11a03ed354a5c982cace876d8486857e11f994e7a87fa4",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/contact/lighthouse.html": {
-        "hash": "1498a450e8aec526a22fb17715f4ef679eebd9bf90b03224c42bbd8c530370f9",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/skills/payload.html": {
-        "hash": "841e0998b16455f779fce9c55b58abdaf269aa71006193099af1c40e273787c2",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/skills/lighthouse.html": {
-        "hash": "d19084d2279a572d4ad383b2075f84d67a28b1bf356e5a26b39642bdd469ce78",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/payload.html": {
-        "hash": "db241af1e8fe6e4eede930d8801337300af1ea8e27c0747be9b37f615174cfee",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/lighthouse.html": {
-        "hash": "4b186d74c5f5ff5cd54ecb717f37a75fea5ac4a51de8f361f2517a05a6608687",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/4/payload.html": {
-        "hash": "1adae9c46e7fbe6fc972b021a6dcf79e09f988fdf7c2a3e5541507580a1e62f9",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/4/lighthouse.html": {
-        "hash": "6d1d4cc10a06b753ff2d87a52f0f6e4aa520a65f7f053ece4c7d08d29d286c9e",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/5/payload.html": {
-        "hash": "2dba63ca82ba899a1bf8e074e90ccde08d8bea2f8c5b8eec76c8fba17f6ea05d",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/5/lighthouse.html": {
-        "hash": "151947b04f04a7c93efbea12a0c2da41d3b364cfc49fac7d62746704d9d68254",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/3/payload.html": {
-        "hash": "fd36e0c7a14bdaabf4a702385384fbd807040207d0332b485dee1292e5017562",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/3/lighthouse.html": {
-        "hash": "ef93df73cff374fcd283c086d226f5baa76b12bff620d37b2424adfb62731e9f",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/6/payload.html": {
-        "hash": "c632616690695b4533442f0ef1a3bc65942806fd9085c5785133225cc9253df5",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/6/lighthouse.html": {
-        "hash": "5005b9898b78ed08c675f70fb1ffe533cffbd9ec8a247ab72478974cf1b0e3fd",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/1/payload.html": {
-        "hash": "b51ea941751e25dcbac1c03f8d54ae454c44d772c6acc02157eebdb91fbde08f",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/1/lighthouse.html": {
-        "hash": "4985dea1bec49ced859c468ed2ae76c4c687536217add85d4e4d1ae60755a284",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/2/payload.html": {
-        "hash": "590c94d66c6b0e1834ed008f42f42012c297c8f931553d67974db50a8d6bd211",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/0b0c/reports/blog/posts/2/lighthouse.html": {
-        "hash": "a624813d6e594745aed97ee64583862f0894755d7967a5eab56182bd00725a4f",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/fd96/index.html": {
-        "hash": "d253f9408b997411b5c2531440b646309c2d318fafaa2aa35cf2a43f29b3cdb2",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/fd96/reports/payload.html": {
-        "hash": "fe5d7769521968da429788b84030caa33d327c62509398b6197e271f7c699023",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/fd96/reports/about/payload.html": {
-        "hash": "63a84ad8b336cff7c6932133f7a8334568813913ddb55780737ce5dee3e68407",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/fd96/reports/astro/payload.html": {
-        "hash": "ff46f2b5db4873aff931082d59e844b92f420a142d5ec5d77a3225052e5d49ea",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/fd96/reports/contact/payload.html": {
-        "hash": "384c7df01652448d9d11a03ed354a5c982cace876d8486857e11f994e7a87fa4",
-        "lastmod": "2025-11-29"
-    },
-    "./.unlighthouse/n3rdium.dev/fd96/reports/skills/payload.html": {
-        "hash": "841e0998b16455f779fce9c55b58abdaf269aa71006193099af1c40e273787c2",
         "lastmod": "2025-11-29"
     },
-    "./.unlighthouse/n3rdium.dev/fd96/reports/blog/payload.html": {
+    "./blog/index.html": {
         "hash": "db241af1e8fe6e4eede930d8801337300af1ea8e27c0747be9b37f615174cfee",
         "lastmod": "2025-11-29"
     },
     "./blog/posts/4-optimize-website.html": {
         "hash": "2b9fe7a20742d24cc9fcd03455f60c1173e2027ccd2c8777f30181a98137beb0",
-        "lastmod": "29-11-2025"
-    },
-    "./blog/posts/_template.html": {
-        "hash": "dd87eb8a2edda81dac597c0e5a4161eee89894b082f2645aa9fb0efc99f36368",
-        "lastmod": "2025-11-29"
-    },
-    "./blog/posts/0-diy-astrophotography-camera.html": {
-        "hash": "b51ea941751e25dcbac1c03f8d54ae454c44d772c6acc02157eebdb91fbde08f",
         "lastmod": "2025-11-29"
     },
     "./blog/posts/3-build-website.html": {
         "hash": "b1e5d7d4d3ec5a0dc233acfd3e819e11d0d6f28541b82ea622188832e7eb1819",
-        "lastmod": "29-11-2025"
+        "lastmod": "2025-11-29"
     },
     "./blog/posts/5-aio-to-vnc-monitor.html": {
         "hash": "3f5b30ff21572f7e16300443bd2cbeb493d8efc264ef07ed9c6bc811e9410648",
-        "lastmod": "29-11-2025"
-    },
-    "./blog/posts/1-vibe-coding.html": {
-        "hash": "b1a0cd55493b2fb5f9b58d57dea8a43a9118f2a794dedb3a43c0e112fb3b16a8",
-        "lastmod": "29-11-2025"
-    },
-    "./blog/posts/2-ai-rubber-duck.html": {
-        "hash": "9d976be77d760b62eb597423baa6d9f088cfc1bbde55875a51bd52c4f7536e97",
-        "lastmod": "29-11-2025"
+        "lastmod": "2025-11-29"
     },
     "./blog/posts/0-diy-astro-camera.html": {
         "hash": "671a43ec9b62babcdd3562f3a80b1cdc46e94bfbff8b1e16738309bbfe3c3437",
-        "lastmod": "29-11-2025"
+        "lastmod": "2025-11-29"
+    },
+    "./blog/posts/1-vibe-coding.html": {
+        "hash": "b1a0cd55493b2fb5f9b58d57dea8a43a9118f2a794dedb3a43c0e112fb3b16a8",
+        "lastmod": "2025-11-29"
+    },
+    "./blog/posts/2-ai-rubber-duck.html": {
+        "hash": "9d976be77d760b62eb597423baa6d9f088cfc1bbde55875a51bd52c4f7536e97",
+        "lastmod": "2025-11-29"
     }
 }

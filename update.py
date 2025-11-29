@@ -66,7 +66,7 @@ def write_hashes():
         json.dump(hashes, f, indent = 4)
 
 
-TODAY = datetime.today().strftime('%d-%m-%Y')
+TODAY = datetime.today().strftime('%Y-%m-%d')
 map = []
 
 def urlify(path: str) -> str:
@@ -113,12 +113,17 @@ def build_sitemap_entry(map_item: dict) -> str:
     print(f"building sitemap entry for {url}")
 
     # Why? Because.
-    priority = 1.0
+    priority = 0.3
+    if "/astro/history/" in url:
+        priority = 0.5
+    if "/blog/posts/" in url:
+        priority = 0.6
     if url.endswith("/"):
-        priority = 1.0
+        priority = 0.8
     if url == "/":
         priority = 1.0
 
+    # todo changefreq
     return f"""    <url>
         <loc>https://n3rdium.dev{url}</loc>
         <lastmod>{lastmod}</lastmod>
@@ -162,7 +167,7 @@ for root in SEARCH_PATHS:
 
         path = os.path.join(root, file)
         url = urlify(path)
-        print(f"processing blog entry {url}")
+        print(f"processing post entry {url}")
         
         with open(path) as f:
             metadata = f.read().split("N3RDIUM META START")[1].split("N3RDIUM META END")[0].strip()
