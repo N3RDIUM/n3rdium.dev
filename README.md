@@ -4,6 +4,8 @@ The website is [here](https://n3rdium.dev).
 
 TODOs:
 - [ ] Add more TODOs? 😅
+- [ ] Skills: add google analytics, google search console, fish shell, editors (nvim, vscode, zeditor), chess +elo, human languages, subjects of interest/courses equiv, obsidian, npm, yarn, react native, expo/snack, firebase, ollama, windows 7, windows 8 (sadly), windows 10, windows 11, endeavouros, nixos, learning klingon, badminton,
+- [ ] Skills: highlight things being learnt
 - [ ] Fix a lot of SEO stuff. Write proper readmes for projects and link here.
 - [x] Fix the gallery page for mobile devices
 - [x] Add alt text in the astro image index
