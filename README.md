@@ -4,6 +4,7 @@ The website is [here](https://n3rdium.dev).
 
 TODOs:
 - [ ] Add more TODOs? 😅
+- [ ] Fix a lot of SEO stuff. Write proper readmes for projects and link here.
 - [x] Fix the gallery page for mobile devices
 - [x] Add alt text in the astro image index
 - [x] GitHub Action w/ py script to auto-update the sitemap and post json files
