@@ -1,12 +1,13 @@
 let content = []
 let current = 0;
 
-function render({ url, image, big }) {
+function render({ title, url, image, big }) {
     return `<div class="tile ${big == 1 ? 'big-tile': 'smol-tile'}">
     <a href="${url}">
         <img
             src="${image}"
             class="tile-image ${big == 1 ? 'big-image' : 'smol-image'}"
+            alt="${title}"
             loading="lazy"
         />
     </a>

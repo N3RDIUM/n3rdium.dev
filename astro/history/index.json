@@ -5,7 +5,7 @@
         "written": "24-01-2025",
         "image": "/astro/assets/rpi-milkyway-camp.webp",
         "tags": [],
-        "url": "/astro/history/latest.html"
+        "url": "/astro/history/latest-milky-way.html"
     },
     {
         "title": "EQ Platform Tracking Test - N3RDIUM",
@@ -13,7 +13,7 @@
         "written": "23-01-2025",
         "image": "/astro/assets/tracking-test.webp",
         "tags": [],
-        "url": "/astro/history/22.html"
+        "url": "/astro/history/22-eq-platform-test.html"
     },
     {
         "title": "The Orion Nebula: Take 2 - N3RDIUM",
@@ -21,7 +21,7 @@
         "written": "22-01-2025",
         "image": "/astro/assets/dob-m42-naneghat.webp",
         "tags": [],
-        "url": "/astro/history/21.html"
+        "url": "/astro/history/21-orion-nebula.html"
     },
     {
         "title": "The Moon: Take 3 - N3RDIUM",
@@ -30,7 +30,7 @@
         "big": 1,
         "image": "/astro/assets/dob-moon-naneghat.webp",
         "tags": [],
-        "url": "/astro/history/20.html"
+        "url": "/astro/history/20-moon.html"
     },
     {
         "title": "Pleiades - N3RDIUM",
@@ -38,7 +38,7 @@
         "written": "20-01-2025",
         "image": "/astro/assets/dob-m45.webp",
         "tags": [],
-        "url": "/astro/history/19.html"
+        "url": "/astro/history/19-seven-sisters.html"
     },
     {
         "title": "Jupiter: Take 3 - N3RDIUM",
@@ -46,7 +46,7 @@
         "written": "19-01-2025",
         "image": "/astro/assets/dob-jupiter-take3.webp",
         "tags": [],
-        "url": "/astro/history/18.html"
+        "url": "/astro/history/18-jupiter.html"
     },
     {
         "title": "Jupiter: Take 2 - N3RDIUM",
@@ -55,7 +55,7 @@
         "image": "/astro/assets/dob-jupiter-take2.webp",
         "tags": [],
         "big": 1,
-        "url": "/astro/history/17.html"
+        "url": "/astro/history/17-jupiter.html"
     },
     {
         "title": "The Orion Nebula - N3RDIUM",
@@ -63,7 +63,7 @@
         "written": "17-01-2025",
         "image": "/astro/assets/dob-m42.webp",
         "tags": [],
-        "url": "/astro/history/16.html"
+        "url": "/astro/history/16-orion-nebula.html"
     },
     {
         "title": "The Moon - N3RDIUM",
@@ -71,7 +71,7 @@
         "written": "16-01-2025",
         "image": "/astro/assets/dob-moon.webp",
         "tags": [],
-        "url": "/astro/history/15.html"
+        "url": "/astro/history/15-moon.html"
     },
     {
         "title": "Saturn - N3RDIUM",
@@ -79,7 +79,7 @@
         "written": "15-01-2025",
         "image": "/astro/assets/dob-saturn.webp",
         "tags": [],
-        "url": "/astro/history/14.html"
+        "url": "/astro/history/14-saturn.html"
     },
     {
         "title": "Jupiter - N3RDIUM",
@@ -87,7 +87,7 @@
         "written": "14-01-2025",
         "image": "/astro/assets/dob-jupiter.webp",
         "tags": [],
-        "url": "/astro/history/13.html"
+        "url": "/astro/history/13-jupiter.html"
     },
     {
         "title": "Ring Nebula: Take 2 - N3RDIUM",
@@ -96,7 +96,7 @@
         "image": "/astro/assets/dob-m57-take2.webp",
         "tags": [],
         "big": 1,
-        "url": "/astro/history/12.html"
+        "url": "/astro/history/12-ring-nebula.html"
     },
     {
         "title": "Ring Nebula - N3RDIUM",
@@ -105,7 +105,7 @@
         "image": "/astro/assets/dob-m57.webp",
         "tags": [],
         "big": 1,
-        "url": "/astro/history/11.html"
+        "url": "/astro/history/11-ring-nebula.html"
     },
     {
         "title": "The Great Globular Cluster in Hercules: Take 2 - N3RDIUM",
@@ -114,7 +114,7 @@
         "image": "/astro/assets/dob-m13-take2.webp",
         "tags": [],
         "big": 1,
-        "url": "/astro/history/10.html"
+        "url": "/astro/history/10-hercules-globular.html"
     },
     {
         "title": "The Great Globular Cluster in Hercules - N3RDIUM",
@@ -122,7 +122,7 @@
         "written": "10-01-2025",
         "image": "/astro/assets/dob-m13.webp",
         "tags": [],
-        "url": "/astro/history/9.html"
+        "url": "/astro/history/9-hercules-globular.html"
     },
     {
         "title": "Ursa Major with a Raspberry Pi - N3RDIUM",
@@ -130,7 +130,7 @@
         "written": "09-01-2025",
         "image": "/astro/assets/rpi-ursa-major.webp",
         "tags": [],
-        "url": "/astro/history/8.html"
+        "url": "/astro/history/8-ursa-major-astropi.html"
     },
     {
         "title": "Dark Sky Widefield Test 4 - N3RDIUM",
@@ -139,7 +139,7 @@
         "image": "/astro/assets/dark-widefield-test4.webp",
         "tags": [],
         "big": 1,
-        "url": "/astro/history/7.html"
+        "url": "/astro/history/7-dark-widefield-test.html"
     },
     {
         "title": "Dark Sky Widefield Test 3 - N3RDIUM",
@@ -147,7 +147,7 @@
         "written": "07-01-2025",
         "image": "/astro/assets/dark-widefield-test3.webp",
         "tags": [],
-        "url": "/astro/history/6.html"
+        "url": "/astro/history/6-dark-widefield-test.html"
     },
     {
         "title": "Dark Sky Widefield Test 2 - N3RDIUM",
@@ -156,7 +156,7 @@
         "image": "/astro/assets/dark-widefield-test2.webp",
         "tags": [],
         "big": 1,
-        "url": "/astro/history/5.html"
+        "url": "/astro/history/5-dark-widefield-test.html"
     },
     {
         "title": "Dark Sky Widefield Test 1 - N3RDIUM",
@@ -164,7 +164,7 @@
         "written": "05-01-2025",
         "image": "/astro/assets/dark-widefield-test1.webp",
         "tags": [],
-        "url": "/astro/history/4.html"
+        "url": "/astro/history/4-dark-widefield-test.html"
     },
     {
         "title": "Widefield Test 2 - N3RDIUM",
@@ -172,7 +172,7 @@
         "written": "04-01-2025",
         "image": "/astro/assets/widefield-test2.webp",
         "tags": [],
-        "url": "/astro/history/3.html"
+        "url": "/astro/history/3-widefield-test.html"
     },
     {
         "title": "Widefield Test - N3RDIUM",
@@ -181,7 +181,7 @@
         "image": "/astro/assets/widefield-test.webp",
         "tags": [],
         "big": 1,
-        "url": "/astro/history/2.html"
+        "url": "/astro/history/2-widefield-test.html"
     },
     {
         "title": "C/2022 E3 ZTF - N3RDIUM",
@@ -189,7 +189,7 @@
         "written": "02-01-2025",
         "image": "/astro/assets/C2022E3ZTF.webp",
         "tags": [],
-        "url": "/astro/history/1.html"
+        "url": "/astro/history/1-green-comet.html"
     },
     {
         "title": "First Moon - N3RDIUM",
@@ -197,6 +197,6 @@
         "written": "01-01-2025",
         "image": "/astro/assets/moon-first.webp",
         "tags": [],
-        "url": "/astro/history/0.html"
+        "url": "/astro/history/0-first-moon.html"
     }
 ]
