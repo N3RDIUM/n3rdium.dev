@@ -2,6 +2,7 @@ import os
 import hashlib
 import json
 from datetime import datetime
+import re
 
 # STAGE ONE: SITEMAP BUILD
 FORBIDDEN_DIRS = [
@@ -49,10 +50,23 @@ def load_hashes():
 
 load_hashes()
 
+AUTOGEN_PREFIX = "<!--AUTOGEN START-->"
+AUTOGEN_SUFFIX = "<!--AUTOGEN END-->"
 def hash_file(path: str) -> str:
     with open(path, "rb") as f:
-        algo = hashlib.sha256()
-        algo.update(f.read())
+        data = f.read()
+
+    text = data.decode("utf-8", errors="ignore")
+
+    cleaned = re.sub(
+        f"{AUTOGEN_PREFIX}.*?{AUTOGEN_SUFFIX}",
+        "",
+        text,
+        flags=re.DOTALL
+    )
+
+    algo = hashlib.sha256()
+    algo.update(cleaned.encode("utf-8"))
     return algo.hexdigest()
 
 def file_changed(path: str) -> bool:
@@ -75,9 +89,11 @@ def urlify(path: str) -> str:
 
 def get_lastmod(path: str) -> str:
     if path not in hashes:
+        print(f"\tnew file: {path}")
         return TODAY
 
     if file_changed(path):
+        print(f"\tfile changed: {path}")
         return TODAY
 
     return hashes[path]["lastmod"]
@@ -91,7 +107,7 @@ for (root, dirs, files) in os.walk(".", topdown = True):
             continue
         
         path = os.path.join(root, file)
-        print(f"processing hashes for {path}")
+        print(f"processing hashes: {path}")
 
         url = urlify(path)
         lastmod = get_lastmod(path)
@@ -110,7 +126,7 @@ write_hashes()
 
 def build_sitemap_entry(map_item: dict) -> str:
     url, lastmod = map_item["url"], map_item["lastmod"]
-    print(f"building sitemap entry for {url}")
+    print(f"building sitemap entry: {url}")
 
     # Why? Because.
     priority = 0.3
@@ -167,7 +183,7 @@ for root in SEARCH_PATHS:
 
         path = os.path.join(root, file)
         url = urlify(path)
-        print(f"processing post entry {url}")
+        print(f"processing post entry: {url}")
         
         with open(path) as f:
             metadata = f.read().split("N3RDIUM META START")[1].split("N3RDIUM META END")[0].strip()
