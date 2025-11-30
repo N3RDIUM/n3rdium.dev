@@ -11,6 +11,7 @@ TODOs:
 - [ ] Skills: add chess +elo, human languages, subjects of interest/courses equiv, npm, yarn, react native, expo/snack, ollama, badminton, GIMP, Siril, DSS, MSICE, p5js, mpv, glsl, tkinter, pyqt5, qtdesigner, cargo
 - [ ] New sub: host my projects' docs, etc. on `/projects/`. Changelogs will be included on the regular blog along with posts, like what vaxry does. Projects that may require this: PyTaskbar, AstroPi, zen, mnmlst, voxl, foom, rubberducky (archive later or will be superseded by zen), webcraft (first gamedev experiment?).
 - [ ] Fix a lot of SEO stuff. Write proper readmes for projects and link here.
+- [ ] New project: easily add a comments section anywhere! Make use of it on this site. Integrate with Akismet.
 - [x] Move pages: `/skills/` -> `/about/skills/` and fill the remaining nav space with `/projects/`. Or better, make space for SIX nav items instead (font size -). Or EVEN BETTER, don't display the nav entry of the page you're currently on.
 - [x] Skills: highlight things being learnt
 - [x] Fix the gallery page for mobile devices
