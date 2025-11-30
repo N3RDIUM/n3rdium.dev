@@ -201,3 +201,6 @@ for root in SEARCH_PATHS:
 # STAGE 3: PROJECTS INDEX UPDATE
 # todo
 
+# todo: split stages into separate files, because adding that blog read time thing is going to increase complexity. Or not!
+# if you do decide to split these files, make sure you put them where they belong, i.e. blog.py in /blog/ etc.
+

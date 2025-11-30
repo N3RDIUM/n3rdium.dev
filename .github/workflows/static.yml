@@ -46,6 +46,10 @@ jobs:
       - name: Run inline script
         run: python inline.py
         continue-on-error: true
+
+      - name: Run update RSS/ATOM feeds
+        run: python feeds.py
+        continue-on-error: true
         
       - name: Push Changes
         run: |
