@@ -1,10 +1,10 @@
 {
     "./index.html": {
-        "hash": "fc08fd4b36bacb6298621a0cc660db77e4602bdffeee950212804801d4712353",
+        "hash": "a4219b520bad944b46c0c7f66d50ff229426333443ebd08910200d46dc5fc3e1",
         "lastmod": "2025-11-30"
     },
     "./about/index.html": {
-        "hash": "482fd4a048924be1d0ecb1abed4a96d66f01d5e4ee4c70d910364645385a0743",
+        "hash": "dc177c4b4f002bb15ce78e7c1a6f73c15e6950713f509e9f81f2341fa17e9113",
         "lastmod": "2025-11-30"
     },
     "./astro/index.html": {
@@ -141,6 +141,10 @@
     },
     "./blog/posts/2-ai-rubber-duck.html": {
         "hash": "414f41683ec58097224333d0ff8f769c717da95041f698bbfb961477f8354ddf",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/index.html": {
+        "hash": "04efb1bdec3ee738843a5445b3effa25d55ccb6fdfd4062f80c4a5f4fb0f6dc7",
         "lastmod": "2025-11-30"
     }
 }

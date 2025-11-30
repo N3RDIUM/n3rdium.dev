@@ -6,6 +6,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://n3rdium.dev/projects/</loc>
+        <lastmod>2025-11-30</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://n3rdium.dev/blog/</loc>
         <lastmod>2025-11-30</lastmod>
         <priority>0.8</priority>
