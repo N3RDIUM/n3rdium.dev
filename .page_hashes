@@ -144,7 +144,43 @@
         "lastmod": "2025-11-30"
     },
     "./projects/index.html": {
-        "hash": "04efb1bdec3ee738843a5445b3effa25d55ccb6fdfd4062f80c4a5f4fb0f6dc7",
+        "hash": "4af382ad0af0dc97a3b1e894f41f83b8d9cab81a95c0c02dc59305ee53c65926",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/dotfiles/index.html": {
+        "hash": "c5dab0dbfa5c171630cf6fcd58b0afd0f8907069b8fe9480dbfa11d084576100",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/webcraft/index.html": {
+        "hash": "be88b6c91b250b88eee7727bb77a228132baf624ec37e9b793e3fc655d01bccb",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/pytaskbar/index.html": {
+        "hash": "e7445d4faaafbd14960665cb929f8bc6d1db1dca65a54892cf4a0d3f2aacd4d0",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/portfolio/index.html": {
+        "hash": "eb8c153b1241bd5e3cb714ee5f026b8c6755f9091c5e555e28be89f93ff9403e",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/rubberducky/index.html": {
+        "hash": "a3d2fb2027b0d776c9c25682c86c633392452761949fea0c4c310aa21fcbfde8",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/zen/index.html": {
+        "hash": "05188588ff86ad92d35d2d88393a94b3567599fc2fb9c7ef7908676ef42316d3",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/voxl/index.html": {
+        "hash": "80993805c1006c2202ea68380f8c55cf6f4882bd6e1003178453e26c75d9491d",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/astropi/index.html": {
+        "hash": "b98512041c807d5799129fd5b3d8b6f5aebfcf5bc7cf7c486d7e0d806dd9bf19",
+        "lastmod": "2025-11-30"
+    },
+    "./projects/foom/index.html": {
+        "hash": "c30ff7c971cc27e45f93ecf4d17f6591cacdb1dfe70f33e4a9df2dd4f5d44a30",
         "lastmod": "2025-11-30"
     }
 }

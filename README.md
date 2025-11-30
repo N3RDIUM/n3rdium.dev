@@ -5,9 +5,9 @@ The website is [here](https://n3rdium.dev).
 TODOs:
 - [ ] Add more TODOs? 😅
 - [ ] Update frequency entries in the sitemap.
-- [ ] Site RSS/Atom feed for astro, projects/updates, blog posts, etc.
+- [ ] Site RSS/Atom feed for astro, projects/updates, blog posts, etc. Pypkg `feedgen`
 - [ ] Blog post: Making a website from scratch in 2025. Because the other two posts didn't do it justice.
-- [ ] Blog: add table of contents and estimated reading time.
+- [ ] Blog: add table of contents and estimated reading time. Pypkg `readtime`
 - [ ] Skills: add chess +elo, human languages, subjects of interest/courses equiv, npm, yarn, react native, expo/snack, ollama, badminton, GIMP, Siril, DSS, MSICE, p5js, mpv, glsl, tkinter, pyqt5, qtdesigner, cargo
 - [ ] New sub: host my projects' docs, etc. on `/projects/`. Changelogs will be included on the regular blog along with posts, like what vaxry does. Projects that may require this: PyTaskbar, AstroPi, zen, mnmlst, voxl, foom, rubberducky (archive later or will be superseded by zen), webcraft (first gamedev experiment?).
 - [ ] Fix a lot of SEO stuff. Write proper readmes for projects and link here.

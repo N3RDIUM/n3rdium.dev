@@ -198,3 +198,6 @@ for root in SEARCH_PATHS:
     with open(os.path.join(root, "index.json"), "w") as f:
         json.dump(index, f, indent=4)
 
+# STAGE 3: PROJECTS INDEX UPDATE
+# todo
+
