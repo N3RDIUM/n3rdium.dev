@@ -1,15 +1,31 @@
 const isDarkReaderDetected = [...document.querySelectorAll('style')].some((el) => el.classList.contains('darkreader'));
 if(isDarkReaderDetected) {
-    // alert("Greetings, elite Dark Reader user! This website has a dark theme that the extension doesn't seem to detect, which makes it look funky. Please consider disabling it for this site. I won't flash-bang you. Ever. That's a promise!");
+    // alert("Greetings, elite Dark Reader user! This website has a dark theme that the extension doesn't seem to detect, which makes it look funky. Please consider disabling it for this site. I won't flash-bang you.");
+}
+
+const current_sub = window.location.pathname.split("/")[1];
+
+const nav_entries = {
+    about: `<a class="nav-link thefont" href="/about/">About</a>`,
+    skills: `<a class="nav-link thefont" href="/skills/">Skills</a>`,
+    projects: `<a class="nav-link thefont" href="/projects/">Projects</a>`,
+    blog: `<a class="nav-link thefont" href="/blog/">Blog</a>`,
+    astro: `<a class="nav-link thefont" href="/astro/">Astro</a>`,
+    contact: `<a class="nav-link thefont" href="/contact/">Contact</a>`,
+};
+
+let nav_string = "";
+for (const key in nav_entries) {
+    if (key == current_sub) {
+        continue
+    }
+
+    nav_string += nav_entries[key];
 }
 
 const nav = `<a class="nav-username thefont" href="/">N3RDIUM</a>
 <div class="nav-links">
-    <a class="nav-link thefont" href="/about/">About</a>
-    <a class="nav-link thefont" href="/skills/">Skills</a>
-    <a class="nav-link thefont" href="/blog/">Blog</a>
-    <a class="nav-link thefont" href="/astro/">Astro</a>
-    <a class="nav-link thefont" href="/contact/">Contact</a>
+${nav_string}
 </div>`
 
 window.onload = () => {
