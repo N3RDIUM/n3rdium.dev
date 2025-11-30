@@ -4,9 +4,10 @@ The website is [here](https://n3rdium.dev).
 
 TODOs:
 - [ ] Add more TODOs? 😅
-- [ ] Skills: add google analytics, google search console, fish shell, editors (nvim, vscode, zeditor), chess +elo, human languages, subjects of interest/courses equiv, obsidian, npm, yarn, react native, expo/snack, firebase, ollama, windows 7, windows 8 (sadly), windows 10, windows 11, endeavouros, nixos, learning klingon, badminton,
-- [ ] Skills: highlight things being learnt
+- [ ] Skills: chess +elo, human languages, subjects of interest/courses equiv, npm, yarn, react native, expo/snack, ollama, badminton, GIMP, Siril, DSS, MSICE,  
+- [ ] New sub: host my projects' docs, etc. on `/docs/`. Changelogs will be included on the regular blog along with posts, like what vaxry does. Projects that may require this: PyTaskbar, AstroPi, zen, mnmlst, voxl, foom, rubberducky (archive later or will be superseded by zen), webcraft (first gamedev experiment?).
 - [ ] Fix a lot of SEO stuff. Write proper readmes for projects and link here.
+- [x] Skills: highlight things being learnt
 - [x] Fix the gallery page for mobile devices
 - [x] Add alt text in the astro image index
 - [x] GitHub Action w/ py script to auto-update the sitemap and post json files
@@ -20,3 +21,4 @@ TODOs:
 - [x] Make the projects page
 - [x] Do your meta tags (author, description, tags, banner image, etc.)
 - [x] Get it back up on Google Search
+
