@@ -31,18 +31,6 @@
     padding: 24px;
     margin-bottom: 24px;
 }
-.post-unclickable {
-    all: unset;
-    color: #ebdbb2;
-    background: #3c3836;
-    text-decoration: none;
-    width: 80%;
-    max-width: 700px;
-    padding: 24px;
-    margin-bottom: 42px;
-    border-radius: 6px;
-    transition-duration: 128ms;
-}
 .post:hover {
     background: #504945;
     cursor: pointer;
@@ -84,7 +72,7 @@
 }
 
 .post-container {
-    max-width: 700px;
+    max-width: calc(min(700px, 90vw));
 }
 .title-container {
     display: flex;
@@ -98,12 +86,6 @@
     text-align: left;
     font-size: 13px;
     color: #ebdbb2;
-}
-.limwidth {
-    max-width: 800px;
-}
-.title-back {
-    text-align: left;
 }
 .title-meta {
     margin-top: 12px;
