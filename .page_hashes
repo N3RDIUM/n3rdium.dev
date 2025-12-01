@@ -104,8 +104,8 @@
         "lastmod": "2025-11-30"
     },
     "./astro/history/latest-milky-way.html": {
-        "hash": "580354fdeb571b900347197d831aed0f4d2b4e5ddb0a16da94a1da1d36357d99",
-        "lastmod": "2025-11-30"
+        "hash": "4ce89ad40f224faf3baf87dbc45f5cb8d38a91e8a59639a11331704bc950c1c5",
+        "lastmod": "2025-12-01"
     },
     "./contact/index.html": {
         "hash": "d2bf02a24ff36d9d9f960051e089421d7e14480efbc4eea093322b5b08e2353f",
@@ -182,5 +182,9 @@
     "./projects/foom/index.html": {
         "hash": "c30ff7c971cc27e45f93ecf4d17f6591cacdb1dfe70f33e4a9df2dd4f5d44a30",
         "lastmod": "2025-11-30"
+    },
+    "./astro/history/23-milky-way.html": {
+        "hash": "580354fdeb571b900347197d831aed0f4d2b4e5ddb0a16da94a1da1d36357d99",
+        "lastmod": "2025-12-01"
     }
 }

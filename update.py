@@ -5,6 +5,9 @@ from datetime import datetime
 import re
 import readtime
 
+# Global constants
+REDIRECT_TAG = "<!--REDIRECT PAGE-->"
+
 # STAGE ONE: SITEMAP BUILD
 FORBIDDEN_DIRS = [
     "./r",
@@ -14,7 +17,8 @@ FORBIDDEN_DIRS = [
 FORBIDDEN_FILES = [
     "404.html",
     "template.html",
-    "page-template.html",
+    "template.html",
+    "redirect_template.html",
 ]
 
 def is_dir_forbidden(root: str) -> bool:
@@ -110,6 +114,11 @@ for (root, dirs, files) in os.walk(".", topdown = True):
         path = os.path.join(root, file)
         print(f"processing hashes: {path}")
 
+        with open(path, "r") as f:
+            if REDIRECT_TAG in f.read():
+                print("\tredirect page, skipping")
+                continue
+
         url = urlify(path)
         lastmod = get_lastmod(path)
 
@@ -194,6 +203,9 @@ for root in SEARCH_PATHS:
         reading_time = None
         with open(path) as f:
             content = f.read()
+            if REDIRECT_TAG in content:
+                print("\tredirect page, skipping")
+                continue
             metadata = str(content) \
                 .split(META_PREFIX)[1].split(META_SUFFIX)[0].strip()
             try:

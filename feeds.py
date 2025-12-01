@@ -5,6 +5,7 @@ BLOG = "./blog/posts/index.json"
 ASTRO = "./astro/history/index.json"
 
 # STAGE 1: Blog feed
+print("generating blog feed")
 blog_feed = FeedGenerator()
 blog_feed.id('https://n3rdium.dev/blog/')
 blog_feed.title("N3RDIUM's Blog")
@@ -24,6 +25,7 @@ def urlify(path):
 
 for post in blog_content:
     fe = blog_feed.add_entry()
+    print(f"\tblog post: {post["title"]}")
     fe.id(post["url"])
     fe.title(post["title"])
     fe.link(href=urlify(post["url"]))
@@ -32,6 +34,7 @@ blog_feed.atom_file('./blog/atom.xml')
 blog_feed.rss_file('./blog/rss.xml')
 
 # STAGE 2: Astro feed
+print("generating blog feed")
 astro_feed = FeedGenerator()
 astro_feed.id('https://n3rdium.dev/astro/')
 astro_feed.title("N3RDIUM's Astro Gallery")
@@ -51,6 +54,7 @@ def urlify(path):
 
 for post in astro_content:
     fe = astro_feed.add_entry()
+    print(f"\tastro post: {post["title"]}")
     fe.id(post["url"])
     fe.title(post["title"])
     fe.link(href=urlify(post["url"]))
