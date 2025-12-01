@@ -3,6 +3,7 @@ import hashlib
 import json
 from datetime import datetime
 import re
+import readtime
 
 # STAGE ONE: SITEMAP BUILD
 FORBIDDEN_DIRS = [
@@ -171,6 +172,11 @@ def date_to_timestamp(date: str) -> int:
 def the_key(thing: dict) -> int:
     return date_to_timestamp(thing["written"])
 
+META_PREFIX = "N3RDIUM META START"
+META_SUFFIX = "N3RDIUM META END"
+CONTENT_PREFIX = "<!--CONTENT START-->"
+CONTENT_SUFFIX = "<!--CONTENT END-->"
+
 for root in SEARCH_PATHS:
     index = []
 
@@ -185,11 +191,23 @@ for root in SEARCH_PATHS:
         url = urlify(path)
         print(f"processing post entry: {url}")
         
+        reading_time = None
         with open(path) as f:
-            metadata = f.read().split("N3RDIUM META START")[1].split("N3RDIUM META END")[0].strip()
+            content = f.read()
+            metadata = str(content) \
+                .split(META_PREFIX)[1].split(META_SUFFIX)[0].strip()
+            try:
+                post_content = str(content) \
+                    .split(CONTENT_PREFIX)[1].split(CONTENT_SUFFIX)[0].strip()
+                reading_time = readtime.of_html(post_content).text + " read"
+                do_readtime = True
+            except IndexError:
+                pass
 
         metadata = json.loads(metadata)
         metadata["url"] = url
+        if reading_time:
+            metadata["readtime"] = reading_time
         
         index.append(metadata)
 

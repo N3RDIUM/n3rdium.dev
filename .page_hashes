@@ -1,7 +1,7 @@
 {
     "./index.html": {
         "hash": "a4219b520bad944b46c0c7f66d50ff229426333443ebd08910200d46dc5fc3e1",
-        "lastmod": "2025-11-30"
+        "lastmod": "2025-12-01"
     },
     "./about/index.html": {
         "hash": "dc177c4b4f002bb15ce78e7c1a6f73c15e6950713f509e9f81f2341fa17e9113",
@@ -120,28 +120,28 @@
         "lastmod": "2025-11-30"
     },
     "./blog/posts/4-optimize-website.html": {
-        "hash": "04289692ccf1fc260e1ff566c1edb8293f3410e6441c1c5e0f4bbd56c086c962",
-        "lastmod": "2025-11-30"
+        "hash": "d2454a0a70fd5c73a576463bef8ff9b5ed65eb6f767493cc8fed2bf9ad2e960f",
+        "lastmod": "2025-12-01"
     },
     "./blog/posts/3-build-website.html": {
-        "hash": "28f238643254f15917fcb8513cc781cb266e65c35c8fc1a2fa7b5588b7e2bd1d",
-        "lastmod": "2025-11-30"
+        "hash": "8e97508123086b8e72834f280874cdf5712d0f0c341522d7ea1069d1cd38a093",
+        "lastmod": "2025-12-01"
     },
     "./blog/posts/5-aio-to-vnc-monitor.html": {
-        "hash": "a4f9b8c978d2b7fe89c3a1d8a90da1cb8390e32476e1cf18548f5a6d96873304",
-        "lastmod": "2025-11-30"
+        "hash": "f22241f7eac5f1dfbe8da17dca98b0ce9851a19a78745283588982aea7e1eee2",
+        "lastmod": "2025-12-01"
     },
     "./blog/posts/0-diy-astro-camera.html": {
-        "hash": "b20a5eadab11350f9ae1fd6194669d995607fbb747fead479dd5a368aaf5668d",
-        "lastmod": "2025-11-30"
+        "hash": "2d7ccd933a23a4c714adc3752688ca9589324aa989341837424624dbb13330d2",
+        "lastmod": "2025-12-01"
     },
     "./blog/posts/1-vibe-coding.html": {
-        "hash": "dba75dbbdba30d0945e75a749097028fa02a2d3503c403847299823003503929",
-        "lastmod": "2025-11-30"
+        "hash": "0e9dfffeef2d67ce8827c99034dfedab4655e6c6c2798633ed5d870a38bb5f21",
+        "lastmod": "2025-12-01"
     },
     "./blog/posts/2-ai-rubber-duck.html": {
-        "hash": "414f41683ec58097224333d0ff8f769c717da95041f698bbfb961477f8354ddf",
-        "lastmod": "2025-11-30"
+        "hash": "63048966096bf19924feffdc3023d1649fa92643b16ff967cd9caf1f5eec27b5",
+        "lastmod": "2025-12-01"
     },
     "./projects/index.html": {
         "hash": "4af382ad0af0dc97a3b1e894f41f83b8d9cab81a95c0c02dc59305ee53c65926",

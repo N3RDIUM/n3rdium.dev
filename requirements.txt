@@ -1,2 +1,4 @@
 rjsmin
 rcssmin
+feedgen
+readtime
