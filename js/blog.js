@@ -12,7 +12,11 @@ function taggify(tags) {
     return ret
 }
 
-function render({ url, title, description, written, tags }) {
+function render({ url, title, description, written, tags, readtime }) {
+    let rts = "";
+    if(readtime) {
+        rts = readtime;
+    }
     return `<a
         href="${url}"
         class="post"
@@ -24,8 +28,9 @@ function render({ url, title, description, written, tags }) {
             <p class="thefont preview">
                 ${description}
             </p>
-            <div class="thefont metadata">
-                ${written} ${taggify(tags)}
+            <div class="thefont metadata" style="width: 100%">
+                <span style="float:left">${rts}</span>
+                <span style="float:right">${written} ${taggify(tags)}</span>
             </div>
         </div>
     </a>`
