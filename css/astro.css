@@ -1,15 +1,13 @@
 .astro-heading {
     margin-top: 48px;
     height: 32vh;
-    background: url("/astro/assets/rpi-milkyway-camp.webp");
+    background: #1d2021;
     background-size: cover;
     background-position: center;
 }
 .astro-heading-text {
-    background: #282828;
-    padding: 12px;
     color: #ebdbb2;
-    font-size: 42px;
+    font-size: 48px;
 }
 .content {
     display: flex;
