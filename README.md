@@ -4,7 +4,7 @@ The website is [here](https://n3rdium.dev).
 
 TODOs:
 - [ ] Add more TODOs? 😅
-- [ ] Update site structure. Must include piano stuff. Going to need those list pages more, not just on blog. Make dynamic lists in js() and add fuzzy search(Fuse.js). "All caught up!" instead of "Stay tuned for more". Also do a scroll to top button in the bottom right corner for all scrollable pages.
+- [ ] Update site structure. Must include piano stuff. Going to need those list pages more, not just on blog. Make dynamic lists in js and add fuzzy search(Fuse.js). "All caught up!" instead of "Stay tuned for more". Also do a scroll to top button in the bottom right corner for all scrollable pages.
 - [ ] Update frequency entries in the sitemap.
 - [ ] Blog post: Making a website from scratch in 2025. Because the other two posts didn't do it justice. Or rewrite the other two posts. Include that the star pattern on the homepage changes everytime the site is deployed.
 - [ ] Blog: add table of contents.
