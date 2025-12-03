@@ -61,7 +61,7 @@ def autogen_block(stylesheets, scripts):
 
     for stylesheet in stylesheets:
         if stylesheet not in css:
-            print(f"could not find stylesheet {stylesheet}")
+            print(f"could not find stylesheet {stylesheet} - skipping")
             continue
         ret += f"""
 <style>
@@ -71,7 +71,7 @@ def autogen_block(stylesheets, scripts):
 
     for script in scripts:
         if script not in js:
-            print(f"could not find script {script}")
+            print(f"could not find script {script} - skipping")
             continue
         ret += f"""
 <script>
