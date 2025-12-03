@@ -14,7 +14,7 @@ TODOs:
 - [ ] Fix a lot of SEO stuff. Write proper readmes for projects and link here.
 - [ ] New project: easily add a comments section anywhere! Make use of it on this site. Integrate with Akismet.
 - [x] Redirect system: use 302 redirects using meta and link instead of that hacky thing. Or HTML meta redirects.
-- [x] Blog: estimated reading time. Pypkg `readtime` (WIP - display)
+- [x] Blog: estimated reading time. Pypkg `readtime`
 - [x] Site RSS/Atom feed for astro, projects/updates, blog posts, etc. Pypkg `feedgen`
 - [x] Move pages: `/skills/` -> `/about/skills/` and fill the remaining nav space with `/projects/`. Or better, make space for SIX nav items instead (font size -). Or EVEN BETTER, don't display the nav entry of the page you're currently on.
 - [x] Skills: highlight things being learnt
