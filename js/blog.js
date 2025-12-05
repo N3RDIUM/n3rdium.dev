@@ -1,5 +1,7 @@
-let content = []
-let current = 0;
+let content = [];
+fuse = new Fuse(content, {
+  keys: ['title', 'description', 'tags']
+})
 
 function taggify(tags) {
     let ret = "";
@@ -36,31 +38,34 @@ function render({ url, title, description, written, tags, readtime }) {
     </a>`
 }
 
-function loadMore() {
-    const el = document.getElementById("list-view");
-    
-    for(i=0; i<10; i++) {
-        if(content[current] == undefined) break;
+function refresh_results() {
+    const box = document.getElementById("query");
+    const query = box.value.trim();
+    let results = [];
 
-        el.innerHTML += render(content[current]);
-        current += 1;
-
-        if(current >= content.length) {
-            allDone();
-            break
+    if(query == "") { results = content }
+    else {
+        const fuse_results = fuse.search(query);
+        for(const result of fuse_results) {
+            results.push(result.item);
         }
     }
-}
 
-function allDone() {
-    const button = document.getElementById("loadmore");
+    let thing = "";
+    for(const result of results) {
+        thing += render(result);
+    }
 
-    button.setAttribute("disabled", "");
-    button.innerHTML = "Stay tuned for more!";
+    const el = document.getElementById("list-view");
+    el.innerHTML = thing;
 }
 
 fetch("/blog/posts/index.json").then(async res => {
     content = await res.json();
-    loadMore();
+    fuse = new Fuse(content, {
+      keys: ['title', 'description', 'tags']
+    })
+
+    refresh_results();
 }).catch(() => alert("Couldn't load blog posts! Please try again."));
 
