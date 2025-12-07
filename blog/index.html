@@ -35,7 +35,7 @@
 </style>
 
 <style>
-.feeds{font-size:18px;color:#ebdbb2;margin-top:-32px}.feed:hover{color:#458588}
+.feeds{font-size:18px;color:#ebdbb2;margin-top:-32px}.feed-sep{font-size:18px;color:#ebdbb2;margin-top:-32px}.feed:hover{color:#458588}
 </style>
 
 <style>
@@ -120,7 +120,7 @@ refresh_results();}).catch(()=>alert("Couldn't load blog posts! Please try again
                             class="feed"
                             href="/blog/rss.xml"
                         >RSS</a>
-                        <span class="feed">•</span>
+                        <span class="feed-sep">🟅</span>
                         <a 
                             class="feed"
                             href="/blog/atom.xml"
@@ -134,7 +134,7 @@ refresh_results();}).catch(()=>alert("Couldn't load blog posts! Please try again
                         class="search-box"
                         id="query"
                         name="query"
-                        placeholder="Search here"
+                        placeholder="Fuzzy-search here..."
                         oninput="refresh_results()"
                     >
                     <button class="clear-search">

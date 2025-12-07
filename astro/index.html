@@ -38,7 +38,7 @@
 </style>
 
 <style>
-.feeds{font-size:18px;color:#ebdbb2;margin-top:-32px}.feed:hover{color:#458588}
+.feeds{font-size:18px;color:#ebdbb2;margin-top:-32px}.feed-sep{font-size:18px;color:#ebdbb2;margin-top:-32px}.feed:hover{color:#458588}
 </style>
 
 <script>
@@ -96,7 +96,7 @@ fetch("/astro/history/index.json").then(async res=>{content=await res.json();loa
                         class="feed"
                         href="/astro/rss.xml"
                     >RSS</a>
-                    <span class="feed">•</span>
+                    <span class="feed-sep">🟅</span>
                     <a 
                         class="feed"
                         href="/astro/atom.xml"

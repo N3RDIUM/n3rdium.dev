@@ -3,6 +3,11 @@
     color: #ebdbb2;
     margin-top: -32px;
 }
+.feed-sep {
+    font-size: 18px;
+    color: #ebdbb2;
+    margin-top: -32px;
+}
 .feed:hover {
     color: #458588;
 }
