@@ -10,10 +10,10 @@ TODOs:
 - [ ] Update frequency entries in the sitemap.
 - [ ] Blog: add table of contents.
 - [ ] Skills: add chess +elo, human languages, subjects of interest/courses equiv, npm, yarn, react native, expo/snack, ollama, badminton, GIMP, Siril, DSS, MSICE, p5js, mpv, glsl, tkinter, pyqt5, qtdesigner, cargo, llms/prompting, stable diffusion/sdxl, google colab
-- [ ] New sub: host my projects' docs, etc. on `/projects/`. Changelogs will be included on the regular blog along with posts, like what vaxry does. Projects that may require this: PyTaskbar, AstroPi, zen, mnmlst, voxl, foom, rubberducky (archive later or will be superseded by zen), webcraft (first gamedev experiment?).
 - [ ] Projects will host their own sites on `projectname.n3rdium.dev` from respective repositories.
-- [ ] Write proper readmes for projects and link here.
 - [ ] New project: easily add a comments section anywhere! Make use of it on this site. Integrate with Akismet.
+- [x] New sub: host my projects' docs, etc. on `/projects/`. Changelogs will be included on the regular blog along with posts, like what vaxry does. Projects that may require this: PyTaskbar, AstroPi, zen, mnmlst, voxl, foom, rubberducky (archive later or will be superseded by zen), webcraft (first gamedev experiment?).
+- [x] Write proper readmes for projects and link here.
 - [x] Fix a lot of SEO stuff.
 - [x] Make dynamic lists in js and add fuzzy search(Fuse.js). "All caught up!" instead of "Stay tuned for more". 
 - [x] Redirect system: use 302 redirects using meta and link instead of that hacky thing. Or HTML meta redirects.
