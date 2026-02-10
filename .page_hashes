@@ -1,151 +1,151 @@
 {
     "./index.html": {
-        "hash": "a4219b520bad944b46c0c7f66d50ff229426333443ebd08910200d46dc5fc3e1",
-        "lastmod": "2025-12-01"
+        "hash": "2d4e5bfcbd9fa5add2e56cd6072759362a933e6a476683f03207225dacf8acc0",
+        "lastmod": "2026-02-10"
     },
     "./about/index.html": {
         "hash": "c235e7219a9b4f36517118c0f16b4da4caadcae1b041043bd8b532ec11cb71c1",
         "lastmod": "2025-12-27"
     },
     "./astro/index.html": {
-        "hash": "181eb887d848cfcfe3a37496ef92cd53ec3ca6016b334ea53372290e9e6ce2a9",
-        "lastmod": "2025-12-07"
+        "hash": "7774f6eec29317bcfb8a03fb999e4f080e7a24177670641aa51a1a05b0064ed3",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/17-jupiter.html": {
-        "hash": "6f85fae5ba6a825730ed19d3166b1e728f3945b009eb525e8ed5c73ed9c858d2",
-        "lastmod": "2025-11-30"
+        "hash": "0baace689891874b2417ac2cc4d02aa136b63e0ee9d6e0cfbbf6be9e10a02d94",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/14-saturn.html": {
-        "hash": "65dfe92fe1699d4339c934c59851a0ca3d9df2f00f7766efabb57f4c6969b983",
-        "lastmod": "2025-11-30"
+        "hash": "2c7480633965b73dc36446cc609bf6643a0873759fb7ecd6c2061d0ebed138c1",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/11-ring-nebula.html": {
-        "hash": "9dd14ba5e4ac8b25482707c29cece201c0f81f01d96720fbe0c1a240003ced6a",
-        "lastmod": "2025-11-30"
+        "hash": "f28787bf9316d18458bc37d91004e8ff339bf79d2ca1ead46277c07a137a5abe",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/8-ursa-major-astropi.html": {
-        "hash": "37efdc84c27077401a270972d7a606a517bfdebe2c7b70b10ae3bd964e632d23",
-        "lastmod": "2025-11-30"
+        "hash": "20cabcde59e6647b2ca56e9a8d94e78ac85833ca81f0874162cb10da8766cd9c",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/16-orion-nebula.html": {
-        "hash": "061d06d5053764141da337b455e631ac9c5fdae05da6756713e1f528a7b09dd2",
-        "lastmod": "2025-11-30"
+        "hash": "42fa2f47b8c44a158b133954d990ddf05c2560564eb115d3e3881daf482e53a3",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/0-first-moon.html": {
-        "hash": "dbd0ec2f3e7176fddefa71760ffdbf093467a864e0867022ccc55438923d2654",
-        "lastmod": "2025-11-30"
+        "hash": "515b3815d203672f123ac7d2c2ec307dc7d5f7bf7e482951126189a0af6d2367",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/10-hercules-globular.html": {
-        "hash": "2e6098bac3bb7e92c82c361b607a838186a07a38cd09189ea94e326e1339bbe3",
-        "lastmod": "2025-11-30"
+        "hash": "6b25637e029148acbe45ea27348bfb3ea7f1296974def83e975f8f3ac712c428",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/20-moon.html": {
-        "hash": "f7beba058318403dfbba7a903febc25e4ba7d37dcecda9644abc92e886fbbae3",
-        "lastmod": "2025-11-30"
+        "hash": "ed1a980e8a68c9d24d32a99f2f5226da22818af7cc8cd00cadc34c47f2dbe984",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/19-seven-sisters.html": {
-        "hash": "10929778122421cad3cef36cf0b35dc81c27f7ba2864cc60c7fc040b77deaba5",
-        "lastmod": "2025-11-30"
+        "hash": "519afc26749e9a498638611ea3d573d205d13f1caac668f5219974794a584662",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/18-jupiter.html": {
-        "hash": "e0e3fc3036b54df57f0f0322b1b96dd21b7f57ed6c5f5d169eab3ae0d459cd22",
-        "lastmod": "2025-11-30"
+        "hash": "8657ffbd264ba14315202cd030f94bf33eee687077d951f3f1c3f6b7a47cc67c",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/2-widefield-test.html": {
-        "hash": "f51ca6bfe5f5691d70e69bacdac567cdeac2da69210b6b6bde1ffe8b6f434f2d",
-        "lastmod": "2025-11-30"
+        "hash": "f74e767898226d7a1feef7880b3948fc5610aff1496b0bb980e5f853f2be3384",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/13-jupiter.html": {
-        "hash": "b3626d228a8eb8148ce82b1701309af5bf4640df5276238dc5810e395ac737dc",
-        "lastmod": "2025-11-30"
+        "hash": "337848378178a1c098fca0a503c63b4007c95b348ddfc75cfdcd892305dc0f69",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/1-green-comet.html": {
-        "hash": "811a38b928546fa3326bb9f2f427ec5ec935fbcded59c220d36021b97e39f49b",
-        "lastmod": "2025-11-30"
+        "hash": "846fe2440144ea9b012a728ad31e149f9dcc5e47698a2380b1596e11dfeeb7d3",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/7-dark-widefield-test.html": {
-        "hash": "b8c0e372b278e551d821e6d0acfe7bab59158da92e18326a104066a5de895d5c",
-        "lastmod": "2025-11-30"
+        "hash": "eb3b57be50bd1deafffadf5dc7cd46a4ee9ef2f0c1053f5efd0c817b4d4fe917",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/4-dark-widefield-test.html": {
-        "hash": "5450fa12978f412bf5003cc33abcb2808e8b2a0134120702739b58e4809e375a",
-        "lastmod": "2025-11-30"
+        "hash": "55c0ecc105e17b5f9c9074758e3119569c59951a64908f7fc6e2dd9646715fd4",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/12-ring-nebula.html": {
-        "hash": "eb0bd2a23463accaf385a373d4c442058686d2ca727c7534caccbe4ef45834fd",
-        "lastmod": "2025-11-30"
+        "hash": "c021088d709b6bc9df05d42a1d7073198857c90a6534fb9ab9eaf45f7c7f8b81",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/9-hercules-globular.html": {
-        "hash": "763557a1d2e5fb539b5256309b2a8832f07703a612c188bb4e62123d96d0e22c",
-        "lastmod": "2025-11-30"
+        "hash": "1f8bdeb84d6351701a38cf06d47be0b3c2580fe82090b2346ee80a458458dd6f",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/15-moon.html": {
-        "hash": "e4494d1b36181cb9c9020d2e3a865bd85d5152b259989dca5760dda2b5370f22",
-        "lastmod": "2025-11-30"
+        "hash": "e605e2fef14e1c7ced980f17c42613e8089e9d641107d4c9db26c0f79b8bff52",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/6-dark-widefield-test.html": {
-        "hash": "1150f7e82b8e5691903f7b0a64674f2c0eddc18e1d7fe64e31e974986a2d5598",
-        "lastmod": "2025-11-30"
+        "hash": "a5c1203427642987bc4792d1d2f2282082eebe316dc7b46d4ea8aea32bfd7872",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/21-orion-nebula.html": {
-        "hash": "5b4dc1906b1dd5bd29a117bcc691fccf56bd9772dc86705b593c4f96e331ccb6",
-        "lastmod": "2025-11-30"
+        "hash": "87ee68ea59ec21df117fbf47ea8f2c71ae18644d66848960478e0913feb5a8ca",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/5-dark-widefield-test.html": {
-        "hash": "042b961c59b2b34e94b29372e2f90ebae7a9c79d8afb6e0059e41b7966a79ce3",
-        "lastmod": "2025-11-30"
+        "hash": "50afbeb9f5d5eec6df735ec5e40cc26eb6331e08512bc49ff04cbed7cab29737",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/22-eq-platform-test.html": {
-        "hash": "7837c6570f3f4ae9fe6ceb1b98915227801a9363c570745f99fe2fb4af7e95e4",
-        "lastmod": "2025-11-30"
+        "hash": "e43042e8b4fd63f0db9f3a62dde2d304368e46e525f63dc90f39c68f9b605240",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/3-widefield-test.html": {
-        "hash": "10a0851f21c3b1c15d42f65e5daeb53ad112cf0eabed421175d296b8f6fb170d",
-        "lastmod": "2025-11-30"
+        "hash": "a6f3b33f6da5435f3b0b2ea4df05edf62fc0444ec6fc50e7c22a8b22a70a016a",
+        "lastmod": "2026-02-10"
     },
     "./astro/history/latest-milky-way.html": {
         "hash": "4ce89ad40f224faf3baf87dbc45f5cb8d38a91e8a59639a11331704bc950c1c5",
         "lastmod": "2025-12-01"
     },
     "./contact/index.html": {
-        "hash": "d2bf02a24ff36d9d9f960051e089421d7e14480efbc4eea093322b5b08e2353f",
-        "lastmod": "2025-11-30"
+        "hash": "59c86b4fb2efac7b204ca32e86ed8c695569bda1de96ee01a2c2ef64b0d79d05",
+        "lastmod": "2026-02-10"
     },
     "./skills/index.html": {
-        "hash": "94b3c59c6ad766e45d0a925a8076b9179c06fcf9a41d86864754fd241b1b4ac3",
-        "lastmod": "2025-11-30"
+        "hash": "76ce147b8e208d32300fe8cb976098f17acc97e8b501a45d31792a5ca3a7f6ef",
+        "lastmod": "2026-02-10"
     },
     "./blog/index.html": {
-        "hash": "c094b8af637d47abaec2de3f8f73dc2338d49387da128da8eb61da874e2ae8c2",
-        "lastmod": "2025-12-07"
+        "hash": "548f8fed50a868680a6bb30d722bebefb4a9ab487d5d77854b9d9d0eb91b912c",
+        "lastmod": "2026-02-10"
     },
     "./blog/posts/4-optimize-website.html": {
-        "hash": "d2454a0a70fd5c73a576463bef8ff9b5ed65eb6f767493cc8fed2bf9ad2e960f",
-        "lastmod": "2025-12-01"
+        "hash": "83cf3605dccaef17c64111bda80128c814dabdb6af6363f8f74264ae80aef00f",
+        "lastmod": "2026-02-10"
     },
     "./blog/posts/3-build-website.html": {
-        "hash": "8e97508123086b8e72834f280874cdf5712d0f0c341522d7ea1069d1cd38a093",
-        "lastmod": "2025-12-01"
+        "hash": "7752a1305afebc24824173070d929c4ec8a506257dbc4cbb4f8d1fd6a0dd8663",
+        "lastmod": "2026-02-10"
     },
     "./blog/posts/5-aio-to-vnc-monitor.html": {
-        "hash": "f22241f7eac5f1dfbe8da17dca98b0ce9851a19a78745283588982aea7e1eee2",
-        "lastmod": "2025-12-01"
+        "hash": "d3603a51e9f62cee8d9f8f041e292c6d36515766f7e85a6d8caa3a269c4d01d5",
+        "lastmod": "2026-02-10"
     },
     "./blog/posts/0-diy-astro-camera.html": {
-        "hash": "2d7ccd933a23a4c714adc3752688ca9589324aa989341837424624dbb13330d2",
-        "lastmod": "2025-12-01"
+        "hash": "dc10fde361e6d4f4fe1eaf94d989e1873bd056340e31a0a6403fa67d9bbf619f",
+        "lastmod": "2026-02-10"
     },
     "./blog/posts/1-vibe-coding.html": {
-        "hash": "0e9dfffeef2d67ce8827c99034dfedab4655e6c6c2798633ed5d870a38bb5f21",
-        "lastmod": "2025-12-01"
+        "hash": "f2b93bc5974351c0386c32095c03b650c73f4d98be1640a9f51067c07c4ba31d",
+        "lastmod": "2026-02-10"
     },
     "./blog/posts/2-ai-rubber-duck.html": {
-        "hash": "63048966096bf19924feffdc3023d1649fa92643b16ff967cd9caf1f5eec27b5",
-        "lastmod": "2025-12-01"
+        "hash": "f4975138536cab699065e2db0e4ebcf8692e7006ec14233a1a7a53429ea95e64",
+        "lastmod": "2026-02-10"
     },
     "./projects/index.html": {
-        "hash": "4af382ad0af0dc97a3b1e894f41f83b8d9cab81a95c0c02dc59305ee53c65926",
-        "lastmod": "2025-11-30"
+        "hash": "93c97b007d6760b53a9d5523f3dbce09ffabcd16508df21e30d004981ad2900b",
+        "lastmod": "2026-02-10"
     },
     "./projects/dotfiles/index.html": {
         "hash": "c5dab0dbfa5c171630cf6fcd58b0afd0f8907069b8fe9480dbfa11d084576100",
@@ -184,7 +184,7 @@
         "lastmod": "2025-11-30"
     },
     "./astro/history/23-milky-way.html": {
-        "hash": "580354fdeb571b900347197d831aed0f4d2b4e5ddb0a16da94a1da1d36357d99",
-        "lastmod": "2025-12-01"
+        "hash": "610b20ed759d259e31e8bf293616eff9e106a0163a47e64ae27567b5a05122e0",
+        "lastmod": "2026-02-10"
     }
 }
