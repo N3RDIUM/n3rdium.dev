@@ -47,9 +47,9 @@ N3RDIUM META END
 
 <script>
 const isDarkReaderDetected=[...document.querySelectorAll('style')].some((el)=>el.classList.contains('darkreader'));if(isDarkReaderDetected){}
-const current_sub=window.location.pathname.split("/")[1];const nav_entries={about:`<a class="nav-link thefont" href="/about/">About</a>`,skills:`<a class="nav-link thefont" href="/skills/">Skills</a>`,projects:`<a class="nav-link thefont" href="/projects/">Projects</a>`,blog:`<a class="nav-link thefont" href="/blog/">Blog</a>`,astro:`<a class="nav-link thefont" href="/astro/">Astro</a>`,contact:`<a class="nav-link thefont" href="/contact/">Contact</a>`,};let nav_string="";for(const key in nav_entries){if(key==current_sub){continue}
+const current_sub=window.location.pathname.split("/")[1];const nav_entries={about:`<a class="nav-link" href="/about/">About</a>`,skills:`<a class="nav-link" href="/skills/">Skills</a>`,projects:`<a class="nav-link" href="/projects/">Projects</a>`,blog:`<a class="nav-link" href="/blog/">Blog</a>`,astro:`<a class="nav-link" href="/astro/">Astro</a>`,contact:`<a class="nav-link" href="/contact/">Contact</a>`,};let nav_string="";for(const key in nav_entries){if(key==current_sub){continue}
 nav_string+=nav_entries[key];}
-const nav=`<a class="nav-username thefont" href="/">N3RDIUM</a>
+const nav=`<a class="nav-username" href="/">N3RDIUM</a>
 <div class="nav-links">
 ${nav_string}
 </div>`
@@ -80,7 +80,7 @@ let t,e,n,o,i,a=null,s=65,c=new Set;const r=1111;function d(t){o=performance.now
         <div class="container">
             <div class="nav-header" id="nav"></div>
 
-            <div class="content centered thefont">
+            <div class="content centered">
                 <img
                     alt="A close-up image of Saturn with its magnificent rings."
                     class="showcase"
@@ -100,21 +100,21 @@ let t,e,n,o,i,a=null,s=65,c=new Set;const r=1111;function d(t){o=performance.now
 
             <div class="nav-footer">
                 <a
-                    class="nav-link thefont"
+                    class="nav-link"
                     href="/astro/history/0-first-moon.html"
                     >Oldest</a
                 >
                 <a
-                    class="nav-link thefont"
+                    class="nav-link"
                     href="/astro/history/13-jupiter.html"
                     >Previous</a
                 >
-                <a class="nav-link thefont" href="/astro/">Gallery</a>
-                <a class="nav-link thefont" href="/astro/history/15-moon.html"
+                <a class="nav-link" href="/astro/">Gallery</a>
+                <a class="nav-link" href="/astro/history/15-moon.html"
                     >Next</a
                 >
                 <a
-                    class="nav-link thefont"
+                    class="nav-link"
                     href="/astro/history/latest-milky-way.html"
                     >Newest</a
                 >

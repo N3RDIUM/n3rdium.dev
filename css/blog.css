@@ -35,12 +35,14 @@
     background: #504945;
     cursor: pointer;
 }
+.post:hover .post-banner {
+    filter: none;
+}
 .post-banner {
     width: 100%;
     aspect-ratio: calc(16 / 7);
     object-fit: cover;
-    filter: brightness(0.9) grayscale(1.0) hue-rotate(45deg);
-    transition-duration: 200ms;
+    filter: brightness(0.84) sepia(1);
     border-radius: 6px;
 }
 .post-banner-nodim {
@@ -48,9 +50,6 @@
     aspect-ratio: calc(16 / 7);
     object-fit: cover;
     border-radius: 6px;
-}
-.post-banner:hover {
-    filter: none;
 }
 .post-title {
     margin-top: 0px;
@@ -62,8 +61,8 @@
     font-size: 12px;
     margin-top: -4px;
 }
-.preview {
-    font-size: 13px;
+.post-description {
+    font-size: 16px;
     margin-top: 16px;
 }
 .clicky {

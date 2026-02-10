@@ -4,15 +4,18 @@ The website is [here](https://n3rdium.dev).
 
 TODOs:
 - [ ] Add more TODOs? 😅
-- [ ] Update site structure. Must include piano stuff. Going to need those list pages more, not just on blog. Make dynamic lists in js and add fuzzy search(Fuse.js). "All caught up!" instead of "Stay tuned for more". Also do a scroll to top button in the bottom right corner for all scrollable pages.
+- [ ] Astro image zoom-in/desc page: redux
+- [ ] Update site structure. Must include piano stuff. Going to need those list pages more, not just on blog. Maybe use one of those dropdown navs (sidebar on mobile).
+- [ ] Do a scroll to top button in the bottom right corner for all scrollable pages.
 - [ ] Update frequency entries in the sitemap.
-- [ ] Blog post: Making a website from scratch in 2025. Because the other two posts didn't do it justice. Or rewrite the other two posts. Include that the star pattern on the homepage changes everytime the site is deployed.
 - [ ] Blog: add table of contents.
-- [ ] Skills: add chess +elo, human languages, subjects of interest/courses equiv, npm, yarn, react native, expo/snack, ollama, badminton, GIMP, Siril, DSS, MSICE, p5js, mpv, glsl, tkinter, pyqt5, qtdesigner, cargo
+- [ ] Skills: add chess +elo, human languages, subjects of interest/courses equiv, npm, yarn, react native, expo/snack, ollama, badminton, GIMP, Siril, DSS, MSICE, p5js, mpv, glsl, tkinter, pyqt5, qtdesigner, cargo, llms/prompting, stable diffusion/sdxl, google colab
 - [ ] New sub: host my projects' docs, etc. on `/projects/`. Changelogs will be included on the regular blog along with posts, like what vaxry does. Projects that may require this: PyTaskbar, AstroPi, zen, mnmlst, voxl, foom, rubberducky (archive later or will be superseded by zen), webcraft (first gamedev experiment?).
 - [ ] Projects will host their own sites on `projectname.n3rdium.dev` from respective repositories.
-- [ ] Fix a lot of SEO stuff. Write proper readmes for projects and link here.
+- [ ] Write proper readmes for projects and link here.
 - [ ] New project: easily add a comments section anywhere! Make use of it on this site. Integrate with Akismet.
+- [x] Fix a lot of SEO stuff.
+- [x] Make dynamic lists in js and add fuzzy search(Fuse.js). "All caught up!" instead of "Stay tuned for more". 
 - [x] Redirect system: use 302 redirects using meta and link instead of that hacky thing. Or HTML meta redirects.
 - [x] Blog: estimated reading time. Pypkg `readtime`
 - [x] Site RSS/Atom feed for astro, projects/updates, blog posts, etc. Pypkg `feedgen`

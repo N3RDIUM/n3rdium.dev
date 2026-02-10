@@ -6,12 +6,12 @@ if(isDarkReaderDetected) {
 const current_sub = window.location.pathname.split("/")[1];
 
 const nav_entries = {
-    about: `<a class="nav-link thefont" href="/about/">About</a>`,
-    skills: `<a class="nav-link thefont" href="/skills/">Skills</a>`,
-    projects: `<a class="nav-link thefont" href="/projects/">Projects</a>`,
-    blog: `<a class="nav-link thefont" href="/blog/">Blog</a>`,
-    astro: `<a class="nav-link thefont" href="/astro/">Astro</a>`,
-    contact: `<a class="nav-link thefont" href="/contact/">Contact</a>`,
+    about: `<a class="nav-link" href="/about/">About</a>`,
+    skills: `<a class="nav-link" href="/skills/">Skills</a>`,
+    projects: `<a class="nav-link" href="/projects/">Projects</a>`,
+    blog: `<a class="nav-link" href="/blog/">Blog</a>`,
+    astro: `<a class="nav-link" href="/astro/">Astro</a>`,
+    contact: `<a class="nav-link" href="/contact/">Contact</a>`,
 };
 
 let nav_string = "";
@@ -23,7 +23,7 @@ for (const key in nav_entries) {
     nav_string += nav_entries[key];
 }
 
-const nav = `<a class="nav-username thefont" href="/">N3RDIUM</a>
+const nav = `<a class="nav-username" href="/">N3RDIUM</a>
 <div class="nav-links">
 ${nav_string}
 </div>`

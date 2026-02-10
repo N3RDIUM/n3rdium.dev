@@ -27,9 +27,9 @@
 
 <script>
 const isDarkReaderDetected=[...document.querySelectorAll('style')].some((el)=>el.classList.contains('darkreader'));if(isDarkReaderDetected){}
-const current_sub=window.location.pathname.split("/")[1];const nav_entries={about:`<a class="nav-link thefont" href="/about/">About</a>`,skills:`<a class="nav-link thefont" href="/skills/">Skills</a>`,projects:`<a class="nav-link thefont" href="/projects/">Projects</a>`,blog:`<a class="nav-link thefont" href="/blog/">Blog</a>`,astro:`<a class="nav-link thefont" href="/astro/">Astro</a>`,contact:`<a class="nav-link thefont" href="/contact/">Contact</a>`,};let nav_string="";for(const key in nav_entries){if(key==current_sub){continue}
+const current_sub=window.location.pathname.split("/")[1];const nav_entries={about:`<a class="nav-link" href="/about/">About</a>`,skills:`<a class="nav-link" href="/skills/">Skills</a>`,projects:`<a class="nav-link" href="/projects/">Projects</a>`,blog:`<a class="nav-link" href="/blog/">Blog</a>`,astro:`<a class="nav-link" href="/astro/">Astro</a>`,contact:`<a class="nav-link" href="/contact/">Contact</a>`,};let nav_string="";for(const key in nav_entries){if(key==current_sub){continue}
 nav_string+=nav_entries[key];}
-const nav=`<a class="nav-username thefont" href="/">N3RDIUM</a>
+const nav=`<a class="nav-username" href="/">N3RDIUM</a>
 <div class="nav-links">
 ${nav_string}
 </div>`
@@ -57,39 +57,39 @@ let t,e,n,o,i,a=null,s=65,c=new Set;const r=1111;function d(t){o=performance.now
 
     <body>
         <div class="container center home-container">
-            <div class="username thefont">
+            <div class="username">
                 N3RDIUM
             </div>
 
             <div class="home-link-container">
                 <a 
-                    class="home-link thefont"
+                    class="home-link"
                     href="/about/"
                 >About</a>
                 <span class="home-link-sep">•</span>
                 <a
-                    class="home-link thefont"
+                    class="home-link"
                     href="/skills/"
                 >Skills</a>
                 <span class="home-link-sep">•</span>
                 <a
-                    class="home-link thefont"
+                    class="home-link"
                     href="/contact/"
                 >Contact</a>
             </div>
             <div class="home-link-container">
                 <a
-                    class="home-link thefont"
+                    class="home-link"
                     href="/projects/"
                 >Projects</a>
                 <span class="home-link-sep">•</span>
                 <a
-                    class="home-link thefont"
+                    class="home-link"
                     href="/blog/"
                 >Blog</a>
                 <span class="home-link-sep">•</span>
                 <a
-                    class="home-link thefont"
+                    class="home-link"
                     href="/astro/"
                 >Astro</a>
             </div>

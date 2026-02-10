@@ -23,14 +23,14 @@ function render({ url, title, description, written, tags, readtime }) {
         href="${url}"
         class="post"
     >
-        <h2 class="post-title thefont">
+        <h2 class="post-title">
             ${title}
         </h2>
         <div class="post-preview">
-            <p class="thefont preview">
+            <p class="post-description">
                 ${description}
             </p>
-            <div class="thefont metadata" style="width: 100%">
+            <div class="metadata" style="width: 100%">
                 <span style="float:left">${rts}</span>
                 <span style="float:right">${written} ${taggify(tags)}</span>
             </div>
@@ -58,6 +58,10 @@ function refresh_results() {
 
     const el = document.getElementById("list-view");
     el.innerHTML = thing;
+
+    if(thing == "") {
+        el.innerHTML = "No results found!";
+    }
 }
 
 fetch("/blog/posts/index.json").then(async res => {

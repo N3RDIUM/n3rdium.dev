@@ -40,7 +40,7 @@ N3RDIUM META END
         <!--AUTOGEN START-->
 
 <style>
-.welcome-container{display:flex;flex-direction:column;text-align:center;padding:42px}.welcome-heading{color:#458588;font-size:42px;margin-bottom:0}.welcome-subhead{margin-top:0;text-align:center;margin-bottom:42px}.posts{display:flex;width:100%;align-items:center;flex-direction:column}.post{all:unset;color:#ebdbb2;background:#3c3836;text-decoration:none;width:80%;max-width:700px;padding:24px;margin-bottom:24px}.post:hover{background:#504945;cursor:pointer}.post-banner{width:100%;aspect-ratio:calc(16 / 7);object-fit:cover;filter:brightness(0.9) grayscale(1.0) hue-rotate(45deg);transition-duration:200ms;border-radius:6px}.post-banner-nodim{width:100%;aspect-ratio:calc(16 / 7);object-fit:cover;border-radius:6px}.post-banner:hover{filter:none}.post-title{margin-top:0px;color:#83a598}.metadata{color:#d5c4a1;float:right;font-size:12px;margin-top:-4px}.preview{font-size:13px;margin-top:16px}.clicky{margin-bottom:-4px;float:right}.post-container{max-width:calc(min(700px,90vw))}.title-container{display:flex;flex-direction:column;color:#83a598}.title-subhead{margin-top:-12px;margin-bottom:12px;max-width:800px;text-align:left;font-size:13px;color:#ebdbb2}.title-meta{margin-top:12px;width:100%;font-size:12px;text-align:right;color:#d5c4a1}.next{float:right}.blog-content{max-width:800px;margin:42px 0}.blog-image{width:80%;margin-left:10%}.blog-caption{width:80%;margin-left:10%;font-size:12px;color:#bdae93;margin-bottom:42px}h2,h3,h4,h5,h6{color:#fbf1c7}a{color:#ebdbb2}a:active{color:#fbf1c7}a:visited{color:#d5c4a1}pre{width:80%;margin-left:10%;text-wrap:wrap}.loadmore-container{width:100%;align-items:center;justify-content:center;display:flex}.loadmore{color:#ebdbb2;background:#458588;border:0px;font-size:16px;padding:8px}.loadmore:hover{background:#ebdbb2;color:#282828}.loadmore:active{background:#fbf1c7;color:#458588}.loadmore:disabled{background:#665c54;color:#a89984}
+.welcome-container{display:flex;flex-direction:column;text-align:center;padding:42px}.welcome-heading{color:#458588;font-size:42px;margin-bottom:0}.welcome-subhead{margin-top:0;text-align:center;margin-bottom:42px}.posts{display:flex;width:100%;align-items:center;flex-direction:column}.post{all:unset;color:#ebdbb2;background:#3c3836;text-decoration:none;width:80%;max-width:700px;padding:24px;margin-bottom:24px}.post:hover{background:#504945;cursor:pointer}.post:hover .post-banner{filter:none}.post-banner{width:100%;aspect-ratio:calc(16 / 7);object-fit:cover;filter:brightness(0.84) sepia(1);border-radius:6px}.post-banner-nodim{width:100%;aspect-ratio:calc(16 / 7);object-fit:cover;border-radius:6px}.post-title{margin-top:0px;color:#83a598}.metadata{color:#d5c4a1;float:right;font-size:12px;margin-top:-4px}.post-description{font-size:16px;margin-top:16px}.clicky{margin-bottom:-4px;float:right}.post-container{max-width:calc(min(700px,90vw))}.title-container{display:flex;flex-direction:column;color:#83a598}.title-subhead{margin-top:-12px;margin-bottom:12px;max-width:800px;text-align:left;font-size:13px;color:#ebdbb2}.title-meta{margin-top:12px;width:100%;font-size:12px;text-align:right;color:#d5c4a1}.next{float:right}.blog-content{max-width:800px;margin:42px 0}.blog-image{width:80%;margin-left:10%}.blog-caption{width:80%;margin-left:10%;font-size:12px;color:#bdae93;margin-bottom:42px}h2,h3,h4,h5,h6{color:#fbf1c7}a{color:#ebdbb2}a:active{color:#fbf1c7}a:visited{color:#d5c4a1}pre{width:80%;margin-left:10%;text-wrap:wrap}.loadmore-container{width:100%;align-items:center;justify-content:center;display:flex}.loadmore{color:#ebdbb2;background:#458588;border:0px;font-size:16px;padding:8px}.loadmore:hover{background:#ebdbb2;color:#282828}.loadmore:active{background:#fbf1c7;color:#458588}.loadmore:disabled{background:#665c54;color:#a89984}
 </style>
 
 <style>
@@ -53,9 +53,9 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 
 <script>
 const isDarkReaderDetected=[...document.querySelectorAll('style')].some((el)=>el.classList.contains('darkreader'));if(isDarkReaderDetected){}
-const current_sub=window.location.pathname.split("/")[1];const nav_entries={about:`<a class="nav-link thefont" href="/about/">About</a>`,skills:`<a class="nav-link thefont" href="/skills/">Skills</a>`,projects:`<a class="nav-link thefont" href="/projects/">Projects</a>`,blog:`<a class="nav-link thefont" href="/blog/">Blog</a>`,astro:`<a class="nav-link thefont" href="/astro/">Astro</a>`,contact:`<a class="nav-link thefont" href="/contact/">Contact</a>`,};let nav_string="";for(const key in nav_entries){if(key==current_sub){continue}
+const current_sub=window.location.pathname.split("/")[1];const nav_entries={about:`<a class="nav-link" href="/about/">About</a>`,skills:`<a class="nav-link" href="/skills/">Skills</a>`,projects:`<a class="nav-link" href="/projects/">Projects</a>`,blog:`<a class="nav-link" href="/blog/">Blog</a>`,astro:`<a class="nav-link" href="/astro/">Astro</a>`,contact:`<a class="nav-link" href="/contact/">Contact</a>`,};let nav_string="";for(const key in nav_entries){if(key==current_sub){continue}
 nav_string+=nav_entries[key];}
-const nav=`<a class="nav-username thefont" href="/">N3RDIUM</a>
+const nav=`<a class="nav-username" href="/">N3RDIUM</a>
 <div class="nav-links">
 ${nav_string}
 </div>`
@@ -86,7 +86,7 @@ let t,e,n,o,i,a=null,s=65,c=new Set;const r=1111;function d(t){o=performance.now
         <div class="container">
             <div class="nav-header" id="nav"></div>
 
-            <div class="content centered thefont">
+            <div class="content centered">
                 <div class="post-container">
                     <div class="title-container">
                         <h1 class="title-heading">
@@ -99,7 +99,7 @@ let t,e,n,o,i,a=null,s=65,c=new Set;const r=1111;function d(t){o=performance.now
                             to make my own astrophotography camera using a
                             Raspberry Pi and the official HQ Camera.
                         </p>
-                        <div class="thefont title-meta">
+                        <div class="title-meta">
                             28-12-2024 [Astrophotography]
                         </div>
                     </div>

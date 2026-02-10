@@ -1,0 +1,34 @@
+[
+    {
+        "url": "https://github.com/n3rdium/astropi",
+        "name": "astropi",
+        "description": "A DIY astronomy camera made with a raspberry pi 5 and the HQ camera!",
+        "image": "/astro/assets/rpi-milkyway-camp.webp",
+        "imagealt": "An image of the Milky Way captured with a Raspberry Pi.",
+        "tags": ["featured", "python", "astro"]
+    },
+    {
+        "url": "https://github.com/n3rdium/voxl",
+        "name": "voxl",
+        "description": "A highly optimized procedural multiplayer voxel engine written from scratch in Python.",
+        "tags": ["featured", "python", "game"]
+    },
+    {
+        "url": "https://github.com/n3rdium/foom",
+        "name": "foom",
+        "description": "A curses-based mpd client.",
+        "tags": ["wip", "python", "tui"]
+    },
+    {
+        "url": "https://github.com/n3rdium/mnmlst",
+        "name": "dotfiles",
+        "description": "My dotfiles!",
+        "tags": ["featured", "nixos", "dotfiles"]
+    },
+    {
+        "url": "https://github.com/n3rdium/webcraft",
+        "name": "WebCraft",
+        "description": "One of my first projects! A web terrain generator written in Three.js.",
+        "tags": ["beginner", "web", "game"]
+    }
+]
