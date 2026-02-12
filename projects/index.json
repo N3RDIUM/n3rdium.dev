@@ -10,7 +10,7 @@
     {
         "url": "https://github.com/n3rdium/voxl",
         "name": "voxl",
-        "description": "A highly optimized procedural multiplayer voxel engine written from scratch in Python.",
+        "description": "A procedural multiplayer voxel engine written from scratch in Python.",
         "tags": ["featured", "python", "game"]
     },
     {
