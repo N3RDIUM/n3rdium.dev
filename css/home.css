@@ -77,7 +77,7 @@
     flex: 1 1 200px;
     aspect-ratio: 1;
     background: var(--bg_1, gray);
-    border: solid 2px var(--bg_2, lightgray);
+    border: solid 1px var(--bg_2, lightgray);
     border-radius: 2px;
 
     display: flex;
@@ -123,6 +123,9 @@
     }
     .techstack-head {
         font-size: 16px;
+    }
+    .techstack-box {
+        border-width: 2px;
     }
     .techstack-more {
         font-size: 16px;
