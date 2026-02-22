@@ -5,4 +5,5 @@ The website is [here](https://n3rdium.dev).
 
 TODOs:
 - [ ] Use the sass preprocessor. Add the cmd to the deploy workflow.
+- [ ] Make tech stack boxes clickable.
 
