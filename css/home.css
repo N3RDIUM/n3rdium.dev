@@ -15,15 +15,15 @@
     margin-bottom: -10px;
 }
 .intro-text {
-    font-size: 18px;
+    font-size: 14px;
 }
 .intro-icons {
     height: 24px;
     margin-bottom: 12px;
 }
 .intro-icon {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    aspect-ratio: 1;
 }
 .intro-link {
     margin: 6px;
@@ -47,9 +47,15 @@
     .intro-username {
         margin-top: 46px;
     }
+    .intro-text {
+        font-size: 18px;
+    }
     .intro-icons {
         float: right;
         margin-bottom: 0;
+    }
+    .intro-icon {
+        width: 24px;
     }
 }
 
@@ -90,8 +96,10 @@
 }
 .techstack-head {
     margin-bottom: 12px;
+    font-size: 13px;
 }
 .techstack-more {
+    font-size: 13px;
     align-self: flex-end;
 }
 
@@ -112,6 +120,12 @@
 @media screen and (min-width: 600px) {
     .techstack-container {
         margin-top: 42px;
+    }
+    .techstack-head {
+        font-size: 16px;
+    }
+    .techstack-more {
+        font-size: 16px;
     }
 }
 
