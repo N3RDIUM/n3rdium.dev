@@ -12,28 +12,29 @@ META_END-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Self-taught backend & game developer focused on scalability, minimalism, and developer experience. Amateur astronomer. Piano addict.">
 
+        <!--dev start-->
+        <link rel="stylesheet" href="/css/theme.css">
+        <link rel="stylesheet" href="/css/default.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <!--dev end-->
+
         <!--inline start
             css:theme
             css:default
             css:home
         inline end-->
         <!--autogen start-->
-        <style>
-        :root{--fg:#ebdbb2;--fg4:#a89984;--fg3:#bdae93;--fg2:#d5c4a1;--fg1:#ebdbb2;--fg0:#fbf1c7;--bg:#282828;--bg0_h:#1d2021;--bg_0:#282828;--bg_1:#3c3836;--bg_2:#504945;--bg_3:#665c54;--bg_4:#7c6f64;--bg0_s:#32302f;--red:#cc241d;--green:#98971a;--yellow:#458588;--purple:#b16286;--aqua:#689d9a;--orange:#d65d0e;--lred:#fb4934;--lgreen:#b8bb26;--lyellow:#fabd2f;--lblue:#83a598;--lpurple:#d3869b;--laqua:#8ec07c;--lorange:#fe8019;--lgray:#a89984;--gray:#928374;--dgray:#928374}
-        </style>
-
-        <style>
-        @font-face{font-family:"Iosevka";font-display:swap;src:url("/assets/fonts/Iosevka-Light.woff2") format("woff2"),url("/assets/fonts/Iosevka-Light.ttf") format("truetype")}body,html{margin:0;padding:0;color:var(--fg,white);background-color:var(--bg_0,black);display:flex;flex-direction:column;align-items:center}hr{color:var(--gray,#323232);background:var(--gray,#323232);border:solid 1px var(--gray,#323232)}a{color:#ebdbb2;font-size:20px;padding:2px}a:hover{text-decoration:underline wavy #cc241d}a:active{color:#fbf1c7}a:visited{color:#d5c4a1}.container{width:80vw;max-width:1024px;min-height:42px;font-family:Iosevka;font-optical-sizing:auto;font-weight:400;display:flex;flex-direction:column}
-        </style>
-
-        <style>
-        .intro-container{margin-top:24px;padding:12px;display:flex;flex-direction:column}.intro-pfp{display:flex;align-items:center;justify-content:center}.intro-username{color:var(--fg0,white);font-size:42px;margin-bottom:-10px}.intro-text{font-size:14px}.intro-icons{height:24px;margin-bottom:12px}.intro-icon{width:18px;aspect-ratio:1}.intro-link{margin:6px;text-decoration:none}.intro-link:visited{text-decoration:none}.intro-link:hover{text-decoration:none}.intro-link:active{text-decoration:none}@media screen and (min-width:600px){.intro-container{margin-top:64px;flex-direction:row}.intro-username{margin-top:46px}.intro-text{font-size:18px}.intro-icons{float:right;margin-bottom:0}.intro-icon{width:24px}}.techstack-container{display:flex;flex-direction:column;justify-content:center;max-width:842px}.techstack-row{gap:12px;margin-bottom:12px;display:flex;flex-direction:row;justify-content:center}.techstack-box{flex:1 1 200px;aspect-ratio:1;background:var(--bg_1,gray);border:solid 1px var(--bg_2,lightgray);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center}.techstack-icon{width:64px;aspect-ratio:1}.techstack-role{font-size:14px;margin-top:12px;display:none}.techstack-head{margin-bottom:12px;font-size:13px}.techstack-more{font-size:13px;align-self:flex-end}@media screen and (min-width:800px){.techstack-box{flex:1 1 240px;aspect-ratio:1.42;border-width:2px}.techstack-role{display:flex}}@media screen and (max-width:600px){.techstack-icon{width:42px}}@media screen and (min-width:600px){.techstack-container{margin-top:42px}.techstack-head{font-size:16px}.techstack-more{font-size:16px}}.scroll-head{color:var(--gray,gray);font-size:68px;width:256px;margin:0;margin-top:42px;height:128px;display:none;writing-mode:vertical-rl;text-orientation:mixed}@media screen and (min-width:1192px){.scroll-head{display:flex}.right-or-down{display:flex;flex-direction:row}.techstack-container{width:100%}}
-        </style>
         <!--autogen end-->
+
+        <!--scripts-->
+        <script type="module" src="/js/default.js"></script>
     </head>
     <body>
+        <nav class="nav-container">
+        </nav>
+
         <main class="container">
-            <div class="intro-container">
+            <header class="intro-container">
                 <div class="intro-pfp">
                     <picture width=200 height=200 alt="N3RIDUM's Avatar">
                         <source srcset="/assets/img/n3rdium.avif" type="image/avif">
@@ -68,7 +69,7 @@ META_END-->
                         </a>
                     </div>
                 </div>
-            </div>
+            </header>
 
             <div class="right-or-down">
                 <div class="techstack-container">

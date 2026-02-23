@@ -35,28 +35,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run starfield script
-        run: python starfield.py
-        continue-on-error: true
-
-      - name: Run inline script
-        run: python inline.py
-        continue-on-error: true
-      
-      - name: Run update script
-        run: python update.py
-        continue-on-error: true
-
-      - name: Run update RSS/ATOM feeds
-        run: python feeds.py
-        continue-on-error: true
-        
-      - name: Push Changes
-        run: |
-          git config --global user.name 'n3rdium'
-          git config --global user.email 'n3rdium@users.noreply.github.com'
-          git commit -am "ci: automated commit"
-          git push
+      - name: Run build script
+        run: python scripts/dist.py
         continue-on-error: true
           
       - name: Checkout
@@ -68,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './dist/'
           
       - name: Deploy to GitHub Pages
         id: deployment

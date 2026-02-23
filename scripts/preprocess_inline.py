@@ -5,27 +5,29 @@ from rcssmin import cssmin
 css: dict[str, str] = {}
 js: dict[str, str] = {}
 
-for style in os.listdir("./css"):
+for style in os.listdir("./src/css"):
     if not style.endswith(".css"):
         continue
 
-    with open(os.path.join("./css/", style), "r") as file:
+    with open(os.path.join("./src/css/", style), "r") as file:
         contents = file.read()
     name = style.removesuffix(".css")
 
     css[name] = str(cssmin(contents))
     print(f"loaded stylesheet: {name}")
 
-for script in os.listdir("./js"):
+for script in os.listdir("./src/js"):
     if not script.endswith(".js"):
         continue
 
-    with open(os.path.join("./js/", script), "r") as file:
+    with open(os.path.join("./src/js/", script), "r") as file:
         contents = file.read()
     name = script.removesuffix(".js")
 
     js[name] = str(jsmin(contents))
     print(f"loaded script: {name}")
+
+# TODO separate modules from scripts.
 
 INLINE_PREFIX = "<!--inline start"
 INLINE_SUFFIX = "inline end-->"
@@ -115,18 +117,19 @@ def process_file(path: str):
     with open(path, "w") as file:
         _ = file.write(new_file)
 
-    print(f"processed file: {path}")
+    print(f"processed inline block: {path}")
 
 
-BLACKLIST = [
+BLACKLIST = [  # TODO regex matching for convenience?
     "template.html",
     "redirect_template.html",
 ]
 
-for root, dirs, files in os.walk(".", topdown=True):
-    for file in files:
-        if not file.endswith(".html"):
-            continue
-        if file in BLACKLIST:
-            continue
-        process_file(os.path.join(root, file))
+def inline():
+    for root, _, files in os.walk("dist/", topdown=True):
+        for file in files:
+            if not file.endswith(".html"):
+                continue
+            if file in BLACKLIST:
+                continue
+            process_file(os.path.join(root, file))
