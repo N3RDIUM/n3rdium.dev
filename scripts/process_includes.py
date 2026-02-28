@@ -10,6 +10,7 @@ if os.path.exists("includes/"):
 
 def process_includes():
     for slug, repo in includes.items():
+        print(f"processing include {slug}")
         path: str = os.path.join("includes/", slug)
         dist_path: str = os.path.join("dist/", slug)
         os.makedirs(path, exist_ok=True)
@@ -29,4 +30,3 @@ def process_includes():
         print("chdir reset")
 
         _ = shutil.copytree(os.path.join(path, "dist/"), dist_path)
-        print(f"processed include {slug}")
