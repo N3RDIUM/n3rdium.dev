@@ -256,10 +256,15 @@
     margin-right: 2px;
 }
 .mobile-projects-head {
-    margin-top: 74px;
+    margin-top: 24px;
     pointer-events: none;
     user-select: none;
     margin-left: 12px;
+}
+@media screen and (min-width: 600px) {
+    .mobile-projects-head {
+        margin-top: 74px;
+    }
 }
 @media screen and (min-width: 1192px) {
     .mobile-projects-head {
