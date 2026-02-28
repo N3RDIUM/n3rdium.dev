@@ -1,3 +1,4 @@
 {
-    "mdsite-template-test/": "https://github.com/n3rdium/mdsite-template.git"
+    "mdsite-template-test/": "https://github.com/n3rdium/mdsite-template.git",
+    "blog/": "https://github.com/n3rdium/blog.git"
 }
