@@ -36,7 +36,7 @@ def process_includes():
 
         # TODO if the repos already exist (eg. on a dev machine) just git pull
 
-        print(f"> chdir {path}")
+        print(f"> cd {path}")
         os.chdir(path)
 
         if not fresh_clone:
@@ -59,7 +59,9 @@ def process_includes():
         except subprocess.CalledProcessError as e:
             print(f"> dist.sh failed: {e}. skipping this include.")
 
-        print(f"< chdir {root}")
+        print(f"> cd {root}")
         os.chdir(root)
 
-        _ = shutil.copytree(os.path.join(path, "dist/"), dist_path)
+        build_path = os.path.join(path, "dist/")
+        print(f"> cp -r {build_path} {dist_path}")
+        _ = shutil.copytree(build_path, dist_path)
