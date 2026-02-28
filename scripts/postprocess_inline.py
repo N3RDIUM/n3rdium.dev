@@ -5,27 +5,29 @@ from rcssmin import cssmin
 css: dict[str, str] = {}
 js: dict[str, str] = {}
 
-for style in os.listdir("./src/css"):
-    if not style.endswith(".css"):
-        continue
+def load_css():
+    for style in os.listdir("./dist/css"):
+        if not style.endswith(".css"):
+            continue
 
-    with open(os.path.join("./src/css/", style), "r") as file:
-        contents = file.read()
-    name = style.removesuffix(".css")
+        with open(os.path.join("./src/css/", style), "r") as file:
+            contents = file.read()
+        name = style.removesuffix(".css")
 
-    css[name] = str(cssmin(contents))
-    print(f"loaded stylesheet: {name}")
+        css[name] = str(cssmin(contents))
+        print(f"loaded stylesheet: {name}")
 
-for script in os.listdir("./src/js"):
-    if not script.endswith(".js"):
-        continue
+def load_js():
+    for script in os.listdir("./dist/js"):
+        if not script.endswith(".js"):
+            continue
 
-    with open(os.path.join("./src/js/", script), "r") as file:
-        contents = file.read()
-    name = script.removesuffix(".js")
+        with open(os.path.join("./src/js/", script), "r") as file:
+            contents = file.read()
+        name = script.removesuffix(".js")
 
-    js[name] = str(jsmin(contents))
-    print(f"loaded script: {name}")
+        js[name] = str(jsmin(contents))
+        print(f"loaded script: {name}")
 
 # TODO separate modules from scripts.
 
