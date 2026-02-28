@@ -14,6 +14,11 @@ _ = shutil.copytree("./src", "./dist")
 # build
 process_includes()
 
+# TODO sitemap build from metadata, exactly here.
+# let html files' metadata declare if the page is to be blacklisted (default no)
+
+# TODO also rss feed build from metadata follows right after.
+
 # post-processing
 dev_remove()
 load_css()
