@@ -7,6 +7,7 @@ TODOs:
 - [ ] (Maybe) Use the sass preprocessor. Add the cmd to the deploy workflow.
 - [ ] Make tech stack boxes clickable.
 - [ ] The astro gallery will be a separate repo too. Move astro stuff there. Make a template: htmlsite-template (`dist.sh` just copies the html files into dist/).
+- [ ] Included repos: include absolute urls of dependencies (css/js) in the templates in the dev blocks, otherwise we'll have to do a remote push + prod deploy just to see what the rendered html looks like.
 - [x] An `includes.json` file will specify external repos to include during the build along with their root slug. The repos themselves will contain build scripts that build into their /dist/, which will be moved to the corresponding path by the builder.
 - [x] Keep non-inline stuff for devx, enclose with delimiters and remove during the preprocessor stage.
 - [x] Instead of making entire panels for them, turn the "Piano addict." and "Amateur astronomer." themselves into links to these pages.
