@@ -1,3 +1,7 @@
 .venv/
 .unlighthouse/
 dist/
+includes/
+__pycache__/
+*.py[cod]
+*$py.class
