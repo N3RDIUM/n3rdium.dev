@@ -8,6 +8,17 @@ with open("includes.json", "r") as f:
 
 root = os.path.dirname(os.path.dirname(__file__))
 
+def copyfiles(src: str, dst: str):
+    """Copy all files in directory src to directory dst."""
+
+    for file in os.listdir(src):
+        src_file = os.path.join(src, file)
+        dst_file = os.path.join(dst, file)
+        if os.path.exists(dst_file):
+            print(f"    # file {dst_file} already exists, skipping.")
+        print(f"    > cp {src_file} {dst_file}")
+        _ = shutil.copy(src_file, dst_file)
+
 def process_includes():
     for slug, repo in includes.items():
         print(f"processing include {slug}")
@@ -61,29 +72,15 @@ def process_includes():
 
         build_path = os.path.join(path, "dist/")
 
-        css_path = os.path.join(path, "css/*")
-        if os.path.exists(css_path):
-            dist_css = os.path.join(dist_path, "css/")
-            print(f"    > cp -r {css_path} {dist_path}")
-            try:
-                _ = subprocess.check_output(
-                    ["cp", "-r", css_path, dist_css],
-                    text=True
-                )
-            except subprocess.CalledProcessError:
-                print("# css copy failed, continuing.")
+        css_path = os.path.join(path, "css/")
+        if os.path.isdir(css_path):
+            dist_css = "dist/css"
+            copyfiles(css_path, dist_css)
 
-        js_path = os.path.join(path, "js/*")
-        if os.path.exists(js_path):
-            dist_js = os.path.join(dist_path, "js/")
-            print(f"    > cp -r {css_path} {dist_path}")
-            try:
-                _ = subprocess.check_output(
-                    ["cp", "-r", js_path, dist_js],
-                    text=True
-                )
-            except subprocess.CalledProcessError:
-                print("# js copy failed, continuing.")
+        js_path = os.path.join(path, "js/")
+        if os.path.isdir(js_path):
+            dist_js = "dist/js"
+            copyfiles(js_path, dist_js)
 
         print(f"    > cp -r {build_path} {dist_path}")
         _ = shutil.copytree(build_path, dist_path)
