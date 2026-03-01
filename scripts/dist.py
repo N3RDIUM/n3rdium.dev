@@ -2,6 +2,7 @@ import os
 import shutil
 
 from .process_includes import process_includes
+from .process_metadata import process_metadata
 from .postprocess_dev import dev_remove
 from .postprocess_inline import inline, load_css, load_js
 from .postprocess_minify import minifier
@@ -13,11 +14,7 @@ _ = shutil.copytree("./src", "./dist")
 
 # build
 process_includes()
-
-# TODO sitemap build from metadata, exactly here.
-# let html files' metadata declare if the page is to be blacklisted (default no)
-
-# TODO also rss/atom/jsonindex build from metadata follows right after.
+process_metadata()
 
 # post-processing
 dev_remove()

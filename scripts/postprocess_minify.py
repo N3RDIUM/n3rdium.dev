@@ -17,17 +17,10 @@ def minify_file(path: str) -> None:
         _ = file.write(minified)
         print(f"minified: {path}")
 
-BLACKLIST = [  # TODO regex matching for convenience?
-    "template.html",
-    "redirect_template.html",
-]
-
 def minifier():
     for root, _, files in os.walk("dist/", topdown=True):
         for file in files:
             if not file.endswith(".html"):
-                continue
-            if file in BLACKLIST:
                 continue
             minify_file(os.path.join(root, file))
 

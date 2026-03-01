@@ -20,17 +20,10 @@ def process_file(path: str) -> None:
         _ = file.write(removed)
         print(f"removed dev deps: {path}")
 
-BLACKLIST = [  # TODO regex matching for convenience?
-    "template.html",
-    "redirect_template.html",
-]
-
 def dev_remove():
     for root, _, files in os.walk("dist/", topdown=True):
         for file in files:
             if not file.endswith(".html"):
-                continue
-            if file in BLACKLIST:
                 continue
             process_file(os.path.join(root, file))
 
