@@ -4,12 +4,13 @@ from datetime import date
 from json.decoder import JSONDecodeError
 
 type Metadata = dict[str, str | int | float | None]
-pages: dict[str, Metadata] = {}  # map: url -> metadata
+type URL = str
+pages: dict[URL, Metadata] = {}
 
 META_PREFIX = "<!--meta start"
 META_SUFFIX = "meta end-->"
 
-def urlify(path: str) -> str:
+def urlify(path: str) -> URL:
     return "https://n3rdium.dev/" + path.removeprefix(".").removeprefix("/")
 
 def extract_metadata(file: str):
@@ -34,7 +35,7 @@ DEFAULT_LASTMOD = date.today().strftime("%Y-%m-%d")
 DEFAULT_CHANGEFREQ = "never"
 DEFAULT_PRIORITY = 0.5
 
-def build_sitemap_entry(url: str, metadata: Metadata) -> str:
+def build_sitemap_entry(url: URL, metadata: Metadata) -> str:
     lastmod = metadata.get("lastmod", DEFAULT_LASTMOD)
     changefreq = metadata.get("changefreq", DEFAULT_CHANGEFREQ)
     priority = metadata.get("priority", DEFAULT_PRIORITY)
