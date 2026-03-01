@@ -253,7 +253,7 @@
 .project-tag {
     padding: 3px;
     background: var(--bg_2, gray);
-    margin-right: 2px;
+    margin-right: 4px;
 }
 .mobile-projects-head {
     margin-top: 24px;
