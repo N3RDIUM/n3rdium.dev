@@ -54,7 +54,7 @@ def process_includes():
                     text=True
                 )
             except subprocess.CalledProcessError as e:
-                print(f"    > failed to pull changes: {e}. skipping this include.")
+                print(f"    # failed to pull changes: {e}. skipping this include.")
                 continue
 
         print("    > ./scripts/site_dist.sh")
@@ -64,7 +64,7 @@ def process_includes():
                 text=True
             )
         except subprocess.CalledProcessError as e:
-            print(f"    > dist.sh failed: {e}. skipping this include.")
+            print(f"    # dist.sh failed: {e}. skipping this include.")
             continue
 
         print(f"    > cd {root}")
@@ -83,4 +83,8 @@ def process_includes():
             copyfiles(js_path, dist_js)
 
         print(f"    > cp -r {build_path} {dist_path}")
-        _ = shutil.copytree(build_path, dist_path)
+        try:
+            _ = shutil.copytree(build_path, dist_path)
+        except Exception as e:
+            print(f"    # copy `dist` failed: {e}. skipping this include.")
+            continue
