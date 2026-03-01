@@ -46,10 +46,10 @@ def process_includes():
                 print(f"    > failed to pull changes: {e}. skipping this include.")
                 continue
 
-        print("    > ./dist.sh")
+        print("    > ./scripts/site_dist.sh")
         try:
             _ = subprocess.check_output(
-                ["./dist.sh"],
+                ["./scripts/site_dist.sh"],
                 text=True
             )
         except subprocess.CalledProcessError as e:
