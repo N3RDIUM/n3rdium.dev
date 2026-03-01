@@ -1,5 +1,6 @@
 import os
 import json
+from datetime import date
 from json.decoder import JSONDecodeError
 
 type Metadata = dict[str, str | int | float | None]
@@ -11,7 +12,7 @@ META_SUFFIX = "meta end-->"
 def urlify(path: str) -> str:
     return "https://n3rdium.dev/" + path.removeprefix(".").removeprefix("/")
 
-def extract_metadata(file:  str):
+def extract_metadata(file: str):
     print(f"    {file}", end="")
     with open(file, "r") as f:
         contents = f.read()
@@ -29,6 +30,35 @@ def extract_metadata(file:  str):
         print(f" JSONDecodeError: {e}")
         return
 
+DEFAULT_LASTMOD = date.today().strftime("%Y-%m-%d")
+DEFAULT_CHANGEFREQ = "yearly"
+DEFAULT_PRIORITY = 0.5
+
+def build_sitemap_entry(url: str, metadata: Metadata) -> str:
+    lastmod = metadata.get("lastmod", DEFAULT_LASTMOD)
+    changefreq = metadata.get("changefreq", DEFAULT_CHANGEFREQ)
+    priority = metadata.get("priority", DEFAULT_PRIORITY)
+
+    return f"""
+    <url>
+        <loc>{url}</loc>
+        <lastmod>{lastmod}</lastmod>
+        <changefreq>{changefreq}</changefreq>
+        <priority>{priority}</priority>
+    </url>"""
+
+def build_sitemap() -> str:
+    entries: list[str] = []
+
+    for url, metadata in pages.items():
+        print(f"    {url}")
+        entries.append(build_sitemap_entry(url, metadata))
+
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{"".join(entries)}
+</urlset>
+"""
+
 def process_metadata():
     print("processing metadata")
     for root, _, files in os.walk(".", topdown=True):
@@ -37,7 +67,9 @@ def process_metadata():
                 continue
             extract_metadata(os.path.join(root, file))
     
-    print("building sitemap")
-    for page in pages:
-        print(f"    {page}")
+    sitemap_path = "sitemap.xml"
+    print(f"building main sitemap {sitemap_path}")
+    sitemap = build_sitemap()
+    with open(sitemap_path, "w") as f:
+        _ = f.write(sitemap)
 
