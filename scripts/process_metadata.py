@@ -9,10 +9,10 @@ META_PREFIX = "<!--meta start"
 META_SUFFIX = "meta end-->"
 
 def urlify(path: str) -> str:
-    return path
+    return "https://n3rdium.dev/" + path.removeprefix(".").removeprefix("/")
 
 def extract_metadata(file:  str):
-    print(f"process metadata: {file}", end="")
+    print(f"    {file}", end="")
     with open(file, "r") as f:
         contents = f.read()
 
@@ -30,12 +30,14 @@ def extract_metadata(file:  str):
         return
 
 def process_metadata():
+    print("processing metadata")
     for root, _, files in os.walk(".", topdown=True):
         for file in files:
             if not file.endswith(".html"):
                 continue
             extract_metadata(os.path.join(root, file))
-
+    
+    print("building sitemap")
     for page in pages:
-        print(page)
+        print(f"    {page}")
 

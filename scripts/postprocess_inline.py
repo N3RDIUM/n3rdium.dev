@@ -98,7 +98,7 @@ def process_file(path: str):
         inline_block = contents.split(INLINE_PREFIX)[1]
         inline_block = inline_block.split(INLINE_SUFFIX)[0]
     except IndexError:
-        print(f"could not locate inline block for {path}")
+        print(f"    {path} skipped!")
         return
 
     stylesheets, scripts = process_inline_block(inline_block)
@@ -114,10 +114,11 @@ def process_file(path: str):
     with open(path, "w") as file:
         _ = file.write(new_file)
 
-    print(f"processed inline block: {path}")
+    print(f"    {path}")
 
 
 def inline():
+    print("processing inline blocks")
     for root, _, files in os.walk(".", topdown=True):
         for file in files:
             if not file.endswith(".html"):

@@ -19,7 +19,7 @@ def process_includes():
             os.makedirs(path)
 
             # I intend it to behave as a warning instead of crashing the build.
-            print(f"> git clone {repo} {path} -q")
+            print(f"    > git clone {repo} {path} -q")
             try:
                 _ = subprocess.check_output(
                     ["git", "clone", repo, path, "-q"],
@@ -27,61 +27,63 @@ def process_includes():
                 )
                 fresh_clone = True
             except subprocess.CalledProcessError as e:
-                print(f"> failed to clone {repo}: {e}. skipping this include.")
+                print(f"    # failed to clone {repo}: {e}. skipping this include.")
                 continue
         else:
-            print(f"# {path} already exists, skipping clone.")
+            print(f"    # {path} already exists, skipping clone.")
 
-        print(f"> cd {path}")
+        print(f"    > cd {path}")
         os.chdir(path)
 
         if not fresh_clone:
-            print("> git pull -q")
+            print("    > git pull -q")
             try:
                 _ = subprocess.check_output(
                     ["git", "pull", "-q"],
                     text=True
                 )
             except subprocess.CalledProcessError as e:
-                print(f"> failed to pull changes: {e}. skipping this include.")
+                print(f"    > failed to pull changes: {e}. skipping this include.")
                 continue
 
-        print("> ./dist.sh")
+        print("    > ./dist.sh")
         try:
             _ = subprocess.check_output(
                 ["./dist.sh"],
                 text=True
             )
         except subprocess.CalledProcessError as e:
-            print(f"> dist.sh failed: {e}. skipping this include.")
+            print(f"    > dist.sh failed: {e}. skipping this include.")
             continue
 
-        print(f"> cd {root}")
+        print(f"    > cd {root}")
         os.chdir(root)
 
         build_path = os.path.join(path, "dist/")
 
         css_path = os.path.join(path, "css/*")
-        dist_css = os.path.join(dist_path, "css/")
-        print(f"> cp -r {css_path} {dist_path}")
-        try:
-            _ = subprocess.check_output(
-                ["cp", "-r", css_path, dist_css],
-                text=True
-            )
-        except subprocess.CalledProcessError:
-            print("# css copy failed, continuing.")
+        if os.path.exists(css_path):
+            dist_css = os.path.join(dist_path, "css/")
+            print(f"    > cp -r {css_path} {dist_path}")
+            try:
+                _ = subprocess.check_output(
+                    ["cp", "-r", css_path, dist_css],
+                    text=True
+                )
+            except subprocess.CalledProcessError:
+                print("# css copy failed, continuing.")
 
         js_path = os.path.join(path, "js/*")
-        dist_js = os.path.join(dist_path, "js/")
-        print(f"> cp -r {css_path} {dist_path}")
-        try:
-            _ = subprocess.check_output(
-                ["cp", "-r", js_path, dist_js],
-                text=True
-            )
-        except subprocess.CalledProcessError:
-            print("# js copy failed, continuing.")
+        if os.path.exists(js_path):
+            dist_js = os.path.join(dist_path, "js/")
+            print(f"    > cp -r {css_path} {dist_path}")
+            try:
+                _ = subprocess.check_output(
+                    ["cp", "-r", js_path, dist_js],
+                    text=True
+                )
+            except subprocess.CalledProcessError:
+                print("# js copy failed, continuing.")
 
-        print(f"> cp -r {build_path} {dist_path}")
+        print(f"    > cp -r {build_path} {dist_path}")
         _ = shutil.copytree(build_path, dist_path)

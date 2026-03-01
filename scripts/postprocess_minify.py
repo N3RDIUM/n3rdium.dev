@@ -15,9 +15,10 @@ def minify_file(path: str) -> None:
 
     with open(path, "w") as file:
         _ = file.write(minified)
-        print(f"minified: {path}")
+        print(f"    {path}")
 
 def minifier():
+    print("minifying html")
     for root, _, files in os.walk(".", topdown=True):
         for file in files:
             if not file.endswith(".html"):

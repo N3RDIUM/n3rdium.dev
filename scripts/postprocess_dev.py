@@ -18,9 +18,10 @@ def process_file(path: str) -> None:
 
     with open(path, "w") as file:
         _ = file.write(removed)
-        print(f"removed dev deps: {path}")
+        print(f"    {path}")
 
 def dev_remove():
+    print("removing dev blocks")
     for root, _, files in os.walk(".", topdown=True):
         for file in files:
             if not file.endswith(".html"):
