@@ -1,5 +1,5 @@
 {
     "mdsite-template-test/": "https://github.com/n3rdium/mdsite-template.git",
     "htmlsite-template-test/": "https://github.com/n3rdium/htmlsite-template.git",
-    "blog/": "https://github.com/n3rdium/blog.git"
+    "blog/post/": "https://github.com/n3rdium/blog.git"
 }
