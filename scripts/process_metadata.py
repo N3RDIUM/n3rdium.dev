@@ -31,7 +31,7 @@ def extract_metadata(file: str):
         return
 
 DEFAULT_LASTMOD = date.today().strftime("%Y-%m-%d")
-DEFAULT_CHANGEFREQ = "yearly"
+DEFAULT_CHANGEFREQ = "never"
 DEFAULT_PRIORITY = 0.5
 
 def build_sitemap_entry(url: str, metadata: Metadata) -> str:
