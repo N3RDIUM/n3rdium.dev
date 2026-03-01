@@ -14,12 +14,15 @@ _ = shutil.copytree("./src", "./dist")
 
 # build
 process_includes()
+
+os.chdir("dist")
 process_metadata()
 
 # post-processing
 dev_remove()
-load_css()
-load_js()
+load_css("css")
+load_js("js")
 inline()
 minifier()
+os.chdir(os.path.dirname(os.path.dirname(__file__)))
 

@@ -3,10 +3,13 @@ import json
 from json.decoder import JSONDecodeError
 
 type Metadata = dict[str, str | int | float | None]
-pages: list[Metadata] = []
+pages: dict[str, Metadata] = {}  # map: url -> metadata
 
 META_PREFIX = "<!--meta start"
 META_SUFFIX = "meta end-->"
+
+def urlify(path: str) -> str:
+    return path
 
 def extract_metadata(file:  str):
     print(f"process metadata: {file}", end="")
@@ -16,7 +19,8 @@ def extract_metadata(file:  str):
     try:
         json_source = contents.split(META_PREFIX)[1].split(META_SUFFIX)[0]
         metadata: Metadata = json.loads(json_source)
-        pages.append(metadata)
+        url = urlify(file)
+        pages[url] = metadata
         print()
     except IndexError as e:
         print(f" IndexError: {e}")
@@ -26,9 +30,12 @@ def extract_metadata(file:  str):
         return
 
 def process_metadata():
-    for root, _, files in os.walk("dist/", topdown=True):
+    for root, _, files in os.walk(".", topdown=True):
         for file in files:
             if not file.endswith(".html"):
                 continue
             extract_metadata(os.path.join(root, file))
+
+    for page in pages:
+        print(page)
 

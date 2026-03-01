@@ -5,29 +5,31 @@ from rcssmin import cssmin
 css: dict[str, str] = {}
 js: dict[str, str] = {}
 
-def load_css():
-    for style in os.listdir("./dist/css"):
+def load_css(path: str):
+    print(f"loading css from {path}")
+    for style in os.listdir(path):
         if not style.endswith(".css"):
             continue
 
-        with open(os.path.join("./src/css/", style), "r") as file:
+        with open(os.path.join(path, style), "r") as file:
             contents = file.read()
         name = style.removesuffix(".css")
 
         css[name] = str(cssmin(contents))
-        print(f"loaded stylesheet: {name}")
+        print(f"    loaded css: {name}")
 
-def load_js():
-    for script in os.listdir("./dist/js"):
+def load_js(path: str):
+    print(f"loading js from {path}")
+    for script in os.listdir("./js"):
         if not script.endswith(".js"):
             continue
 
-        with open(os.path.join("./src/js/", script), "r") as file:
+        with open(os.path.join("./js/", script), "r") as file:
             contents = file.read()
         name = script.removesuffix(".js")
 
         js[name] = str(jsmin(contents))
-        print(f"loaded script: {name}")
+        print(f"    loaded js: {name}")
 
 # TODO separate modules from scripts.
 
@@ -116,7 +118,7 @@ def process_file(path: str):
 
 
 def inline():
-    for root, _, files in os.walk("dist/", topdown=True):
+    for root, _, files in os.walk(".", topdown=True):
         for file in files:
             if not file.endswith(".html"):
                 continue

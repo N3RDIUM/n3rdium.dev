@@ -32,10 +32,6 @@ def process_includes():
         else:
             print(f"# {path} already exists, skipping clone.")
 
-        # TODO copy JS/CSS from (if exists) from repo to src/
-
-        # TODO if the repos already exist (eg. on a dev machine) just git pull
-
         print(f"> cd {path}")
         os.chdir(path)
 
@@ -58,10 +54,34 @@ def process_includes():
             )
         except subprocess.CalledProcessError as e:
             print(f"> dist.sh failed: {e}. skipping this include.")
+            continue
 
         print(f"> cd {root}")
         os.chdir(root)
 
         build_path = os.path.join(path, "dist/")
+
+        css_path = os.path.join(path, "css/*")
+        dist_css = os.path.join(dist_path, "css/")
+        print(f"> cp -r {css_path} {dist_path}")
+        try:
+            _ = subprocess.check_output(
+                ["cp", "-r", css_path, dist_css],
+                text=True
+            )
+        except subprocess.CalledProcessError:
+            print("# css copy failed, continuing.")
+
+        js_path = os.path.join(path, "js/*")
+        dist_js = os.path.join(dist_path, "js/")
+        print(f"> cp -r {css_path} {dist_path}")
+        try:
+            _ = subprocess.check_output(
+                ["cp", "-r", js_path, dist_js],
+                text=True
+            )
+        except subprocess.CalledProcessError:
+            print("# js copy failed, continuing.")
+
         print(f"> cp -r {build_path} {dist_path}")
         _ = shutil.copytree(build_path, dist_path)

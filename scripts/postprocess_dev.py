@@ -21,7 +21,7 @@ def process_file(path: str) -> None:
         print(f"removed dev deps: {path}")
 
 def dev_remove():
-    for root, _, files in os.walk("dist/", topdown=True):
+    for root, _, files in os.walk(".", topdown=True):
         for file in files:
             if not file.endswith(".html"):
                 continue

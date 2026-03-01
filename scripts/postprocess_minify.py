@@ -18,7 +18,7 @@ def minify_file(path: str) -> None:
         print(f"minified: {path}")
 
 def minifier():
-    for root, _, files in os.walk("dist/", topdown=True):
+    for root, _, files in os.walk(".", topdown=True):
         for file in files:
             if not file.endswith(".html"):
                 continue
