@@ -52,8 +52,12 @@ def build_sitemap() -> str:
     entries: list[str] = []
 
     for url, metadata in pages.items():
-        print(f"    {url}")
+        print(f"    {url}", end="")
+        if metadata.get("sitemap_invisible"):
+            print(" [invisible]")
+            continue
         entries.append(build_sitemap_entry(url, metadata))
+        print()
 
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{"".join(entries)}
