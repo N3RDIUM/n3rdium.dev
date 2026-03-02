@@ -1,5 +1,11 @@
 #!/bin/sh
 
+if [ ! -d "dist" ]; then
+    rm -r dist/
+fi
+cp -r ./src ./newsrc
+mv newsrc dist
+
 python -m pip install -U -r requirements.txt
 
 if [ ! -d "permafrost" ]; then
