@@ -28,15 +28,10 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5 
         with:
-          python-version: '3.12'
-
-      - name: Install python deps
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python-version: '3.13'
 
       - name: Run build script
-        run: python scripts/dist.py
+        run: scripts/dist.sh
         continue-on-error: true
           
       - name: Checkout
