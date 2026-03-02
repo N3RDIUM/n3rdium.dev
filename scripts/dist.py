@@ -8,7 +8,6 @@ from .minify import minifier
 os.chdir("dist")
 
 # preload
-print(os.getcwd())
 load_css("css")
 load_js("js")
 

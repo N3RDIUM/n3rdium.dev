@@ -3,8 +3,7 @@
 if [ ! -d "dist" ]; then
     rm -r dist/
 fi
-cp -r ./src ./newsrc
-mv newsrc dist
+cp -a src dist
 
 python -m pip install -U -r requirements.txt
 
