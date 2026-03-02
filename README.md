@@ -8,6 +8,7 @@ TODOs:
 - [ ] Make tech stack boxes clickable.
 - [ ] Automatic code syntax highlighting for all `code` tags
 - [ ] (Maybe) Use the sass preprocessor. Add the cmd to the deploy workflow.
+- [ ] (Maybe) Separate the builder into a separate repo.
 
 ## Thanks and Citations
 - The site uses the [gruvbox theme](https://github.com/morhetz/gruvbox).
