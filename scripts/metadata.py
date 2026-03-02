@@ -1,7 +1,6 @@
 import os
-import json
+import yaml
 from datetime import date
-from json.decoder import JSONDecodeError
 
 type Metadata = dict[str, str | int | float | None]
 type URL = str
@@ -19,16 +18,16 @@ def extract_metadata(file: str):
         contents = f.read()
 
     try:
-        json_source = contents.split(META_PREFIX)[1].split(META_SUFFIX)[0]
-        metadata: Metadata = json.loads(json_source)
+        raw_yaml = contents.split(META_PREFIX)[1].split(META_SUFFIX)[0]
+        metadata: Metadata = yaml.safe_load(raw_yaml)
         url = urlify(file)
         pages[url] = metadata
         print()
     except IndexError as e:
         print(f" IndexError: {e}")
         return
-    except JSONDecodeError as e:
-        print(f" JSONDecodeError: {e}")
+    except Exception as e:
+        print(f" Exception: {e}")
         return
 
 DEFAULT_LASTMOD = date.today().strftime("%Y-%m-%d")
