@@ -30,9 +30,9 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Run build script
-        run: scripts/dist.sh
-        continue-on-error: true
+      - name: Run shell script
+        run: ./dist.sh
+        continue-on-error: false
           
       - name: Checkout
         uses: actions/checkout@v4
