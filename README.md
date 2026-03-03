@@ -1,6 +1,6 @@
 # N3RDIUM
-My little corner of the internet. Not much to see here, I guess.
-The website is [here](https://n3rdium.dev).
+My little corner of the internet. Not much to see here, I guess. The website is 
+[here](https://n3rdium.dev).
 
 TODOs:
 - [ ] Permafrost template
@@ -11,5 +11,5 @@ TODOs:
 - [ ] (Maybe) Separate the builder into a separate repo.
 
 ## Thanks and Citations
-- The site uses the [gruvbox theme](https://github.com/morhetz/gruvbox).
+- theme: [gruvbox](https://github.com/morhetz/gruvbox) by morhetz
 
