@@ -1,5 +1,5 @@
 # N3RDIUM
-Hey there! This is my portfolio website and blog. Not much to see here, I guess.
+My little corner of the internet. Not much to see here, I guess.
 The website is [here](https://n3rdium.dev).
 
 TODOs:
