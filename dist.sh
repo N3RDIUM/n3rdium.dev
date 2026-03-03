@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# build folder
+if [ ! -d "build" ]; then
+    rm -rf build/
+fi
+
 # dist folder
 if [ ! -d "dist" ]; then
     rm -r dist/
