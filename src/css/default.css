@@ -5,6 +5,10 @@ body, html {
     color: var(--fg, white);
     background-color: var(--bg_0, black);
 
+    font-family: monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,10 +40,6 @@ a:visited {
     min-height: 42px;
     padding-top: 42px;
 
-    font-family: monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-
     display: flex;
     flex-direction: column;
 }
@@ -65,6 +65,7 @@ a:visited {
 }
 
 .nav-gohome {
+    font-size: 21px;
     text-decoration: none;
     margin-left: 8px;
 }
@@ -77,10 +78,10 @@ a:visited {
 }
 .drawer {
     position: fixed;
-    top: 42px;
+    top: 43px;
     left: 0;
     width: 100%;
-    height: calc(100% - 42px);
+    height: calc(100% - 43px);
     background: var(--bg_1, gray);
     transition-duration: 321ms;
 }
