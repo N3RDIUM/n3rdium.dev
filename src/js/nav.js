@@ -10,7 +10,34 @@ const NAV_HTML = `
         height=28
     />
 </button>
-<div class="drawer drawer-closed" id="drawer"></div>
+<div class="drawer drawer-closed" id="drawer">
+    <div class="drawer-links">
+        <a class="mobile-nav-item" href="/about/">About</a>
+        <ul>
+            <li>
+                <a class="mobile-nav-item" href="/contact/">Contact</a>
+            </li>
+            <li>
+                <a class="mobile-nav-item" href="/stack/">Stack</a>
+            </li>
+        </ul>
+        <a class="mobile-nav-item" href="/work/">Work</a>
+        <ul>
+            <li>
+                <a class="mobile-nav-item" href="/projects/">Projects</a>
+            </li>
+            <li>
+                <a class="mobile-nav-item" href="/astro/">Astronomy</a>
+            </li>
+            <li>
+                <a class="mobile-nav-item" href="/piano/">Piano</a>
+            </li>
+        </ul>
+        <a class="mobile-nav-item" href="/blog/">Blog</a>
+        <br><br>
+        <a class="mobile-nav-item" href="/notes/">Notes</a>
+    </div>
+</div>
 <div class="desktop-nav">
     <div class="desktop-nav-link">
         <a class="desktop-nav-link-text" href="/about/">About</a>

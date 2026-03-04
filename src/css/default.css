@@ -34,6 +34,15 @@ a:visited {
     color: var(--fg2, white);
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+ul li::before {
+    content: "- ";
+}
+
 .container {
     width: 80vw;
     max-width: 800px;
@@ -84,14 +93,21 @@ a:visited {
     height: calc(100% - 43px);
     background: var(--bg_1, gray);
     transition-duration: 321ms;
+    overflow-y: auto;
+
+    padding-left: 28px;
+    padding-top: 28px;
 }
 .drawer-closed {
     transform: translateY(100%);
 }
+.drawer-links {
+    font-size: 21px;
+}
+
 .desktop-nav {
     display: none;
 }
-
 .desktop-nav-link {
     display: block;
     position: relative;
@@ -129,4 +145,3 @@ a:visited {
         display: flex;
     }
 }
-
