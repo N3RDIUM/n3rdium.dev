@@ -3,6 +3,7 @@ My little corner of the internet. Not much to see here, I guess. The website is
 [here](https://n3rdium.dev).
 
 TODOs:
+- [ ] For repetitive tag names, extract them, and rename them to short alphanumerics to save kb.
 - [ ] Store lastmods and publisheds in date+time instead of just date. Modify metadata/feedgen accordingly. Also, the feeds' `updated` is supposed to be the max of the included posts' `updated`. Also, check that `updated` can never be before `published`.
 - [ ] Blog index: lazy infinite scroll implementation.
 - [ ] Use git submodules to handle doorknob and permafrost.
