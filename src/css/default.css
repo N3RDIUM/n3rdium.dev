@@ -17,23 +17,24 @@ hr {
 }
 
 a {
-    color: #ebdbb2;
+    color: var(--fg, white);
     padding: 2px;
 }
 a:hover {
-    text-decoration: underline wavy #cc241d;
+    text-decoration: underline wavy var(--red, red);
 }
 a:active {
-    color: #fbf1c7;
+    color: var(--fg0, white);
 }
 a:visited {
-    color: #d5c4a1;
+    color: var(--fg2, white);
 }
 
 .container {
     width: 80vw;
     max-width: 800px;
     min-height: 42px;
+    padding-top: 42px;
 
     font-family: monospace;
     font-optical-sizing: auto;
@@ -41,5 +42,88 @@ a:visited {
 
     display: flex;
     flex-direction: column;
+}
+
+.body-disabled {
+    height: calc(100vh - 42px);
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+.nav-container {
+    width: 100%;
+    height: 42px;
+    position: fixed;
+    background: var(--bg_2, gray);
+
+    z-index: 1024;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-gohome {
+    text-decoration: none;
+    margin-left: 8px;
+}
+.nav-drawer-button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+.drawer {
+    position: fixed;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 42px);
+    background: var(--bg_1, gray);
+    transition-duration: 321ms;
+}
+.drawer-closed {
+    transform: translateY(100%);
+}
+.desktop-nav {
+    display: none;
+}
+
+.desktop-nav-link {
+    display: block;
+    position: relative;
+    margin-right: 12px;
+    font-size: 16px;
+}
+.desktop-nav-drop {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+    padding-top: 14px;
+    gap: 4px;
+    background: var(--bg_2, gray);
+}
+.desktop-nav-link:hover .desktop-nav-drop {
+    display: flex;
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        padding-top: 0;
+    }
+    .nav-drawer-button {
+        display: none;
+    }
+    .drawer {
+        display: none;
+    }
+    .desktop-nav {
+        display: flex;
+    }
 }
 

@@ -175,6 +175,7 @@
 }
 .projects-wrapper {
     position: relative;
+    z-index: 1;
 }
 .hide-scrollbar {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
