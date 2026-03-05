@@ -36,7 +36,7 @@ a:visited {
 
 ul {
     list-style: none;
-    padding-left: 0;
+    padding-left: 16px;
     margin-top: 0;
 }
 ul li::before {
