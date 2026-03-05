@@ -6,7 +6,7 @@
 .toc {
     background: var(--bg_1, darkgray);
     padding-top: 16px;
-    padding-bottom: -8px;
+    padding-bottom: 2px;
 }
 .admonition {
     background: var(--bg_2, darkgray);
