@@ -99,8 +99,10 @@
         }
     }
 }
-.techstack-more {
+.more {
     font-size: 13px;
+    width: 100%;
+    text-align: right;
     float: right;
 }
 
