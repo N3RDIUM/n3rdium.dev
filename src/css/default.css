@@ -42,6 +42,19 @@ ul {
 ul li::before {
     content: "- ";
 }
+button {
+    all: unset;
+    color: var(--fg, white);
+    background: var(--bg_1, gray);
+    cursor: pointer;
+    border-radius: 2px;
+}
+button:hover {
+    background: var(--bg_2, gray);
+}
+button:active {
+    background: var(--bg_0, black);
+}
 
 .container {
     width: 80vw;
