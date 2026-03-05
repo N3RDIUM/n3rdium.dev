@@ -54,5 +54,8 @@
             ],
             "language": "en"
         }
+    },
+    "find_replace": {
+        "!<img": "<img"
     }
 }

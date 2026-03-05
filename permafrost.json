@@ -2,6 +2,7 @@
     "output_dir": "dist/",
     "import_dir": "build/",
     "imports": {
-        "blog/post": "https://github.com/n3rdium/blog.git"
+        "blog/post": "https://github.com/n3rdium/blog.git",
+        "notes/": "https://github.com/n3rdium/vault.git"
     }
 }
