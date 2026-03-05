@@ -1,0 +1,56 @@
+.container {
+    margin-top: 128px;
+    margin-bottom: 128px;
+    font-size: 18px;
+}
+.toc {
+    background: var(--bg_1, darkgray);
+    padding-top: 16px;
+    padding-bottom: -8px;
+}
+.admonition {
+    background: var(--bg_2, darkgray);
+    padding: 12px;
+}
+.admonition p {
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+.admonition-title {
+    font-weight: bolder;
+    margin-top: 4px;
+}
+.info .admonition-title {
+    color: var(--lblue, aqua);
+}
+.note .admonition-title {
+    color: var(--laqua, aqua);
+}
+.tip .admonition-title {
+    color: var(--lpurple, aqua);
+}
+.question .admonition-title {
+    color: var(--lyellow, gold);
+}
+.warning .admonition-title {
+    color: var(--lyellow, gold);
+}
+.error .admonition-title {
+    color: var(--lred, red);
+}
+.danger .admonition-title {
+    color: var(--lred, orangered);
+}
+.bug .admonition-title {
+    color: var(--lyellow, yellow);
+}
+.example .admonition-title {
+    color: var(--lgreen, lightgreen);
+}
+.quote .admonition-title {
+    color: var(--lpurple, lavender);
+}
+pre {
+    padding: 12px;
+    background: var(--bg_1, darkgray);
+}
