@@ -54,3 +54,6 @@ pre {
     padding: 12px;
     background: var(--bg_1, darkgray);
 }
+img {
+    max-width: 100%;
+}

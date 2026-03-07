@@ -3,6 +3,11 @@
     "import_dir": "build/",
     "imports": {
         "blog/post": "https://github.com/n3rdium/blog.git",
-        "notes/": "https://github.com/n3rdium/vault.git"
+        "notes/": "https://github.com/n3rdium/vault.git",
+        ".": "https://github.com/n3rdium/n3rdium.dev"
+    },
+    "source_vault": "n3rdium-md",
+    "templates": {
+        "n3rdium.dev": "template.html"
     }
 }
