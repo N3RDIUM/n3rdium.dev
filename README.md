@@ -15,5 +15,5 @@ TODOs:
 - [x] Metatdata feed generation: "feeds" metadata (list) which handles file types, eg: [blog/idx.json, blog/rss.xml, blog/atom.xml]
 
 ## Thanks and Citations
-- theme: [gruvbox](https://github.com/morhetz/gruvbox) by morhetz 
+- theme: [gruvbox](https://github.com/morhetz/gruvbox) by morhetz
 
