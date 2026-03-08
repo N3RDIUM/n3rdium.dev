@@ -2,7 +2,11 @@
     "target": "dist",
     "feeds": {
         "blog/index.json": {
-            "type": "json"
+            "type": "json",
+            "sort": {
+                "key": "published",
+                "reverse": true
+            }
         },
         "blog/rss.xml": {
             "type": "rss",
@@ -27,7 +31,11 @@
                     "rel": "alternate"
                 }
             ],
-            "language": "en"
+            "language": "en",
+            "sort": {
+                "key": "published",
+                "reverse": true
+            }
         },
         "blog/atom.xml": {
             "type": "atom",
@@ -52,7 +60,11 @@
                     "rel": "alternate"
                 }
             ],
-            "language": "en"
+            "language": "en",
+            "sort": {
+                "key": "published",
+                "reverse": true
+            }
         }
     },
     "find_replace": {

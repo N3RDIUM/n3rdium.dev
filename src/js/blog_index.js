@@ -1,6 +1,6 @@
 var content = {};
 
-function blog_post_card({ relpath, title, description, tags, readtime }) {
+function blog_post_card({ relpath, title, description, tags, readtime, published }) {
     let tags_html = "";
     if(tags != null) {
         for(var tag of tags) {
@@ -14,7 +14,9 @@ function blog_post_card({ relpath, title, description, tags, readtime }) {
         <div class="description">${description}</div>
         <div class="metadata">
             <div class="tags">${tags_html}</div>
-            <div class="readtime">${readtime}</div>
+            <div class="times">
+                ${readtime} 🟅 ${published}
+            </div>
         </div>
     </button>
 </a>`;

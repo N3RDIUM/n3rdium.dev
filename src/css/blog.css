@@ -1,7 +1,14 @@
-.blog-heading {
+.blog-header {
     margin-top: 80px;
     margin-bottom: 80px;
     text-align: center;
+
+    .welcome {
+        margin-bottom: 0;
+    }
+    .feeds {
+        font-size: 17px;
+    }
 }
 .blog-post {
     text-decoration: none;
@@ -35,8 +42,8 @@
                 }
             }
 
-            .readtime {
-                font-size: 16px;
+            .times {
+                font-size: 15px;
             }
         }
     }
