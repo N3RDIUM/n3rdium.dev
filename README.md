@@ -11,6 +11,7 @@ TODOs:
 - [ ] (Maybe) Use the sass preprocessor. Add the cmd to the deploy workflow.
 - [ ] Py workflow neocities integration.
 - [ ] pfr make max image width configurable, -1 to disable
+- [ ] scroll-to-top button and copy button for all code blocks.
 - [x] configuration: order feed by alphabetical/lastmod/lcfs_lastmod etc.
 - [x] Permafrost template
 - [x] Manage (deferred) JS modules. First thing to add is a responsive nav menu.
