@@ -1,6 +1,9 @@
 {
     "target": "dist",
     "feeds": {
+        "search.json": {
+            "type": "json"
+        },
         "blog/index.json": {
             "type": "json",
             "sort": {
