@@ -5,6 +5,7 @@
     "tags": "tags",
     "progress": "number",
     "level": "text",
-    "authors": "multitext"
+    "authors": "multitext",
+    "lastmod": "date"
   }
 }
