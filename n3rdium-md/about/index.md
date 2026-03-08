@@ -5,7 +5,8 @@ template: n3rdium.dev
 lastmod: 2026-03-08
 changefreq: never
 priority: "0.5"
-feeds: search.json
+feeds:
+  - search.json
 ---
 Hey there! I'm `n3rdium`. I like basically everything about space, computers and pianos. I also play badminton in my spare time.
 
