@@ -15,9 +15,6 @@ const NAV_HTML = `
         <a class="item" href="/about/">About</a>
         <ul>
             <li>
-                <a class="item" href="/contact/">Contact</a>
-            </li>
-            <li>
                 <a class="item" href="/stack/">Stack</a>
             </li>
         </ul>
@@ -42,7 +39,6 @@ const NAV_HTML = `
     <div class="link">
         <a class="link-text" href="/about/">About</a>
         <div class="drop">
-            <a class="item" href="/contact/">Contact</a>
             <a class="item" href="/stack/">Stack</a>
         </div>
     </div>
