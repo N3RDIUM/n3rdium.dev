@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about/index.md",
+                "file": "contact/index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
@@ -210,8 +210,8 @@
   },
   "active": "100f38d786b7cd10",
   "lastOpenFiles": [
-    "contact/index.md",
     "about/index.md",
+    "contact/index.md",
     "contact",
     "template.html~",
     "template.html",
