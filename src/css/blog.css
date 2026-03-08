@@ -10,50 +10,55 @@
         font-size: 17px;
     }
 }
-.blog-post {
-    text-decoration: none;
-    margin-bottom: 8px;
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-    .post {
-        width: calc(100% - 28px);
-        min-height: 32px;
-        padding: 14px;
-        background: var(--bg_1, gray);
+    .blog-post {
+        text-decoration: none;
 
-        .heading {
-            margin: 0;
-            margin-bottom: 4px;
-        }
-        .metadata {
-            margin-top: 6px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        .post {
+            width: calc(100% - 28px);
+            min-height: 32px;
+            padding: 14px;
+            background: var(--bg_1, gray);
 
-            .tags {
+            .heading {
+                margin: 0;
+                margin-bottom: 4px;
+            }
+            .metadata {
+                margin-top: 6px;
                 display: flex;
                 flex-direction: row;
-                font-size: 13px;
+                justify-content: space-between;
 
-                .tag {
-                    padding: 3px;
-                    background: var(--bg_2, gray);
-                    margin-right: 4px;
+                .tags {
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 13px;
+
+                    .tag {
+                        padding: 3px;
+                        background: var(--bg_2, gray);
+                        margin-right: 4px;
+                    }
+                }
+
+                .times {
+                    font-size: 15px;
                 }
             }
-
-            .times {
-                font-size: 15px;
-            }
+        }
+        .post:hover {
+            background: var(--bg_2, gray);
+        }
+        .post:active {
+            background: var(--bg_0, black);
         }
     }
-    .post:hover {
-        background: var(--bg_2, gray);
+    .blog-post:hover {
+        text-decoration: none;
     }
-    .post:active {
-        background: var(--bg_0, black);
-    }
-}
-.blog-post:hover {
-    text-decoration: none;
 }
