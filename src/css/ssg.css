@@ -50,9 +50,20 @@
 .quote .admonition-title {
     color: var(--lpurple, lavender);
 }
+code {
+    background: var(--bg_2, darkgray);
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
 pre {
     padding: 12px;
     background: var(--bg_1, darkgray);
+
+    code {
+        background: transparent;
+        padding: 0;
+    }
 }
 img {
     max-width: 100%;
