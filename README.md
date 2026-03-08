@@ -10,6 +10,7 @@ TODOs:
 - [ ] (Maybe) Use the sass preprocessor. Add the cmd to the deploy workflow.
 - [ ] Py workflow neocities integration.
 - [ ] configuration: order feed by alphabetical/lastmod/lcfs_lastmod etc.
+- [ ] pfr make max image width configurable, -1 to disable
 - [x] Permafrost template
 - [x] Manage (deferred) JS modules. First thing to add is a responsive nav menu.
 - [x] Metatdata feed generation: "feeds" metadata (list) which handles file types, eg: [blog/idx.json, blog/rss.xml, blog/atom.xml]
