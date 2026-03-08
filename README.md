@@ -3,6 +3,7 @@ My little corner of the internet. Not much to see here, I guess. The website is
 [here](https://n3rdium.dev).
 
 TODOs:
+- [ ] fix font size too big on mobile devices
 - [ ] Use git submodules to handle doorknob and permafrost.
 - [ ] Automatic code syntax highlighting for all `code` tags
 - [ ] Auto-convert images to avif while building and change the urls accordingly.
