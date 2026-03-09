@@ -10,7 +10,7 @@ feeds:
 ---
 Hey there! I'm n3rdium. Thank you for your interest in contacting me. I use the handle `n3rdium` on most sites.
 
-Email: [n3rdium@gmail.com](mailto:n3rdium@gmail.com)<br>
-GitHub: [n3rdium](https://github.com/n3rdium)<br>
-LinkedIn: [n3rdium](https://www.linkedin.com/in/n3rdium/)<br>
-Discord: n3rdium<br>
+- Email: [n3rdium@gmail.com](mailto:n3rdium@gmail.com)
+- GitHub: [n3rdium](https://github.com/n3rdium)
+- LinkedIn: [n3rdium](https://www.linkedin.com/in/n3rdium/)
+- Discord: n3rdium

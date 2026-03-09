@@ -12,6 +12,7 @@ feeds:
 I started programming a few months before COVID hit (nice timing if you ask me). Python was my first language.
 
 My current stack looks something like this:
+
 - Python (backend, most comfortable)
 - Plain JavaScript (for simple scripting / website stuff)
 - WGPU (graphics API)
@@ -19,6 +20,7 @@ My current stack looks something like this:
 - Neovim (preferred text editor)
 
 I’m currently learning the following stuff:
+
 - C (Patt & Patel)
 - OS Engineering (OSTEP)
 - Networking (CCNA)
