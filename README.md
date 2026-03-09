@@ -20,4 +20,5 @@ TODOs:
 
 ## Thanks and Citations
 - theme: [gruvbox](https://github.com/morhetz/gruvbox) by morhetz
+- icons: [svgrepo](https://www.svgrepo.com/)
 
