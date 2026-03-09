@@ -8,6 +8,10 @@ priority: "0.5"
 feeds:
   - search.json
 ---
-Hey there! I'm `n3rdium`. I like basically everything about space, computers and pianos. I also play badminton in my spare time.
+Hey there! I'm `n3rdium`. I like space, computers and pianos. I also play badminton in my spare time.
 
 A bit more about about my username: It both is and isn't case-sensitive. It can be either all-caps or all lowercase, but not anywhere in between. i.e. there are only two "valid" versions of my username: `n3rdium` and `N3RDIUM`.
+
+By the way, you can navigate this site without a mouse! Press `alt` to get started. Scroll with `J`/`K` and navigate history with `H`/`L`. Requires JavaScript to be enabled. (TODO actually implement this)
+
+TODO badges/flares here.
