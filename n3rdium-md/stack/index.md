@@ -13,15 +13,15 @@ I started programming around the time COVID hit (nice timing if you ask me). Pyt
 
 My current stack looks something like this:
 
-- Python (backend, most comfortable)
-- Plain JavaScript (for simple scripting / website stuff)
-- WGPU (graphics API)
-- NixOS (go-to OS + package manager)
-- Neovim (preferred text editor)
+- **Python** (backend, most comfortable)
+- Plain **JavaScript** (for simple scripting / website stuff)
+- **WGPU** (graphics API)
+- **NixOS** (go-to OS + package manager)
+- **Neovim** (preferred text editor)
 
 Currently, I’m learning:
 
-- C (Patt & Patel)
-- OS Engineering (OSTEP)
-- Networking (CCNA)
-- Nim (Official Docs)
+- **C** (Patt & Patel)
+- **OS Engineering** (OSTEP)
+- **Networking** (CCNA)
+- **Nim** (Official Docs)
