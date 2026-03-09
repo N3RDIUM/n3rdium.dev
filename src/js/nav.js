@@ -8,6 +8,7 @@ const NAV_HTML = `
         alt="Menu"
         width=28
         height=28
+        loading="lazy"
     />
 </button>
 <div class="drawer drawer-closed" id="drawer">
