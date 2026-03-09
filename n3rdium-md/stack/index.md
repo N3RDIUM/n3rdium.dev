@@ -9,7 +9,7 @@ priority: "0.52"
 feeds:
   - search.json
 ---
-I started programming around the time COVID hit (nice timing if you ask me). Python was my first language.
+I started programming around the time COVID hit (nice timing if you ask me). Python was my first language, and what got me hooked to computers.
 
 My current stack looks something like this:
 
@@ -18,6 +18,8 @@ My current stack looks something like this:
 - **WGPU** (graphics API)
 - **NixOS** (go-to OS + package manager)
 - **Neovim** (preferred text editor)
+
+Although I don’t do any fancy frameworks, I can create minimal, functional and performant webpages like this one.
 
 Currently, I’m learning:
 
