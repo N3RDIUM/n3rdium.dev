@@ -9,7 +9,7 @@ function blog_post_card({ relpath, title, description, tags, readtime, published
     }
 
     return `<a class="blog-post" href="${relpath}">
-    <button class="post responsive-border">
+    <div class="post responsive-border">
         <h2 class="heading">${title}</h2>
         <div class="description">${description}</div>
         <div class="metadata">
@@ -18,7 +18,7 @@ function blog_post_card({ relpath, title, description, tags, readtime, published
                 ${readtime} 🟅 ${published}
             </div>
         </div>
-    </button>
+    </div>
 </a>`;
 }
 
