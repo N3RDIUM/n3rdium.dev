@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about/index.md",
+                "file": "stack/index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
@@ -211,7 +211,9 @@
   "active": "100f38d786b7cd10",
   "lastOpenFiles": [
     "contact/index.md",
+    "stack/index.md",
     "about/index.md",
+    "stack",
     "Untitled.md",
     "contact",
     "contact",
@@ -245,7 +247,6 @@
     "patches",
     "kanban",
     "Harvard.md~",
-    "unis",
     "Writing Projects/Research/Nov 2025 Physics/transformer_illustration.png",
     "Writing Projects/Research/Nov 2025 English/Motivations.png",
     "Writing Projects/Research/Nov 2025 English/Experience.png",

@@ -1,0 +1,25 @@
+---
+title: Tech stack - N3RDIUM
+description: |
+  Some information about my tech stack, as well as what concepts I'm currently learning.
+template: n3rdium.dev
+lastmod: 2026-03-09
+changefreq: never
+priority: "0.52"
+feeds:
+  - search.json
+---
+I started programming a few months before COVID hit (nice timing if you ask me). Python was my first language.
+
+My current stack looks something like this:
+- Python (backend, most comfortable)
+- Plain JavaScript (for simple scripting / website stuff)
+- WGPU (graphics API)
+- NixOS (go-to OS + package manager)
+- Neovim (preferred text editor)
+
+I’m currently learning the following stuff:
+- C (Patt & Patel)
+- OS Engineering (OSTEP)
+- Networking (CCNA)
+- Nim (Official Docs)
