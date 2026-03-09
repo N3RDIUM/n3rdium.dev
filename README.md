@@ -4,14 +4,15 @@ My little corner of the internet. Not much to see here, I guess. The website is
 
 TODOs:
 - [ ] fix font size too big on mobile devices
+- [ ] global page search using `search.json`
 - [ ] Use git submodules to handle doorknob and permafrost.
-- [ ] Automatic code syntax highlighting for all `code` tags
-- [ ] Auto-convert images to avif while building and change the urls accordingly.
 - [ ] Make tech stack boxes clickable.
 - [ ] (Maybe) Use the sass preprocessor. Add the cmd to the deploy workflow.
 - [ ] Py workflow neocities integration.
 - [ ] pfr make max image width configurable, -1 to disable
 - [ ] scroll-to-top button and copy button for all code blocks.
+- [x] Automatic code syntax highlighting for all `code` tags
+- [x] Auto-convert images to webp while building and change the urls accordingly.
 - [x] configuration: order feed by alphabetical/lastmod/lcfs_lastmod etc.
 - [x] Permafrost template
 - [x] Manage (deferred) JS modules. First thing to add is a responsive nav menu.
