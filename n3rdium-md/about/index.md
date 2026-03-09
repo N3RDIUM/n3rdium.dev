@@ -12,6 +12,6 @@ Hey there! I'm `n3rdium`. I like space, computers and pianos. I also play badmin
 
 A bit more about about my username: It both is and isn't case-sensitive. It can be either all-caps or all lowercase, but not anywhere in between. i.e. there are only two "valid" versions of my username: `n3rdium` and `N3RDIUM`.
 
-By the way, you can navigate this site without a mouse! Press `f` to get started. Scroll with `J`/`K` and navigate history with `H`/`L`. Requires JavaScript to be enabled.
+By the way, you can navigate this site without a mouse! Press `F` to get started. Scroll with `J`/`K` and navigate history with `H`/`L`. Requires JavaScript to be enabled.
 
 TODO badges/flares here.
