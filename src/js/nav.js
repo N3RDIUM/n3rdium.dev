@@ -147,6 +147,15 @@ function clearHints() {
 }
 
 document.addEventListener("keydown", e => {
+});
+
+// TODO F1 for help
+document.addEventListener("keydown", function (e) {
+    const tag = document.activeElement.tagName.toLowerCase();
+    if (tag === "input" || tag === "textarea" || document.activeElement.isContentEditable) {
+        return;
+    }
+
     if (e.key === "Escape" && hintMode) {
         clearHints();
         return;
@@ -156,48 +165,58 @@ document.addEventListener("keydown", e => {
         if (e.key === "f") {
             startHintMode();
             e.preventDefault();
+            return;
         }
-        return;
-    }
-
-    typed += e.key.toLowerCase();
-
-    const matches = hints.filter(h => h.key.startsWith(typed));
-
-    if (matches.length === 1 && matches[0].key === typed) {
-        matches[0].el.click();
-        clearHints();
     } else {
-        hints.forEach(h => {
-            h.label.style.opacity = h.key.startsWith(typed) ? "1" : "0.2";
-        });
-    }
-});
+        typed += e.key.toLowerCase();
 
-document.addEventListener("keydown", function (e) {
-    const tag = document.activeElement.tagName.toLowerCase();
-    if (tag === "input" || tag === "textarea" || document.activeElement.isContentEditable) {
+        const matches = hints.filter(h => h.key.startsWith(typed));
+
+        if (matches.length === 1 && matches[0].key === typed) {
+            matches[0].el.click();
+            clearHints();
+        } else {
+            hints.forEach(h => {
+                h.label.style.opacity = h.key.startsWith(typed) ? "1" : "0.2";
+            });
+        }
         return;
     }
 
     switch (e.key.toLowerCase()) {
         case "j":
-        window.scrollBy({ top: 100, behavior: "smooth" });
-        break;
+            window.scrollBy({ top: 100, behavior: "smooth" });
+            break;
 
         case "k":
-        window.scrollBy({ top: -100, behavior: "smooth" });
-        break;
+            window.scrollBy({ top: -100, behavior: "smooth" });
+            break;
+
+        case "u":
+            window.scrollBy({
+                top: -window.innerHeight * 0.5,
+                behavior: "smooth"
+            });
+            break;
+
+        case "d":
+            window.scrollBy({
+                top: window.innerHeight * 0.5,
+                behavior: "smooth"
+            });
+            break;
 
         case "h":
-        window.history.back();
-        break;
+            window.history.back();
+            break;
 
         case "l":
-        window.history.forward();
-        break;
+            window.history.forward();
+            break;
     }
 });
+
+// TODO "scroll to top" button in the bottom right
 
 window.addEventListener("DOMContentLoaded", (event) => {
     let nav_el = document.createElement("nav");
