@@ -19,7 +19,7 @@ My current stack looks something like this:
 - NixOS (go-to OS + package manager)
 - Neovim (preferred text editor)
 
-I’m currently learning the following stuff:
+Currently, I’m learning:
 
 - C (Patt & Patel)
 - OS Engineering (OSTEP)

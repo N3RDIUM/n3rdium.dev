@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4ac115c581043471",
+        "id": "57440979a5d9bc2e",
         "type": "tabs",
         "children": [
           {
-            "id": "100f38d786b7cd10",
+            "id": "0c8c5020a6e28082",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about/index.md",
+                "file": "stack/index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
@@ -208,13 +208,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "100f38d786b7cd10",
+  "active": "fa9bb5bb50e4271e",
   "lastOpenFiles": [
+    "about/index.md",
+    "Untitled.canvas",
+    "ideas.md",
     "contact/index.md",
     "stack/index.md",
-    "about/index.md",
     "stack",
-    "Untitled.md",
     "contact",
     "contact",
     "template.html~",
@@ -228,7 +229,6 @@
     "concepts/hardware vs software.md",
     "permafrost.json",
     "_templates/n3rdium-dev.html",
-    "Untitled.canvas",
     "unique/202602091041.md",
     "unique/202601061936.md",
     "unique/202509291914.md",
@@ -243,7 +243,6 @@
     "Meta TODO.md",
     "n3rdium.dev revamp.md",
     "Houston.md",
-    "Harvard.md",
     "patches",
     "kanban",
     "Harvard.md~",
