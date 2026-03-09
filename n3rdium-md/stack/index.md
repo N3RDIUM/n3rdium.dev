@@ -9,7 +9,7 @@ priority: "0.52"
 feeds:
   - search.json
 ---
-I started programming around the time COVID hit (nice timing if you ask me). Python was my first language, and what got me hooked to computers.
+I started programming around the time COVID hit (nice timing if you ask me). Python was my first language, and it’s what got me hooked to computers.
 
 My current stack looks something like this:
 
