@@ -1,11 +1,6 @@
 #!/bin/sh
 
-# build folder
-if [ -d "build" ]; then
-    rm -rf build/
-fi
-
-# dist folder
+# dist directory
 if [ -d "dist" ]; then
     rm -rf dist/
 fi
