@@ -35,6 +35,3 @@ python -m pip install -U -r doorknob/requirements.txt
 # run
 python -m permafrost.main
 python -m doorknob.main
-
-# check
-ls -Ra
