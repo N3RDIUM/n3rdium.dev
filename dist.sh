@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # build folder
-if [ ! -d "build" ]; then
+if [ -d "build" ]; then
     rm -rf build/
 fi
 
 # dist folder
-if [ ! -d "dist" ]; then
-    rm -r dist/
+if [ -d "dist" ]; then
+    rm -rf dist/
 fi
 rsync -a src/ dist/
 
