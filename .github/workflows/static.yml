@@ -33,7 +33,7 @@ jobs:
       - name: Install LaTeX tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-extra dvisvgm
+          sudo apt-get install -y texlive-latex-recommended dvisvgm
 
       - name: Run build script
         run: ./dist.sh
