@@ -4,6 +4,7 @@ My little corner of the internet. Not much to see here, I guess. The website is
 
 TODOs:
 - [ ] fix font size too big on mobile devices
+- [ ] allow pfr choose remote branch, projects have separate `docs` branches
 - [ ] global page search using `search.json`
 - [ ] Use git submodules to handle doorknob and permafrost.
 - [ ] Make tech stack boxes clickable.

@@ -2,12 +2,21 @@
     "output_dir": "dist/",
     "import_dir": "build/",
     "imports": {
-        "blog/post": "https://github.com/n3rdium/blog.git",
-        "notes/": "https://github.com/n3rdium/vault.git",
-        ".": "https://github.com/n3rdium/n3rdium.dev"
-    },
-    "source_vault": "n3rdium-md",
-    "templates": {
-        "n3rdium.dev": "template.html"
+        ".": {
+            "url": "https://github.com/n3rdium/n3rdium.dev.git",
+            "branch": "md"
+        },
+        "blog/post": {
+            "url": "https://github.com/n3rdium/blog.git",
+            "branch": "main"
+        },
+        "notes": {
+            "url": "https://github.com/n3rdium/vault.git",
+            "branch": "main"
+        },
+        "project/dotfiles": {
+            "url": "https://github.com/n3rdium/dotfiles.git",
+            "branch": "docs"
+        }
     }
 }
