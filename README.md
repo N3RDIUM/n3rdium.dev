@@ -3,6 +3,7 @@ My little corner of the internet. Not much to see here, I guess. The website is
 [here](https://n3rdium.dev).
 
 TODOs:
+- [ ] pfr: if the link is external, make it `target=_blank`.
 - [ ] fix font size too big on mobile devices
 - [ ] allow pfr choose remote branch, projects have separate `docs` branches
 - [ ] global page search using `search.json`
