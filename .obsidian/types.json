@@ -1,0 +1,12 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "progress": "number",
+    "level": "text",
+    "authors": "multitext",
+    "lastmod": "date",
+    "feeds": "multitext"
+  }
+}
