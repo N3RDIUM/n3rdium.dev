@@ -1,0 +1,22 @@
+{
+    "output_dir": "dist/",
+    "import_dir": "build/",
+    "imports": {
+        ".": {
+            "url": "https://github.com/n3rdium/n3rdium.dev.git",
+            "branch": "md"
+        },
+        "blog/post": {
+            "url": "https://github.com/n3rdium/blog.git",
+            "branch": "main"
+        },
+        "notes": {
+            "url": "https://github.com/n3rdium/vault.git",
+            "branch": "main"
+        },
+        "project/dotfiles": {
+            "url": "https://github.com/n3rdium/dotfiles.git",
+            "branch": "docs"
+        }
+    }
+}
