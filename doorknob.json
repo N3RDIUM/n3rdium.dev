@@ -4,6 +4,13 @@
         "search.json": {
             "type": "json"
         },
+        "astro/index.json": {
+            "type": "json",
+            "sort": {
+                "key": "published",
+                "reverse": true
+            }
+        },
         "blog/index.json": {
             "type": "json",
             "sort": {

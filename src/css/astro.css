@@ -1,0 +1,59 @@
+.container {
+    width: 100vw;
+    max-width: unset;
+}
+
+.astro-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px;
+    gap: 4px;
+
+    .post {
+        position: relative;
+        width: 142px;
+        height: 142px;
+
+        img {
+            width: 142px;
+            height: 142px;
+            object-fit: cover;
+            aspect-ratio: 1;
+        }
+
+        span {
+            position: absolute;
+            background: var(--bg_0, black);
+            top: 0; left: 0; bottom: 0; right: 0;
+            aspect-ratio: 1;
+            padding: 11px;
+            font-size: 21px;
+            display: none;
+        }
+    }
+
+    .post:hover {
+        span {
+            display: flex;
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+    .astro-cards {
+        padding: 24px;
+        gap: 10px;
+
+        .post {
+            width: 256px;
+            height: 256px;
+
+            img {
+                width: 256px;
+                height: 256px;
+            }
+        }
+    }
+}
+
