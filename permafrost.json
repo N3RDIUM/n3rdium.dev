@@ -6,6 +6,10 @@
             "url": "https://github.com/n3rdium/n3rdium.dev.git",
             "branch": "md"
         },
+        "astro": {
+            "url": "https://github.com/n3rdium/astro-gallery.git",
+            "branch": "main"
+        },
         "blog/post": {
             "url": "https://github.com/n3rdium/blog.git",
             "branch": "main"
