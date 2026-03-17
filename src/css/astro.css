@@ -25,7 +25,7 @@
 
         span {
             position: absolute;
-            background: var(--bg_0, black);
+            background: var(--bg_2, black);
             top: 0; left: 0; bottom: 0; right: 0;
             aspect-ratio: 1;
             padding: 11px;
