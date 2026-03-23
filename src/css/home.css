@@ -64,4 +64,8 @@
     padding: 12px;
     white-space: pre-wrap;
     overflow-wrap: break-word;
+    font-weight: light;
+
+    .p { font-weight: bolder; color: var(--lgreen, lime); }
+    .c { font-weight: bold; color: var(--fg, white); }
 }
