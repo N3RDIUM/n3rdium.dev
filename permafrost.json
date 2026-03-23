@@ -17,10 +17,6 @@
         "notes": {
             "url": "https://github.com/n3rdium/vault.git",
             "branch": "main"
-        },
-        "project/dotfiles": {
-            "url": "https://github.com/n3rdium/dotfiles.git",
-            "branch": "docs"
         }
     }
 }
