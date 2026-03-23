@@ -15,7 +15,7 @@ My current stack looks something like this:
 
 - **Python** (backend, most comfortable)
 - Plain **JavaScript** (for simple scripting / website stuff)
-- **WGPU** (graphics API)
+- **Vulkan** (graphics API)
 - **NixOS** (go-to OS + package manager)
 - **Neovim** (preferred text editor)
 
@@ -27,3 +27,4 @@ Currently, I’m learning:
 - **OS Engineering** (OSTEP)
 - **Networking** (CCNA)
 - **Nim** (Official Docs)
+- **Vulkan** (Official Docs)
