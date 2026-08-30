@@ -1,0 +1,85 @@
+.header {
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    margin-top: 24px;
+}
+
+.header h1 {
+    margin-top: -4px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cards .blog-post {
+    text-decoration: none;
+    color: #ebdbb2;
+}
+
+.cards .blog-post .post {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 28px);
+    min-height: 32px;
+    padding: 14px;
+    background: var(--bg_1, gray);
+}
+
+.cards .blog-post .post .heading {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.cards .blog-post .post .nposts {
+    font-size: 13px;
+    width: 100%;
+    text-align: right;
+    margin-bottom: -4px;
+}
+
+.cards .blog-post .post .metadata {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards .blog-post .post .metadata .tags {
+    font-size: 13px;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.cards .blog-post .post .metadata .times {
+    font-size: 15px;
+}
+
+.cards .blog-post .post:hover {
+    background: var(--bg_2, gray);
+}
+
+.cards .blog-post .post:active {
+    background: var(--bg_0, black);
+}
+
+.cards .blog-post:hover {
+    text-decoration: none;
+}
+
+.cards .blog-post:hover .post .heading {
+    text-decoration: wavy underline 1px;
+}
+
+.cards .blog-post:active {
+    text-decoration: none;
+}
+
+.cards .blog-post:active .post .heading {
+    text-decoration: solid underline 1px;
+}

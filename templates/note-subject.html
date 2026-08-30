@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }} - n3rdium's notes</title>
+    {{ head }}
+
+    <meta charset="UTF-8">
+    <meta name="description" content="{{ metadata.description }}">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="n3rdium">
+
+    <link rel=stylesheet href="/css/theme.css"/>
+    <link rel=stylesheet href="/css/kami.css"/>
+    <link rel=stylesheet href="/css/index.css"/>
+    <script src="/js/nav.js"></script>
+  </head>
+  <body>
+    <main role=main class="content">
+{{ body }}
+
+{% set ns = namespace(current_initial=None) %}
+
+{% for item in preprocessors.feeds.feeds["notes-" ~ metadata["subject-page"]]
+      |selectattr('title')
+      |sort(attribute='title', case_sensitive=False) %}
+
+    {% set initial = item.title[0]|lower %}
+
+    {% if initial != ns.current_initial %}
+        <h2>{{ initial }}</h2>
+        {% set ns.current_initial = initial %}
+    {% endif %}
+
+    <a href="{{ item.href }}">{{ item.title }}</a>
+{% endfor %}
+    </main>
+  </body>
+</html>
+

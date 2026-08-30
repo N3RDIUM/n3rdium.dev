@@ -1,0 +1,9 @@
+[submodule "blog"]
+	path = blog
+	url = https://forge.n3rdium.dev/vaults/blog
+[submodule "notes"]
+	path = notes
+	url = https://forge.n3rdium.dev/vaults/notes
+[submodule "astro"]
+	path = astro
+	url = https://forge.n3rdium.dev/vaults/astro

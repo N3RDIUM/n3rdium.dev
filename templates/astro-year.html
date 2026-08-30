@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }} - n3rdium's astrophotography</title>
+    {{ head }}
+
+    <meta charset="UTF-8">
+    <meta name="description" content="{{ metadata.description }}">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="n3rdium">
+
+    <link rel=stylesheet href="/css/theme.css"/>
+    <link rel=stylesheet href="/css/kami.css"/>
+    <link rel=stylesheet href="/css/index.css"/>
+    <link rel=stylesheet href="/css/blog-index.css"/>
+    <link rel=stylesheet href="/css/astro.css"/>
+    <script src="/js/nav.js"></script>
+  </head>
+  <body>
+    <main role=main class="content">
+        <div class="header">
+            <a class="back-link" href="/astro/">&lt;- /astro/</a>
+            <h1>{{ title }}</h1>
+            {{ body }}
+            <p>
+                {{ metadata.description }}
+            </p>
+        </div>
+        <div class="cards">
+            {% for item in preprocessors.feeds.feeds["astro-" ~ metadata.year] %}
+                <a class="blog-post" href="{{ item.href }}">
+                    <div class="post responsive-border">
+                        <h2 class="heading">{{ item.title }}</h2>
+                        <div class="description">{{ item.description }}</div>
+                        <img class="astro-image-preview" height="{{ item["preview-height"] }}" src="{{ item.image }}"></img>
+                        <div class="metadata">
+                            <div class="tags">
+                                {% for tag in item.tags %}
+                                <code>{{ tag }}</code>
+                                {% endfor %}
+                            </div>
+                            <div class="times">
+                                {{ item.pubdate }}
+                                {% if "readtime" in item %}
+                                    \\ ~{{ item.readtime }} read
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}    
+        </div>
+        <!-- TODO next/prev -->
+    </main>
+  </body>
+</html>
+

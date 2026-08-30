@@ -1,0 +1,9 @@
+.astro-image-preview {
+    margin-top: 5px;
+    margin-bottom: 3px;
+    object-fit: cover;
+    width: 100%;
+}
+.astro-image {
+    margin-bottom: 4px;
+}

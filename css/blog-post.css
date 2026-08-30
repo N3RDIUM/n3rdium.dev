@@ -1,0 +1,24 @@
+.post-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.post-header .title {
+    font-size: 37px;
+    margin-top: -4px;
+    margin-bottom: -3px;
+}
+
+.post-header .description {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.post-header .tags {
+    font-size: 13px;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
