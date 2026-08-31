@@ -52,7 +52,14 @@
                 </a>
             {% endfor %}    
         </div>
-        <!-- TODO next/prev -->
+        <div class="prevnext">
+            {% if "prev" in metadata %}
+                <a class="prev" href="{{ metadata.prev }}">&lt;- prev</a>
+            {% endif %}
+            {% if "next" in metadata %}
+                <a class="next" href="{{ metadata.next }}">next -&gt;</a>
+            {% endif %}
+        </div>
     </main>
   </body>
 </html>

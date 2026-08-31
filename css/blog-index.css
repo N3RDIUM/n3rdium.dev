@@ -83,3 +83,15 @@
 .cards .blog-post:active .post .heading {
     text-decoration: solid underline 1px;
 }
+
+.prevnext {
+    margin-top: 21px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.prevnext .prev {
+    float: left;
+}
+.prevnext .next {
+    float: right;
+}
