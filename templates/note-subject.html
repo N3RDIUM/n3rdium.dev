@@ -20,8 +20,11 @@
     <main role=main class="content">
 {{ body }}
 
-{% set ns = namespace(current_initial=None) %}
-
+{% set ns = namespace(
+    current_initial=None, 
+    first_letter=True, 
+    unclosed_ul=False) 
+%}
 {% for item in preprocessors.feeds.feeds["notes-" ~ metadata["subject-page"]]
       |selectattr('title')
       |sort(attribute='title', case_sensitive=False) %}
@@ -29,12 +32,23 @@
     {% set initial = item.title[0]|lower %}
 
     {% if initial != ns.current_initial %}
+        {% if not ns.first_letter %}
+            </ul>
+        {% endif %}
+        {% set ns.first_letter = False %}
+
         <h2>{{ initial }}</h2>
+        <ul>
+
+        {% set ns.unclosed_ul = True %}
         {% set ns.current_initial = initial %}
     {% endif %}
 
-    <a href="{{ item.href }}">{{ item.title }}</a>
+    <li><a href="{{ item.href }}">{{ item.title }}</a></li>
 {% endfor %}
+{% if ns.unclosed_ul %}
+    </ul>
+{% endif %}
     </main>
   </body>
 </html>
